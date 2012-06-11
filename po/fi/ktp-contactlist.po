@@ -1,0 +1,698 @@
+# Copyright © 2012 This_file_is_part_of_KDE
+# This file is distributed under the same license as the ktp-contact-list package.
+#
+# Tommi Nieminen <translator@legisign.org>, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: ktp-contactlist\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2012-06-02 03:26+0200\n"
+"PO-Revision-Date: 2012-04-15 23:49+0300\n"
+"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
+"Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: account-button.cpp:71
+msgctxt "@action:inmenu This is an IM user status"
+msgid "Available"
+msgstr "Saatavilla"
+
+#: account-button.cpp:72
+msgctxt "@action:inmenu This is an IM user status"
+msgid "Away"
+msgstr "Poissa"
+
+#: account-button.cpp:73
+msgctxt "@action:inmenu This is an IM user status"
+msgid "Be right back"
+msgstr "Palaan kohta"
+
+#: account-button.cpp:74
+msgctxt "@action:inmenu This is an IM user status"
+msgid "Busy"
+msgstr "Varattu"
+
+#: account-button.cpp:75
+msgctxt "@action:inmenu This is an IM user status"
+msgid "Do not disturb"
+msgstr "Älä häiritse"
+
+#: account-button.cpp:76
+msgctxt "@action:inmenu This is an IM user status"
+msgid "Extended Away"
+msgstr "Laajennettu poissaolo"
+
+#: account-button.cpp:77
+msgctxt "@action:inmenu This is an IM user status"
+msgid "Invisible"
+msgstr "Näkymätön"
+
+#: account-button.cpp:78
+msgctxt "@action:inmenu This is an IM user status"
+msgid "Offline"
+msgstr "Poissa"
+
+#: account-button.cpp:82
+msgctxt "@action:inmenu This is the IM presence message"
+msgid "Set message..."
+msgstr "Aseta viesti..."
+
+#: global-presence-chooser.cpp:93
+msgid "Configure Custom Presences..."
+msgstr "Mukauta läsnäolotapoja..."
+
+#: global-presence-chooser.cpp:100
+msgid "Now listening to..."
+msgstr "Nyt soi..."
+
+#: global-presence-chooser.cpp:183
+msgid "Click to change your presence message"
+msgstr ""
+
+#: global-presence-chooser.cpp:220
+msgctxt "Presence string when the account is connecting"
+msgid "Connecting..."
+msgstr ""
+
+#: global-presence-chooser.cpp:281
+msgid ""
+"This plugin is currently disabled. Do you want to enable it and use as your "
+"presence?"
+msgstr ""
+"Tämä liitännäinen on paraikaa poissa käytöstä. Haluatko ottaa sen käyttöön "
+"ja käyttää sitä läsnäolotapanasi?"
+
+#: global-presence-chooser.cpp:282
+msgid "Plugin disabled"
+msgstr "Liitännäinen ei käytössä"
+
+#: dialogs/custom-presence-dialog.cpp:70
+msgid "Edit Custom Presences"
+msgstr "Mukauta läsnäolotapoja"
+
+#: dialogs/custom-presence-dialog.cpp:89
+msgid "Set custom available message..."
+msgstr "Aseta mukautettu saatavilla-viesti..."
+
+#: dialogs/custom-presence-dialog.cpp:90
+msgid "Set custom busy message..."
+msgstr "Aseta mukautettu varattu-viesti..."
+
+#: dialogs/custom-presence-dialog.cpp:91
+msgid "Set custom away message..."
+msgstr "Aseta mukautettu poissa-viesti..."
+
+#: dialogs/custom-presence-dialog.cpp:92
+msgid "Set custom extended away message..."
+msgstr "Aseta mukautettu laajennetun poissaolon viesti..."
+
+#: dialogs/custom-presence-dialog.cpp:102
+msgid "Add Presence"
+msgstr "Lisää läsnäolotapa"
+
+#: dialogs/custom-presence-dialog.cpp:103
+msgid "Remove Presence"
+msgstr "Poista läsnäolotapa"
+
+#: dialogs/remove-contact-dialog.cpp:41
+msgid "Remove the selected contact?"
+msgstr "Poistetaanko valittu yhteystieto?"
+
+#: dialogs/join-chat-room-dialog.cpp:197
+msgid "This room is already in your favorites."
+msgstr ""
+
+#: dialogs/join-chat-room-dialog.cpp:199
+msgid "Add room"
+msgstr ""
+
+#: dialogs/join-chat-room-dialog.cpp:199
+msgid "Name"
+msgstr ""
+
+#: filter-bar.cpp:39
+msgctxt "@info:tooltip"
+msgid "Hide Filter Bar"
+msgstr "Piilota suodinrivi"
+
+#: filter-bar.cpp:43
+msgctxt "@label:textbox"
+msgid "Filter:"
+msgstr "Suodin:"
+
+#: contact-list-widget.cpp:142
+msgid "You have no IM accounts configured. Would you like to do that now?"
+msgstr "Pikaviestitilejä ei ole asetettu. Haluatko tehdä sen nyt?"
+
+#: contact-list-widget.cpp:143
+msgid "No Accounts Found"
+msgstr "Tilejä ei löytynyt"
+
+#: contact-list-widget.cpp:172
+msgid ""
+"It appears you do not have the IM Accounts control module installed. Please "
+"install telepathy-accounts-kcm package."
+msgstr ""
+"Näyttää siltä, että pikaviestitilien hallintamoduulia ole asennettu. Asenna "
+"paketti telepathy-accounts-kcm."
+
+#: contact-list-widget.cpp:173
+msgid "IM Accounts KCM Plugin Is Not Installed"
+msgstr "Pikaviestitilien KCM-liitännäistä ei ole asennettu"
+
+#: contact-list-widget.cpp:435
+#, kde-format
+msgid "Choose files to send to %1"
+msgstr ""
+
+#: tooltips/contacttooltip.cpp:59
+msgctxt "This is an IM user status"
+msgid "Unknown"
+msgstr "Tuntematon"
+
+#: tooltips/contacttooltip.cpp:69
+msgctxt "This is an IM user status"
+msgid "Error Getting Presence"
+msgstr ""
+
+#: main-widget.cpp:85
+#, fuzzy
+#| msgid "Add new contacts..."
+msgid "Add New Contacts..."
+msgstr "Lisää uusia yhteystietoja..."
+
+#: main-widget.cpp:89
+#, fuzzy
+#| msgid "Show/Hide groups"
+msgid "Show/Hide Groups"
+msgstr "Näytä tai piilota ryhmiä"
+
+#: main-widget.cpp:127
+#, fuzzy
+#| msgid "Hide/Show offline users"
+msgid "Hide/Show Offline Users"
+msgstr "Piilota tai näytä verkosta poissa olevia käyttäjiä"
+
+#: main-widget.cpp:133
+msgid "List is sorted by name. Click to sort by presence."
+msgstr ""
+"Luettelo on lajiteltu nimen mukaan. Lajittele läsnäolon mukaan "
+"napsauttamalla."
+
+#: main-widget.cpp:134
+msgid "List is sorted by presence. Click to sort by name."
+msgstr ""
+"Luettelo on lajiteltu läsnäolon mukaan. Lajittele nimen mukaan "
+"napsauttamalla."
+
+#: main-widget.cpp:141
+#, fuzzy
+#| msgid "Find contact"
+msgid "Find Contact"
+msgstr "Etsi yhteystietoa"
+
+#: main-widget.cpp:158
+msgid "Instant Messaging Settings..."
+msgstr ""
+
+#: main-widget.cpp:164
+#, fuzzy
+#| msgid "Contact list type"
+msgid "Contact List Type"
+msgstr "Yhteystietoluettelon tyyppi"
+
+#: main-widget.cpp:165
+#, fuzzy
+#| msgid "Use full list"
+msgid "Use Full List"
+msgstr "Käytä täyttä luetteloa"
+
+#: main-widget.cpp:173
+#, fuzzy
+#| msgid "Use compact list"
+msgid "Use Compact List"
+msgstr "Käytä tiivistä luetteloa"
+
+#: main-widget.cpp:184
+#, fuzzy
+#| msgid "Find contact"
+msgid "Shown Contacts"
+msgstr "Etsi yhteystietoa"
+
+#: main-widget.cpp:191
+#, fuzzy
+#| msgid "Block contact"
+msgid "Show all contacts"
+msgstr "Torju yhteystieto"
+
+#: main-widget.cpp:198
+#, fuzzy
+#| msgid "Unblock Contact"
+msgid "Show unblocked contacts"
+msgstr "Peru yhteystiedon torjunta"
+
+#: main-widget.cpp:205
+#, fuzzy
+#| msgid "Block contact"
+msgid "Show blocked contacts"
+msgstr "Torju yhteystieto"
+
+#: main-widget.cpp:222
+#, fuzzy
+#| msgid "Join chat room"
+msgid "Join Chat Room..."
+msgstr "Liity chat-huoneeseen"
+
+#: main-widget.cpp:302
+msgid ""
+"Something unexpected happened to the core part of your Instant Messaging "
+"system and it couldn't be initialized. Try restarting the Contact List."
+msgstr ""
+"Jotakin odottamatonta sattui pikaviestijärjestelmän ydinosalle eikä se "
+"voinut käynnistyä. Yritä käynnistä yhteystietoluettelo uudestaan."
+
+#: main-widget.cpp:304
+msgid "IM system failed to initialize"
+msgstr "Pikaviestijärjestelmän käynnistys epäonnistui"
+
+#: main-widget.cpp:338
+msgid ""
+"Seems like you forgot to select an account. Also do not forget to connect it "
+"first."
+msgstr "Näytät unohtaneen valita tilin. Äläkä unohda yhdistää sitä ensin."
+
+#: main-widget.cpp:339
+msgid "No Account Selected"
+msgstr "Tiliä ei valittu"
+
+#: main-widget.cpp:343
+msgid ""
+"An error we did not anticipate just happened and so the contact could not be "
+"added. Sorry."
+msgstr "Sattui odottomaton virhe, eikä yhteystietoa voitu lisätä. Anteeksi."
+
+#: main-widget.cpp:344
+msgid "Account Error"
+msgstr "Tilivirhe"
+
+#: main-widget.cpp:440
+msgid ""
+"You do not have any other presence controls active (a Presence widget for "
+"example).\n"
+"Do you want to stay online or would you rather go offline?"
+msgstr ""
+
+#: main-widget.cpp:442
+msgid "No Other Presence Controls Found"
+msgstr ""
+
+#: main-widget.cpp:443
+msgid "Stay Online"
+msgstr "Pysy verkossa"
+
+#: main-widget.cpp:444
+msgid "Go Offline"
+msgstr "Poistu verkosta"
+
+#: contact-overlays.cpp:132 contact-overlays.cpp:133
+msgid "Start Chat"
+msgstr "Aloita chat"
+
+#: contact-overlays.cpp:133
+msgid "Start a text chat"
+msgstr "Aloita tekstichat"
+
+#: contact-overlays.cpp:144 contact-overlays.cpp:145
+msgid "Start Audio Call"
+msgstr "Aloita äänipuhelu"
+
+#: contact-overlays.cpp:145
+msgid "Start an audio call"
+msgstr "Aloita äänipuhelu"
+
+#: contact-overlays.cpp:157 contact-overlays.cpp:158
+msgid "Start Video Call"
+msgstr "Aloita videopuhelu"
+
+#: contact-overlays.cpp:158
+msgid "Start a video call"
+msgstr "Aloita videopuhelu"
+
+#: contact-overlays.cpp:169 contact-overlays.cpp:170 context-menu.cpp:129
+msgid "Send File..."
+msgstr "Lähetä tiedosto..."
+
+#: contact-overlays.cpp:170
+msgid "Send a file"
+msgstr "Lähetä tiedosto"
+
+#: contact-overlays.cpp:181 contact-overlays.cpp:182
+msgid "Share my desktop"
+msgstr "Jaa työpöytäni"
+
+#: contact-overlays.cpp:182
+msgid "Share desktop using RFB"
+msgstr "Jaa työpöytäni RFB:llä"
+
+#: main.cpp:36 main.cpp:37
+msgid "KDE Telepathy Contact List"
+msgstr "KDE Telepathy -yhteystietoluettelo"
+
+#: main.cpp:38
+msgid "(C) 2011, Martin Klapetek"
+msgstr "(C) 2011, Martin Klapetek"
+
+#: main.cpp:40
+msgctxt "@info:credit"
+msgid "Martin Klapetek"
+msgstr "Martin Klapetek"
+
+#: main.cpp:40
+msgid "Developer"
+msgstr "Kehittäjä"
+
+#: main.cpp:48
+msgid "Show Telepathy debugging information"
+msgstr "Näytä Telepathy-vianjäljitystieto"
+
+#: rc.cpp:1
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Tommi Nieminen"
+
+#: rc.cpp:2
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "translator@legisign.org"
+
+#. i18n: file: dialogs/contact-info.ui:14
+#. i18n: ectx: property (windowTitle), widget (QWidget, ContactInfo)
+#: rc.cpp:5
+msgid "Dialog"
+msgstr "Kyselyikkuna"
+
+#. i18n: file: dialogs/contact-info.ui:28
+#. i18n: ectx: property (text), widget (QLabel, avatarLabel)
+#: rc.cpp:8
+msgid "Avatar Here"
+msgstr "Avatar tähän"
+
+#. i18n: file: dialogs/contact-info.ui:37
+#. i18n: ectx: property (text), widget (QLabel, idLabel)
+#: rc.cpp:11
+msgid "ContactID"
+msgstr ""
+
+#. i18n: file: dialogs/contact-info.ui:59
+#. i18n: ectx: property (text), widget (QLabel, nameLabel)
+#: rc.cpp:14
+msgid "Contact Display Name"
+msgstr "Yhteystiedon näyttönimi"
+
+#. i18n: file: dialogs/contact-info.ui:69
+#. i18n: ectx: property (text), widget (QLabel, presenceLabel)
+#: rc.cpp:17
+msgid "Presence String"
+msgstr "Läsnäolojono"
+
+#. i18n: file: dialogs/contact-info.ui:114
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: rc.cpp:20
+msgid "Contact can see when you are online:"
+msgstr "Yhteystieto voi nähdä, kun olet verkossa:"
+
+#. i18n: file: dialogs/contact-info.ui:121
+#. i18n: ectx: property (text), widget (QLabel, publishStateLabel)
+#. i18n: file: dialogs/contact-info.ui:135
+#. i18n: ectx: property (text), widget (QLabel, subscriptionStateLabel)
+#. i18n: file: dialogs/contact-info.ui:149
+#. i18n: ectx: property (text), widget (QLabel, blockedLabel)
+#: rc.cpp:23 rc.cpp:29 rc.cpp:35
+msgid "TextLabel"
+msgstr "Tekstiselite"
+
+#. i18n: file: dialogs/contact-info.ui:128
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: rc.cpp:26
+msgid "You can see when the contact is online:"
+msgstr "Voit nähdä, kun yhteystieto on verkossa:"
+
+#. i18n: file: dialogs/contact-info.ui:142
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: rc.cpp:32
+msgid "Contact is blocked:"
+msgstr "Yhteystieto on torjuttu:"
+
+#. i18n: file: dialogs/remove-contact-dialog.ui:23
+#. i18n: ectx: property (windowTitle), widget (QWidget, RemoveContactDialog)
+#: rc.cpp:38
+msgid "Remove contact"
+msgstr "Poista yhteystieto"
+
+#. i18n: file: dialogs/remove-contact-dialog.ui:47
+#. i18n: ectx: property (text), widget (QLabel, textLabel)
+#: rc.cpp:41
+msgid "Message"
+msgstr "Viesti"
+
+#. i18n: file: dialogs/remove-contact-dialog.ui:124
+#. i18n: ectx: property (text), widget (QLabel, contactAvatarLabel)
+#: rc.cpp:44
+msgid "Avatar"
+msgstr "Avatar"
+
+#. i18n: file: dialogs/remove-contact-dialog.ui:161
+#. i18n: ectx: property (text), widget (QLabel, contactAliasLabel)
+#: rc.cpp:47
+msgid "Alias"
+msgstr "Alias"
+
+#. i18n: file: dialogs/remove-contact-dialog.ui:229
+#. i18n: ectx: property (text), widget (QCheckBox, blockCheckbox)
+#: rc.cpp:50
+msgid "Block contact"
+msgstr "Torju yhteystieto"
+
+#. i18n: file: dialogs/join-chat-room-dialog.ui:20
+#. i18n: ectx: property (windowTitle), widget (QWidget, JoinChatRoomDialog)
+#: rc.cpp:53
+#, fuzzy
+#| msgid "Join chat room"
+msgid "Join Chatroom"
+msgstr "Liity chat-huoneeseen"
+
+#. i18n: file: dialogs/join-chat-room-dialog.ui:29
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:56
+msgid "Enter chat room:"
+msgstr "Siirry chat-huoneeseen:"
+
+#. i18n: file: dialogs/join-chat-room-dialog.ui:47
+#. i18n: ectx: attribute (title), widget (QWidget, favoritesTab)
+#: rc.cpp:59
+msgid "Favorites"
+msgstr ""
+
+#. i18n: file: dialogs/join-chat-room-dialog.ui:63
+#. i18n: ectx: property (text), widget (QPushButton, addFavoritePushButton)
+#: rc.cpp:62
+msgid "Add Room"
+msgstr ""
+
+#. i18n: file: dialogs/join-chat-room-dialog.ui:73
+#. i18n: ectx: property (text), widget (QPushButton, removeFavoritePushButton)
+#: rc.cpp:65
+#, fuzzy
+#| msgid "Remove Group"
+msgid "Remove Room"
+msgstr "Poista ryhmä"
+
+#. i18n: file: dialogs/join-chat-room-dialog.ui:98
+#. i18n: ectx: attribute (title), widget (QWidget, recentTab)
+#: rc.cpp:68
+msgid "Recent"
+msgstr ""
+
+#. i18n: file: dialogs/join-chat-room-dialog.ui:112
+#. i18n: ectx: property (text), widget (QPushButton, removeRecentPushButton)
+#: rc.cpp:71
+#, fuzzy
+#| msgid "Remove Group"
+msgid "Remove"
+msgstr "Poista ryhmä"
+
+#. i18n: file: dialogs/join-chat-room-dialog.ui:122
+#. i18n: ectx: property (text), widget (QPushButton, clearRecentPushButton)
+#: rc.cpp:74
+msgid "Clear list"
+msgstr ""
+
+#. i18n: file: dialogs/join-chat-room-dialog.ui:145
+#. i18n: ectx: attribute (title), widget (QWidget, queryTab)
+#. i18n: file: dialogs/join-chat-room-dialog.ui:176
+#. i18n: ectx: property (text), widget (QPushButton, queryPushButton)
+#: rc.cpp:77 rc.cpp:86
+msgid "Query"
+msgstr ""
+
+#. i18n: file: dialogs/join-chat-room-dialog.ui:151
+#. i18n: ectx: property (text), widget (QLabel, serverLabel)
+#: rc.cpp:80
+msgid "Server to be queried:"
+msgstr ""
+
+#. i18n: file: dialogs/join-chat-room-dialog.ui:163
+#. i18n: ectx: property (clickMessage), widget (KLineEdit, serverLineEdit)
+#: rc.cpp:83
+msgid "Leave blank for the selected account's default server"
+msgstr ""
+
+#. i18n: file: dialogs/join-chat-room-dialog.ui:186
+#. i18n: ectx: property (text), widget (QPushButton, stopPushButton)
+#: rc.cpp:89
+msgid "Stop"
+msgstr ""
+
+#. i18n: file: dialogs/join-chat-room-dialog.ui:217
+#. i18n: ectx: property (clickMessage), widget (KLineEdit, filterBar)
+#: rc.cpp:92
+#, fuzzy
+#| msgid "Enter chat room:"
+msgid "Search rooms"
+msgstr "Siirry chat-huoneeseen:"
+
+#. i18n: file: tooltips/contacttooltip.ui:126
+#. i18n: ectx: property (text), widget (QLabel, blockedLabel)
+#: rc.cpp:95
+msgid "User is blocked"
+msgstr "Käyttäjä on torjuttu"
+
+#. i18n: file: main-widget.ui:14
+#. i18n: ectx: property (windowTitle), widget (QMainWindow, MainWindow)
+#: rc.cpp:98
+msgid "KDE IM Contacts"
+msgstr ""
+
+#: rooms-model.cpp:72
+msgid "Password required"
+msgstr ""
+
+#: rooms-model.cpp:74
+msgid "No password required"
+msgstr ""
+
+#: rooms-model.cpp:94
+msgid "Member count"
+msgstr ""
+
+#: rooms-model.cpp:114
+msgctxt "Chatrooms name"
+msgid "Name"
+msgstr ""
+
+#: rooms-model.cpp:116
+msgctxt "Chatrooms description"
+msgid "Description"
+msgstr ""
+
+#: context-menu.cpp:93
+msgid "Start Chat..."
+msgstr "Aloita chat..."
+
+#: context-menu.cpp:109
+msgid "Start Audio Call..."
+msgstr "Aloita äänipuhelu..."
+
+#: context-menu.cpp:119
+msgid "Start Video Call..."
+msgstr "Aloita videopuhelu..."
+
+#: context-menu.cpp:139
+msgid "Share my desktop..."
+msgstr "Jaa työpöytäni..."
+
+#: context-menu.cpp:161
+msgid "Presence message link"
+msgid_plural "Presence message links"
+msgstr[0] "Läsnäoloviestin linkki"
+msgstr[1] "Läsnäoloviestin linkit"
+
+#: context-menu.cpp:176
+msgid "Remove Contact From This Group"
+msgstr "Poista yhteystieto tästä ryhmästä"
+
+#: context-menu.cpp:180
+msgid "Move to Group"
+msgstr "Siirrä ryhmään"
+
+#: context-menu.cpp:198
+msgid "Create New Group..."
+msgstr "Luo uusi ryhmä..."
+
+#: context-menu.cpp:214
+msgid "Re-request Contact Authorization"
+msgstr ""
+
+#: context-menu.cpp:216
+msgid "Resend Contact Authorization"
+msgstr ""
+
+#: context-menu.cpp:222
+msgid "Unblock Contact"
+msgstr "Peru yhteystiedon torjunta"
+
+#: context-menu.cpp:225
+msgid "Block Contact"
+msgstr "Torju yhteystieto"
+
+#: context-menu.cpp:230
+msgid "Remove Contact"
+msgstr "Poista yhteystieto"
+
+#: context-menu.cpp:235
+msgid "Show Info..."
+msgstr "Näytä tiedot..."
+
+#: context-menu.cpp:258
+msgid "Rename Group..."
+msgstr "Muuta ryhmän nimeä..."
+
+#: context-menu.cpp:264
+msgid "Delete Group"
+msgstr "Poista ryhmä"
+
+#: context-menu.cpp:419 context-menu.cpp:444
+msgid "New Group Name"
+msgstr "Uuden ryhmän nimi"
+
+#: context-menu.cpp:420 context-menu.cpp:445
+msgid "Please enter the new group name"
+msgstr "Anna uudelle ryhmälle nimi"
+
+#: context-menu.cpp:474
+#, kde-format
+msgid ""
+"Do you really want to remove group %1?\n"
+"\n"
+"Note that all contacts will be moved to group 'Ungrouped'"
+msgstr ""
+"Haluatko varmasti poistaa ryhmän %1?\n"
+"\n"
+"Huomaa, että sen kaikki yhteystiedot siirretään ryhmään ”Ryhmittämättömät”"
+
+#: context-menu.cpp:476
+msgid "Remove Group"
+msgstr "Poista ryhmä"
+
+#~ msgid "Configure accounts..."
+#~ msgstr "Tilien asetukset..."
+
+#~ msgid "Account:"
+#~ msgstr "Tili:"
+
+#~ msgid "Screen Name:"
+#~ msgstr "Näyttönimi:"

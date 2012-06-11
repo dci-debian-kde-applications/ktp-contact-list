@@ -1,0 +1,897 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Yuri Chornoivan <yurchor@ukr.net>, 2010, 2011, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2012-06-02 03:26+0200\n"
+"PO-Revision-Date: 2012-05-06 09:45+0300\n"
+"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
+"Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.5\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+#: account-button.cpp:71
+msgctxt "@action:inmenu This is an IM user status"
+msgid "Available"
+msgstr "Доступний"
+
+#: account-button.cpp:72
+msgctxt "@action:inmenu This is an IM user status"
+msgid "Away"
+msgstr "Відсутній"
+
+#: account-button.cpp:73
+msgctxt "@action:inmenu This is an IM user status"
+msgid "Be right back"
+msgstr "Зараз повернусь"
+
+#: account-button.cpp:74
+msgctxt "@action:inmenu This is an IM user status"
+msgid "Busy"
+msgstr "Зайнятий"
+
+#: account-button.cpp:75
+msgctxt "@action:inmenu This is an IM user status"
+msgid "Do not disturb"
+msgstr "Не турбувати"
+
+#: account-button.cpp:76
+msgctxt "@action:inmenu This is an IM user status"
+msgid "Extended Away"
+msgstr "Немає на місці"
+
+#: account-button.cpp:77
+msgctxt "@action:inmenu This is an IM user status"
+msgid "Invisible"
+msgstr "Невидимий"
+
+#: account-button.cpp:78
+msgctxt "@action:inmenu This is an IM user status"
+msgid "Offline"
+msgstr "Поза мережею"
+
+#: account-button.cpp:82
+msgctxt "@action:inmenu This is the IM presence message"
+msgid "Set message..."
+msgstr "Встановити повідомлення…"
+
+#: global-presence-chooser.cpp:93
+msgid "Configure Custom Presences..."
+msgstr "Налаштувати нетипові повідомлення щодо присутності…"
+
+#: global-presence-chooser.cpp:100
+msgid "Now listening to..."
+msgstr "Зараз слухає…"
+
+#: global-presence-chooser.cpp:183
+msgid "Click to change your presence message"
+msgstr "Натисніть, щоб змінити ваше повідомлення про присутність"
+
+#: global-presence-chooser.cpp:220
+msgctxt "Presence string when the account is connecting"
+msgid "Connecting..."
+msgstr "Встановлення з’єднання…"
+
+#: global-presence-chooser.cpp:281
+msgid ""
+"This plugin is currently disabled. Do you want to enable it and use as your "
+"presence?"
+msgstr ""
+"Цей додаток вимкнено. Бажаєте увімкнути його і скористатися ним для показу "
+"повідомлень щодо присутності."
+
+#: global-presence-chooser.cpp:282
+msgid "Plugin disabled"
+msgstr "Додаток вимкнено"
+
+#: dialogs/custom-presence-dialog.cpp:70
+msgid "Edit Custom Presences"
+msgstr "Редагування нетипових повідомлень присутності"
+
+#: dialogs/custom-presence-dialog.cpp:89
+msgid "Set custom available message..."
+msgstr "Встановити нетипові повідомлення щодо доступності…"
+
+#: dialogs/custom-presence-dialog.cpp:90
+msgid "Set custom busy message..."
+msgstr "Встановити нетипові повідомлення щодо зайнятості…"
+
+#: dialogs/custom-presence-dialog.cpp:91
+msgid "Set custom away message..."
+msgstr "Встановити нетипове повідомлення щодо відсутності…"
+
+#: dialogs/custom-presence-dialog.cpp:92
+msgid "Set custom extended away message..."
+msgstr "Встановити нетипове розширене повідомлення щодо відсутності…"
+
+#: dialogs/custom-presence-dialog.cpp:102
+msgid "Add Presence"
+msgstr "Додати повідомлення щодо відсутності"
+
+#: dialogs/custom-presence-dialog.cpp:103
+msgid "Remove Presence"
+msgstr "Вилучити повідомлення щодо відсутності"
+
+#: dialogs/remove-contact-dialog.cpp:41
+msgid "Remove the selected contact?"
+msgstr "Вилучити позначений запис контакту?"
+
+#: dialogs/join-chat-room-dialog.cpp:197
+msgid "This room is already in your favorites."
+msgstr "Цю кімнату вже додано до улюблених."
+
+#: dialogs/join-chat-room-dialog.cpp:199
+msgid "Add room"
+msgstr "Додавання кімнати"
+
+#: dialogs/join-chat-room-dialog.cpp:199
+msgid "Name"
+msgstr "Назва"
+
+#: filter-bar.cpp:39
+msgctxt "@info:tooltip"
+msgid "Hide Filter Bar"
+msgstr "Приховати смужку фільтрування"
+
+#: filter-bar.cpp:43
+msgctxt "@label:textbox"
+msgid "Filter:"
+msgstr "Фільтр:"
+
+#: contact-list-widget.cpp:142
+msgid "You have no IM accounts configured. Would you like to do that now?"
+msgstr ""
+"Вами ще не налаштовано жодного облікового запису обміну повідомленнями. "
+"Бажаєте налаштувати такий запис?"
+
+#: contact-list-widget.cpp:143
+msgid "No Accounts Found"
+msgstr "Не знайдено жодного облікового запису"
+
+#: contact-list-widget.cpp:172
+msgid ""
+"It appears you do not have the IM Accounts control module installed. Please "
+"install telepathy-accounts-kcm package."
+msgstr ""
+"Здається, у вашій системі не встановлено модуль керування обліковими "
+"записами обміну повідомленнями. Будь ласка, встановіть пакунок telepathy-"
+"accounts-kcm."
+
+#: contact-list-widget.cpp:173
+msgid "IM Accounts KCM Plugin Is Not Installed"
+msgstr "Не встановлено модуль керування обліковими записами"
+
+#: contact-list-widget.cpp:435
+#, kde-format
+msgid "Choose files to send to %1"
+msgstr "Виберіть файли, які слід надіслати %1"
+
+#: tooltips/contacttooltip.cpp:59
+msgctxt "This is an IM user status"
+msgid "Unknown"
+msgstr "Невідомий"
+
+#: tooltips/contacttooltip.cpp:69
+msgctxt "This is an IM user status"
+msgid "Error Getting Presence"
+msgstr "Помилка під час спроби отримання даних присутності"
+
+#: main-widget.cpp:85
+msgid "Add New Contacts..."
+msgstr "Додати нові контакти…"
+
+#: main-widget.cpp:89
+msgid "Show/Hide Groups"
+msgstr "Показати або сховати групи"
+
+#: main-widget.cpp:127
+msgid "Hide/Show Offline Users"
+msgstr "Показати або сховати тих, хто не у мережі"
+
+#: main-widget.cpp:133
+msgid "List is sorted by name. Click to sort by presence."
+msgstr ""
+"Список впорядковано за іменами. Натисніть, щоб впорядкувати його за "
+"присутністю."
+
+#: main-widget.cpp:134
+msgid "List is sorted by presence. Click to sort by name."
+msgstr ""
+"Список впорядковано за присутністю. Натисніть, щоб впорядкувати його за "
+"іменами."
+
+#: main-widget.cpp:141
+msgid "Find Contact"
+msgstr "Знайти контакт"
+
+#: main-widget.cpp:158
+msgid "Instant Messaging Settings..."
+msgstr "Параметри обміну повідомленнями…"
+
+#: main-widget.cpp:164
+msgid "Contact List Type"
+msgstr "Тип списку контактів"
+
+#: main-widget.cpp:165
+msgid "Use Full List"
+msgstr "Повний список"
+
+#: main-widget.cpp:173
+msgid "Use Compact List"
+msgstr "Компактний список"
+
+#: main-widget.cpp:184
+msgid "Shown Contacts"
+msgstr "Показані контакти"
+
+#: main-widget.cpp:191
+msgid "Show all contacts"
+msgstr "Показати всі контакти"
+
+#: main-widget.cpp:198
+msgid "Show unblocked contacts"
+msgstr "Показати незаблоковані контакти"
+
+#: main-widget.cpp:205
+msgid "Show blocked contacts"
+msgstr "Показати блоковані контакти"
+
+#: main-widget.cpp:222
+msgid "Join Chat Room..."
+msgstr "Приєднатися до кімнати балачки…"
+
+#: main-widget.cpp:302
+msgid ""
+"Something unexpected happened to the core part of your Instant Messaging "
+"system and it couldn't be initialized. Try restarting the Contact List."
+msgstr ""
+"У основній частині системи обміну повідомленнями сталася якась помилка, отже "
+"її не вдалося ініціалізувати. Спробуйте перезапустити список контактів."
+
+#: main-widget.cpp:304
+msgid "IM system failed to initialize"
+msgstr "Не вдалося ініціалізувати систему обміну повідомленнями"
+
+#: main-widget.cpp:338
+msgid ""
+"Seems like you forgot to select an account. Also do not forget to connect it "
+"first."
+msgstr ""
+"Здається, ви забули позначити обліковий запис. Не забудьте спочатку "
+"встановити з ним з’єднання."
+
+#: main-widget.cpp:339
+msgid "No Account Selected"
+msgstr "Не вказано облікового запису"
+
+#: main-widget.cpp:343
+msgid ""
+"An error we did not anticipate just happened and so the contact could not be "
+"added. Sorry."
+msgstr ""
+"Сталася непередбачена нами помилка, контакт не вдалося додати. Вибачте."
+
+#: main-widget.cpp:344
+msgid "Account Error"
+msgstr "Помилка облікового запису"
+
+#: main-widget.cpp:440
+msgid ""
+"You do not have any other presence controls active (a Presence widget for "
+"example).\n"
+"Do you want to stay online or would you rather go offline?"
+msgstr ""
+"Жоден з інших засобів керування станом присутності (наприклад, віджет "
+"присутності) не використано.\n"
+"Залишити стан «у мережі» чи перейти до стану «поза мережею»?"
+
+#: main-widget.cpp:442
+msgid "No Other Presence Controls Found"
+msgstr "Не знайдено інших засобів керування станом присутності"
+
+#: main-widget.cpp:443
+msgid "Stay Online"
+msgstr "Залишатися в мережі"
+
+#: main-widget.cpp:444
+msgid "Go Offline"
+msgstr "Вийти з мережі"
+
+#: contact-overlays.cpp:132 contact-overlays.cpp:133
+msgid "Start Chat"
+msgstr "Початок спілкування"
+
+#: contact-overlays.cpp:133
+msgid "Start a text chat"
+msgstr "Почати текстове спілкування"
+
+#: contact-overlays.cpp:144 contact-overlays.cpp:145
+msgid "Start Audio Call"
+msgstr "Початок аудіоспілкування"
+
+#: contact-overlays.cpp:145
+msgid "Start an audio call"
+msgstr "Почати аудіоспілкування"
+
+#: contact-overlays.cpp:157 contact-overlays.cpp:158
+msgid "Start Video Call"
+msgstr "Початок відеоспілкування"
+
+#: contact-overlays.cpp:158
+msgid "Start a video call"
+msgstr "Почати відеоспілкування"
+
+#: contact-overlays.cpp:169 contact-overlays.cpp:170 context-menu.cpp:129
+msgid "Send File..."
+msgstr "Надіслати файл…"
+
+#: contact-overlays.cpp:170
+msgid "Send a file"
+msgstr "Надсилання файла"
+
+#: contact-overlays.cpp:181 contact-overlays.cpp:182
+msgid "Share my desktop"
+msgstr "Оприлюднити зображення стільниці"
+
+#: contact-overlays.cpp:182
+msgid "Share desktop using RFB"
+msgstr "Оприлюднити зображення стільниці за допомогою RFB"
+
+#: main.cpp:36 main.cpp:37
+msgid "KDE Telepathy Contact List"
+msgstr "Список контактів Telepathy у KDE"
+
+#: main.cpp:38
+msgid "(C) 2011, Martin Klapetek"
+msgstr "© Martin Klapetek, 2011"
+
+#: main.cpp:40
+msgctxt "@info:credit"
+msgid "Martin Klapetek"
+msgstr "Martin Klapetek"
+
+#: main.cpp:40
+msgid "Developer"
+msgstr "Розробник"
+
+#: main.cpp:48
+msgid "Show Telepathy debugging information"
+msgstr "Показати діагностичні дані Telepathy"
+
+#: rc.cpp:1
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Юрій Чорноіван"
+
+#: rc.cpp:2
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "yurchor@ukr.net"
+
+#. i18n: file: dialogs/contact-info.ui:14
+#. i18n: ectx: property (windowTitle), widget (QWidget, ContactInfo)
+#: rc.cpp:5
+msgid "Dialog"
+msgstr "Діалогове вікно"
+
+#. i18n: file: dialogs/contact-info.ui:28
+#. i18n: ectx: property (text), widget (QLabel, avatarLabel)
+#: rc.cpp:8
+msgid "Avatar Here"
+msgstr "Аватар"
+
+#. i18n: file: dialogs/contact-info.ui:37
+#. i18n: ectx: property (text), widget (QLabel, idLabel)
+#: rc.cpp:11
+msgid "ContactID"
+msgstr "Ід. контакту"
+
+#. i18n: file: dialogs/contact-info.ui:59
+#. i18n: ectx: property (text), widget (QLabel, nameLabel)
+#: rc.cpp:14
+msgid "Contact Display Name"
+msgstr "Показане ім’я контакту"
+
+#. i18n: file: dialogs/contact-info.ui:69
+#. i18n: ectx: property (text), widget (QLabel, presenceLabel)
+#: rc.cpp:17
+msgid "Presence String"
+msgstr "Рядок присутності"
+
+#. i18n: file: dialogs/contact-info.ui:114
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: rc.cpp:20
+msgid "Contact can see when you are online:"
+msgstr "Співрозмовник може бачити, коли ви у мережі:"
+
+#. i18n: file: dialogs/contact-info.ui:121
+#. i18n: ectx: property (text), widget (QLabel, publishStateLabel)
+#. i18n: file: dialogs/contact-info.ui:135
+#. i18n: ectx: property (text), widget (QLabel, subscriptionStateLabel)
+#. i18n: file: dialogs/contact-info.ui:149
+#. i18n: ectx: property (text), widget (QLabel, blockedLabel)
+#: rc.cpp:23 rc.cpp:29 rc.cpp:35
+msgid "TextLabel"
+msgstr "TextLabel"
+
+#. i18n: file: dialogs/contact-info.ui:128
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: rc.cpp:26
+msgid "You can see when the contact is online:"
+msgstr "Ви зможете бачити, коли співрозмовники у мережі:"
+
+#. i18n: file: dialogs/contact-info.ui:142
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: rc.cpp:32
+msgid "Contact is blocked:"
+msgstr "Контакт заблоковано:"
+
+#. i18n: file: dialogs/remove-contact-dialog.ui:23
+#. i18n: ectx: property (windowTitle), widget (QWidget, RemoveContactDialog)
+#: rc.cpp:38
+msgid "Remove contact"
+msgstr "Вилучення контакту"
+
+#. i18n: file: dialogs/remove-contact-dialog.ui:47
+#. i18n: ectx: property (text), widget (QLabel, textLabel)
+#: rc.cpp:41
+msgid "Message"
+msgstr "Повідомлення"
+
+#. i18n: file: dialogs/remove-contact-dialog.ui:124
+#. i18n: ectx: property (text), widget (QLabel, contactAvatarLabel)
+#: rc.cpp:44
+msgid "Avatar"
+msgstr "Аватар"
+
+#. i18n: file: dialogs/remove-contact-dialog.ui:161
+#. i18n: ectx: property (text), widget (QLabel, contactAliasLabel)
+#: rc.cpp:47
+msgid "Alias"
+msgstr "Псевдонім"
+
+#. i18n: file: dialogs/remove-contact-dialog.ui:229
+#. i18n: ectx: property (text), widget (QCheckBox, blockCheckbox)
+#: rc.cpp:50
+msgid "Block contact"
+msgstr "Заблокувати контакт"
+
+#. i18n: file: dialogs/join-chat-room-dialog.ui:20
+#. i18n: ectx: property (windowTitle), widget (QWidget, JoinChatRoomDialog)
+#: rc.cpp:53
+msgid "Join Chatroom"
+msgstr "Приєднання до кімнати спілкування"
+
+#. i18n: file: dialogs/join-chat-room-dialog.ui:29
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:56
+msgid "Enter chat room:"
+msgstr "Вхід до кімнати спілкування:"
+
+#. i18n: file: dialogs/join-chat-room-dialog.ui:47
+#. i18n: ectx: attribute (title), widget (QWidget, favoritesTab)
+#: rc.cpp:59
+msgid "Favorites"
+msgstr "Улюблені"
+
+#. i18n: file: dialogs/join-chat-room-dialog.ui:63
+#. i18n: ectx: property (text), widget (QPushButton, addFavoritePushButton)
+#: rc.cpp:62
+msgid "Add Room"
+msgstr "Додати кімнату"
+
+#. i18n: file: dialogs/join-chat-room-dialog.ui:73
+#. i18n: ectx: property (text), widget (QPushButton, removeFavoritePushButton)
+#: rc.cpp:65
+msgid "Remove Room"
+msgstr "Вилучити кімнату"
+
+#. i18n: file: dialogs/join-chat-room-dialog.ui:98
+#. i18n: ectx: attribute (title), widget (QWidget, recentTab)
+#: rc.cpp:68
+msgid "Recent"
+msgstr "Нещодавні"
+
+#. i18n: file: dialogs/join-chat-room-dialog.ui:112
+#. i18n: ectx: property (text), widget (QPushButton, removeRecentPushButton)
+#: rc.cpp:71
+msgid "Remove"
+msgstr "Вилучити"
+
+#. i18n: file: dialogs/join-chat-room-dialog.ui:122
+#. i18n: ectx: property (text), widget (QPushButton, clearRecentPushButton)
+#: rc.cpp:74
+msgid "Clear list"
+msgstr "Спорожнити список"
+
+#. i18n: file: dialogs/join-chat-room-dialog.ui:145
+#. i18n: ectx: attribute (title), widget (QWidget, queryTab)
+#. i18n: file: dialogs/join-chat-room-dialog.ui:176
+#. i18n: ectx: property (text), widget (QPushButton, queryPushButton)
+#: rc.cpp:77 rc.cpp:86
+msgid "Query"
+msgstr "Надіслати запит"
+
+#. i18n: file: dialogs/join-chat-room-dialog.ui:151
+#. i18n: ectx: property (text), widget (QLabel, serverLabel)
+#: rc.cpp:80
+msgid "Server to be queried:"
+msgstr "Сервер для запитів:"
+
+#. i18n: file: dialogs/join-chat-room-dialog.ui:163
+#. i18n: ectx: property (clickMessage), widget (KLineEdit, serverLineEdit)
+#: rc.cpp:83
+msgid "Leave blank for the selected account's default server"
+msgstr ""
+"Не заповнюйте, якщо хочете користуватися типовим сервером облікового запису"
+
+#. i18n: file: dialogs/join-chat-room-dialog.ui:186
+#. i18n: ectx: property (text), widget (QPushButton, stopPushButton)
+#: rc.cpp:89
+msgid "Stop"
+msgstr "Зупинити"
+
+#. i18n: file: dialogs/join-chat-room-dialog.ui:217
+#. i18n: ectx: property (clickMessage), widget (KLineEdit, filterBar)
+#: rc.cpp:92
+msgid "Search rooms"
+msgstr "Шукати кімнати"
+
+#. i18n: file: tooltips/contacttooltip.ui:126
+#. i18n: ectx: property (text), widget (QLabel, blockedLabel)
+#: rc.cpp:95
+msgid "User is blocked"
+msgstr "Користувача заблоковано"
+
+#. i18n: file: main-widget.ui:14
+#. i18n: ectx: property (windowTitle), widget (QMainWindow, MainWindow)
+#: rc.cpp:98
+msgid "KDE IM Contacts"
+msgstr "Список контактів у KDE"
+
+#: rooms-model.cpp:72
+msgid "Password required"
+msgstr "Потрібен пароль"
+
+#: rooms-model.cpp:74
+msgid "No password required"
+msgstr "Пароль не потрібен"
+
+#: rooms-model.cpp:94
+msgid "Member count"
+msgstr "Кількість учасників"
+
+#: rooms-model.cpp:114
+msgctxt "Chatrooms name"
+msgid "Name"
+msgstr "Назва"
+
+#: rooms-model.cpp:116
+msgctxt "Chatrooms description"
+msgid "Description"
+msgstr "Опис"
+
+#: context-menu.cpp:93
+msgid "Start Chat..."
+msgstr "Почати спілкування…"
+
+#: context-menu.cpp:109
+msgid "Start Audio Call..."
+msgstr "Почати аудіоспілкування…"
+
+#: context-menu.cpp:119
+msgid "Start Video Call..."
+msgstr "Почати відеоспілкування…"
+
+#: context-menu.cpp:139
+msgid "Share my desktop..."
+msgstr "Оприлюднити зображення стільниці…"
+
+#: context-menu.cpp:161
+msgid "Presence message link"
+msgid_plural "Presence message links"
+msgstr[0] "Посилання рядка присутності"
+msgstr[1] "Посилання рядка присутності"
+msgstr[2] "Посилання рядка присутності"
+msgstr[3] "Посилання рядка присутності"
+
+#: context-menu.cpp:176
+msgid "Remove Contact From This Group"
+msgstr "Вилучити контакт з цієї групи"
+
+#: context-menu.cpp:180
+msgid "Move to Group"
+msgstr "Пересунути до групи"
+
+#: context-menu.cpp:198
+msgid "Create New Group..."
+msgstr "Створити групу…"
+
+#: context-menu.cpp:214
+msgid "Re-request Contact Authorization"
+msgstr "Надіслати повторний запит щодо уповноваження"
+
+#: context-menu.cpp:216
+msgid "Resend Contact Authorization"
+msgstr "Повторно надіслати контактові дані для уповноваження"
+
+#: context-menu.cpp:222
+msgid "Unblock Contact"
+msgstr "Розблокувати контакт"
+
+#: context-menu.cpp:225
+msgid "Block Contact"
+msgstr "Заблокувати контакт"
+
+#: context-menu.cpp:230
+msgid "Remove Contact"
+msgstr "Вилучити контакт"
+
+#: context-menu.cpp:235
+msgid "Show Info..."
+msgstr "Показати дані…"
+
+#: context-menu.cpp:258
+msgid "Rename Group..."
+msgstr "Перейменувати групу…"
+
+#: context-menu.cpp:264
+msgid "Delete Group"
+msgstr "Вилучити групу"
+
+#: context-menu.cpp:419 context-menu.cpp:444
+msgid "New Group Name"
+msgstr "Назва нової групи"
+
+#: context-menu.cpp:420 context-menu.cpp:445
+msgid "Please enter the new group name"
+msgstr "Будь ласка, вкажіть назву нової групи"
+
+#: context-menu.cpp:474
+#, kde-format
+msgid ""
+"Do you really want to remove group %1?\n"
+"\n"
+"Note that all contacts will be moved to group 'Ungrouped'"
+msgstr ""
+"Бажаєте вилучити групу %1?\n"
+"\n"
+"Зауважте, що всі записи контактів з групи буде пересунуто до групи «Без "
+"групи»."
+
+#: context-menu.cpp:476
+msgid "Remove Group"
+msgstr "Вилучити групу"
+
+#~ msgid "Account:"
+#~ msgstr "Обліковий запис:"
+
+#~ msgid "Screen Name:"
+#~ msgstr "Екранне ім'я:"
+
+#~ msgid "Configure accounts..."
+#~ msgstr "Налаштувати облікові записи…"
+
+#~ msgid "Join chat room"
+#~ msgstr "Приєднання до кімнати спілкування"
+
+#~ msgid "Load from file..."
+#~ msgstr "Завантажити з файла…"
+
+#~ msgctxt "String in menu saying Use avatar from account X"
+#~ msgid "Use from %1"
+#~ msgstr "Використати з %1"
+
+#~ msgctxt "Dialog text"
+#~ msgid "You have no accounts set. Would you like to set one now?"
+#~ msgstr ""
+#~ "Вами ще не налаштовано жодного облікового запису. Бажаєте налаштувати "
+#~ "такий запис?"
+
+#~ msgctxt "Dialog caption"
+#~ msgid "No accounts set"
+#~ msgstr "Немає облікових записів"
+
+#~ msgid "Please choose your avatar"
+#~ msgstr "Виберіть ваш аватар"
+
+#~ msgid "Telepathy KDE Contact List"
+#~ msgstr "Список контактів Telepathy у KDE"
+
+#~ msgid ""
+#~ "The file you have selected does not seem to be an image.\n"
+#~ "Please select an image file."
+#~ msgstr ""
+#~ "У вказаному вами файлі не зберігається даних зображення!\n"
+#~ "Вам слід вказати файл зображення."
+
+#~ msgid "Sort by presence"
+#~ msgstr "Впорядкувати за присутністю"
+
+#~ msgid "Sort by name"
+#~ msgstr "Впорядкувати за назвою"
+
+#~ msgid "Configure Accounts"
+#~ msgstr "Налаштування облікових записів"
+
+#~ msgid "Choose a file"
+#~ msgstr "Виберіть файл"
+
+#~ msgid "Form"
+#~ msgstr "Форма"
+
+#~ msgctxt "This is an IM user status"
+#~ msgid "Online"
+#~ msgstr "В мережі"
+
+#~ msgctxt "This is an IM user status"
+#~ msgid "Away"
+#~ msgstr "Відсутній"
+
+#~ msgctxt "This is an IM user status"
+#~ msgid "Busy"
+#~ msgstr "Зайнятий"
+
+#~ msgctxt "This is an IM user status"
+#~ msgid "Invisible"
+#~ msgstr "Невидимий"
+
+#~ msgctxt "This is an IM user status"
+#~ msgid "Offline"
+#~ msgstr "Поза мережею"
+
+#~ msgid ""
+#~ "The contact %1 added you to their contact list. Do you want to allow this "
+#~ "person to see your presence and add them to your contact list?"
+#~ msgstr ""
+#~ "Вас було додано до списку контактів %1. Хочете дозволити тому, хто вас "
+#~ "додав, переглядати дані щодо вашої присутності та додати його чи її до "
+#~ "вашого списку контактів?"
+
+#~ msgid "Subscription request"
+#~ msgstr "Запит щодо отримання даних"
+
+#~ msgid "Available"
+#~ msgstr "Доступний"
+
+#~ msgid "Busy"
+#~ msgstr "Зайнятий"
+
+#~ msgid "Away"
+#~ msgstr "Відсутній"
+
+#~ msgid "Extended Away"
+#~ msgstr "Немає на місці"
+
+#~ msgid "Invisible"
+#~ msgstr "Невидимий"
+
+#~ msgid "Offline"
+#~ msgstr "Поза мережею"
+
+#~ msgid "Control accounts presence"
+#~ msgstr "Визначення присутності облікових записів"
+
+#~ msgid "All at once"
+#~ msgstr "Всі одразу"
+
+#~ msgid "Separately"
+#~ msgstr "Окремо"
+
+#~ msgid ""
+#~ "Could not connect %1. Authentication failed (is your password correct?)"
+#~ msgstr ""
+#~ "Не вдалося встановити з’єднання з %1. Помилка розпізнавання (можливо, "
+#~ "пароль вказано неправильно)."
+
+#~ msgid ""
+#~ "Could not connect %1. There was a network error, check your connection"
+#~ msgstr ""
+#~ "Не вдалося встановити з’єднання з %1. Отримано повідомлення про помилку "
+#~ "мережі, перевірте чи працює з’єднання з мережею."
+
+#~ msgid "An unexpected error has occurred with %1: '%2'"
+#~ msgstr "З %1 сталася неочікувана помилка: «%2»"
+
+#~ msgid "Account %1 was disabled."
+#~ msgstr "Обліковий запис %1 було вимкнено."
+
+#~ msgid "Account %1 was removed."
+#~ msgstr "Обліковий запис %1 було вилучено."
+
+#~ msgid "Publish State:"
+#~ msgstr "Оприлюднення стану:"
+
+#~ msgid "Blocked:"
+#~ msgstr "Заблоковано:"
+
+#~ msgid "Whats this"
+#~ msgstr "Що це?"
+
+#~ msgid "Alias:"
+#~ msgstr "Псевдонім:"
+
+#~ msgid "Status:"
+#~ msgstr "Стан:"
+
+#~ msgid "Pin the filter bar"
+#~ msgstr "Закріпити смужку фільтрування"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Away"
+#~ msgstr "Відсутній"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Busy"
+#~ msgstr "Зайнятий"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Offline"
+#~ msgstr "Поза мережею"
+
+#~ msgid "Sorry, the image couldn't be processed."
+#~ msgstr "Вибачте, не вдалося обробити зображення."
+
+#~ msgid "Add contact"
+#~ msgstr "Додати контакт"
+
+#~ msgid "Hide offline"
+#~ msgstr "Приховати тих, хто поза мережею"
+
+#~ msgid "Ctrl+I"
+#~ msgstr "Ctrl+I"
+
+#~ msgid ""
+#~ "The Nepomuk Query Service client is not available on your system. "
+#~ "Contactlist requires the query service client to be available: please "
+#~ "check your system settings"
+#~ msgstr ""
+#~ "У вашій системі не вдалося виявити клієнтську частину служби запитів до "
+#~ "Nepomuk. Для роботи списку контактів потрібен доступ до цієї частини: "
+#~ "будь ласка, увімкніть клієнтську частину у «Системних параметрах»."
+
+#~ msgid ""
+#~ "It was not possible to query Nepomuk database. Please check your "
+#~ "installation and make sure Nepomuk is running."
+#~ msgstr ""
+#~ "Не вдалося виконати опитування бази даних Nepomuk. Будь ласка, перевірте, "
+#~ "чи належно встановлено Nepomuk і чи запущено його служби."
+
+#~ msgid "Add to metacontact"
+#~ msgstr "Додати до запису метаконтакту"
+
+#~ msgctxt "Adds a new metacontact"
+#~ msgid "Add new..."
+#~ msgstr "Додати новий…"
+
+#~ msgid "Please select the removal means for this contact"
+#~ msgstr "Будь ласка, виберіть спосіб вилучення цього запису"
+
+#~ msgid "Don't show me in his buddy list anymore"
+#~ msgstr "Не показувати мене надалі у списку співрозмовника"
+
+#~ msgid "Don't show him in my buddy list anymore"
+#~ msgstr "Не показувати цей запису у вашому списку співрозмовників"
+
+#~ msgid "Block him"
+#~ msgstr "Заблокувати"
+
+#~ msgid "Please enter the ID of the contact in question"
+#~ msgstr "Будь ласка, вкажіть ідентифікатор цього контакту"
+
+#~ msgid "An error occurred????"
+#~ msgstr "Сталася помилка…"
+
+#~ msgid "Impossible to start a chat"
+#~ msgstr "Не вдалося розпочати балачку"
+
+#~ msgid "Telepathy Nepomuk Enabled Contact List Prototype"
+#~ msgstr "Прототип списку контактів з використанням Telepathy і Nepomuk"
