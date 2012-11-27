@@ -42,6 +42,7 @@
 #include <QtGui/QToolTip>
 #include <QStyle>
 #include <QtGui/QPushButton>
+#include <QMenu>
 
 //A sneaky class that adds an extra entry to the end of the presence model
 //called "Configure Presences"
@@ -87,6 +88,10 @@ int PresenceModelExtended::rowCount(const QModelIndex &parent) const
 
 QVariant PresenceModelExtended::data(const QModelIndex &index, int role) const
 {
+    if (role == Qt::SizeHintRole) {
+        const QFontMetrics fontMetrics(KGlobalSettings::generalFont());
+        return QSize(0, qMax(fontMetrics.height(), (int)(KIconLoader::SizeSmall)) + 8);
+    }
     if (index.row() == rowCount(index.parent())-1) {
         switch(role) {
         case Qt::DisplayRole:
@@ -136,14 +141,20 @@ void PresenceModelExtended::sourceRowsRemoved(const QModelIndex &index, int star
 
 QModelIndex PresenceModelExtended::addTemporaryPresence(const KTp::Presence &presence)
 {
-    if (! presence.isValid()) {
-        removeTemporaryPresence();
+    int row = m_model->rowCount(QModelIndex());
+
+    //if the temp presence already exists, don't remove and readd it
+    //but simply replace it
+    if (m_temporaryPresence.isValid()) {
+        m_temporaryPresence = presence;
+        emit dataChanged(this->createIndex(row, 0), this->createIndex(row, 0));
+    } else {
+        kDebug() << "adding temp presence to the model";
+        beginInsertRows(QModelIndex(),row, row);
+        m_temporaryPresence = presence;
+        endInsertRows();
     }
 
-    int row = m_model->rowCount(QModelIndex());
-    beginInsertRows(QModelIndex(),row, row);
-    m_temporaryPresence = presence;
-    endInsertRows();
     return this->createIndex(row, 0);
 }
 
@@ -234,6 +245,16 @@ bool GlobalPresenceChooser::event(QEvent *e)
         repositionOverlays();
     }
 
+    if (e->type() == QEvent::ContextMenu) {
+        QMouseEvent *me = static_cast<QMouseEvent*>(e);
+        if (isEditable()) {
+            //we need to correctly position the menu, otherwise it just appears at (0;0)
+            m_lineEditContextMenu.data()->exec(me->globalPos());
+
+            return true;
+        }
+    }
+
     if (e->type() == QEvent::KeyPress) {
         QKeyEvent *ke = static_cast<QKeyEvent*>(e);
 
@@ -249,17 +270,31 @@ bool GlobalPresenceChooser::event(QEvent *e)
                 m_changePresenceMessageButton->show();
             }
         }
+        if (ke->key() == Qt::Key_Down || ke->key() == Qt::Key_Up) {
+            if (!isEditable()) {
+                showPopup();
+                return true;
+            }
+        }
     }
 
     if (e->type() == QEvent::FocusOut) {
         //just cancel editable and let it exec parent event()
+        if (!m_lineEditContextMenu.isNull()) {
+            if (!m_lineEditContextMenu.data()->isHidden()) {
+                //if we're showing the context menu, do not process this event further
+                return true;
+            }
+            //...otherwise delete the menu and hide the lineedit
+            m_lineEditContextMenu.data()->deleteLater();
+        }
         if (isEditable()) {
             setEditable(false);
             m_changePresenceMessageButton->show();
         }
     }
 
-    return QComboBox::event(e); // krazy:exclude=qclasses
+    return KComboBox::event(e); // krazy:exclude=qclasses
 }
 
 void GlobalPresenceChooser::onCurrentIndexChanged(int index)
@@ -322,12 +357,13 @@ void GlobalPresenceChooser::onCurrentIndexChanged(int index)
 
 void GlobalPresenceChooser::onPresenceChanged(const KTp::Presence &presence)
 {
-    m_modelExtended->removeTemporaryPresence();
-    kDebug();
     for (int i=0; i < count() ; i++) {
         KTp::Presence itemPresence = itemData(i, PresenceModel::PresenceRole).value<KTp::Presence>();
         if (itemPresence.type() == presence.type() && itemPresence.statusMessage() == presence.statusMessage()) {
             setCurrentIndex(i);
+            if (itemPresence != m_modelExtended->temporaryPresence()) {
+                m_modelExtended->removeTemporaryPresence();
+            }
             return;
         }
     }
@@ -370,6 +406,9 @@ void GlobalPresenceChooser::onChangePresenceMessageClicked()
     if (m_globalPresence->currentPresence().statusMessage().isEmpty()) {
         lineEdit()->clear();
     }
+
+    m_lineEditContextMenu = lineEdit()->createStandardContextMenu();
+
     lineEdit()->setFocus();
 }
 
@@ -381,7 +420,6 @@ void GlobalPresenceChooser::onConfirmPresenceMessageClicked()
     presence.setStatus(presence.type(), presence.status(), lineEdit()->text());
     QModelIndex newPresence = m_model->addPresence(presence); //m_model->addPresence(presence);
     setEditable(false);
-    kDebug() << newPresence.row();
     setCurrentIndex(newPresence.row());
     //this is needed because currentIndexChanged signal is not connected and that is to not crash contact list
     //because this signal is emitted once there is a valid model and that happens before AccountManager is ready

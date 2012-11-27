@@ -80,10 +80,10 @@ private Q_SLOTS:
     void toggleSearchWidget(bool show);
     void onAccountManagerReady(Tp::PendingOperation* op);
     void onAddContactRequest();
-    void onAddContactRequestFoundContacts(Tp::PendingOperation *operation);
     void onUseGlobalPresenceTriggered();
     void onUsePerAccountPresenceTriggered();
     void onJoinChatRoomRequested();                 /** join chat room action is triggered */
+    void onMakeCallRequested();
     void onCustomContextMenuRequested(const QPoint &point);
     void onGenericOperationFinished(Tp::PendingOperation *operation);   /** called when a Tp::PendingOperation finishes. Used to check for errors */
 
@@ -98,8 +98,8 @@ private:
 
 
     KAction                *m_addContactAction;
-    KAction                *m_groupContactsAction;
-    KAction                *m_showOfflineAction;
+    KDualAction            *m_groupContactsAction;
+    KDualAction            *m_showOfflineAction;
     KAction                *m_searchContactAction;
     KDualAction            *m_sortByPresenceAction;
 
