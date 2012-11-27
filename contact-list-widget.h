@@ -55,16 +55,15 @@ public Q_SLOTS:
 
     void onSwitchToFullView();
     void onSwitchToCompactView();
+    void onSwitchToMiniView();
 
     void onShowAllContacts();
     void onShowUnblockedContacts();
     void onShowBlockedContacts();
 
 private Q_SLOTS:
-    void onNewAccountAdded(const Tp::AccountPtr &account);
     void onContactListClicked(const QModelIndex &index);
     void onContactListDoubleClicked(const QModelIndex &index);
-    void onAccountConnectionStatusChanged(Tp::ConnectionStatus status);
 
     void onNewGroupModelItemsInserted(const QModelIndex &index, int start, int end);
     void addOverlayButtons();
@@ -90,12 +89,15 @@ protected:
     virtual void dragEnterEvent(QDragEnterEvent *event);
     virtual void dragMoveEvent(QDragMoveEvent *event);
     virtual void dragLeaveEvent(QDragLeaveEvent *event);
+    virtual void drawBranches(QPainter *painter, const QRect &rect, const QModelIndex &index) const;
 
 private:
     void requestFileTransferChannels(const Tp::AccountPtr& account,
                                      const Tp::ContactPtr& contact,
                                      const QStringList& filenames,
                                      const QDateTime& userActionTime);
+
+    void loadGroupStatesFromConfig();
 
     friend class ContextMenu;
     ContactListWidgetPrivate * const d_ptr;

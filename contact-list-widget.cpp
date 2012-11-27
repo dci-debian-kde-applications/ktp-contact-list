@@ -71,7 +71,7 @@ ContactListWidget::ContactListWidget(QWidget *parent)
     KConfigGroup guiConfigGroup(config, "GUI");
 
     d->delegate = new ContactDelegate(this);
-    d->compactDelegate = new ContactDelegateCompact(this);
+    d->compactDelegate = new ContactDelegateCompact(ContactDelegateCompact::Normal, this);
 
     d->model = new AccountsModel(this);
     d->groupsModel = new GroupsModel(d->model, this);
@@ -82,6 +82,7 @@ ContactListWidget::ContactListWidget(QWidget *parent)
     setModel(d->modelFilter);
     setSortingEnabled(true);
     sortByColumn(0, Qt::AscendingOrder);
+    loadGroupStatesFromConfig();
 
     connect(d->modelFilter, SIGNAL(rowsInserted(QModelIndex,int,int)),
             this, SLOT(onNewGroupModelItemsInserted(QModelIndex,int,int)));
@@ -100,14 +101,20 @@ ContactListWidget::ContactListWidget(QWidget *parent)
     viewport()->setAcceptDrops(true);
     setDropIndicatorShown(true);
 
-    if (guiConfigGroup.readEntry("selected_delegate", "compact") == QLatin1String("compact")) {
-        setItemDelegate(d->compactDelegate);
-    } else {
+    QString delegateMode = guiConfigGroup.readEntry("selected_delegate", "normal");
+
+    if (delegateMode == QLatin1String("full")) {
         setItemDelegate(d->delegate);
+    } else if (delegateMode == QLatin1String("mini")) {
+        setItemDelegate(d->compactDelegate);
+        d->compactDelegate->setListMode(ContactDelegateCompact::Mini);
+    } else {
+        setItemDelegate(d->compactDelegate);
+        d->compactDelegate->setListMode(ContactDelegateCompact::Normal);
     }
 
     addOverlayButtons();
-    emit enableOverlays(guiConfigGroup.readEntry("selected_delegate", "compact") == QLatin1String("full"));
+    emit enableOverlays(guiConfigGroup.readEntry("selected_delegate", "normal") == QLatin1String("full"));
 
     connect(this, SIGNAL(clicked(QModelIndex)),
             this, SLOT(onContactListClicked(QModelIndex)));
@@ -130,11 +137,6 @@ void ContactListWidget::setAccountManager(const Tp::AccountManagerPtr &accountMa
     Q_D(ContactListWidget);
     d->model->setAccountManager(accountManager);
 
-    connect(accountManager.data(), SIGNAL(newAccount(Tp::AccountPtr)),
-                this, SLOT(onNewAccountAdded(Tp::AccountPtr)));
-
-
-
     QList<Tp::AccountPtr> accounts = accountManager->allAccounts();
 
     if(accounts.count() == 0) {
@@ -145,13 +147,6 @@ void ContactListWidget::setAccountManager(const Tp::AccountManagerPtr &accountMa
             showSettingsKCM();
         }
     }
-
-    foreach (const Tp::AccountPtr &account, accounts) {
-        onNewAccountAdded(account);
-    }
-
-    expandAll();
-
 }
 
 AccountsModel* ContactListWidget::accountsModel()
@@ -180,46 +175,10 @@ void ContactListWidget::showSettingsKCM()
     dialog->exec();
 }
 
-void ContactListWidget::onAccountConnectionStatusChanged(Tp::ConnectionStatus status)
+void ContactListWidget::onContactListClicked(const QModelIndex& index)
 {
     Q_D(ContactListWidget);
 
-    kDebug() << "Connection status is" << status;
-
-    Tp::AccountPtr account(qobject_cast< Tp::Account* >(sender()));
-    QModelIndex index = d->model->index(qobject_cast<AccountsModelItem*>(d->model->accountItemForId(account->uniqueIdentifier())));
-
-    switch (status) {
-        case Tp::ConnectionStatusConnected:
-            setExpanded(index, true);
-            break;
-        case Tp::ConnectionStatusConnecting:
-            setExpanded(index, false);
-        default:
-            break;
-    }
-}
-
-void ContactListWidget::onNewAccountAdded(const Tp::AccountPtr& account)
-{
-    Q_ASSERT(account->isReady(Tp::Account::FeatureCore));
-
-    connect(account.data(),
-            SIGNAL(connectionStatusChanged(Tp::ConnectionStatus)),
-            this, SLOT(onAccountConnectionStatusChanged(Tp::ConnectionStatus)));
-
-    //FIXME get rid of that thing already
-//     m_avatarButton->loadAvatar(account);
-//     KSharedConfigPtr config = KGlobal::config();
-//     KConfigGroup avatarGroup(config, "Avatar");
-//     if (avatarGroup.readEntry("method", QString()) == QLatin1String("account")) {
-//         //this also updates the avatar if it was changed somewhere else
-//         m_avatarButton->selectAvatarFromAccount(avatarGroup.readEntry("source", QString()));
-//     }
-}
-
-void ContactListWidget::onContactListClicked(const QModelIndex& index)
-{
     if (!index.isValid()) {
         return;
     }
@@ -230,15 +189,20 @@ void ContactListWidget::onContactListClicked(const QModelIndex& index)
         KSharedConfigPtr config = KSharedConfig::openConfig(QLatin1String("ktelepathyrc"));
         KConfigGroup groupsConfig = config->group("GroupsState");
 
+        QString groupId = index.data(AccountsModel::IdRole).toString();
+
         if (isExpanded(index)) {
             collapse(index);
-            groupsConfig.writeEntry(index.data(AccountsModel::IdRole).toString(), false);
+            groupsConfig.writeEntry(groupId, false);
         } else {
             expand(index);
-            groupsConfig.writeEntry(index.data(AccountsModel::IdRole).toString(), true);
+            groupsConfig.writeEntry(groupId, true);
         }
 
         groupsConfig.config()->sync();
+
+        //replace the old value or insert new value if it isn't there yet
+        d->groupStates.insert(groupId, isExpanded(index));
     }
 }
 
@@ -321,6 +285,10 @@ void ContactListWidget::toggleGroups(bool show)
         d->modelFilter->setSourceModel(d->groupsModel);
     } else {
         d->modelFilter->setSourceModel(d->model);
+    }
+
+    for (int i = 0; i < d->modelFilter->rowCount(); i++) {
+        onNewGroupModelItemsInserted(d->modelFilter->index(i, 0, QModelIndex()), 0, 0);
     }
 }
 
@@ -470,19 +438,20 @@ void ContactListWidget::onNewGroupModelItemsInserted(const QModelIndex& index, i
 {
     Q_UNUSED(start);
     Q_UNUSED(end);
+    Q_D(ContactListWidget);
+
     if (!index.isValid()) {
         return;
     }
 
     //if there is no parent, we deal with top-level item that we want to expand/collapse, ie. group or account
     if (!index.parent().isValid()) {
-        KSharedConfigPtr config = KSharedConfig::openConfig(QLatin1String("ktelepathyrc"));
-        KConfigGroup groupsConfig = config->group("GroupsState");
 
         //we're probably dealing with group item, so let's check if it is expanded first
         if (!isExpanded(index)) {
             //if it's not expanded, check the config if we should expand it or not
-            if (groupsConfig.readEntry(index.data(AccountsModel::IdRole).toString(), false)) {
+            QString groupId = index.data(AccountsModel::IdRole).toString();
+            if (d->groupStates.value(groupId)) {
                 expand(index);
             }
         }
@@ -509,13 +478,30 @@ void ContactListWidget::onSwitchToCompactView()
     Q_D(ContactListWidget);
 
     setItemDelegate(d->compactDelegate);
+    d->compactDelegate->setListMode(ContactDelegateCompact::Normal);
     doItemsLayout();
 
     emit enableOverlays(false);
 
     KSharedConfigPtr config = KGlobal::config();
     KConfigGroup guiConfigGroup(config, "GUI");
-    guiConfigGroup.writeEntry("selected_delegate", "compact");
+    guiConfigGroup.writeEntry("selected_delegate", "normal");
+    guiConfigGroup.config()->sync();
+}
+
+void ContactListWidget::onSwitchToMiniView()
+{
+    Q_D(ContactListWidget);
+
+    setItemDelegate(d->compactDelegate);
+    d->compactDelegate->setListMode(ContactDelegateCompact::Mini);;
+    doItemsLayout();
+
+    emit enableOverlays(false);
+
+    KSharedConfigPtr config = KGlobal::config();
+    KConfigGroup guiConfigGroup(config, "GUI");
+    guiConfigGroup.writeEntry("selected_delegate", "mini");
     guiConfigGroup.config()->sync();
 }
 
@@ -786,5 +772,32 @@ void ContactListWidget::paintEvent(QPaintEvent *event)
         option.rect = d->dropIndicatorRect.adjusted(0,0,-1,-1);
         QPainter painter(viewport());
         style()->drawPrimitive(QStyle::PE_IndicatorItemViewItemDrop, &option, &painter, this);
+    }
+}
+
+void ContactListWidget::drawBranches(QPainter *painter, const QRect &rect, const QModelIndex &index) const
+{
+    Q_UNUSED(painter);
+    Q_UNUSED(rect);
+    Q_UNUSED(index);
+
+    // There is a 0px identation set in the constructor, with setIndentation(0).
+    // Because of that, no branches are shown, so they should be disabled completely (overriding drawBranches).
+    // Leaving branches enabled with 0px identation results in a 1px branch line on the left of all items,
+    // which looks like an artifact.
+    //See https://bugreports.qt-project.org/browse/QTBUG-26305
+}
+
+void ContactListWidget::loadGroupStatesFromConfig()
+{
+    Q_D(ContactListWidget);
+    d->groupStates.clear();
+
+    KConfig config(QLatin1String("ktelepathyrc"));
+    KConfigGroup groupsConfig = config.group("GroupsState");
+
+    Q_FOREACH(const QString &key, groupsConfig.keyList()) {
+        bool expanded = groupsConfig.readEntry(key, false);
+        d->groupStates.insert(key, expanded);
     }
 }

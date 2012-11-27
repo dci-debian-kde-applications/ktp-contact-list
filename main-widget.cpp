@@ -49,8 +49,10 @@
 #include <KProtocolInfo>
 #include <KSettings/Dialog>
 #include <KSharedConfig>
+#include <KStandardDirs>
 #include <KStandardShortcut>
 #include <KNotification>
+#include <KToolInvocation>
 
 #include "ui_main-widget.h"
 #include "account-buttons-panel.h"
@@ -76,23 +78,6 @@ MainWidget::MainWidget(QWidget *parent)
     setWindowIcon(KIcon("telepathy-kde"));
     setAutoSaveSettings();
 
-
-    KSharedConfigPtr config = KGlobal::config();
-    KConfigGroup guiConfigGroup(config, "GUI");
-
-    m_toolBar->setToolButtonStyle(Qt::ToolButtonIconOnly);
-
-    m_addContactAction = new KAction(KIcon("list-add-user"), i18n("Add New Contacts..."), this);
-
-    m_toolBar->addAction(m_addContactAction);
-
-    m_groupContactsAction = new KAction(KIcon("user-group-properties"), i18n("Show/Hide Groups"), this);
-    m_groupContactsAction->setCheckable(true);
-    m_groupContactsAction->setChecked(true);
-    //TODO: Toggle the tooltip with the button? eg. once its Show, after click its Hide .. ?
-
-    m_toolBar->addAction(m_groupContactsAction);
-
     Tp::AccountFactoryPtr  accountFactory = Tp::AccountFactory::create(QDBusConnection::sessionBus(),
                                                                        Tp::Features() << Tp::Account::FeatureCore
                                                                        << Tp::Account::FeatureAvatar
@@ -109,7 +94,8 @@ MainWidget::MainWidget(QWidget *parent)
     Tp::ContactFactoryPtr contactFactory = Tp::ContactFactory::create(Tp::Features()  << Tp::Contact::FeatureAlias
                                                                       << Tp::Contact::FeatureAvatarData
                                                                       << Tp::Contact::FeatureSimplePresence
-                                                                      << Tp::Contact::FeatureCapabilities);
+                                                                      << Tp::Contact::FeatureCapabilities
+                                                                      << Tp::Contact::FeatureClientTypes);
 
     Tp::ChannelFactoryPtr channelFactory = Tp::ChannelFactory::create(QDBusConnection::sessionBus());
 
@@ -122,9 +108,30 @@ MainWidget::MainWidget(QWidget *parent)
     connect(m_accountManager->becomeReady(), SIGNAL(finished(Tp::PendingOperation*)),
             this, SLOT(onAccountManagerReady(Tp::PendingOperation*)));
 
+    KSharedConfigPtr config = KGlobal::config();
+    KConfigGroup guiConfigGroup(config, "GUI");
 
+    m_toolBar->setToolButtonStyle(Qt::ToolButtonIconOnly);
 
-    m_showOfflineAction = new KAction(KIcon("meeting-attending-tentative"), i18n("Hide/Show Offline Users"), this);
+    m_addContactAction = new KAction(KIcon("list-add-user"), i18n("Add New Contacts..."), this);
+
+    m_toolBar->addAction(m_addContactAction);
+
+    m_groupContactsAction = new KDualAction(i18n("Contacts are shown by accounts. Click to show them in groups."),
+                                            i18n("Contacts are shown in groups. Click to show them in accounts."),
+                                            this);
+    m_groupContactsAction->setActiveIcon(KIcon("user-group-properties"));
+    m_groupContactsAction->setInactiveIcon(KIcon("user-group-properties"));
+    m_groupContactsAction->setCheckable(true);
+    m_groupContactsAction->setChecked(true);
+
+    m_toolBar->addAction(m_groupContactsAction);
+
+    m_showOfflineAction = new KDualAction(i18n("Offline contacts are hidden. Click to show them."),
+                                          i18n("Offline contacts are shown. Click to hide them."),
+                                          this);
+    m_showOfflineAction->setActiveIcon(KIcon("meeting-attending-tentative"));
+    m_showOfflineAction->setInactiveIcon(KIcon("meeting-attending-tentative"));
     m_showOfflineAction->setCheckable(true);
     m_showOfflineAction->setChecked(false);
 
@@ -166,15 +173,24 @@ MainWidget::MainWidget(QWidget *parent)
                                                                 m_contactsListView, SLOT(onSwitchToFullView())));
     delegateTypeGroup->actions().last()->setCheckable(true);
 
-    if (guiConfigGroup.readEntry("selected_delegate", "compact") == QLatin1String("full")) {
+    if (guiConfigGroup.readEntry("selected_delegate", "normal") == QLatin1String("full")) {
         delegateTypeGroup->actions().last()->setChecked(true);
     }
 
-    delegateTypeGroup->addAction(setDelegateTypeMenu->addAction(i18n("Use Compact List"),
+    delegateTypeGroup->addAction(setDelegateTypeMenu->addAction(i18n("Use Normal List"),
                                                                 m_contactsListView, SLOT(onSwitchToCompactView())));
     delegateTypeGroup->actions().last()->setCheckable(true);
 
-    if (guiConfigGroup.readEntry("selected_delegate", "compact") == QLatin1String("compact")) {
+    if (guiConfigGroup.readEntry("selected_delegate", "normal") == QLatin1String("normal")
+        || guiConfigGroup.readEntry("selected_delegate", "normal") == QLatin1String("compact")) { //needed for backwards compatibility
+        delegateTypeGroup->actions().last()->setChecked(true);
+    }
+
+    delegateTypeGroup->addAction(setDelegateTypeMenu->addAction(i18n("Use Minimalistic List"),
+                                                                     m_contactsListView, SLOT(onSwitchToMiniView())));
+    delegateTypeGroup->actions().last()->setCheckable(true);
+
+    if (guiConfigGroup.readEntry("selected_delegate", "normal") == QLatin1String("mini")) {
         delegateTypeGroup->actions().last()->setChecked(true);
     }
 
@@ -212,14 +228,19 @@ MainWidget::MainWidget(QWidget *parent)
     settingsButtonMenu->addMenu(setBlockedFilterMenu);
 
     if (guiConfigGroup.readEntry("selected_presence_chooser", "global") == QLatin1String("global")) {
-//         //hide account buttons and show global presence
-         onUseGlobalPresenceTriggered();
+        //hide account buttons and show global presence
+        onUseGlobalPresenceTriggered();
     }
 
     // Restore window geometry
     restoreGeometry(guiConfigGroup.readEntry("window_geometry", QByteArray()));
 
     settingsButtonMenu->addAction(i18n("Join Chat Room..."), this, SLOT(onJoinChatRoomRequested()));
+
+    if (!KStandardDirs::findExe("ktp-dialout-ui").isEmpty()) {
+        settingsButtonMenu->addAction(i18n("Make a Call..."), this, SLOT(onMakeCallRequested()));
+    }
+
     settingsButtonMenu->addSeparator();
     settingsButtonMenu->addMenu(helpMenu());
 
@@ -268,9 +289,11 @@ MainWidget::MainWidget(QWidget *parent)
 
     bool useGroups = guiConfigGroup.readEntry("use_groups", true);
     m_groupContactsAction->setChecked(useGroups);
+    m_groupContactsAction->setActive(useGroups);
 
     bool showOffline = guiConfigGroup.readEntry("show_offline", false);
     m_showOfflineAction->setChecked(showOffline);
+    m_showOfflineAction->setActive(showOffline);
 
     bool sortByPresence = guiConfigGroup.readEntry("sort_by_presence", true);
     m_sortByPresenceAction->setActive(sortByPresence);
@@ -329,39 +352,11 @@ void MainWidget::showMessageToUser(const QString& text, const MainWidget::System
     notification->sendEvent();
 }
 
-void MainWidget::onAddContactRequest() {
-    QWeakPointer<KTp::AddContactDialog> dialog = new KTp::AddContactDialog(m_contactsListView->accountsModel(), this);
-    if (dialog.data()->exec() == QDialog::Accepted) {
-        Tp::AccountPtr account = dialog.data()->account();
-        if (account.isNull()) {
-            KMessageBox::error(this,
-                               i18n("Seems like you forgot to select an account. Also do not forget to connect it first."),
-                               i18n("No Account Selected"));
-        }
-        else if (account->connection().isNull()) {
-            KMessageBox::error(this,
-                               i18n("An error we did not anticipate just happened and so the contact could not be added. Sorry."),
-                               i18n("Account Error"));
-        } else {
-            QStringList identifiers = QStringList() << dialog.data()->screenName();
-            Tp::PendingContacts* pendingContacts = account->connection()->contactManager()->contactsForIdentifiers(identifiers);
-            connect(pendingContacts, SIGNAL(finished(Tp::PendingOperation*)), SLOT(onAddContactRequestFoundContacts(Tp::PendingOperation*)));
-        }
-    }
-    delete dialog.data();
-}
-
-void MainWidget::onAddContactRequestFoundContacts(Tp::PendingOperation *operation) {
-    Tp::PendingContacts *pendingContacts = qobject_cast<Tp::PendingContacts*>(operation);
-
-    if (! pendingContacts->isError()) {
-        //request subscription
-        pendingContacts->manager()->requestPresenceSubscription(pendingContacts->contacts());
-    }
-    else {
-        kDebug() << pendingContacts->errorName();
-        kDebug() << pendingContacts->errorMessage();
-    }
+void MainWidget::onAddContactRequest()
+{
+    KTp::AddContactDialog *dialog = new KTp::AddContactDialog(m_contactsListView->accountsModel(), this);
+    dialog->setAttribute(Qt::WA_DeleteOnClose);
+    dialog->show();
 }
 
 void MainWidget::onCustomContextMenuRequested(const QPoint &pos)
@@ -420,6 +415,11 @@ void MainWidget::onJoinChatRoomRequested()
     }
 
     delete dialog.data();
+}
+
+void MainWidget::onMakeCallRequested()
+{
+    KToolInvocation::kdeinitExec(QLatin1String("ktp-dialout-ui"));
 }
 
 void MainWidget::closeEvent(QCloseEvent* e)
