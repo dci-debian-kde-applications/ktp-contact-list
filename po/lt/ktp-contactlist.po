@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l 10n\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-08-28 20:47+0200\n"
-"PO-Revision-Date: 2012-08-05 23:47+0300\n"
+"POT-Creation-Date: 2013-01-18 09:34+0100\n"
+"PO-Revision-Date: 2012-10-28 14:58+0200\n"
 "Last-Translator: Liudas Ališauskas <liudas.alisauskas@gmail.com>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -22,11 +22,11 @@ msgstr ""
 
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Andrius Štikonas"
+msgstr "Andrius Štikonas, Liudas Ališauskas"
 
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "stikonas@gmail.com"
+msgstr "stikonas@gmail.com, liudas@akmc.lt"
 
 #: account-button.cpp:71
 msgctxt "@action:inmenu This is an IM user status"
@@ -75,7 +75,7 @@ msgstr "Nustatyti žinutę..."
 
 #: contact-list-widget.cpp:144
 msgid "You have no IM accounts configured. Would you like to do that now?"
-msgstr "Jūs neturite TP sukonfigūruotų paskirų. Ar norite tai padaryti dabar?"
+msgstr "Jūs neturite sukonfigūruotų IM paskirų. Ar norite tai padaryti dabar?"
 
 #: contact-list-widget.cpp:145
 msgid "No Accounts Found"
@@ -86,55 +86,55 @@ msgid ""
 "It appears you do not have the IM Accounts control module installed. Please "
 "install telepathy-accounts-kcm package."
 msgstr ""
-"Atrodo, kad Jūs neturite įdiegti TP paskyrų kontrolės modulio. Prašome "
+"Atrodo, kad Jūs neturite įdiegto IM paskyrų kontrolės modulio. Prašome "
 "įdiegti telepathy-accounts-kcm paketą."
 
 #: contact-list-widget.cpp:168
 msgid "IM Accounts KCM Plugin Is Not Installed"
-msgstr "TP paskyrų KCM priedas nėra įdiegtas"
+msgstr "Paskyrų KCM priedas nėra įdiegtas"
 
 #: contact-list-widget.cpp:403
 #, kde-format
 msgid "Choose files to send to %1"
 msgstr "Pasirinkite, kuriuos failus siųsti %1"
 
-#: contact-overlays.cpp:132 contact-overlays.cpp:133
+#: contact-overlays.cpp:134 contact-overlays.cpp:135
 msgid "Start Chat"
 msgstr "Pradėti pokalbį"
 
-#: contact-overlays.cpp:133
+#: contact-overlays.cpp:135
 msgid "Start a text chat"
 msgstr "Pradėti teksto pokalbį"
 
-#: contact-overlays.cpp:144 contact-overlays.cpp:145
+#: contact-overlays.cpp:146 contact-overlays.cpp:147
 msgid "Start Audio Call"
 msgstr "Pradėti garso skambutį"
 
-#: contact-overlays.cpp:145
+#: contact-overlays.cpp:147
 msgid "Start an audio call"
 msgstr "Pradėti garso skambutį"
 
-#: contact-overlays.cpp:157 contact-overlays.cpp:158
+#: contact-overlays.cpp:159 contact-overlays.cpp:160
 msgid "Start Video Call"
 msgstr "Pradėti vaizdo skambutį"
 
-#: contact-overlays.cpp:158
+#: contact-overlays.cpp:160
 msgid "Start a video call"
 msgstr "Pradėti vaizdo skambutį"
 
-#: contact-overlays.cpp:169 contact-overlays.cpp:170 context-menu.cpp:129
+#: contact-overlays.cpp:171 contact-overlays.cpp:172 context-menu.cpp:129
 msgid "Send File..."
 msgstr "Siųsti failą..."
 
-#: contact-overlays.cpp:170
+#: contact-overlays.cpp:172
 msgid "Send a file"
 msgstr "Siųsti failą"
 
-#: contact-overlays.cpp:181 contact-overlays.cpp:182
+#: contact-overlays.cpp:183 contact-overlays.cpp:184
 msgid "Share my desktop"
 msgstr "Dalintis savo darbastaliu"
 
-#: contact-overlays.cpp:182
+#: contact-overlays.cpp:184
 msgid "Share desktop using RFB"
 msgstr "Dalintis darbastaliu naudojant RFB"
 
@@ -430,7 +430,7 @@ msgstr "Konfigūruoti savitas būkles..."
 msgid "Now listening to..."
 msgstr "Dabar klausomasi..."
 
-#: global-presence-chooser.cpp:194
+#: global-presence-chooser.cpp:195
 msgid "Click to change your presence message"
 msgstr "Spustelėkite, kad pakeisti Jūsų būklės pranešimą"
 
@@ -439,14 +439,14 @@ msgctxt "Presence string when the account is connecting"
 msgid "Connecting..."
 msgstr "Jungiamasi..."
 
-#: global-presence-chooser.cpp:316
+#: global-presence-chooser.cpp:319
 msgid ""
 "This plugin is currently disabled. Do you want to enable it and use as your "
 "presence?"
 msgstr ""
 "Šis priedas išjungtas. Ar norite jį įjungti ir naudoti kaip jūsų buvimą?"
 
-#: global-presence-chooser.cpp:317
+#: global-presence-chooser.cpp:320
 msgid "Plugin disabled"
 msgstr "Prietas uždraustas"
 
@@ -457,18 +457,20 @@ msgstr "Pridėti naujų kontaktų..."
 #: main-widget.cpp:120
 msgid "Contacts are shown by accounts. Click to show them in groups."
 msgstr ""
+"Kontaktai yra rodomi pagal paskyras. Spustelėkite , kad rodyti juos grupėse."
 
 #: main-widget.cpp:121
 msgid "Contacts are shown in groups. Click to show them in accounts."
 msgstr ""
+"Kontaktai yra rodomi grupėmis. Spustelėkite , kad rodyti juos paskiromis."
 
 #: main-widget.cpp:130
 msgid "Offline contacts are hidden. Click to show them."
-msgstr ""
+msgstr "Atsijungę kontaktai yra paslėpti. Spustelėkite, kad rodyti juos."
 
 #: main-widget.cpp:131
 msgid "Offline contacts are shown. Click to hide them."
-msgstr ""
+msgstr "Atsijungę kontaktai yra rodomi. Spustelėkite, kad paslėpti juos."
 
 #: main-widget.cpp:140
 msgid "List is sorted by name. Click to sort by presence."
@@ -488,7 +490,7 @@ msgstr "Rasti kontaktą"
 
 #: main-widget.cpp:165
 msgid "Instant Messaging Settings..."
-msgstr "Tikralaikio pokalbio nustatymai..."
+msgstr "Pokalbių nustatymai..."
 
 #: main-widget.cpp:171
 msgid "Contact List Type"
@@ -499,14 +501,12 @@ msgid "Use Full List"
 msgstr "Naudoti pilną sąrašą"
 
 #: main-widget.cpp:180
-#, fuzzy
 msgid "Use Normal List"
-msgstr "Naudoti kompaktišką sąrašą"
+msgstr "Naudoti normalų sąrašą"
 
 #: main-widget.cpp:189
-#, fuzzy
 msgid "Use Minimalistic List"
-msgstr "Naudoti kompaktišką sąrašą"
+msgstr "Naudoti minimalų sąrašą"
 
 #: main-widget.cpp:200
 msgid "Shown Contacts"
@@ -529,22 +529,20 @@ msgid "Join Chat Room..."
 msgstr "Prisijungti prie pokalbių kambario..."
 
 #: main-widget.cpp:241
-#, fuzzy
-#| msgid "Start Audio Call..."
 msgid "Make a Call..."
-msgstr "Pradėti garso skambutį..."
+msgstr "Skambinti..."
 
 #: main-widget.cpp:325
 msgid ""
 "Something unexpected happened to the core part of your Instant Messaging "
 "system and it couldn't be initialized. Try restarting the Contact List."
 msgstr ""
-"Kažkas netikėto nutiko pagrindinei Tikralaikio pokalbio sistemai ir nebuvo "
-"galima paleisti. Pamėginkite iš naujo paleisti kontaktų sąrašą."
+"Kažkas netikėto nutiko pagrindinei pokalbių sistemai ir nebuvo galima "
+"paleisti. Pamėginkite iš naujo paleisti kontaktų sąrašą."
 
 #: main-widget.cpp:327
 msgid "IM system failed to initialize"
-msgstr "TP sistema nesugebėjo pasileisti"
+msgstr "IM sistema nesugebėjo pasileisti"
 
 #: main-widget.cpp:440
 msgid ""
@@ -570,11 +568,11 @@ msgstr "Atsijungti"
 #. i18n: ectx: property (windowTitle), widget (QMainWindow, MainWindow)
 #: main-widget.ui:14
 msgid "KDE IM Contacts"
-msgstr "KDE TP kontaktai"
+msgstr "KDE Kontaktai"
 
 #: main.cpp:36 main.cpp:37
 msgid "KDE Telepathy Contact List"
-msgstr "KDE Telepatijos kontaktų sąrašas"
+msgstr "KDE Telepathy kontaktų sąrašas"
 
 #: main.cpp:38
 msgid "(C) 2011, Martin Klapetek"
@@ -591,7 +589,7 @@ msgstr "Programuotojas"
 
 #: main.cpp:48
 msgid "Show Telepathy debugging information"
-msgstr "Rodyti Telepatijos derinimo informaciją"
+msgstr "Rodyti Telepathy derinimo informaciją"
 
 #: rooms-model.cpp:72
 msgid "Password required"
@@ -629,12 +627,3 @@ msgstr "Klaida gaunant būklę"
 #: tooltips/contacttooltip.ui:126
 msgid "User is blocked"
 msgstr "Naudotojas užblokuotas"
-
-#~ msgid "Show/Hide Groups"
-#~ msgstr "Rodyti/slėpti grupes"
-
-#~ msgid "Hide/Show Offline Users"
-#~ msgstr "Rodyti/slėpti atsijungusius naudotojus"
-
-#~ msgid "Account Error"
-#~ msgstr "Paskyros klaida"

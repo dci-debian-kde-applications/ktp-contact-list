@@ -1,12 +1,12 @@
 # Translation of ktp-contactlist.po into Serbian.
 # Mladen Pejakovic <pejakm@gmail.com>, 2012.
-# Chusslove Illich <caslav.ilic@gmx.net>, 2012.
+# Chusslove Illich <caslav.ilic@gmx.net>, 2012, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: ktp-contactlist\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-08-28 20:47+0200\n"
-"PO-Revision-Date: 2012-07-22 22:37+0200\n"
+"POT-Creation-Date: 2013-01-18 09:34+0100\n"
+"PO-Revision-Date: 2012-12-09 09:45+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@ijekavianlatin\n"
@@ -87,7 +87,7 @@ msgid ""
 "install telepathy-accounts-kcm package."
 msgstr ""
 "Čini se da nemate instaliran kontrolni modul IM naloga. Instalirajte paket "
-"telepathy-accounts-kcm."
+"ktp-accounts-kcm."
 
 #: contact-list-widget.cpp:168
 msgid "IM Accounts KCM Plugin Is Not Installed"
@@ -99,43 +99,43 @@ msgstr "Priključak kontrolnog modula IM naloga nije instaliran"
 msgid "Choose files to send to %1"
 msgstr "Izbor fajlova za slanje primaocu %1"
 
-#: contact-overlays.cpp:132 contact-overlays.cpp:133
+#: contact-overlays.cpp:134 contact-overlays.cpp:135
 msgid "Start Chat"
 msgstr "Započni ćaskanje"
 
-#: contact-overlays.cpp:133
+#: contact-overlays.cpp:135
 msgid "Start a text chat"
 msgstr "Započni tekstualno ćaskanje"
 
-#: contact-overlays.cpp:144 contact-overlays.cpp:145
+#: contact-overlays.cpp:146 contact-overlays.cpp:147
 msgid "Start Audio Call"
 msgstr "Započni audio poziv"
 
-#: contact-overlays.cpp:145
+#: contact-overlays.cpp:147
 msgid "Start an audio call"
 msgstr "Započni audio poziv"
 
-#: contact-overlays.cpp:157 contact-overlays.cpp:158
+#: contact-overlays.cpp:159 contact-overlays.cpp:160
 msgid "Start Video Call"
 msgstr "Započni video poziv"
 
-#: contact-overlays.cpp:158
+#: contact-overlays.cpp:160
 msgid "Start a video call"
 msgstr "Započni video poziv"
 
-#: contact-overlays.cpp:169 contact-overlays.cpp:170 context-menu.cpp:129
+#: contact-overlays.cpp:171 contact-overlays.cpp:172 context-menu.cpp:129
 msgid "Send File..."
 msgstr "Pošalji fajl..."
 
-#: contact-overlays.cpp:170
+#: contact-overlays.cpp:172
 msgid "Send a file"
 msgstr "Pošalji fajl"
 
-#: contact-overlays.cpp:181 contact-overlays.cpp:182
+#: contact-overlays.cpp:183 contact-overlays.cpp:184
 msgid "Share my desktop"
 msgstr "Podijeli moju površ"
 
-#: contact-overlays.cpp:182
+#: contact-overlays.cpp:184
 msgid "Share desktop using RFB"
 msgstr "Podijeli površ koristeći RFB"
 
@@ -434,7 +434,7 @@ msgstr "Podesi posebne prisutnosti..."
 msgid "Now listening to..."
 msgstr "Trenutno slušam..."
 
-#: global-presence-chooser.cpp:194
+#: global-presence-chooser.cpp:195
 msgid "Click to change your presence message"
 msgstr "Kliknite da promenite poruku prisutnosti"
 
@@ -443,7 +443,7 @@ msgctxt "Presence string when the account is connecting"
 msgid "Connecting..."
 msgstr "Povezujem se..."
 
-#: global-presence-chooser.cpp:316
+#: global-presence-chooser.cpp:319
 msgid ""
 "This plugin is currently disabled. Do you want to enable it and use as your "
 "presence?"
@@ -451,7 +451,7 @@ msgstr ""
 "Ovaj priključak je isključen. Želite li da ga uključite i koristite kao "
 "svoju prisutnost?"
 
-#: global-presence-chooser.cpp:317
+#: global-presence-chooser.cpp:320
 msgid "Plugin disabled"
 msgstr "Priključak je isključen"
 

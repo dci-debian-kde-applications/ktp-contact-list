@@ -6,15 +6,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-08-28 20:47+0200\n"
-"PO-Revision-Date: 2012-06-18 18:20+0300\n"
+"POT-Creation-Date: 2013-01-18 09:34+0100\n"
+"PO-Revision-Date: 2012-10-08 20:32+0300\n"
 "Last-Translator: Marek Laane <bald@smail.ee>\n"
 "Language-Team: Estonian <kde-et@linux.ee>\n"
 "Language: et\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.4\n"
+"X-Generator: Lokalize 1.5\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 msgctxt "NAME OF TRANSLATORS"
@@ -96,43 +96,43 @@ msgstr "Kiirsuhtluskontode juhtimismoodul ei ole paigaldatud"
 msgid "Choose files to send to %1"
 msgstr "Kasutajale %1 saadetavate failide valimine"
 
-#: contact-overlays.cpp:132 contact-overlays.cpp:133
+#: contact-overlays.cpp:134 contact-overlays.cpp:135
 msgid "Start Chat"
 msgstr "Alusta vestlust"
 
-#: contact-overlays.cpp:133
+#: contact-overlays.cpp:135
 msgid "Start a text chat"
 msgstr "Alusta tekstivestlust"
 
-#: contact-overlays.cpp:144 contact-overlays.cpp:145
+#: contact-overlays.cpp:146 contact-overlays.cpp:147
 msgid "Start Audio Call"
 msgstr "Alusta häälkõnet"
 
-#: contact-overlays.cpp:145
+#: contact-overlays.cpp:147
 msgid "Start an audio call"
 msgstr "Alusta häälkõnet"
 
-#: contact-overlays.cpp:157 contact-overlays.cpp:158
+#: contact-overlays.cpp:159 contact-overlays.cpp:160
 msgid "Start Video Call"
 msgstr "Alusta videokõnet"
 
-#: contact-overlays.cpp:158
+#: contact-overlays.cpp:160
 msgid "Start a video call"
 msgstr "Alusta videokõnet"
 
-#: contact-overlays.cpp:169 contact-overlays.cpp:170 context-menu.cpp:129
+#: contact-overlays.cpp:171 contact-overlays.cpp:172 context-menu.cpp:129
 msgid "Send File..."
 msgstr "Saada fail..."
 
-#: contact-overlays.cpp:170
+#: contact-overlays.cpp:172
 msgid "Send a file"
 msgstr "Saada fail"
 
-#: contact-overlays.cpp:181 contact-overlays.cpp:182
+#: contact-overlays.cpp:183 contact-overlays.cpp:184
 msgid "Share my desktop"
 msgstr "Jaga mu töölauda"
 
-#: contact-overlays.cpp:182
+#: contact-overlays.cpp:184
 msgid "Share desktop using RFB"
 msgstr "Jaga töölauda RFB kaudu"
 
@@ -426,7 +426,7 @@ msgstr "Seadista kohandatud kohalolekut..."
 msgid "Now listening to..."
 msgstr "Praegu kuulan..."
 
-#: global-presence-chooser.cpp:194
+#: global-presence-chooser.cpp:195
 msgid "Click to change your presence message"
 msgstr "Klõpsa kohalolekuteate muutmiseks"
 
@@ -435,7 +435,7 @@ msgctxt "Presence string when the account is connecting"
 msgid "Connecting..."
 msgstr "Ühendumine..."
 
-#: global-presence-chooser.cpp:316
+#: global-presence-chooser.cpp:319
 msgid ""
 "This plugin is currently disabled. Do you want to enable it and use as your "
 "presence?"
@@ -443,7 +443,7 @@ msgstr ""
 "See plugin on praegu keelatud. Kas soovid selle lubada ja kasutada enda "
 "kohalolekuna?"
 
-#: global-presence-chooser.cpp:317
+#: global-presence-chooser.cpp:320
 msgid "Plugin disabled"
 msgstr "Plugin on keelatud"
 
@@ -454,18 +454,20 @@ msgstr "Lisa uusi kontakte..."
 #: main-widget.cpp:120
 msgid "Contacts are shown by accounts. Click to show them in groups."
 msgstr ""
+"Kontakte näidatakse kontode järgi. Klõpsa nende nägemiseks rühmade järgi."
 
 #: main-widget.cpp:121
 msgid "Contacts are shown in groups. Click to show them in accounts."
 msgstr ""
+"Kontakte näidatakse rühmade järgi. Klõpsa nende nägemiseks kontode järgi."
 
 #: main-widget.cpp:130
 msgid "Offline contacts are hidden. Click to show them."
-msgstr ""
+msgstr "Võrgus mitteolevad kontaktid on peidetud. Klõpsa nende nägemiseks."
 
 #: main-widget.cpp:131
 msgid "Offline contacts are shown. Click to hide them."
-msgstr ""
+msgstr "Võrgus mitteolevad kontaktid on näha. Klõpsa nende peitmiseks."
 
 #: main-widget.cpp:140
 msgid "List is sorted by name. Click to sort by presence."
@@ -492,16 +494,12 @@ msgid "Use Full List"
 msgstr "Täisnimekirja kasutamine"
 
 #: main-widget.cpp:180
-#, fuzzy
-#| msgid "Use Compact List"
 msgid "Use Normal List"
-msgstr "Kompaktse nimekirja kasutamine"
+msgstr "Tavalise nimekirja kasutamine"
 
 #: main-widget.cpp:189
-#, fuzzy
-#| msgid "Use Compact List"
 msgid "Use Minimalistic List"
-msgstr "Kompaktse nimekirja kasutamine"
+msgstr "Minimalistliku nimekirja kasutamine"
 
 #: main-widget.cpp:200
 msgid "Shown Contacts"
@@ -524,10 +522,8 @@ msgid "Join Chat Room..."
 msgstr "Liitu jututoaga..."
 
 #: main-widget.cpp:241
-#, fuzzy
-#| msgid "Start Audio Call..."
 msgid "Make a Call..."
-msgstr "Alusta häälkõnet..."
+msgstr "Helista..."
 
 #: main-widget.cpp:325
 msgid ""

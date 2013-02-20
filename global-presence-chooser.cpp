@@ -179,7 +179,6 @@ GlobalPresenceChooser::GlobalPresenceChooser(QWidget *parent) :
     m_modelExtended(new PresenceModelExtended(m_model, this))
 {
     this->setModel(m_modelExtended);
-
     setEditable(false);
     //needed for mousemove events
     setMouseTracking(true);
@@ -187,6 +186,8 @@ GlobalPresenceChooser::GlobalPresenceChooser(QWidget *parent) :
     m_busyOverlay = new KPixmapSequenceOverlayPainter(this);
     m_busyOverlay->setSequence(KPixmapSequence("process-working"));
     m_busyOverlay->setWidget(this);
+
+    onPresenceChanged(m_globalPresence->currentPresence());
 
     m_changePresenceMessageButton = new QPushButton(this);
     m_changePresenceMessageButton->setIcon(KIcon("document-edit"));
@@ -198,7 +199,6 @@ GlobalPresenceChooser::GlobalPresenceChooser(QWidget *parent) :
     connect(m_globalPresence, SIGNAL(connectionStatusChanged(Tp::ConnectionStatus)), SLOT(onConnectionStatusChanged(Tp::ConnectionStatus)));
     connect(m_changePresenceMessageButton, SIGNAL(clicked(bool)), this, SLOT(onChangePresenceMessageClicked()));
 
-    onPresenceChanged(m_globalPresence->currentPresence());
 }
 
 void GlobalPresenceChooser::setAccountManager(const Tp::AccountManagerPtr &accountManager)
@@ -299,6 +299,9 @@ bool GlobalPresenceChooser::event(QEvent *e)
 
 void GlobalPresenceChooser::onCurrentIndexChanged(int index)
 {
+    if (index == -1) {
+        return;
+    }
     //if they select the "configure item"
     if (index == count()-1) {
         QWeakPointer<CustomPresenceDialog> dialog = new CustomPresenceDialog(m_model, this);
@@ -357,19 +360,26 @@ void GlobalPresenceChooser::onCurrentIndexChanged(int index)
 
 void GlobalPresenceChooser::onPresenceChanged(const KTp::Presence &presence)
 {
-    for (int i=0; i < count() ; i++) {
+    if (presence.type() == Tp::ConnectionPresenceTypeUnknown) {
+        setCurrentIndex(-1);
+        m_busyOverlay->start();
+        return;
+    }
+    for (int i = 0; i < count() ; i++) {
         KTp::Presence itemPresence = itemData(i, PresenceModel::PresenceRole).value<KTp::Presence>();
         if (itemPresence.type() == presence.type() && itemPresence.statusMessage() == presence.statusMessage()) {
             setCurrentIndex(i);
             if (itemPresence != m_modelExtended->temporaryPresence()) {
                 m_modelExtended->removeTemporaryPresence();
             }
+            m_busyOverlay->stop();
             return;
         }
     }
 
     QModelIndex index = m_modelExtended->addTemporaryPresence(presence);
     setCurrentIndex(index.row());
+    m_busyOverlay->stop();
 }
 
 void GlobalPresenceChooser::onConnectionStatusChanged(Tp::ConnectionStatus connectionStatus)

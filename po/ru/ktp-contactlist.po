@@ -1,219 +1,218 @@
-# Translation of ktp-contactlist.po into Serbian.
-# Mladen Pejakovic <pejakm@gmail.com>, 2012.
-# Chusslove Illich <caslav.ilic@gmx.net>, 2012, 2013.
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Yuri Efremov <yur.arh@gmail.com>, 2012.
 msgid ""
 msgstr ""
-"Project-Id-Version: ktp-contactlist\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2013-01-18 09:34+0100\n"
-"PO-Revision-Date: 2012-12-09 09:45+0100\n"
-"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
-"Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
-"Language: sr@latin\n"
+"PO-Revision-Date: 2012-10-22 22:23+0400\n"
+"Last-Translator: Yuri Efremov <yur.arh@gmail.com>\n"
+"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.5\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Environment: kde\n"
-"X-Associated-UI-Catalogs: ktp-common-internals\n"
 
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Mladen Pejaković"
+msgstr "Юрий Ефремов"
 
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "pejakm@gmail.com"
+msgstr "yur.arh@gmail.com"
 
 #: account-button.cpp:71
 msgctxt "@action:inmenu This is an IM user status"
 msgid "Available"
-msgstr "Dostupan"
+msgstr "Доступен"
 
 #: account-button.cpp:72
 msgctxt "@action:inmenu This is an IM user status"
 msgid "Away"
-msgstr "Odsutan"
+msgstr "Отсутствует"
 
 #: account-button.cpp:73
 msgctxt "@action:inmenu This is an IM user status"
 msgid "Be right back"
-msgstr "Odmah se vraćam"
+msgstr "Скоро вернусь"
 
 #: account-button.cpp:74
 msgctxt "@action:inmenu This is an IM user status"
 msgid "Busy"
-msgstr "Zauzet"
+msgstr "Занят"
 
 #: account-button.cpp:75
 msgctxt "@action:inmenu This is an IM user status"
 msgid "Do not disturb"
-msgstr "Ne uznemiravaj"
+msgstr "Не беспокоить"
 
 #: account-button.cpp:76
 msgctxt "@action:inmenu This is an IM user status"
 msgid "Extended Away"
-msgstr "Duže odsutan"
+msgstr "Давно отсутствует"
 
 #: account-button.cpp:77
 msgctxt "@action:inmenu This is an IM user status"
 msgid "Invisible"
-msgstr "Nevidljiv"
+msgstr "Невидимый"
 
 #: account-button.cpp:78
 msgctxt "@action:inmenu This is an IM user status"
 msgid "Offline"
-msgstr "Van veze"
+msgstr "Не в сети"
 
 #: account-button.cpp:82
 msgctxt "@action:inmenu This is the IM presence message"
 msgid "Set message..."
-msgstr "Postavi poruku..."
+msgstr "Установить сообщение..."
 
 #: contact-list-widget.cpp:144
 msgid "You have no IM accounts configured. Would you like to do that now?"
-msgstr "Nemate podešenih IM naloga. Želite li da ih podesite sada?"
+msgstr ""
 
 #: contact-list-widget.cpp:145
 msgid "No Accounts Found"
-msgstr "Nema naloga"
+msgstr ""
 
 #: contact-list-widget.cpp:167
 msgid ""
 "It appears you do not have the IM Accounts control module installed. Please "
 "install telepathy-accounts-kcm package."
 msgstr ""
-"Čini se da nemate instaliran kontrolni modul IM naloga. Instalirajte paket "
-"ktp-accounts-kcm."
 
 #: contact-list-widget.cpp:168
 msgid "IM Accounts KCM Plugin Is Not Installed"
-msgstr "Priključak kontrolnog modula IM naloga nije instaliran"
+msgstr ""
 
-# >> @title:window
 #: contact-list-widget.cpp:403
 #, kde-format
 msgid "Choose files to send to %1"
-msgstr "Izbor fajlova za slanje primaocu %1"
+msgstr "Выбор файлов для отправки к %1"
 
 #: contact-overlays.cpp:134 contact-overlays.cpp:135
 msgid "Start Chat"
-msgstr "Započni ćaskanje"
+msgstr "Написать сообщение"
 
 #: contact-overlays.cpp:135
 msgid "Start a text chat"
-msgstr "Započni tekstualno ćaskanje"
+msgstr "Начать текстовое общение"
 
 #: contact-overlays.cpp:146 contact-overlays.cpp:147
 msgid "Start Audio Call"
-msgstr "Započni audio poziv"
+msgstr "Аудиовызов"
 
 #: contact-overlays.cpp:147
 msgid "Start an audio call"
-msgstr "Započni audio poziv"
+msgstr "Выполнить аудиовызов"
 
 #: contact-overlays.cpp:159 contact-overlays.cpp:160
 msgid "Start Video Call"
-msgstr "Započni video poziv"
+msgstr "Видеовызов"
 
 #: contact-overlays.cpp:160
 msgid "Start a video call"
-msgstr "Započni video poziv"
+msgstr "Выполнить видеовызов"
 
 #: contact-overlays.cpp:171 contact-overlays.cpp:172 context-menu.cpp:129
 msgid "Send File..."
-msgstr "Pošalji fajl..."
+msgstr "Отправить файл..."
 
 #: contact-overlays.cpp:172
 msgid "Send a file"
-msgstr "Pošalji fajl"
+msgstr "Отправить файл"
 
 #: contact-overlays.cpp:183 contact-overlays.cpp:184
 msgid "Share my desktop"
-msgstr "Podeli moju površ"
+msgstr "Показать рабочий стол"
 
 #: contact-overlays.cpp:184
 msgid "Share desktop using RFB"
-msgstr "Podeli površ koristeći RFB"
+msgstr "Показать рабочий стол, используя RFB"
 
 #: context-menu.cpp:93
 msgid "Start Chat..."
-msgstr "Započni ćaskanje..."
+msgstr "Текстовое общение..."
 
 #: context-menu.cpp:109
 msgid "Start Audio Call..."
-msgstr "Započni audio poziv..."
+msgstr "Аудиовызов..."
 
 #: context-menu.cpp:119
 msgid "Start Video Call..."
-msgstr "Započni video poziv..."
+msgstr "Видеовызов..."
 
 #: context-menu.cpp:139
 msgid "Share my desktop..."
-msgstr "Podeli moju površ..."
+msgstr "Показать рабочий стол"
 
 #: context-menu.cpp:161
+#, fuzzy
 msgid "Presence message link"
 msgid_plural "Presence message links"
-msgstr[0] "Veze u poruci prisutnosti"
-msgstr[1] "Veze u poruci prisutnosti"
-msgstr[2] "Veze u poruci prisutnosti"
-msgstr[3] "Veza u poruci prisutnosti"
+msgstr[0] "ссылки сообщения статуса"
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #: context-menu.cpp:176
 msgid "Remove Contact From This Group"
-msgstr "Ukloni kontakt iz ove grupe"
+msgstr "Удалить контакт из этой группы"
 
 #: context-menu.cpp:180
 msgid "Move to Group"
-msgstr "Premesti u grupu"
+msgstr "Переместить в группу"
 
 #: context-menu.cpp:198
 msgid "Create New Group..."
-msgstr "Napravi novu grupu..."
+msgstr "Создать новую группу..."
 
 #: context-menu.cpp:217
 msgid "Re-request Contact Authorization"
-msgstr "Ponovo zatraži ovlašćenje za kontakt"
+msgstr "Повторно запросить авторизацию"
 
 #: context-menu.cpp:223
 msgid "Resend Contact Authorization"
-msgstr "Ponovo pošalji ovlašćenje za kontakt"
+msgstr "Повторно авторизовать"
 
 #: context-menu.cpp:231
 msgid "Unblock Contact"
-msgstr "Odblokiraj kontakt"
+msgstr "Разблокировать контакт"
 
 #: context-menu.cpp:235
 msgid "Block Contact"
-msgstr "Blokiraj kontakt"
+msgstr "Заблокировать контакт"
 
 #: context-menu.cpp:243
 msgid "Remove Contact"
-msgstr "Ukloni kontakt"
+msgstr "Удалить контакт"
 
 #: context-menu.cpp:248
 msgid "Show Info..."
-msgstr "Prikaži podatke..."
+msgstr "Показать информацию..."
 
 #: context-menu.cpp:271
 msgid "Rename Group..."
-msgstr "Preimenuj grupu..."
+msgstr "Переименовать группу..."
 
 #: context-menu.cpp:277
 msgid "Delete Group"
-msgstr "Obriši grupu"
+msgstr "Удалить группу"
 
 #: context-menu.cpp:432 context-menu.cpp:457
 msgid "New Group Name"
-msgstr "Novo ime grupe"
+msgstr "Имя новой группы"
 
 #: context-menu.cpp:433 context-menu.cpp:458
 msgid "Please enter the new group name"
-msgstr "Unesite novo ime za grupu"
+msgstr "Введите имя новой группы"
 
 #: context-menu.cpp:487
 #, kde-format
@@ -222,44 +221,43 @@ msgid ""
 "\n"
 "Note that all contacts will be moved to group 'Ungrouped'"
 msgstr ""
-"Želite li zaista da uklonite grupu %1?\n"
+"Удалить группу %1?\n"
 "\n"
-"Svi kontakti će biti premešteni u grupu „negrupisani“."
+"Заметьте, что все контакты будут перемещены в группу «Без группы»."
 
-# >> @title:window
 #: context-menu.cpp:489
 msgid "Remove Group"
-msgstr "Uklanjanje grupe"
+msgstr "Удалить группу"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, ContactInfo)
 #: dialogs/contact-info.ui:14
 msgid "Dialog"
-msgstr "Dijalog"
+msgstr "Диалоговое окно"
 
 #. i18n: ectx: property (text), widget (QLabel, avatarLabel)
 #: dialogs/contact-info.ui:28
 msgid "Avatar Here"
-msgstr "Avatar ovde"
+msgstr "Аватор"
 
 #. i18n: ectx: property (text), widget (QLabel, idLabel)
 #: dialogs/contact-info.ui:37
 msgid "ContactID"
-msgstr "ID kontakta"
+msgstr "ID контакта"
 
 #. i18n: ectx: property (text), widget (QLabel, nameLabel)
 #: dialogs/contact-info.ui:59
 msgid "Contact Display Name"
-msgstr "Prikazno ime kontakta"
+msgstr "Показываемое имя собеседника"
 
 #. i18n: ectx: property (text), widget (QLabel, presenceLabel)
 #: dialogs/contact-info.ui:69
 msgid "Presence String"
-msgstr "Niska prisutnosti"
+msgstr "Строка статуса"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: dialogs/contact-info.ui:114
 msgid "Contact can see when you are online:"
-msgstr "Kontakt može da vas vidi kada ste na vezi:"
+msgstr "Собеседник может видеть, когда вы в сети:"
 
 #. i18n: ectx: property (text), widget (QLabel, publishStateLabel)
 #. i18n: ectx: property (text), widget (QLabel, subscriptionStateLabel)
@@ -267,283 +265,281 @@ msgstr "Kontakt može da vas vidi kada ste na vezi:"
 #: dialogs/contact-info.ui:121 dialogs/contact-info.ui:135
 #: dialogs/contact-info.ui:149
 msgid "TextLabel"
-msgstr "Etiketa"
+msgstr "Текстовая метка"
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: dialogs/contact-info.ui:128
 msgid "You can see when the contact is online:"
-msgstr "Možete da vidite kada je kontakt na vezi:"
+msgstr "Вы можете видеть, когда собеседник в сети:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: dialogs/contact-info.ui:142
 msgid "Contact is blocked:"
-msgstr "Kontakt je blokiran:"
+msgstr "Контакт заблокирован:"
 
-# >> @title:window
 #: dialogs/custom-presence-dialog.cpp:70
 msgid "Edit Custom Presences"
-msgstr "Uređivanje posebnih prisutnosti"
+msgstr "Изменение другого статуса"
 
 #: dialogs/custom-presence-dialog.cpp:89
 msgid "Set custom available message..."
-msgstr "Posebna poruka dostupnosti..."
+msgstr "Установить свой статус доступности..."
 
 #: dialogs/custom-presence-dialog.cpp:90
 msgid "Set custom busy message..."
-msgstr "Posebna poruka zauzetosti..."
+msgstr "Установить свой статус занятости..."
 
 #: dialogs/custom-presence-dialog.cpp:91
 msgid "Set custom away message..."
-msgstr "Posebna poruka odsutnosti..."
+msgstr "Установить свой статус, что нет на месте..."
 
 #: dialogs/custom-presence-dialog.cpp:92
 msgid "Set custom extended away message..."
-msgstr "Posebna poruka duže odsutnosti..."
+msgstr "Установить свой статус, что давно нет на месте..."
 
 #: dialogs/custom-presence-dialog.cpp:102
 msgid "Add Presence"
-msgstr "Dodaj prisutnost"
+msgstr "Добавить статус"
 
 #: dialogs/custom-presence-dialog.cpp:103
 msgid "Remove Presence"
-msgstr "Ukloni prisutnost"
+msgstr "Удалить статус"
 
 #: dialogs/join-chat-room-dialog.cpp:197
 msgid "This room is already in your favorites."
-msgstr "Ova soba je već među vašim omiljenim."
+msgstr "Канал уже в избранном."
 
-# >> @title:window
 #: dialogs/join-chat-room-dialog.cpp:199
 msgid "Add room"
-msgstr "Dodavanje sobe"
+msgstr "Добавить канал"
 
 #: dialogs/join-chat-room-dialog.cpp:199
 msgid "Name"
-msgstr "Ime"
+msgstr "Имя"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, JoinChatRoomDialog)
 #: dialogs/join-chat-room-dialog.ui:20
 msgid "Join Chatroom"
-msgstr "Pridruži se sobi za ćaskanje"
+msgstr "Войти на канал"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: dialogs/join-chat-room-dialog.ui:29
 msgid "Enter chat room:"
-msgstr "Uđi u sobu za ćaskanje:"
+msgstr "Введите имя канал:"
 
 #. i18n: ectx: attribute (title), widget (QWidget, favoritesTab)
 #: dialogs/join-chat-room-dialog.ui:47
 msgid "Favorites"
-msgstr "Omiljeno"
+msgstr "Избранное"
 
 #. i18n: ectx: property (text), widget (QPushButton, addFavoritePushButton)
 #: dialogs/join-chat-room-dialog.ui:63
 msgid "Add Room"
-msgstr "Dodaj sobu"
+msgstr "Добавить канал"
 
 #. i18n: ectx: property (text), widget (QPushButton, removeFavoritePushButton)
 #: dialogs/join-chat-room-dialog.ui:73
 msgid "Remove Room"
-msgstr "Ukloni sobu"
+msgstr "Удалить канал"
 
 #. i18n: ectx: attribute (title), widget (QWidget, recentTab)
 #: dialogs/join-chat-room-dialog.ui:98
 msgid "Recent"
-msgstr "Nedavno"
+msgstr "Последние"
 
 #. i18n: ectx: property (text), widget (QPushButton, removeRecentPushButton)
 #: dialogs/join-chat-room-dialog.ui:112
 msgid "Remove"
-msgstr "Ukloni"
+msgstr "Удалить"
 
 #. i18n: ectx: property (text), widget (QPushButton, clearRecentPushButton)
 #: dialogs/join-chat-room-dialog.ui:122
 msgid "Clear list"
-msgstr "Očisti spisak"
+msgstr "Очистить список"
 
 #. i18n: ectx: attribute (title), widget (QWidget, queryTab)
 #. i18n: ectx: property (text), widget (QPushButton, queryPushButton)
 #: dialogs/join-chat-room-dialog.ui:145 dialogs/join-chat-room-dialog.ui:176
 msgid "Query"
-msgstr "Upitaj"
+msgstr "Запрос"
 
 #. i18n: ectx: property (text), widget (QLabel, serverLabel)
 #: dialogs/join-chat-room-dialog.ui:151
 msgid "Server to be queried:"
-msgstr "Server za upit:"
+msgstr "Сервер для запросов:"
 
 #. i18n: ectx: property (clickMessage), widget (KLineEdit, serverLineEdit)
 #: dialogs/join-chat-room-dialog.ui:163
 msgid "Leave blank for the selected account's default server"
-msgstr "Ostavite prazno za podrazumevani server izabranog naloga"
+msgstr "Оставьте пустым, по умолчанию сервер выбранной учётной записи"
 
 #. i18n: ectx: property (text), widget (QPushButton, stopPushButton)
 #: dialogs/join-chat-room-dialog.ui:186
 msgid "Stop"
-msgstr "Zaustavi"
+msgstr "Остановить"
 
 #. i18n: ectx: property (clickMessage), widget (KLineEdit, filterBar)
 #: dialogs/join-chat-room-dialog.ui:217
 msgid "Search rooms"
-msgstr "Traži sobe"
+msgstr "Поиск каналов"
 
 #: dialogs/remove-contact-dialog.cpp:45
 msgid "Remove the selected contact?"
-msgstr "Ukloniti izabrani kontakt?"
+msgstr "Удалить выбранные контакты?"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, RemoveContactDialog)
 #: dialogs/remove-contact-dialog.ui:23
 msgid "Remove contact"
-msgstr "Uklanjanje kontakta"
+msgstr "Удалить контакт"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel)
 #: dialogs/remove-contact-dialog.ui:47
 msgid "Message"
-msgstr "Poruka"
+msgstr "Сообщение"
 
 #. i18n: ectx: property (text), widget (QLabel, contactAvatarLabel)
 #: dialogs/remove-contact-dialog.ui:124
 msgid "Avatar"
-msgstr "Avatar"
+msgstr "Аватар"
 
 #. i18n: ectx: property (text), widget (QLabel, contactAliasLabel)
 #: dialogs/remove-contact-dialog.ui:161
 msgid "Alias"
-msgstr "Pseudonim"
+msgstr "Псевдоним"
 
 #. i18n: ectx: property (text), widget (QCheckBox, blockCheckbox)
 #: dialogs/remove-contact-dialog.ui:229
 msgid "Block contact"
-msgstr "Blokiraj kontakt"
+msgstr "Заблокировать контакт"
 
 #: filter-bar.cpp:39
 msgctxt "@info:tooltip"
 msgid "Hide Filter Bar"
-msgstr "Sakrij traku filtera"
+msgstr "Скрыть панель фильтра"
 
 #: filter-bar.cpp:43
 msgctxt "@label:textbox"
 msgid "Filter:"
-msgstr "Filter:"
+msgstr "Фильтр:"
 
 #: global-presence-chooser.cpp:98
 msgid "Configure Custom Presences..."
-msgstr "Podesi posebne prisutnosti..."
+msgstr "Другой статус..."
 
 #: global-presence-chooser.cpp:105
 msgid "Now listening to..."
-msgstr "Trenutno slušam..."
+msgstr "Сейчас слушаю..."
 
 #: global-presence-chooser.cpp:195
 msgid "Click to change your presence message"
-msgstr "Kliknite da promenite poruku prisutnosti"
+msgstr "Нажмите, чтобы изменить сообщение статуса"
 
 #: global-presence-chooser.cpp:231
 msgctxt "Presence string when the account is connecting"
 msgid "Connecting..."
-msgstr "Povezujem se..."
+msgstr "Соединение..."
 
 #: global-presence-chooser.cpp:319
 msgid ""
 "This plugin is currently disabled. Do you want to enable it and use as your "
 "presence?"
 msgstr ""
-"Ovaj priključak je isključen. Želite li da ga uključite i koristite kao "
-"svoju prisutnost?"
+"Этот модуль отключён. Хотите включить его и использовать в качестве вашего "
+"статуса?"
 
 #: global-presence-chooser.cpp:320
 msgid "Plugin disabled"
-msgstr "Priključak je isključen"
+msgstr "Модуль отключён"
 
 #: main-widget.cpp:116
 msgid "Add New Contacts..."
-msgstr "Dodaj nove kontakte..."
+msgstr "Добавить контакты..."
 
 #: main-widget.cpp:120
 msgid "Contacts are shown by accounts. Click to show them in groups."
 msgstr ""
-"Kontakti su prikazani po nalozima. Kliknite da ih prikažete po grupama."
+"Контакты показаны по учётным записям. Нажмите, чтобы изменить отображение по "
+"группам."
 
 #: main-widget.cpp:121
 msgid "Contacts are shown in groups. Click to show them in accounts."
 msgstr ""
-"Kontakti su prikazani po grupama. Kliknite da ih prikažete po nalozima."
+"Контакты показаны по группам. Нажмите, чтобы изменить отображение по учётным "
+"записям."
 
 #: main-widget.cpp:130
 msgid "Offline contacts are hidden. Click to show them."
-msgstr "Kontakti van veze su sakriveni. Kliknite da ih prikažete."
+msgstr ""
 
 #: main-widget.cpp:131
 msgid "Offline contacts are shown. Click to hide them."
-msgstr "Kontakti van veze su prikazani. Kliknite da ih sakrijete."
+msgstr ""
 
 #: main-widget.cpp:140
 msgid "List is sorted by name. Click to sort by presence."
-msgstr "Spisak je poređan po imenu. Kliknite da ga poređate po prisutnosti."
+msgstr ""
 
 #: main-widget.cpp:141
 msgid "List is sorted by presence. Click to sort by name."
-msgstr "Spisak je poređan po prisutnosti. Kliknite da ga poređate po imenu."
+msgstr ""
 
 #: main-widget.cpp:148
 msgid "Find Contact"
-msgstr "Nađi kontakt"
+msgstr "Поиск контакта"
 
 #: main-widget.cpp:165
 msgid "Instant Messaging Settings..."
-msgstr "Brzoglasničke postavke..."
+msgstr "Параметры мгновенных сообщений..."
 
 #: main-widget.cpp:171
 msgid "Contact List Type"
-msgstr "Tip spiska kontakata"
+msgstr "Тип списка контактов"
 
 #: main-widget.cpp:172
 msgid "Use Full List"
-msgstr "Pun spisak"
+msgstr "Использовать полный список"
 
 #: main-widget.cpp:180
 msgid "Use Normal List"
-msgstr "Normalan spisak"
+msgstr "Использовать обычный список"
 
 #: main-widget.cpp:189
 msgid "Use Minimalistic List"
-msgstr "Minimalistički spisak"
+msgstr "Использовать компактный список"
 
 #: main-widget.cpp:200
 msgid "Shown Contacts"
-msgstr "Prikaži kontakte"
+msgstr "Отображение контактов"
 
 #: main-widget.cpp:207
 msgid "Show all contacts"
-msgstr "Prikaži sve kontakte"
+msgstr "Показать все контакты"
 
 #: main-widget.cpp:214
 msgid "Show unblocked contacts"
-msgstr "Prikaži neblokirane kontakte"
+msgstr "Показать не заблокированные контакты"
 
 #: main-widget.cpp:221
 msgid "Show blocked contacts"
-msgstr "Prikaži blokirane kontakte"
+msgstr "Показать заблокированные контакты"
 
 #: main-widget.cpp:238
 msgid "Join Chat Room..."
-msgstr "Pridruži se sobi za ćaskanje..."
+msgstr "Войти на канал..."
 
 #: main-widget.cpp:241
 msgid "Make a Call..."
-msgstr "Pozovi..."
+msgstr "Сделать вызов..."
 
 #: main-widget.cpp:325
 msgid ""
 "Something unexpected happened to the core part of your Instant Messaging "
 "system and it couldn't be initialized. Try restarting the Contact List."
 msgstr ""
-"Nešto neočekivano se desilo sa jezgrom brzoglasničkog sistema i zato ne može "
-"da se pokrene. Pokušajte ponovo da pokrenete spisak kontakata."
 
 #: main-widget.cpp:327
 msgid "IM system failed to initialize"
-msgstr "IM sistem ne može da se pokrene"
+msgstr ""
 
 #: main-widget.cpp:440
 msgid ""
@@ -551,34 +547,31 @@ msgid ""
 "example).\n"
 "Do you want to stay online or would you rather go offline?"
 msgstr ""
-"Nijedan drugi upravljač prisutnošću nije aktivan (vidžet prisutnosti, na "
-"primer).\n"
-"Želite li da ostanete na vezi ili biste radije otišli van veze?"
 
 #: main-widget.cpp:442
 msgid "No Other Presence Controls Found"
-msgstr "Nijedan upravljač prisutnošću nije nađen"
+msgstr "Не найдено других средств управления статусом"
 
 #: main-widget.cpp:443
 msgid "Stay Online"
-msgstr "Ostani na vezi"
+msgstr "Оставаться в сети"
 
 #: main-widget.cpp:444
 msgid "Go Offline"
-msgstr "Idi van veze"
+msgstr "Выйти из сети"
 
 #. i18n: ectx: property (windowTitle), widget (QMainWindow, MainWindow)
 #: main-widget.ui:14
 msgid "KDE IM Contacts"
-msgstr "KDE IM kontakti"
+msgstr "Список контактов KDE"
 
 #: main.cpp:36 main.cpp:37
 msgid "KDE Telepathy Contact List"
-msgstr "KDE Telepathy — spisak kontakata"
+msgstr "Список контактов KDE Telepathy"
 
 #: main.cpp:38
 msgid "(C) 2011, Martin Klapetek"
-msgstr "© 2011, Martin Klapetek"
+msgstr "© Martin Klapetek, 2011"
 
 #: main.cpp:40
 msgctxt "@info:credit"
@@ -587,45 +580,50 @@ msgstr "Martin Klapetek"
 
 #: main.cpp:40
 msgid "Developer"
-msgstr "Programer"
+msgstr "Разработчик"
 
 #: main.cpp:48
 msgid "Show Telepathy debugging information"
-msgstr "Prikaži ispravljačke podatke Telepathyja"
+msgstr "Показать подробности отладки Telepathy"
 
 #: rooms-model.cpp:72
 msgid "Password required"
-msgstr "Lozinka je zahtevana"
+msgstr "Требуется пароль"
 
 #: rooms-model.cpp:74
 msgid "No password required"
-msgstr "Lozinka nije zahtevana"
+msgstr "Не требуется пароль"
 
 #: rooms-model.cpp:94
 msgid "Member count"
-msgstr "Broj članova"
+msgstr "Количество участников"
 
 #: rooms-model.cpp:114
 msgctxt "Chatrooms name"
 msgid "Name"
-msgstr "Ime"
+msgstr "Имя"
 
 #: rooms-model.cpp:116
 msgctxt "Chatrooms description"
 msgid "Description"
-msgstr "Opis"
+msgstr "Описание"
 
 #: tooltips/contacttooltip.cpp:59
 msgctxt "This is an IM user status"
 msgid "Unknown"
-msgstr "nepoznato"
+msgstr "Неизвестно"
 
 #: tooltips/contacttooltip.cpp:69
 msgctxt "This is an IM user status"
 msgid "Error Getting Presence"
-msgstr "Greška u dobavljanju prisutnosti"
+msgstr "Ошибка получения статуса"
 
 #. i18n: ectx: property (text), widget (QLabel, blockedLabel)
 #: tooltips/contacttooltip.ui:126
 msgid "User is blocked"
-msgstr "Korisnik je blokiran"
+msgstr "Пользователь заблокирован"
+
+#, fuzzy
+#~| msgid "Configure Custom Presences..."
+#~ msgid "Configure Notifications ..."
+#~ msgstr "Другой статус..."

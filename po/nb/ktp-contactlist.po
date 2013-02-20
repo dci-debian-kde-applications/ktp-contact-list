@@ -5,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-08-28 20:47+0200\n"
-"PO-Revision-Date: 2012-02-13 16:59+0100\n"
+"POT-Creation-Date: 2013-01-18 09:34+0100\n"
+"PO-Revision-Date: 2012-10-17 21:51+0200\n"
 "Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
 "Language-Team: Norwegian Bokmål <i18n-nb@lister.ping.uio.no>\n"
 "Language: nb\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 1.2\n"
+"X-Generator: Lokalize 1.4\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -97,43 +97,43 @@ msgstr "KCM programtillegg for lynmeldingskontoer er ikke installert"
 msgid "Choose files to send to %1"
 msgstr "Velg filer som skal sendes til %1"
 
-#: contact-overlays.cpp:132 contact-overlays.cpp:133
+#: contact-overlays.cpp:134 contact-overlays.cpp:135
 msgid "Start Chat"
 msgstr "Start prat"
 
-#: contact-overlays.cpp:133
+#: contact-overlays.cpp:135
 msgid "Start a text chat"
 msgstr "Start en tekstprat"
 
-#: contact-overlays.cpp:144 contact-overlays.cpp:145
+#: contact-overlays.cpp:146 contact-overlays.cpp:147
 msgid "Start Audio Call"
 msgstr "Start lydoppkall"
 
-#: contact-overlays.cpp:145
+#: contact-overlays.cpp:147
 msgid "Start an audio call"
 msgstr "Start et lydoppkall"
 
-#: contact-overlays.cpp:157 contact-overlays.cpp:158
+#: contact-overlays.cpp:159 contact-overlays.cpp:160
 msgid "Start Video Call"
 msgstr "Start video-oppkall"
 
-#: contact-overlays.cpp:158
+#: contact-overlays.cpp:160
 msgid "Start a video call"
 msgstr "Start et video-oppkall"
 
-#: contact-overlays.cpp:169 contact-overlays.cpp:170 context-menu.cpp:129
+#: contact-overlays.cpp:171 contact-overlays.cpp:172 context-menu.cpp:129
 msgid "Send File..."
 msgstr "Send fil …"
 
-#: contact-overlays.cpp:170
+#: contact-overlays.cpp:172
 msgid "Send a file"
 msgstr "Send en fil"
 
-#: contact-overlays.cpp:181 contact-overlays.cpp:182
+#: contact-overlays.cpp:183 contact-overlays.cpp:184
 msgid "Share my desktop"
 msgstr "Del mitt skrivebord"
 
-#: contact-overlays.cpp:182
+#: contact-overlays.cpp:184
 msgid "Share desktop using RFB"
 msgstr "Del skrivebord med bruk av RFB"
 
@@ -173,11 +173,11 @@ msgstr "Opprett ny gruppe …"
 
 #: context-menu.cpp:217
 msgid "Re-request Contact Authorization"
-msgstr ""
+msgstr "Be på nytt om kontakt-autorisering"
 
 #: context-menu.cpp:223
 msgid "Resend Contact Authorization"
-msgstr ""
+msgstr "Send kontakt-autorisering på nytt"
 
 #: context-menu.cpp:231
 msgid "Unblock Contact"
@@ -304,11 +304,11 @@ msgstr "Fjern tilstedemelding"
 
 #: dialogs/join-chat-room-dialog.cpp:197
 msgid "This room is already in your favorites."
-msgstr ""
+msgstr "Dette rommet er allerede i favorittlista di."
 
 #: dialogs/join-chat-room-dialog.cpp:199
 msgid "Add room"
-msgstr ""
+msgstr "Legg til rom"
 
 #: dialogs/join-chat-room-dialog.cpp:199
 msgid "Name"
@@ -317,7 +317,7 @@ msgstr "Navn"
 #. i18n: ectx: property (windowTitle), widget (QWidget, JoinChatRoomDialog)
 #: dialogs/join-chat-room-dialog.ui:20
 msgid "Join Chatroom"
-msgstr "Gå inn i pratetom"
+msgstr "Gå inn i praterom"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: dialogs/join-chat-room-dialog.ui:29
@@ -327,32 +327,32 @@ msgstr "Gå inn i praterom:"
 #. i18n: ectx: attribute (title), widget (QWidget, favoritesTab)
 #: dialogs/join-chat-room-dialog.ui:47
 msgid "Favorites"
-msgstr ""
+msgstr "Favoritter"
 
 #. i18n: ectx: property (text), widget (QPushButton, addFavoritePushButton)
 #: dialogs/join-chat-room-dialog.ui:63
 msgid "Add Room"
-msgstr ""
+msgstr "Legg til rom"
 
 #. i18n: ectx: property (text), widget (QPushButton, removeFavoritePushButton)
 #: dialogs/join-chat-room-dialog.ui:73
 msgid "Remove Room"
-msgstr ""
+msgstr "Fjern rom"
 
 #. i18n: ectx: attribute (title), widget (QWidget, recentTab)
 #: dialogs/join-chat-room-dialog.ui:98
 msgid "Recent"
-msgstr ""
+msgstr "Prosent"
 
 #. i18n: ectx: property (text), widget (QPushButton, removeRecentPushButton)
 #: dialogs/join-chat-room-dialog.ui:112
 msgid "Remove"
-msgstr ""
+msgstr "Fjern"
 
 #. i18n: ectx: property (text), widget (QPushButton, clearRecentPushButton)
 #: dialogs/join-chat-room-dialog.ui:122
 msgid "Clear list"
-msgstr ""
+msgstr "Tøm lista"
 
 #. i18n: ectx: attribute (title), widget (QWidget, queryTab)
 #. i18n: ectx: property (text), widget (QPushButton, queryPushButton)
@@ -427,46 +427,46 @@ msgstr "Sett opp egendefinerte tilstedemeldinger …"
 msgid "Now listening to..."
 msgstr "Hører nå på …"
 
-#: global-presence-chooser.cpp:194
+#: global-presence-chooser.cpp:195
 msgid "Click to change your presence message"
-msgstr ""
+msgstr "Trykk for å endre din  tilstedemelding"
 
 #: global-presence-chooser.cpp:231
 msgctxt "Presence string when the account is connecting"
 msgid "Connecting..."
-msgstr ""
+msgstr "Kobler til …"
 
-#: global-presence-chooser.cpp:316
+#: global-presence-chooser.cpp:319
 msgid ""
 "This plugin is currently disabled. Do you want to enable it and use as your "
 "presence?"
 msgstr ""
-"Dette programtillegget ernå slått av. Vil du slå det på og  bruke det som "
+"Dette programtillegget er nå slått av. Vil du slå det på og  bruke det som "
 "din tilstedemelding?"
 
-#: global-presence-chooser.cpp:317
+#: global-presence-chooser.cpp:320
 msgid "Plugin disabled"
 msgstr "Programtillegg slått av"
 
 #: main-widget.cpp:116
 msgid "Add New Contacts..."
-msgstr ""
+msgstr "Legg til nye kontakter …"
 
 #: main-widget.cpp:120
 msgid "Contacts are shown by accounts. Click to show them in groups."
-msgstr ""
+msgstr "Kontakter er vist etter kontoer. Trykk for å vise dem i grupper."
 
 #: main-widget.cpp:121
 msgid "Contacts are shown in groups. Click to show them in accounts."
-msgstr ""
+msgstr "Kontakter er vist i grupper. Trykk for å vise dem i kontoer."
 
 #: main-widget.cpp:130
 msgid "Offline contacts are hidden. Click to show them."
-msgstr ""
+msgstr "Kontakter som er frakoblet er skjult. Trykk for å vise dem."
 
 #: main-widget.cpp:131
 msgid "Offline contacts are shown. Click to hide them."
-msgstr ""
+msgstr "Kontakter som er frakoblet er vist. Trykk for å skjule dem."
 
 #: main-widget.cpp:140
 msgid "List is sorted by name. Click to sort by presence."
@@ -478,51 +478,51 @@ msgstr "Lista er sortert etter til stede. Trykk for å sortere etter navn."
 
 #: main-widget.cpp:148
 msgid "Find Contact"
-msgstr ""
+msgstr "Finn kontakt"
 
 #: main-widget.cpp:165
 msgid "Instant Messaging Settings..."
-msgstr ""
+msgstr "Lynmeldingsinnstillinger …"
 
 #: main-widget.cpp:171
 msgid "Contact List Type"
-msgstr ""
+msgstr "Type kontaktliste"
 
 #: main-widget.cpp:172
 msgid "Use Full List"
-msgstr ""
+msgstr "Bruk fullstendig liste"
 
 #: main-widget.cpp:180
 msgid "Use Normal List"
-msgstr ""
+msgstr "Bruk normal liste"
 
 #: main-widget.cpp:189
 msgid "Use Minimalistic List"
-msgstr ""
+msgstr "Bruk minimalistisk liste"
 
 #: main-widget.cpp:200
 msgid "Shown Contacts"
-msgstr ""
+msgstr "Viste kontakter:"
 
 #: main-widget.cpp:207
 msgid "Show all contacts"
-msgstr ""
+msgstr "Vis alle kontakter"
 
 #: main-widget.cpp:214
 msgid "Show unblocked contacts"
-msgstr ""
+msgstr "Vis ublokkerte kontakter"
 
 #: main-widget.cpp:221
 msgid "Show blocked contacts"
-msgstr ""
+msgstr "Vis blokkerte kontakter"
 
 #: main-widget.cpp:238
 msgid "Join Chat Room..."
-msgstr ""
+msgstr "Gå inn i pratetom …"
 
 #: main-widget.cpp:241
 msgid "Make a Call..."
-msgstr ""
+msgstr "Gjør et anrop …"
 
 #: main-widget.cpp:325
 msgid ""

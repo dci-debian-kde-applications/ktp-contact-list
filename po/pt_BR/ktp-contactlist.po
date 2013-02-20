@@ -9,24 +9,24 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-08-28 20:47+0200\n"
-"PO-Revision-Date: 2012-08-29 00:16-0300\n"
-"Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
+"POT-Creation-Date: 2013-01-18 09:34+0100\n"
+"PO-Revision-Date: 2012-11-22 21:07-0200\n"
+"Last-Translator: André Marcelo Alvarenga <alvarenga@kde.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.4\n"
+"X-Generator: Lokalize 1.5\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Marcus Gama"
+msgstr "Marcus Gama, André Marcelo Alvarenga"
 
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "marcus.gama@gmail.com"
+msgstr "marcus.gama@gmail.com, alvarenga@kde.org"
 
 #: account-button.cpp:71
 msgctxt "@action:inmenu This is an IM user status"
@@ -88,8 +88,8 @@ msgid ""
 "It appears you do not have the IM Accounts control module installed. Please "
 "install telepathy-accounts-kcm package."
 msgstr ""
-"Parece que você não possui o módulo de controle de Contas de MI instalado. "
-"Por favor, instale o pacote telepathy-accounts-kcm."
+"Parece que você não tem instalado o módulo de controle de contas de "
+"mensagens instantâneas. Instale o pacote telepathy-accounts-kcm."
 
 #: contact-list-widget.cpp:168
 msgid "IM Accounts KCM Plugin Is Not Installed"
@@ -100,43 +100,43 @@ msgstr "O plugin do KCM para Contas de MI não está instalado"
 msgid "Choose files to send to %1"
 msgstr "Escolha os arquivos a enviar para %1"
 
-#: contact-overlays.cpp:132 contact-overlays.cpp:133
+#: contact-overlays.cpp:134 contact-overlays.cpp:135
 msgid "Start Chat"
 msgstr "Iniciar bate-papo"
 
-#: contact-overlays.cpp:133
+#: contact-overlays.cpp:135
 msgid "Start a text chat"
 msgstr "Iniciar um bate-papo de texto"
 
-#: contact-overlays.cpp:144 contact-overlays.cpp:145
+#: contact-overlays.cpp:146 contact-overlays.cpp:147
 msgid "Start Audio Call"
 msgstr "Iniciar chamada de áudio"
 
-#: contact-overlays.cpp:145
+#: contact-overlays.cpp:147
 msgid "Start an audio call"
 msgstr "Iniciar uma chamada de áudio"
 
-#: contact-overlays.cpp:157 contact-overlays.cpp:158
+#: contact-overlays.cpp:159 contact-overlays.cpp:160
 msgid "Start Video Call"
 msgstr "Iniciar chamada de vídeo"
 
-#: contact-overlays.cpp:158
+#: contact-overlays.cpp:160
 msgid "Start a video call"
 msgstr "Iniciar uma chamada de vídeo"
 
-#: contact-overlays.cpp:169 contact-overlays.cpp:170 context-menu.cpp:129
+#: contact-overlays.cpp:171 contact-overlays.cpp:172 context-menu.cpp:129
 msgid "Send File..."
 msgstr "Enviar arquivo..."
 
-#: contact-overlays.cpp:170
+#: contact-overlays.cpp:172
 msgid "Send a file"
 msgstr "Enviar um arquivo"
 
-#: contact-overlays.cpp:181 contact-overlays.cpp:182
+#: contact-overlays.cpp:183 contact-overlays.cpp:184
 msgid "Share my desktop"
 msgstr "Compartilhar minha área de trabalho"
 
-#: contact-overlays.cpp:182
+#: contact-overlays.cpp:184
 msgid "Share desktop using RFB"
 msgstr "Compartilhar minha área de trabalho usando RFB"
 
@@ -430,7 +430,7 @@ msgstr "Configurar presenças personalizadas..."
 msgid "Now listening to..."
 msgstr "Ouvindo..."
 
-#: global-presence-chooser.cpp:194
+#: global-presence-chooser.cpp:195
 msgid "Click to change your presence message"
 msgstr "Clique para alterar a sua mensagem de presença"
 
@@ -439,7 +439,7 @@ msgctxt "Presence string when the account is connecting"
 msgid "Connecting..."
 msgstr "Conectando..."
 
-#: global-presence-chooser.cpp:316
+#: global-presence-chooser.cpp:319
 msgid ""
 "This plugin is currently disabled. Do you want to enable it and use as your "
 "presence?"
@@ -447,7 +447,7 @@ msgstr ""
 "Este plugin está atualmente desativado. Você deseja ativá-lo e usar como sua "
 "presença?"
 
-#: global-presence-chooser.cpp:317
+#: global-presence-chooser.cpp:320
 msgid "Plugin disabled"
 msgstr "Plugin desativado"
 
@@ -489,7 +489,7 @@ msgstr "Configurações das mensagens instantâneas..."
 
 #: main-widget.cpp:171
 msgid "Contact List Type"
-msgstr "Tipo da lista de contatos"
+msgstr "Tipo de lista de contatos"
 
 #: main-widget.cpp:172
 msgid "Use Full List"
@@ -505,7 +505,7 @@ msgstr "Usar a lista minimalista"
 
 #: main-widget.cpp:200
 msgid "Shown Contacts"
-msgstr "Contato exibidos"
+msgstr "Exibição de contatos"
 
 #: main-widget.cpp:207
 msgid "Show all contacts"
