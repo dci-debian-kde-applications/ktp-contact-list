@@ -1,8 +1,10 @@
-ktp-contact-list (0.5.1-1) UNRELEASED; urgency=low
+ktp-contact-list (0.5.3-1) UNRELEASED; urgency=low
 
   * [7dc19bd] Imported Upstream version 0.5.1
+  * [fb223af] Imported Upstream version 0.5.3
+  * [26c5e17] bump version dependencies
 
- -- Ritesh Raj Sarraf <rrs@debian.org>  Wed, 28 Nov 2012 23:27:09 +0530
+ -- Ritesh Raj Sarraf <rrs@debian.org>  Wed, 20 Feb 2013 23:55:45 +0530
 
 ktp-contact-list (0.4.0-1) unstable; urgency=low
 
