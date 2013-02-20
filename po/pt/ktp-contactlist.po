@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: telepathy-contactslist-prototype\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-08-28 20:47+0200\n"
+"POT-Creation-Date: 2013-01-18 09:34+0100\n"
 "PO-Revision-Date: 2011-12-29 12:14+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -92,43 +92,43 @@ msgstr "'Plugin' do KCM para Contas de MI Não Instalado"
 msgid "Choose files to send to %1"
 msgstr "Escolher os ficheiros a enviar para %1"
 
-#: contact-overlays.cpp:132 contact-overlays.cpp:133
+#: contact-overlays.cpp:134 contact-overlays.cpp:135
 msgid "Start Chat"
 msgstr "Iniciar uma Conversa"
 
-#: contact-overlays.cpp:133
+#: contact-overlays.cpp:135
 msgid "Start a text chat"
 msgstr "Iniciar uma conversa de texto"
 
-#: contact-overlays.cpp:144 contact-overlays.cpp:145
+#: contact-overlays.cpp:146 contact-overlays.cpp:147
 msgid "Start Audio Call"
 msgstr "Iniciar uma Chamada de Áudio"
 
-#: contact-overlays.cpp:145
+#: contact-overlays.cpp:147
 msgid "Start an audio call"
 msgstr "Iniciar uma chamada de áudio"
 
-#: contact-overlays.cpp:157 contact-overlays.cpp:158
+#: contact-overlays.cpp:159 contact-overlays.cpp:160
 msgid "Start Video Call"
 msgstr "Iniciar uma Chamada de Vídeo"
 
-#: contact-overlays.cpp:158
+#: contact-overlays.cpp:160
 msgid "Start a video call"
 msgstr "Iniciar uma chamada de vídeo"
 
-#: contact-overlays.cpp:169 contact-overlays.cpp:170 context-menu.cpp:129
+#: contact-overlays.cpp:171 contact-overlays.cpp:172 context-menu.cpp:129
 msgid "Send File..."
 msgstr "Enviar um Ficheiro..."
 
-#: contact-overlays.cpp:170
+#: contact-overlays.cpp:172
 msgid "Send a file"
 msgstr "Enviar um ficheiro"
 
-#: contact-overlays.cpp:181 contact-overlays.cpp:182
+#: contact-overlays.cpp:183 contact-overlays.cpp:184
 msgid "Share my desktop"
 msgstr "Partilhar o meu ecrã"
 
-#: contact-overlays.cpp:182
+#: contact-overlays.cpp:184
 msgid "Share desktop using RFB"
 msgstr "Partilhar o ecrã por RFB"
 
@@ -422,7 +422,7 @@ msgstr "Configurar as Presenças Personalizadas..."
 msgid "Now listening to..."
 msgstr "Agora a ouvir..."
 
-#: global-presence-chooser.cpp:194
+#: global-presence-chooser.cpp:195
 msgid "Click to change your presence message"
 msgstr "Carregue para mudar a sua mensagem de presença"
 
@@ -431,7 +431,7 @@ msgctxt "Presence string when the account is connecting"
 msgid "Connecting..."
 msgstr "A ligar..."
 
-#: global-presence-chooser.cpp:316
+#: global-presence-chooser.cpp:319
 msgid ""
 "This plugin is currently disabled. Do you want to enable it and use as your "
 "presence?"
@@ -439,7 +439,7 @@ msgstr ""
 "Este 'plugin' está desactivado de momento. Deseja activá-lo e usá-lo como a "
 "sua presença?"
 
-#: global-presence-chooser.cpp:317
+#: global-presence-chooser.cpp:320
 msgid "Plugin disabled"
 msgstr "'Plugin' desactivado"
 

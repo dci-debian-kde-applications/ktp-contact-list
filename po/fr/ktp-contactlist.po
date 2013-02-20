@@ -1,21 +1,22 @@
 # translation of ktp-contactlist.po to Français
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Joëlle Cornavin <jcorn@free.fr>, 2010, 2011, 2012.
+# Joëlle Cornavin <jcorn@free.fr>, 2010, 2011, 2012, 2013.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: ktp-contactlist\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-08-28 20:47+0200\n"
-"PO-Revision-Date: 2012-07-10 10:21+0200\n"
+"POT-Creation-Date: 2013-01-18 09:34+0100\n"
+"PO-Revision-Date: 2012-07-17 18:48+0200\n"
 "Last-Translator: Joëlle Cornavin <jcorn@free.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
-"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 1.4\n"
 
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
@@ -99,43 +100,43 @@ msgstr ""
 msgid "Choose files to send to %1"
 msgstr "Choisissez les fichiers à envoyer à %1"
 
-#: contact-overlays.cpp:132 contact-overlays.cpp:133
+#: contact-overlays.cpp:134 contact-overlays.cpp:135
 msgid "Start Chat"
 msgstr "Lancer une discussion"
 
-#: contact-overlays.cpp:133
+#: contact-overlays.cpp:135
 msgid "Start a text chat"
 msgstr "Démarrer une discussion par écrit"
 
-#: contact-overlays.cpp:144 contact-overlays.cpp:145
+#: contact-overlays.cpp:146 contact-overlays.cpp:147
 msgid "Start Audio Call"
 msgstr "Démarrer un appel audio"
 
-#: contact-overlays.cpp:145
+#: contact-overlays.cpp:147
 msgid "Start an audio call"
 msgstr "Démarrer un appel audio"
 
-#: contact-overlays.cpp:157 contact-overlays.cpp:158
+#: contact-overlays.cpp:159 contact-overlays.cpp:160
 msgid "Start Video Call"
 msgstr "Démarrer un appel vidéo"
 
-#: contact-overlays.cpp:158
+#: contact-overlays.cpp:160
 msgid "Start a video call"
 msgstr "Démarrer un appel vidéo"
 
-#: contact-overlays.cpp:169 contact-overlays.cpp:170 context-menu.cpp:129
+#: contact-overlays.cpp:171 contact-overlays.cpp:172 context-menu.cpp:129
 msgid "Send File..."
 msgstr "Envoyer un fichier..."
 
-#: contact-overlays.cpp:170
+#: contact-overlays.cpp:172
 msgid "Send a file"
 msgstr "Envoyer un fichier"
 
-#: contact-overlays.cpp:181 contact-overlays.cpp:182
+#: contact-overlays.cpp:183 contact-overlays.cpp:184
 msgid "Share my desktop"
 msgstr "Partager mon bureau"
 
-#: contact-overlays.cpp:182
+#: contact-overlays.cpp:184
 msgid "Share desktop using RFB"
 msgstr "Partage un bureau a l'aide de RFB"
 
@@ -429,7 +430,7 @@ msgstr "Configurer des présences personnalisées..."
 msgid "Now listening to..."
 msgstr "Écoute actuellement..."
 
-#: global-presence-chooser.cpp:194
+#: global-presence-chooser.cpp:195
 msgid "Click to change your presence message"
 msgstr "Cliquez pour changer votre message de présence"
 
@@ -438,7 +439,7 @@ msgctxt "Presence string when the account is connecting"
 msgid "Connecting..."
 msgstr "Connexion en cours..."
 
-#: global-presence-chooser.cpp:316
+#: global-presence-chooser.cpp:319
 msgid ""
 "This plugin is currently disabled. Do you want to enable it and use as your "
 "presence?"
@@ -446,7 +447,7 @@ msgstr ""
 "Ce module externe est actuellement désactivé. Voulez-vous l'activer et "
 "l'utiliser comme présence ?"
 
-#: global-presence-chooser.cpp:317
+#: global-presence-chooser.cpp:320
 msgid "Plugin disabled"
 msgstr "Module externe désactivé"
 
@@ -457,18 +458,21 @@ msgstr "Ajouter de nouveaux contacts..."
 #: main-widget.cpp:120
 msgid "Contacts are shown by accounts. Click to show them in groups."
 msgstr ""
+"Les contacts sont affichés par comptes. Cliquez pour les afficher en groupes."
 
 #: main-widget.cpp:121
 msgid "Contacts are shown in groups. Click to show them in accounts."
 msgstr ""
+"Les contacts sont affichés en groupes. Cliquez pour les afficher dans les "
+"comptes."
 
 #: main-widget.cpp:130
 msgid "Offline contacts are hidden. Click to show them."
-msgstr ""
+msgstr "Les contacts déconnectés sont cachés. Cliquez pour les afficher."
 
 #: main-widget.cpp:131
 msgid "Offline contacts are shown. Click to hide them."
-msgstr ""
+msgstr "Les contacts déconnectés sont affichés. Cliquez pour les cacher."
 
 #: main-widget.cpp:140
 msgid "List is sorted by name. Click to sort by presence."
@@ -495,16 +499,12 @@ msgid "Use Full List"
 msgstr "Utiliser une liste complète"
 
 #: main-widget.cpp:180
-#, fuzzy
-#| msgid "Use Compact List"
 msgid "Use Normal List"
-msgstr "Utiliser une liste compacte"
+msgstr "Utiliser une liste normale"
 
 #: main-widget.cpp:189
-#, fuzzy
-#| msgid "Use Compact List"
 msgid "Use Minimalistic List"
-msgstr "Utiliser une liste compacte"
+msgstr "Utiliser une liste minimaliste"
 
 #: main-widget.cpp:200
 msgid "Shown Contacts"
@@ -527,10 +527,8 @@ msgid "Join Chat Room..."
 msgstr "Rejoindre ce salon de discussion..."
 
 #: main-widget.cpp:241
-#, fuzzy
-#| msgid "Start Audio Call..."
 msgid "Make a Call..."
-msgstr "Démarrer un appel audio..."
+msgstr "Démarrer un appel..."
 
 #: main-widget.cpp:325
 msgid ""

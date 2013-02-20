@@ -1,16 +1,17 @@
 # Copyright © 2012 This_file_is_part_of_KDE
 # This file is distributed under the same license as the ktp-contact-list package.
 # Tommi Nieminen <translator@legisign.org>, 2012.
-# Lasse Liehu <lasse.liehu@gmail.com>, 2012.
+# Lasse Liehu <lasse.liehu@gmail.com>, 2012, 2013.
 #
-# KDE 4.9 Finnish translation sprint 2012-06/07
+# KDE Finnish translation sprint participants:
 # Author: Artnay
+# Author: Lliehu
 msgid ""
 msgstr ""
 "Project-Id-Version: ktp-contactlist\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-08-28 20:47+0200\n"
-"PO-Revision-Date: 2012-08-14 00:02+0300\n"
+"POT-Creation-Date: 2013-01-18 09:34+0100\n"
+"PO-Revision-Date: 2013-01-27 20:25+0200\n"
 "Last-Translator: Lasse Liehu <lasse.liehu@gmail.com>\n"
 "Language-Team: Finnish <lokalisointi@lists.coss.fi>\n"
 "Language: fi\n"
@@ -18,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-POT-Import-Date: 2012-07-19 16:25:13+0000\n"
+"X-POT-Import-Date: 2012-12-02 17:03:34+0000\n"
 "X-Generator: Lokalize 1.5\n"
 
 msgctxt "NAME OF TRANSLATORS"
@@ -87,7 +88,7 @@ msgid ""
 "It appears you do not have the IM Accounts control module installed. Please "
 "install telepathy-accounts-kcm package."
 msgstr ""
-"Näyttää siltä, että pikaviestitilien hallintamoduulia ole asennettu. Asenna "
+"Näyttää siltä, että pikaviestitilien asetusosiota ei ole asennettu. Asenna "
 "paketti telepathy-accounts-kcm."
 
 #: contact-list-widget.cpp:168
@@ -99,49 +100,49 @@ msgstr "Pikaviestitilien KCM-liitännäistä ei ole asennettu"
 msgid "Choose files to send to %1"
 msgstr "Valitse käyttäjälle %1 lähetettävät tiedostot"
 
-#: contact-overlays.cpp:132 contact-overlays.cpp:133
+#: contact-overlays.cpp:134 contact-overlays.cpp:135
 msgid "Start Chat"
-msgstr "Aloita chat"
+msgstr "Aloita keskustelu"
 
-#: contact-overlays.cpp:133
+#: contact-overlays.cpp:135
 msgid "Start a text chat"
-msgstr "Aloita tekstichat"
+msgstr "Aloita tekstikeskustelu"
 
-#: contact-overlays.cpp:144 contact-overlays.cpp:145
+#: contact-overlays.cpp:146 contact-overlays.cpp:147
 msgid "Start Audio Call"
 msgstr "Aloita äänipuhelu"
 
-#: contact-overlays.cpp:145
+#: contact-overlays.cpp:147
 msgid "Start an audio call"
 msgstr "Aloita äänipuhelu"
 
-#: contact-overlays.cpp:157 contact-overlays.cpp:158
+#: contact-overlays.cpp:159 contact-overlays.cpp:160
 msgid "Start Video Call"
 msgstr "Aloita videopuhelu"
 
-#: contact-overlays.cpp:158
+#: contact-overlays.cpp:160
 msgid "Start a video call"
 msgstr "Aloita videopuhelu"
 
-#: contact-overlays.cpp:169 contact-overlays.cpp:170 context-menu.cpp:129
+#: contact-overlays.cpp:171 contact-overlays.cpp:172 context-menu.cpp:129
 msgid "Send File..."
 msgstr "Lähetä tiedosto..."
 
-#: contact-overlays.cpp:170
+#: contact-overlays.cpp:172
 msgid "Send a file"
 msgstr "Lähetä tiedosto"
 
-#: contact-overlays.cpp:181 contact-overlays.cpp:182
+#: contact-overlays.cpp:183 contact-overlays.cpp:184
 msgid "Share my desktop"
 msgstr "Jaa työpöytäni"
 
-#: contact-overlays.cpp:182
+#: contact-overlays.cpp:184
 msgid "Share desktop using RFB"
 msgstr "Jaa työpöytäni RFB:llä"
 
 #: context-menu.cpp:93
 msgid "Start Chat..."
-msgstr "Aloita chat..."
+msgstr "Aloita keskustelu..."
 
 #: context-menu.cpp:109
 msgid "Start Audio Call..."
@@ -319,12 +320,12 @@ msgstr "Nimi"
 #. i18n: ectx: property (windowTitle), widget (QWidget, JoinChatRoomDialog)
 #: dialogs/join-chat-room-dialog.ui:20
 msgid "Join Chatroom"
-msgstr "Liity chat-huoneeseen"
+msgstr "Liity keskusteluhuoneeseen"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: dialogs/join-chat-room-dialog.ui:29
 msgid "Enter chat room:"
-msgstr "Siirry chat-huoneeseen:"
+msgstr "Siirry keskusteluhuoneeseen:"
 
 #. i18n: ectx: attribute (title), widget (QWidget, favoritesTab)
 #: dialogs/join-chat-room-dialog.ui:47
@@ -344,7 +345,7 @@ msgstr "Poista huone"
 #. i18n: ectx: attribute (title), widget (QWidget, recentTab)
 #: dialogs/join-chat-room-dialog.ui:98
 msgid "Recent"
-msgstr ""
+msgstr "Viimeaikaiset"
 
 #. i18n: ectx: property (text), widget (QPushButton, removeRecentPushButton)
 #: dialogs/join-chat-room-dialog.ui:112
@@ -429,16 +430,16 @@ msgstr "Mukauta läsnäolotapoja..."
 msgid "Now listening to..."
 msgstr "Nyt soi..."
 
-#: global-presence-chooser.cpp:194
+#: global-presence-chooser.cpp:195
 msgid "Click to change your presence message"
-msgstr ""
+msgstr "Muuta läsnäoloviestiäsi napsauttamalla"
 
 #: global-presence-chooser.cpp:231
 msgctxt "Presence string when the account is connecting"
 msgid "Connecting..."
 msgstr "Yhdistetään..."
 
-#: global-presence-chooser.cpp:316
+#: global-presence-chooser.cpp:319
 msgid ""
 "This plugin is currently disabled. Do you want to enable it and use as your "
 "presence?"
@@ -446,7 +447,7 @@ msgstr ""
 "Tämä liitännäinen on paraikaa poissa käytöstä. Haluatko ottaa sen käyttöön "
 "ja käyttää sitä läsnäolotapanasi?"
 
-#: global-presence-chooser.cpp:317
+#: global-presence-chooser.cpp:320
 msgid "Plugin disabled"
 msgstr "Liitännäinen ei käytössä"
 
@@ -457,18 +458,23 @@ msgstr "Lisää uusia yhteystietoja..."
 #: main-widget.cpp:120
 msgid "Contacts are shown by accounts. Click to show them in groups."
 msgstr ""
+"Käyttäjät näytetään tileittäin. Näytä heidät ryhmittäin napsauttamalla."
 
 #: main-widget.cpp:121
 msgid "Contacts are shown in groups. Click to show them in accounts."
 msgstr ""
+"Käyttäjät näytetään ryhmittäin. Näytä heidät tileittäin napsauttamalla."
 
 #: main-widget.cpp:130
 msgid "Offline contacts are hidden. Click to show them."
 msgstr ""
+"Poissa verkosta olevat käyttäjät ovat piilossa. Näytä heidät napsauttamalla."
 
 #: main-widget.cpp:131
 msgid "Offline contacts are shown. Click to hide them."
 msgstr ""
+"Poissa verkosta olevat käyttäjät ovat näkyvissä. Piilota heidät "
+"napsauttamalla."
 
 #: main-widget.cpp:140
 msgid "List is sorted by name. Click to sort by presence."
@@ -503,15 +509,12 @@ msgid "Use Normal List"
 msgstr "Käytä tavallista luetteloa"
 
 #: main-widget.cpp:189
-#, fuzzy
-#| msgid "Use Compact List"
 msgid "Use Minimalistic List"
 msgstr "Käytä tiivistä luetteloa"
 
 #: main-widget.cpp:200
-#, fuzzy
 msgid "Shown Contacts"
-msgstr "Torju yhteystieto"
+msgstr "Näytetyt yhteystiedot"
 
 #: main-widget.cpp:207
 msgid "Show all contacts"
@@ -527,13 +530,11 @@ msgstr "Näytä estetyt käyttäjät"
 
 #: main-widget.cpp:238
 msgid "Join Chat Room..."
-msgstr "Liity chat-huoneeseen..."
+msgstr "Liity keskusteluhuoneeseen..."
 
 #: main-widget.cpp:241
-#, fuzzy
-#| msgid "Start Audio Call..."
 msgid "Make a Call..."
-msgstr "Aloita äänipuhelu..."
+msgstr "Aloita puhelu..."
 
 #: main-widget.cpp:325
 msgid ""
@@ -571,6 +572,8 @@ msgstr "Poistu verkosta"
 msgid "KDE IM Contacts"
 msgstr "Pikaviestinkäyttäjät"
 
+# pmap: =:gen=KDE Telepathy -yhteystietoluettelon:
+# pmap: =:elat=KDE Telepathy -yhteystietoluettelosta:
 #: main.cpp:36 main.cpp:37
 msgid "KDE Telepathy Contact List"
 msgstr "KDE Telepathy -yhteystietoluettelo"

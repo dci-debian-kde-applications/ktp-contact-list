@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: telepathy-contactslist-prototype\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-08-28 20:47+0200\n"
+"POT-Creation-Date: 2013-01-18 09:34+0100\n"
 "PO-Revision-Date: 2011-05-09 19:00+0900\n"
 "Last-Translator: Sahran <sahran@live.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -93,43 +93,43 @@ msgstr ""
 msgid "Choose files to send to %1"
 msgstr ""
 
-#: contact-overlays.cpp:132 contact-overlays.cpp:133
+#: contact-overlays.cpp:134 contact-overlays.cpp:135
 msgid "Start Chat"
 msgstr ""
 
-#: contact-overlays.cpp:133
+#: contact-overlays.cpp:135
 msgid "Start a text chat"
 msgstr ""
 
-#: contact-overlays.cpp:144 contact-overlays.cpp:145
+#: contact-overlays.cpp:146 contact-overlays.cpp:147
 msgid "Start Audio Call"
 msgstr ""
 
-#: contact-overlays.cpp:145
+#: contact-overlays.cpp:147
 msgid "Start an audio call"
 msgstr "ئاۋازلىق سۆزلىشىشنى باشلايدۇ"
 
-#: contact-overlays.cpp:157 contact-overlays.cpp:158
+#: contact-overlays.cpp:159 contact-overlays.cpp:160
 msgid "Start Video Call"
 msgstr ""
 
-#: contact-overlays.cpp:158
+#: contact-overlays.cpp:160
 msgid "Start a video call"
 msgstr "سىنلىق سۆزلىشىشنى باشلايدۇ"
 
-#: contact-overlays.cpp:169 contact-overlays.cpp:170 context-menu.cpp:129
+#: contact-overlays.cpp:171 contact-overlays.cpp:172 context-menu.cpp:129
 msgid "Send File..."
 msgstr ""
 
-#: contact-overlays.cpp:170
+#: contact-overlays.cpp:172
 msgid "Send a file"
 msgstr ""
 
-#: contact-overlays.cpp:181 contact-overlays.cpp:182
+#: contact-overlays.cpp:183 contact-overlays.cpp:184
 msgid "Share my desktop"
 msgstr ""
 
-#: contact-overlays.cpp:182
+#: contact-overlays.cpp:184
 msgid "Share desktop using RFB"
 msgstr ""
 
@@ -422,7 +422,7 @@ msgstr ""
 msgid "Now listening to..."
 msgstr ""
 
-#: global-presence-chooser.cpp:194
+#: global-presence-chooser.cpp:195
 msgid "Click to change your presence message"
 msgstr ""
 
@@ -431,13 +431,13 @@ msgctxt "Presence string when the account is connecting"
 msgid "Connecting..."
 msgstr ""
 
-#: global-presence-chooser.cpp:316
+#: global-presence-chooser.cpp:319
 msgid ""
 "This plugin is currently disabled. Do you want to enable it and use as your "
 "presence?"
 msgstr ""
 
-#: global-presence-chooser.cpp:317
+#: global-presence-chooser.cpp:320
 msgid "Plugin disabled"
 msgstr ""
 

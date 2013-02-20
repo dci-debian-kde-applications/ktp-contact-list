@@ -118,10 +118,10 @@ void ContactDelegateCompact::paintContact(QPainter * painter, const QStyleOption
 
     const QFontMetrics nameFontMetrics(nameFont);
 
-    if (option.state & QStyle::State_HasFocus) {
-        painter->setPen(m_palette->color(QPalette::Active, QPalette::HighlightedText));
+    if (option.state & QStyle::State_Selected) {
+        painter->setPen(option.palette.color(QPalette::Active, QPalette::HighlightedText));
     } else {
-        painter->setPen(m_palette->color(QPalette::Active, QPalette::WindowText));
+        painter->setPen(option.palette.color(QPalette::Active, QPalette::Text));
     }
 
     painter->setFont(nameFont);
@@ -139,10 +139,10 @@ void ContactDelegateCompact::paintContact(QPainter * painter, const QStyleOption
     presenceMessageRect.setWidth(optV4.rect.width() - presenceMessageRect.x() - rightIconsWidth);
     presenceMessageRect.setY(presenceMessageRect.y() + (presenceMessageRect.height()/2 - nameFontMetrics.height()/2));
 
-    if (option.state & QStyle::State_HasFocus) {
-        painter->setPen(m_palette->color(QPalette::Disabled, QPalette::HighlightedText));
+    if (option.state & QStyle::State_Selected) {
+        painter->setPen(option.palette.color(QPalette::Disabled, QPalette::HighlightedText));
     } else {
-        painter->setPen(m_palette->color(QPalette::Disabled, QPalette::WindowText));
+        painter->setPen(option.palette.color(QPalette::Disabled, QPalette::Text));
     }
 
     painter->drawText(presenceMessageRect,
@@ -163,14 +163,14 @@ void ContactDelegateCompact::setListMode(ContactDelegateCompact::ListSize size)
 {
     if (size == ContactDelegateCompact::Mini) {
         m_spacing = 2;
-        m_avatarSize = qMax(12, KGlobalSettings::smallestReadableFont().pixelSize() + m_spacing);
+        m_avatarSize = IconSize(KIconLoader::Toolbar);
         m_presenceIconSize = qMax(12, KGlobalSettings::smallestReadableFont().pixelSize() + m_spacing);
         m_clientTypeIconSize = qMax(12, KGlobalSettings::smallestReadableFont().pixelSize() + m_spacing);
     } else if (size == ContactDelegateCompact::Normal) {
         m_spacing = 4;
-        m_avatarSize = 22;
-        m_presenceIconSize = 16;
-        m_clientTypeIconSize = 16;
+        m_avatarSize = IconSize(KIconLoader::Toolbar);
+        m_presenceIconSize = IconSize(KIconLoader::Small);
+        m_clientTypeIconSize = IconSize(KIconLoader::Small);
     }
 
     m_listSize = size;

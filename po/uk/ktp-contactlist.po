@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-08-28 20:47+0200\n"
+"POT-Creation-Date: 2013-01-18 09:34+0100\n"
 "PO-Revision-Date: 2012-07-17 10:32+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -99,43 +99,43 @@ msgstr "Не встановлено модуль керування обліко
 msgid "Choose files to send to %1"
 msgstr "Виберіть файли, які слід надіслати %1"
 
-#: contact-overlays.cpp:132 contact-overlays.cpp:133
+#: contact-overlays.cpp:134 contact-overlays.cpp:135
 msgid "Start Chat"
 msgstr "Початок спілкування"
 
-#: contact-overlays.cpp:133
+#: contact-overlays.cpp:135
 msgid "Start a text chat"
 msgstr "Почати текстове спілкування"
 
-#: contact-overlays.cpp:144 contact-overlays.cpp:145
+#: contact-overlays.cpp:146 contact-overlays.cpp:147
 msgid "Start Audio Call"
 msgstr "Початок аудіоспілкування"
 
-#: contact-overlays.cpp:145
+#: contact-overlays.cpp:147
 msgid "Start an audio call"
 msgstr "Почати аудіоспілкування"
 
-#: contact-overlays.cpp:157 contact-overlays.cpp:158
+#: contact-overlays.cpp:159 contact-overlays.cpp:160
 msgid "Start Video Call"
 msgstr "Початок відеоспілкування"
 
-#: contact-overlays.cpp:158
+#: contact-overlays.cpp:160
 msgid "Start a video call"
 msgstr "Почати відеоспілкування"
 
-#: contact-overlays.cpp:169 contact-overlays.cpp:170 context-menu.cpp:129
+#: contact-overlays.cpp:171 contact-overlays.cpp:172 context-menu.cpp:129
 msgid "Send File..."
 msgstr "Надіслати файл…"
 
-#: contact-overlays.cpp:170
+#: contact-overlays.cpp:172
 msgid "Send a file"
 msgstr "Надсилання файла"
 
-#: contact-overlays.cpp:181 contact-overlays.cpp:182
+#: contact-overlays.cpp:183 contact-overlays.cpp:184
 msgid "Share my desktop"
 msgstr "Оприлюднити зображення стільниці"
 
-#: contact-overlays.cpp:182
+#: contact-overlays.cpp:184
 msgid "Share desktop using RFB"
 msgstr "Оприлюднити зображення стільниці за допомогою RFB"
 
@@ -433,7 +433,7 @@ msgstr "Налаштувати нетипові повідомлення щод�
 msgid "Now listening to..."
 msgstr "Зараз слухає…"
 
-#: global-presence-chooser.cpp:194
+#: global-presence-chooser.cpp:195
 msgid "Click to change your presence message"
 msgstr "Натисніть, щоб змінити ваше повідомлення про присутність"
 
@@ -442,7 +442,7 @@ msgctxt "Presence string when the account is connecting"
 msgid "Connecting..."
 msgstr "Встановлення з’єднання…"
 
-#: global-presence-chooser.cpp:316
+#: global-presence-chooser.cpp:319
 msgid ""
 "This plugin is currently disabled. Do you want to enable it and use as your "
 "presence?"
@@ -450,7 +450,7 @@ msgstr ""
 "Цей додаток вимкнено. Бажаєте увімкнути його і скористатися ним для показу "
 "повідомлень щодо присутності."
 
-#: global-presence-chooser.cpp:317
+#: global-presence-chooser.cpp:320
 msgid "Plugin disabled"
 msgstr "Додаток вимкнено"
 

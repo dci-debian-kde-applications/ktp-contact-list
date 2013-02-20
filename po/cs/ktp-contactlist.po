@@ -1,21 +1,21 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Vít Pelčák <vit@pelcak.org>, 2010, 2011, 2012.
-# Tomáš Chvátal <tomas.chvatal@gmail.com>, 2012.
+# Vít Pelčák <vit@pelcak.org>, 2010, 2011, 2012, 2013.
+# Tomáš Chvátal <tomas.chvatal@gmail.com>, 2012, 2013.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-08-28 20:47+0200\n"
-"PO-Revision-Date: 2012-10-01 08:57+0200\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"POT-Creation-Date: 2013-01-18 09:34+0100\n"
+"PO-Revision-Date: 2013-02-06 11:25+0100\n"
+"Last-Translator: Tomáš Chvátal <tomas.chvatal@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.4\n"
+"X-Generator: Lokalize 1.5\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 msgctxt "NAME OF TRANSLATORS"
@@ -96,43 +96,43 @@ msgstr "Modul KCM účtů komunikátoru není nainstalován"
 msgid "Choose files to send to %1"
 msgstr "Vyberte soubory pro odeslání k %1"
 
-#: contact-overlays.cpp:132 contact-overlays.cpp:133
+#: contact-overlays.cpp:134 contact-overlays.cpp:135
 msgid "Start Chat"
 msgstr "Zahájit rozhovor"
 
-#: contact-overlays.cpp:133
+#: contact-overlays.cpp:135
 msgid "Start a text chat"
 msgstr "Zahájit textový rozhovor"
 
-#: contact-overlays.cpp:144 contact-overlays.cpp:145
+#: contact-overlays.cpp:146 contact-overlays.cpp:147
 msgid "Start Audio Call"
 msgstr "Zahájit zvukový hovor"
 
-#: contact-overlays.cpp:145
+#: contact-overlays.cpp:147
 msgid "Start an audio call"
 msgstr "Zahájit zvukový hovor"
 
-#: contact-overlays.cpp:157 contact-overlays.cpp:158
+#: contact-overlays.cpp:159 contact-overlays.cpp:160
 msgid "Start Video Call"
 msgstr "Zahájit video hovor"
 
-#: contact-overlays.cpp:158
+#: contact-overlays.cpp:160
 msgid "Start a video call"
 msgstr "Zahájit video hovor"
 
-#: contact-overlays.cpp:169 contact-overlays.cpp:170 context-menu.cpp:129
+#: contact-overlays.cpp:171 contact-overlays.cpp:172 context-menu.cpp:129
 msgid "Send File..."
 msgstr "Poslat soubor..."
 
-#: contact-overlays.cpp:170
+#: contact-overlays.cpp:172
 msgid "Send a file"
 msgstr "Poslat soubor"
 
-#: contact-overlays.cpp:181 contact-overlays.cpp:182
+#: contact-overlays.cpp:183 contact-overlays.cpp:184
 msgid "Share my desktop"
 msgstr "Sdílet plochu"
 
-#: contact-overlays.cpp:182
+#: contact-overlays.cpp:184
 msgid "Share desktop using RFB"
 msgstr "Sdílet plochu pomocí RFB"
 
@@ -254,7 +254,7 @@ msgstr "Řetězec stavu"
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: dialogs/contact-info.ui:114
 msgid "Contact can see when you are online:"
-msgstr "Kontakty Vás mohou vidět když jste připojeni:"
+msgstr "Kontakty vás mohou vidět když jste připojeni:"
 
 #. i18n: ectx: property (text), widget (QLabel, publishStateLabel)
 #. i18n: ectx: property (text), widget (QLabel, subscriptionStateLabel)
@@ -304,7 +304,7 @@ msgstr "Odstranit stav"
 
 #: dialogs/join-chat-room-dialog.cpp:197
 msgid "This room is already in your favorites."
-msgstr "Místnost je již ve Vašich oblíbených."
+msgstr "Místnost je již ve vašich oblíbených."
 
 #: dialogs/join-chat-room-dialog.cpp:199
 msgid "Add room"
@@ -427,7 +427,7 @@ msgstr "Nastavit vlastní stavy..."
 msgid "Now listening to..."
 msgstr "Nyní poslouchám..."
 
-#: global-presence-chooser.cpp:194
+#: global-presence-chooser.cpp:195
 msgid "Click to change your presence message"
 msgstr "Klikněte ke změně zprávy stavu"
 
@@ -436,14 +436,14 @@ msgctxt "Presence string when the account is connecting"
 msgid "Connecting..."
 msgstr "Připojuji se..."
 
-#: global-presence-chooser.cpp:316
+#: global-presence-chooser.cpp:319
 msgid ""
 "This plugin is currently disabled. Do you want to enable it and use as your "
 "presence?"
 msgstr ""
 "Rozšíření je nyní zakázáno. Přejete si jej povolit a použít jako svůj stav?"
 
-#: global-presence-chooser.cpp:317
+#: global-presence-chooser.cpp:320
 msgid "Plugin disabled"
 msgstr "Modul vypnut"
 
@@ -528,7 +528,7 @@ msgid ""
 "Something unexpected happened to the core part of your Instant Messaging "
 "system and it couldn't be initialized. Try restarting the Contact List."
 msgstr ""
-"Stalo se něco neočekávaného klíčové části Vašeho IM systému a ten nemohl být "
+"Stalo se něco neočekávaného klíčové části vašeho IM systému a ten nemohl být "
 "inicializován. Zkuste restartovat Seznam kontaktů."
 
 #: main-widget.cpp:327
