@@ -3,13 +3,13 @@
 #
 # Eloy Cuadra <ecuadra@eloihr.net>, 2011, 2012.
 # Kira J. Fernandez <kirajfdez@gmail.com>, 2012.
-# Raul Gonzalez <raulgf83@gmail.com>, 2012.
+# Raul Gonzalez <raulgf83@gmail.com>, 2012, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-01-18 09:34+0100\n"
-"PO-Revision-Date: 2012-10-31 14:00+0100\n"
+"POT-Creation-Date: 2013-03-27 10:06+0100\n"
+"PO-Revision-Date: 2013-03-24 12:48+0100\n"
 "Last-Translator: Raul Gonzalez <raulgf83@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -72,30 +72,46 @@ msgctxt "@action:inmenu This is the IM presence message"
 msgid "Set message..."
 msgstr "Establecer mensaje..."
 
-#: contact-list-widget.cpp:144
+#: contact-list-widget.cpp:156
 msgid "You have no IM accounts configured. Would you like to do that now?"
 msgstr "No tiene ninguna cuenta de MI configurada. ¿Quiere hacerlo ahora?"
 
-#: contact-list-widget.cpp:145
+#: contact-list-widget.cpp:157
 msgid "No Accounts Found"
 msgstr "No se ha encontrado ninguna cuenta"
 
-#: contact-list-widget.cpp:167
+#: contact-list-widget.cpp:172
 msgid ""
 "It appears you do not have the IM Accounts control module installed. Please "
-"install telepathy-accounts-kcm package."
+"install ktp-accounts-kcm package."
 msgstr ""
-"Parece que no tiene instalado el módulo de control de cuentas para MI. Por "
-"favor, instale el paquete telepathy-accounts-kcm."
+"Parece ser que no tiene instalado el módulo de control de cuentas de "
+"mensajería instantánea. Por favor, instale el paquete ktp-accounts-kcm."
 
-#: contact-list-widget.cpp:168
+#: contact-list-widget.cpp:173
 msgid "IM Accounts KCM Plugin Is Not Installed"
 msgstr "El complemento KCM para cuentas de MI no está instalado"
 
-#: contact-list-widget.cpp:403
+#: contact-list-widget.cpp:191
+msgid "Notifications"
+msgstr "Notificaciones"
+
+#: contact-list-widget.cpp:381
 #, kde-format
 msgid "Choose files to send to %1"
 msgstr "Seleccione los archivos a enviar a %1"
+
+#: contact-list-widget.cpp:695
+msgid "&Move here"
+msgstr "&Mover aquí"
+
+#: contact-list-widget.cpp:699
+msgid "&Copy here"
+msgstr "&Copiar aquí"
+
+#: contact-list-widget.cpp:703
+msgid "C&ancel"
+msgstr "C&ancelar"
 
 #: contact-overlays.cpp:134 contact-overlays.cpp:135
 msgid "Start Chat"
@@ -121,7 +137,7 @@ msgstr "Iniciar llamada de vídeo"
 msgid "Start a video call"
 msgstr "Iniciar una llamada de vídeo"
 
-#: contact-overlays.cpp:171 contact-overlays.cpp:172 context-menu.cpp:129
+#: contact-overlays.cpp:171 contact-overlays.cpp:172 context-menu.cpp:138
 msgid "Send File..."
 msgstr "Enviar archivo..."
 
@@ -130,88 +146,104 @@ msgid "Send a file"
 msgstr "Enviar un archivo"
 
 #: contact-overlays.cpp:183 contact-overlays.cpp:184
-msgid "Share my desktop"
+msgid "Share My Desktop"
 msgstr "Compartir mi escritorio"
 
 #: contact-overlays.cpp:184
 msgid "Share desktop using RFB"
 msgstr "Compartir el escritorio usando RFB"
 
-#: context-menu.cpp:93
+#: contact-overlays.cpp:195 contact-overlays.cpp:196
+msgid "Open Log Viewer"
+msgstr "Abrir visor de registros"
+
+#: contact-overlays.cpp:196
+msgid "Show conversation logs"
+msgstr "Mostrar los registros de conversación"
+
+#: context-menu.cpp:102
 msgid "Start Chat..."
 msgstr "Iniciar charla..."
 
-#: context-menu.cpp:109
+#: context-menu.cpp:118
 msgid "Start Audio Call..."
 msgstr "Iniciar llamada de audio..."
 
-#: context-menu.cpp:119
+#: context-menu.cpp:128
 msgid "Start Video Call..."
 msgstr "Iniciar llamada de vídeo..."
 
-#: context-menu.cpp:139
+#: context-menu.cpp:148
 msgid "Share my desktop..."
 msgstr "Compartir mi escritorio..."
 
-#: context-menu.cpp:161
+#: context-menu.cpp:158
+msgid "Open Log Viewer..."
+msgstr "Abrir visor de registros..."
+
+#: context-menu.cpp:170
+msgid "Configure Notifications..."
+msgstr "Configurar las notificaciones..."
+
+#: context-menu.cpp:187
 msgid "Presence message link"
 msgid_plural "Presence message links"
 msgstr[0] "Enlace al mensaje de estado"
 msgstr[1] "Enlaces al mensaje de estado"
 
-#: context-menu.cpp:176
+#: context-menu.cpp:201
 msgid "Remove Contact From This Group"
 msgstr "Eliminar contacto de este grupo"
 
-#: context-menu.cpp:180
+#: context-menu.cpp:205
 msgid "Move to Group"
 msgstr "Mover al grupo"
 
-#: context-menu.cpp:198
+#: context-menu.cpp:223
 msgid "Create New Group..."
 msgstr "Crear nuevo grupo..."
 
-#: context-menu.cpp:217
+#: context-menu.cpp:242
 msgid "Re-request Contact Authorization"
 msgstr "Volver a pedir autorización de contacto"
 
-#: context-menu.cpp:223
+#: context-menu.cpp:248
 msgid "Resend Contact Authorization"
 msgstr "Reenviar autorización de contacto"
 
-#: context-menu.cpp:231
+#: context-menu.cpp:256
 msgid "Unblock Contact"
 msgstr "Desbloquear contacto"
 
-#: context-menu.cpp:235
+#: context-menu.cpp:260
 msgid "Block Contact"
 msgstr "Bloquear contacto"
 
-#: context-menu.cpp:243
+#: context-menu.cpp:268
 msgid "Remove Contact"
 msgstr "Eliminar contacto"
 
-#: context-menu.cpp:248
+#: context-menu.cpp:273
 msgid "Show Info..."
 msgstr "Mostrar información..."
 
-#: context-menu.cpp:271
+#: context-menu.cpp:294
 msgid "Rename Group..."
 msgstr "Cambiar nombre del grupo..."
 
-#: context-menu.cpp:277
+#: context-menu.cpp:300
 msgid "Delete Group"
 msgstr "Borrar grupo"
 
-#: context-menu.cpp:432 context-menu.cpp:457
+#: context-menu.cpp:471 context-menu.cpp:496
 msgid "New Group Name"
 msgstr "Nuevo nombre de grupo"
 
-#: context-menu.cpp:433 context-menu.cpp:458
+#: context-menu.cpp:472 context-menu.cpp:497
 msgid "Please enter the new group name"
 msgstr "Por favor, introduzca el nuevo nombre del grupo"
 
-#: context-menu.cpp:487
+#: context-menu.cpp:530
 #, kde-format
 msgid ""
 "Do you really want to remove group %1?\n"
@@ -222,57 +254,9 @@ msgstr ""
 "\n"
 "Tenga en cuenta que todos los contactos se moverán al grupo «Sin agrupar»"
 
-#: context-menu.cpp:489
+#: context-menu.cpp:532
 msgid "Remove Group"
 msgstr "Eliminar grupo"
-
-#. i18n: ectx: property (windowTitle), widget (QWidget, ContactInfo)
-#: dialogs/contact-info.ui:14
-msgid "Dialog"
-msgstr "Diálogo"
-
-#. i18n: ectx: property (text), widget (QLabel, avatarLabel)
-#: dialogs/contact-info.ui:28
-msgid "Avatar Here"
-msgstr "Avatar aquí"
-
-#. i18n: ectx: property (text), widget (QLabel, idLabel)
-#: dialogs/contact-info.ui:37
-msgid "ContactID"
-msgstr "ID del contacto"
-
-#. i18n: ectx: property (text), widget (QLabel, nameLabel)
-#: dialogs/contact-info.ui:59
-msgid "Contact Display Name"
-msgstr "Nombre del contacto mostrado"
-
-#. i18n: ectx: property (text), widget (QLabel, presenceLabel)
-#: dialogs/contact-info.ui:69
-msgid "Presence String"
-msgstr "Cadena de estado"
-
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: dialogs/contact-info.ui:114
-msgid "Contact can see when you are online:"
-msgstr "El contacto puede verle cuando usted está conectado:"
-
-#. i18n: ectx: property (text), widget (QLabel, publishStateLabel)
-#. i18n: ectx: property (text), widget (QLabel, subscriptionStateLabel)
-#. i18n: ectx: property (text), widget (QLabel, blockedLabel)
-#: dialogs/contact-info.ui:121 dialogs/contact-info.ui:135
-#: dialogs/contact-info.ui:149
-msgid "TextLabel"
-msgstr "TextLabel"
-
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: dialogs/contact-info.ui:128
-msgid "You can see when the contact is online:"
-msgstr "Puede ver cuándo está conectado el contacto:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: dialogs/contact-info.ui:142
-msgid "Contact is blocked:"
-msgstr "El contacto está bloqueado:"
 
 #: dialogs/custom-presence-dialog.cpp:70
 msgid "Edit Custom Presences"
@@ -301,84 +285,6 @@ msgstr "Añadir presencia"
 #: dialogs/custom-presence-dialog.cpp:103
 msgid "Remove Presence"
 msgstr "Eliminar presencia"
-
-#: dialogs/join-chat-room-dialog.cpp:197
-msgid "This room is already in your favorites."
-msgstr "Esta sala ya está en sus favoritos."
-
-#: dialogs/join-chat-room-dialog.cpp:199
-msgid "Add room"
-msgstr "Añadir sala"
-
-#: dialogs/join-chat-room-dialog.cpp:199
-msgid "Name"
-msgstr "Nombre"
-
-#. i18n: ectx: property (windowTitle), widget (QWidget, JoinChatRoomDialog)
-#: dialogs/join-chat-room-dialog.ui:20
-msgid "Join Chatroom"
-msgstr "Unirse a la sala de charla"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: dialogs/join-chat-room-dialog.ui:29
-msgid "Enter chat room:"
-msgstr "Entrar en la sala de charla:"
-
-#. i18n: ectx: attribute (title), widget (QWidget, favoritesTab)
-#: dialogs/join-chat-room-dialog.ui:47
-msgid "Favorites"
-msgstr "Favoritos"
-
-#. i18n: ectx: property (text), widget (QPushButton, addFavoritePushButton)
-#: dialogs/join-chat-room-dialog.ui:63
-msgid "Add Room"
-msgstr "Añadir sala"
-
-#. i18n: ectx: property (text), widget (QPushButton, removeFavoritePushButton)
-#: dialogs/join-chat-room-dialog.ui:73
-msgid "Remove Room"
-msgstr "Eliminar sala"
-
-#. i18n: ectx: attribute (title), widget (QWidget, recentTab)
-#: dialogs/join-chat-room-dialog.ui:98
-msgid "Recent"
-msgstr "Reciente"
-
-#. i18n: ectx: property (text), widget (QPushButton, removeRecentPushButton)
-#: dialogs/join-chat-room-dialog.ui:112
-msgid "Remove"
-msgstr "Eliminar"
-
-#. i18n: ectx: property (text), widget (QPushButton, clearRecentPushButton)
-#: dialogs/join-chat-room-dialog.ui:122
-msgid "Clear list"
-msgstr "Limpiar la lista"
-
-#. i18n: ectx: attribute (title), widget (QWidget, queryTab)
-#. i18n: ectx: property (text), widget (QPushButton, queryPushButton)
-#: dialogs/join-chat-room-dialog.ui:145 dialogs/join-chat-room-dialog.ui:176
-msgid "Query"
-msgstr "Consultar"
-
-#. i18n: ectx: property (text), widget (QLabel, serverLabel)
-#: dialogs/join-chat-room-dialog.ui:151
-msgid "Server to be queried:"
-msgstr "Servidor a consultar:"
-
-#. i18n: ectx: property (clickMessage), widget (KLineEdit, serverLineEdit)
-#: dialogs/join-chat-room-dialog.ui:163
-msgid "Leave blank for the selected account's default server"
-msgstr "Dejar en blanco para el servidor por omisión de la cuenta seleccionada"
-
-#. i18n: ectx: property (text), widget (QPushButton, stopPushButton)
-#: dialogs/join-chat-room-dialog.ui:186
-msgid "Stop"
-msgstr "Detener"
-
-#. i18n: ectx: property (clickMessage), widget (KLineEdit, filterBar)
-#: dialogs/join-chat-room-dialog.ui:217
-msgid "Search rooms"
-msgstr "Buscar salas"
 
 #: dialogs/remove-contact-dialog.cpp:45
 msgid "Remove the selected contact?"
@@ -427,16 +333,16 @@ msgstr "Configurar presencias personalizadas..."
 msgid "Now listening to..."
 msgstr "Escuchando ahora..."
 
-#: global-presence-chooser.cpp:195
+#: global-presence-chooser.cpp:196
 msgid "Click to change your presence message"
 msgstr "Pulse para cambiar su mensaje de presencia"
 
-#: global-presence-chooser.cpp:231
+#: global-presence-chooser.cpp:232
 msgctxt "Presence string when the account is connecting"
 msgid "Connecting..."
 msgstr "Conectando..."
 
-#: global-presence-chooser.cpp:319
+#: global-presence-chooser.cpp:333
 msgid ""
 "This plugin is currently disabled. Do you want to enable it and use as your "
 "presence?"
@@ -444,91 +350,11 @@ msgstr ""
 "Este complemento se encuentra actualmente desactivado. ¿Desea habilitarlo y "
 "usarlo como su estado?"
 
-#: global-presence-chooser.cpp:320
+#: global-presence-chooser.cpp:334
 msgid "Plugin disabled"
 msgstr "Complemento desactivado"
 
-#: main-widget.cpp:116
-msgid "Add New Contacts..."
-msgstr "Añadir nuevos contactos..."
-
-#: main-widget.cpp:120
-msgid "Contacts are shown by accounts. Click to show them in groups."
-msgstr ""
-"Los contactos se están mostrando por cuentas. Pulse para mostrarlos en "
-"grupos."
-
-#: main-widget.cpp:121
-msgid "Contacts are shown in groups. Click to show them in accounts."
-msgstr ""
-"Los contactos se están mostrando en grupos. Pulse para mostrarlos en cuentas."
-
-#: main-widget.cpp:130
-msgid "Offline contacts are hidden. Click to show them."
-msgstr "Los contactos no conectados están ocultos. Pulse para mostrarlos."
-
-#: main-widget.cpp:131
-msgid "Offline contacts are shown. Click to hide them."
-msgstr ""
-"Los contactos no conectados están siendo mostrados. Pulse para ocultarlos."
-
-#: main-widget.cpp:140
-msgid "List is sorted by name. Click to sort by presence."
-msgstr "La lista está ordenada por nombre. Haga clic para ordenar por estado."
-
-#: main-widget.cpp:141
-msgid "List is sorted by presence. Click to sort by name."
-msgstr "La lista está ordenada por estado. Haga clic para ordenar por nombre."
-
-#: main-widget.cpp:148
-msgid "Find Contact"
-msgstr "Buscar contacto"
-
-#: main-widget.cpp:165
-msgid "Instant Messaging Settings..."
-msgstr "Preferencias de mensajería instantánea..."
-
-#: main-widget.cpp:171
-msgid "Contact List Type"
-msgstr "Tipo de lista de contactos"
-
-#: main-widget.cpp:172
-msgid "Use Full List"
-msgstr "Usar lista completa"
-
-#: main-widget.cpp:180
-msgid "Use Normal List"
-msgstr "Usar lista normal"
-
-#: main-widget.cpp:189
-msgid "Use Minimalistic List"
-msgstr "Usar lista minimalista"
-
-#: main-widget.cpp:200
-msgid "Shown Contacts"
-msgstr "Contactos mostrados"
-
-#: main-widget.cpp:207
-msgid "Show all contacts"
-msgstr "Mostrar todos los contactos"
-
-#: main-widget.cpp:214
-msgid "Show unblocked contacts"
-msgstr "Mostrar contactos desbloqueados"
-
-#: main-widget.cpp:221
-msgid "Show blocked contacts"
-msgstr "Mostrar contactos bloqueados"
-
-#: main-widget.cpp:238
-msgid "Join Chat Room..."
-msgstr "Unirse a la sala de charla..."
-
-#: main-widget.cpp:241
-msgid "Make a Call..."
-msgstr "Hacer una llamada..."
-
-#: main-widget.cpp:325
+#: main-widget.cpp:163
 msgid ""
 "Something unexpected happened to the core part of your Instant Messaging "
 "system and it couldn't be initialized. Try restarting the Contact List."
@@ -537,11 +363,11 @@ msgstr ""
 "instantánea y no se ha podido iniciar. Intente reiniciar la lista de "
 "contactos."
 
-#: main-widget.cpp:327
+#: main-widget.cpp:165
 msgid "IM system failed to initialize"
 msgstr "El inicio del sistema de MI ha fallado"
 
-#: main-widget.cpp:440
+#: main-widget.cpp:270
 msgid ""
 "You do not have any other presence controls active (a Presence widget for "
 "example).\n"
@@ -551,84 +377,275 @@ msgstr ""
 "ejemplo).\n"
 "¿Desea permanecer conectado o prefiere desconectarse?"
 
-#: main-widget.cpp:442
+#: main-widget.cpp:272
 msgid "No Other Presence Controls Found"
 msgstr "No se han encontrado otros controles de estado"
 
-#: main-widget.cpp:443
+#: main-widget.cpp:273
 msgid "Stay Online"
 msgstr "Permanecer conectado"
 
-#: main-widget.cpp:444
+#: main-widget.cpp:274
 msgid "Go Offline"
 msgstr "Desconectarse"
+
+#: main-widget.cpp:384
+msgid "Contacts"
+msgstr "Contactos"
+
+#: main-widget.cpp:396
+msgid "View"
+msgstr "Ver"
+
+#: main-widget.cpp:401 main-widget.cpp:436
+msgid "Contact List Type"
+msgstr "Tipo de lista de contactos"
+
+#: main-widget.cpp:404 main-widget.cpp:441
+msgid "Shown Contacts"
+msgstr "Contactos mostrados"
+
+#: main-widget.cpp:513
+msgid "Instant Messaging Settings..."
+msgstr "Preferencias de mensajería instantánea..."
+
+#: main-widget.cpp:518
+msgid "Join Chat Room..."
+msgstr "Unirse a la sala de charla..."
+
+#: main-widget.cpp:519
+msgid "Make a Call..."
+msgstr "Hacer una llamada..."
+
+#: main-widget.cpp:520
+msgid "Add New Contacts..."
+msgstr "Añadir nuevos contactos..."
+
+#: main-widget.cpp:521
+msgid "Find Contact"
+msgstr "Buscar contacto"
+
+#: main-widget.cpp:526
+msgid "Show Contacts by Groups"
+msgstr "Mostrar los contactos por grupos"
+
+#: main-widget.cpp:527
+msgid "Show Contacts by Accounts"
+msgstr "Mostrar los contactos por cuentas"
+
+#: main-widget.cpp:534
+msgid "Show Offline Contacts"
+msgstr "Mostrar los contactos desconectados"
+
+#: main-widget.cpp:535
+msgid "Hide Offline Contacts"
+msgstr "Mostrar todos los contactos"
+
+#: main-widget.cpp:543
+msgid "Sort by Presence"
+msgstr "Ordenar por presencia"
+
+#: main-widget.cpp:544
+msgid "Sort by Name"
+msgstr "Ordenar por nombre"
+
+#: main-widget.cpp:552
+msgid "Use Full List"
+msgstr "Usar lista completa"
+
+#: main-widget.cpp:554
+msgid "Use Normal List"
+msgstr "Usar lista normal"
+
+#: main-widget.cpp:558
+msgid "Use Minimalistic List"
+msgstr "Usar lista minimalista"
+
+#: main-widget.cpp:565
+msgid "Show All Contacts"
+msgstr "Mostrar todos los contactos"
+
+#: main-widget.cpp:567
+msgid "Show Unblocked Contacts"
+msgstr "Mostrar los contactos no bloqueados"
+
+#: main-widget.cpp:569
+msgid "Show Blocked Contacts"
+msgstr "Mostrar los contactos bloqueados"
 
 #. i18n: ectx: property (windowTitle), widget (QMainWindow, MainWindow)
 #: main-widget.ui:14
 msgid "KDE IM Contacts"
 msgstr "Contactos de MI para KDE"
 
-#: main.cpp:36 main.cpp:37
+#: main.cpp:37 main.cpp:38
 msgid "KDE Telepathy Contact List"
 msgstr "Lista de contactos de Telepathy para KDE"
 
-#: main.cpp:38
+#: main.cpp:39
 msgid "(C) 2011, Martin Klapetek"
 msgstr "© 2011, Martin Klapetek"
 
-#: main.cpp:40
+#: main.cpp:41
 msgctxt "@info:credit"
 msgid "Martin Klapetek"
 msgstr "Martin Klapetek"
 
-#: main.cpp:40
+#: main.cpp:41
 msgid "Developer"
 msgstr "Desarrollador"
 
-#: main.cpp:48
+#: main.cpp:49
 msgid "Show Telepathy debugging information"
 msgstr "Mostrar información de depuración de Telepathy"
 
-#: rooms-model.cpp:72
-msgid "Password required"
-msgstr "Se necesita contraseña"
-
-#: rooms-model.cpp:74
-msgid "No password required"
-msgstr "No se necesita contraseña"
-
-#: rooms-model.cpp:94
-msgid "Member count"
-msgstr "Contador de miembros"
-
-#: rooms-model.cpp:114
-msgctxt "Chatrooms name"
-msgid "Name"
-msgstr "Nombre"
-
-#: rooms-model.cpp:116
-msgctxt "Chatrooms description"
-msgid "Description"
-msgstr "Descripción"
-
-#: tooltips/contacttooltip.cpp:59
-msgctxt "This is an IM user status"
-msgid "Unknown"
-msgstr "Desconocido"
-
-#: tooltips/contacttooltip.cpp:69
+#: tooltips/contacttooltip.cpp:56
 msgctxt "This is an IM user status"
 msgid "Error Getting Presence"
 msgstr "Error al obtener estado"
+
+#: tooltips/contacttooltip.cpp:72
+#, kde-format
+msgid "Account: %1"
+msgstr "Cuenta: %1"
 
 #. i18n: ectx: property (text), widget (QLabel, blockedLabel)
 #: tooltips/contacttooltip.ui:126
 msgid "User is blocked"
 msgstr "El usuario está bloqueado"
 
+#, fuzzy
+#~| msgctxt "Presence string when the account is connecting"
+#~| msgid "Connecting..."
+#~ msgid "Settings..."
+#~ msgstr "Conectando..."
+
+#~ msgid "Contacts are shown by accounts. Click to show them in groups."
+#~ msgstr ""
+#~ "Los contactos se están mostrando por cuentas. Pulse para mostrarlos en "
+#~ "grupos."
+
+#~ msgid "Contacts are shown in groups. Click to show them in accounts."
+#~ msgstr ""
+#~ "Los contactos se están mostrando en grupos. Pulse para mostrarlos en "
+#~ "cuentas."
+
+#~ msgid "Offline contacts are hidden. Click to show them."
+#~ msgstr "Los contactos no conectados están ocultos. Pulse para mostrarlos."
+
+#~ msgid "Offline contacts are shown. Click to hide them."
+#~ msgstr ""
+#~ "Los contactos no conectados están siendo mostrados. Pulse para ocultarlos."
+
+#~ msgid "List is sorted by name. Click to sort by presence."
+#~ msgstr ""
+#~ "La lista está ordenada por nombre. Haga clic para ordenar por estado."
+
+#~ msgid "List is sorted by presence. Click to sort by name."
+#~ msgstr ""
+#~ "La lista está ordenada por estado. Haga clic para ordenar por nombre."
+
+#~ msgctxt "This is an IM user status"
+#~ msgid "Unknown"
+#~ msgstr "Desconocido"
+
+#~ msgid "Dialog"
+#~ msgstr "Diálogo"
+
+#~ msgid "Avatar Here"
+#~ msgstr "Avatar aquí"
+
+#~ msgid "Contact Display Name"
+#~ msgstr "Nombre del contacto mostrado"
+
+#~ msgid "Presence String"
+#~ msgstr "Cadena de estado"
+
+#~ msgid "Contact can see when you are online:"
+#~ msgstr "El contacto puede verle cuando usted está conectado:"
+
+#~ msgid "TextLabel"
+#~ msgstr "TextLabel"
+
+#~ msgid "You can see when the contact is online:"
+#~ msgstr "Puede ver cuándo está conectado el contacto:"
+
+#~ msgid "Contact is blocked:"
+#~ msgstr "El contacto está bloqueado:"
+
+#~ msgid "This room is already in your favorites."
+#~ msgstr "Esta sala ya está en sus favoritos."
+
+#~ msgid "Add room"
+#~ msgstr "Añadir sala"
+
+#~ msgid "Name"
+#~ msgstr "Nombre"
+
+#~ msgid "Join Chatroom"
+#~ msgstr "Unirse a la sala de charla"
+
+#~ msgid "Enter chat room:"
+#~ msgstr "Entrar en la sala de charla:"
+
+#~ msgid "Favorites"
+#~ msgstr "Favoritos"
+
+#~ msgid "Add Room"
+#~ msgstr "Añadir sala"
+
+#~ msgid "Remove Room"
+#~ msgstr "Eliminar sala"
+
+#~ msgid "Recent"
+#~ msgstr "Reciente"
+
+#~ msgid "Remove"
+#~ msgstr "Eliminar"
+
+#~ msgid "Clear list"
+#~ msgstr "Limpiar la lista"
+
+#~ msgid "Query"
+#~ msgstr "Consultar"
+
+#~ msgid "Server to be queried:"
+#~ msgstr "Servidor a consultar:"
+
+#~ msgid "Leave blank for the selected account's default server"
+#~ msgstr ""
+#~ "Dejar en blanco para el servidor por omisión de la cuenta seleccionada"
+
+#~ msgid "Stop"
+#~ msgstr "Detener"
+
+#~ msgid "Search rooms"
+#~ msgstr "Buscar salas"
+
+#~ msgid "Password required"
+#~ msgstr "Se necesita contraseña"
+
+#~ msgid "No password required"
+#~ msgstr "No se necesita contraseña"
+
+#~ msgid "Member count"
+#~ msgstr "Contador de miembros"
+
+#~ msgctxt "Chatrooms name"
+#~ msgid "Name"
+#~ msgstr "Nombre"
+
+#~ msgctxt "Chatrooms description"
+#~ msgid "Description"
+#~ msgstr "Descripción"
+
+#, fuzzy
+#~| msgid "Show/Hide groups"
 #~ msgid "Show/Hide Groups"
 #~ msgstr "Mostrar/ocultar grupos"
 
+#, fuzzy
+#~| msgid "Hide/Show offline users"
 #~ msgid "Hide/Show Offline Users"
 #~ msgstr "Ocultar/mostrar usuarios no conectados"
 
@@ -652,17 +669,11 @@ msgstr "El usuario está bloqueado"
 #~ msgid "Account Error"
 #~ msgstr "Error en cuenta"
 
-#~ msgid "Configure accounts..."
-#~ msgstr "Configurar cuentas..."
+#~ msgid "Screen Name:"
+#~ msgstr "Nombre de pantalla:"
 
 #~ msgid "Join chat room"
 #~ msgstr "Unirse a la sala de charla."
-
-#~ msgid "Account:"
-#~ msgstr "Cuenta:"
-
-#~ msgid "Screen Name:"
-#~ msgstr "Nombre de pantalla:"
 
 #~ msgid "Load from file..."
 #~ msgstr "Cargar del archivo..."
@@ -684,9 +695,3 @@ msgstr "El usuario está bloqueado"
 
 #~ msgid "Telepathy KDE Contact List"
 #~ msgstr "Lista de contactos de KDE para Telepathy"
-
-#~ msgid "Sort by presence"
-#~ msgstr "Ordenar por presencia"
-
-#~ msgid "Sort by name"
-#~ msgstr "Ordenar por nombre"

@@ -25,8 +25,7 @@
 #include <KIconLoader>
 #include <KDebug>
 
-#include <KTp/Models/accounts-model.h>
-#include <KTp/Models/contact-model-item.h>
+#include <KTp/types.h>
 
 const int spacing = IconSize(KIconLoader::Dialog) / 8;
 
@@ -114,16 +113,17 @@ void StartChannelContactOverlay::slotClicked(bool checked)
     QModelIndex index = button()->index();
 
     if (index.isValid()) {
-        ContactModelItem* contactItem = index.data(AccountsModel::ItemRole).value<ContactModelItem*>();
-        if (contactItem) {
-            emit activated(contactItem);
+        Tp::AccountPtr account = index.data(KTp::AccountRole).value<Tp::AccountPtr>();
+        Tp::ContactPtr contact = index.data(KTp::ContactRole).value<KTp::ContactPtr>();
+        if (account && contact) {
+            emit activated(account, contact);
         }
     }
 }
 
 bool StartChannelContactOverlay::checkIndex(const QModelIndex& index) const
 {
-    return index.data(m_capabilityRole).toBool() && index.data(AccountsModel::ItemRole).userType() == qMetaTypeId<ContactModelItem*>();
+    return index.data(m_capabilityRole).toBool() && index.data(KTp::RowTypeRole).toInt() == KTp::ContactRowType;
 }
 
 // ------------------------------------------------------------------------
@@ -133,7 +133,7 @@ TextChannelContactOverlay::TextChannelContactOverlay(QObject *parent)
         parent,
         KGuiItem(i18n("Start Chat"), "text-x-generic",
                  i18n("Start Chat"), i18n("Start a text chat")),
-        AccountsModel::TextChatCapabilityRole,
+        KTp::ContactCanTextChatRole,
         IconSize(KIconLoader::Dialog) + spacing * 2)
 {
 }
@@ -145,7 +145,7 @@ AudioChannelContactOverlay::AudioChannelContactOverlay(QObject *parent)
         parent,
         KGuiItem(i18n("Start Audio Call"), "audio-headset",
                  i18n("Start Audio Call"), i18n("Start an audio call")),
-        AccountsModel::AudioCallCapabilityRole,
+        KTp::ContactCanAudioCallRole,
         IconSize(KIconLoader::Dialog) + spacing * 3 + IconSize(KIconLoader::Small))
 
 {
@@ -158,7 +158,7 @@ VideoChannelContactOverlay::VideoChannelContactOverlay(QObject *parent)
         parent,
         KGuiItem(i18n("Start Video Call"), "camera-web",
                  i18n("Start Video Call"), i18n("Start a video call")),
-        AccountsModel::VideoCallCapabilityRole,
+        KTp::ContactCanVideoCallRole,
         IconSize(KIconLoader::Dialog) + spacing * 4 + IconSize(KIconLoader::Small) * 2)
 {
 }
@@ -170,7 +170,7 @@ FileTransferContactOverlay::FileTransferContactOverlay(QObject *parent)
         parent,
         KGuiItem(i18n("Send File..."), "mail-attachment",
                  i18n("Send File..."), i18n("Send a file")),
-        AccountsModel::FileTransferCapabilityRole,
+        KTp::ContactCanFileTransferRole,
         IconSize(KIconLoader::Dialog) + spacing * 5 + IconSize(KIconLoader::Small) * 3)
 {
 }
@@ -180,12 +180,23 @@ FileTransferContactOverlay::FileTransferContactOverlay(QObject *parent)
 DesktopSharingContactOverlay::DesktopSharingContactOverlay(QObject *parent)
     : StartChannelContactOverlay(
         parent,
-        KGuiItem(i18n("Share my desktop"), "krfb",
-                 i18n("Share my desktop"), i18n("Share desktop using RFB")),
-        AccountsModel::DesktopSharingCapabilityRole,
+        KGuiItem(i18n("Share My Desktop"), "krfb",
+                 i18n("Share My Desktop"), i18n("Share desktop using RFB")),
+        -1, //FIXME: the share desktop is now part of ContactTubesRole, not returning bool anymore, needs porting
         IconSize(KIconLoader::Dialog) + spacing * 6 + IconSize(KIconLoader::Small) * 4)
 {
 }
 
+//-------------------------------------------------------------------------
+
+LogViewerOverlay::LogViewerOverlay(QObject* parent)
+    : StartChannelContactOverlay(
+        parent,
+        KGuiItem(i18n("Open Log Viewer"), "documentation",
+                 i18n("Open Log Viewer"), i18n("Show conversation logs")),
+        Qt::DisplayRole, /* Always display the logviewer action */
+        IconSize(KIconLoader::Dialog) + spacing * 7 + IconSize(KIconLoader::Small) * 5)
+{
+}
 
 #include "contact-overlays.moc"

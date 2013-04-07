@@ -1,14 +1,16 @@
+# ktp-contactlist.po translation el
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
+# Stelios <sstavra@gmail.com>, 2012.
 # Dimitrios Glentadakis <dglent@gmail.com>, 2012.
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: ktp-contactlist\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-01-18 09:34+0100\n"
-"PO-Revision-Date: 2012-09-02 08:04+0200\n"
-"Last-Translator: Dimitrios Glentadakis <dglent@gmail.com>\n"
+"POT-Creation-Date: 2013-03-27 10:06+0100\n"
+"PO-Revision-Date: 2013-03-24 13:23+0300\n"
+"Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
@@ -70,33 +72,49 @@ msgctxt "@action:inmenu This is the IM presence message"
 msgid "Set message..."
 msgstr "Καθορίστε μήνυμα..."
 
-#: contact-list-widget.cpp:144
+#: contact-list-widget.cpp:156
 msgid "You have no IM accounts configured. Would you like to do that now?"
 msgstr ""
 "Δεν έχετε διαμορφώσει λογαριασμούς στιγμιαίων μηνυμάτων. Θέλετε να το κάνετε "
 "τώρα;"
 
-#: contact-list-widget.cpp:145
+#: contact-list-widget.cpp:157
 msgid "No Accounts Found"
 msgstr "Δεν βρέθηκαν λογαριασμοί"
 
-#: contact-list-widget.cpp:167
+#: contact-list-widget.cpp:172
 msgid ""
 "It appears you do not have the IM Accounts control module installed. Please "
-"install telepathy-accounts-kcm package."
+"install ktp-accounts-kcm package."
 msgstr ""
 "Φαίνεται ότι δεν έχετε εγκατεστημένο το άρθρωμα ελέγχου λογαριασμών "
-"στιγμιαίων μηνυμάτων. Εγκαταστήστε το πακέτο telepathy-accounts-kcm"
+"στιγμιαίων μηνυμάτων. Εγκαταστήστε το πακέτο ktp-accounts-kcm ."
 
-#: contact-list-widget.cpp:168
+#: contact-list-widget.cpp:173
 msgid "IM Accounts KCM Plugin Is Not Installed"
 msgstr ""
 "Το πρόσθετο KCM για λογαριασμούς στιγμιαίων μηνυμάτων δεν είναι εγκατεστημένο"
 
-#: contact-list-widget.cpp:403
+#: contact-list-widget.cpp:191
+msgid "Notifications"
+msgstr "Ειδοποιήσεις"
+
+#: contact-list-widget.cpp:381
 #, kde-format
 msgid "Choose files to send to %1"
 msgstr "Επιλέξτε αρχεία προς αποστολή στο %1"
+
+#: contact-list-widget.cpp:695
+msgid "&Move here"
+msgstr "&Μετακίνηση εδώ"
+
+#: contact-list-widget.cpp:699
+msgid "&Copy here"
+msgstr "Α&ντιγραφή εδώ"
+
+#: contact-list-widget.cpp:703
+msgid "C&ancel"
+msgstr "&Ακύρωση"
 
 #: contact-overlays.cpp:134 contact-overlays.cpp:135
 msgid "Start Chat"
@@ -122,7 +140,7 @@ msgstr "Έναρξη οπτικής κλήσης"
 msgid "Start a video call"
 msgstr "Έναρξη οπτικής κλήσης"
 
-#: contact-overlays.cpp:171 contact-overlays.cpp:172 context-menu.cpp:129
+#: contact-overlays.cpp:171 contact-overlays.cpp:172 context-menu.cpp:138
 msgid "Send File..."
 msgstr "Αποστολή αρχείου..."
 
@@ -131,88 +149,104 @@ msgid "Send a file"
 msgstr "Αποστολή αρχείου"
 
 #: contact-overlays.cpp:183 contact-overlays.cpp:184
-msgid "Share my desktop"
+msgid "Share My Desktop"
 msgstr "Κοινή χρήση της επιφάνειας εργασίας μου"
 
 #: contact-overlays.cpp:184
 msgid "Share desktop using RFB"
 msgstr "Διαμοιρασμός επιφάνειας εργασίας με χρήση RFB"
 
-#: context-menu.cpp:93
+#: contact-overlays.cpp:195 contact-overlays.cpp:196
+msgid "Open Log Viewer"
+msgstr "Άνοιγμα προβολής καταγραφών"
+
+#: contact-overlays.cpp:196
+msgid "Show conversation logs"
+msgstr "Εμφάνιση καταγραφών συνομιλιών"
+
+#: context-menu.cpp:102
 msgid "Start Chat..."
 msgstr "Έναρξη συνομιλίας..."
 
-#: context-menu.cpp:109
+#: context-menu.cpp:118
 msgid "Start Audio Call..."
 msgstr "Έναρξη ηχητικής κλήσης..."
 
-#: context-menu.cpp:119
+#: context-menu.cpp:128
 msgid "Start Video Call..."
 msgstr "Έναρξη οπτικής κλήσης..."
 
-#: context-menu.cpp:139
+#: context-menu.cpp:148
 msgid "Share my desktop..."
 msgstr "Κοινή χρήση της επιφάνειας εργασίας μου..."
 
-#: context-menu.cpp:161
+#: context-menu.cpp:158
+msgid "Open Log Viewer..."
+msgstr "Άνοιγμα προβολής καταγραφών..."
+
+#: context-menu.cpp:170
+msgid "Configure Notifications..."
+msgstr "Διαμόρφωση ειδοποιήσεων..."
+
+#: context-menu.cpp:187
 msgid "Presence message link"
 msgid_plural "Presence message links"
 msgstr[0] "Σύνδεσμος μηνύματος παρουσίας"
 msgstr[1] "Σύνδεσμοι μηνυμάτων παρουσίας"
 
-#: context-menu.cpp:176
+#: context-menu.cpp:201
 msgid "Remove Contact From This Group"
 msgstr "Αφαίρεση επαφής από την ομάδα αυτή"
 
-#: context-menu.cpp:180
+#: context-menu.cpp:205
 msgid "Move to Group"
 msgstr "Μετακίνηση στην ομάδα"
 
-#: context-menu.cpp:198
+#: context-menu.cpp:223
 msgid "Create New Group..."
 msgstr "Δημιουργία νέας ομάδας..."
 
-#: context-menu.cpp:217
+#: context-menu.cpp:242
 msgid "Re-request Contact Authorization"
 msgstr "Επαναφορά αιτήματος εξουσιοδότησης επαφής"
 
-#: context-menu.cpp:223
+#: context-menu.cpp:248
 msgid "Resend Contact Authorization"
 msgstr "Επανάληψη αποστολής εξουσιοδότησης επαφής"
 
-#: context-menu.cpp:231
+#: context-menu.cpp:256
 msgid "Unblock Contact"
 msgstr "Αναίρεση φραγής επαφής"
 
-#: context-menu.cpp:235
+#: context-menu.cpp:260
 msgid "Block Contact"
 msgstr "Φραγή επαφής"
 
-#: context-menu.cpp:243
+#: context-menu.cpp:268
 msgid "Remove Contact"
 msgstr "Αφαίρεση επαφής"
 
-#: context-menu.cpp:248
+#: context-menu.cpp:273
 msgid "Show Info..."
 msgstr "Προβολή πληροφοριών..."
 
-#: context-menu.cpp:271
+#: context-menu.cpp:294
 msgid "Rename Group..."
 msgstr "Μετονομασία ομάδας..."
 
-#: context-menu.cpp:277
+#: context-menu.cpp:300
 msgid "Delete Group"
 msgstr "Διαγραφή ομάδας"
 
-#: context-menu.cpp:432 context-menu.cpp:457
+#: context-menu.cpp:471 context-menu.cpp:496
 msgid "New Group Name"
 msgstr "Νέο όνομα ομάδας"
 
-#: context-menu.cpp:433 context-menu.cpp:458
+#: context-menu.cpp:472 context-menu.cpp:497
 msgid "Please enter the new group name"
 msgstr "Εισαγάγετε το νέο όνομα ομάδας"
 
-#: context-menu.cpp:487
+#: context-menu.cpp:530
 #, kde-format
 msgid ""
 "Do you really want to remove group %1?\n"
@@ -223,57 +257,9 @@ msgstr ""
 "\n"
 "Σημειώστε ότι όλες οι επαφές θα μετακινηθούν στα 'Μη ομαδοποιημένα'"
 
-#: context-menu.cpp:489
+#: context-menu.cpp:532
 msgid "Remove Group"
 msgstr "Αφαίρεση ομάδας"
-
-#. i18n: ectx: property (windowTitle), widget (QWidget, ContactInfo)
-#: dialogs/contact-info.ui:14
-msgid "Dialog"
-msgstr "Διάλογος"
-
-#. i18n: ectx: property (text), widget (QLabel, avatarLabel)
-#: dialogs/contact-info.ui:28
-msgid "Avatar Here"
-msgstr "Εδώ το avatar"
-
-#. i18n: ectx: property (text), widget (QLabel, idLabel)
-#: dialogs/contact-info.ui:37
-msgid "ContactID"
-msgstr "ContactID"
-
-#. i18n: ectx: property (text), widget (QLabel, nameLabel)
-#: dialogs/contact-info.ui:59
-msgid "Contact Display Name"
-msgstr "Όνομα επαφής στην οθόνη"
-
-#. i18n: ectx: property (text), widget (QLabel, presenceLabel)
-#: dialogs/contact-info.ui:69
-msgid "Presence String"
-msgstr "Συμβολοσειρά παρουσίας"
-
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: dialogs/contact-info.ui:114
-msgid "Contact can see when you are online:"
-msgstr "Η επαφή μπορεί να δει πότε είστε σε σύνδεση:"
-
-#. i18n: ectx: property (text), widget (QLabel, publishStateLabel)
-#. i18n: ectx: property (text), widget (QLabel, subscriptionStateLabel)
-#. i18n: ectx: property (text), widget (QLabel, blockedLabel)
-#: dialogs/contact-info.ui:121 dialogs/contact-info.ui:135
-#: dialogs/contact-info.ui:149
-msgid "TextLabel"
-msgstr "TextLabel"
-
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: dialogs/contact-info.ui:128
-msgid "You can see when the contact is online:"
-msgstr "Μπορείτε να δείτε πότε η επαφή είναι σε σύνδεση:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: dialogs/contact-info.ui:142
-msgid "Contact is blocked:"
-msgstr "Η επαφή είναι σε φραγή:"
 
 #: dialogs/custom-presence-dialog.cpp:70
 msgid "Edit Custom Presences"
@@ -302,85 +288,6 @@ msgstr "Προσθήκη παρουσίας"
 #: dialogs/custom-presence-dialog.cpp:103
 msgid "Remove Presence"
 msgstr "Αφαίρεση παρουσίας"
-
-#: dialogs/join-chat-room-dialog.cpp:197
-msgid "This room is already in your favorites."
-msgstr "Η αίθουσα αυτή είναι ήδη στις αγαπημένες σας."
-
-#: dialogs/join-chat-room-dialog.cpp:199
-msgid "Add room"
-msgstr "Προσθήκη αίθουσας"
-
-#: dialogs/join-chat-room-dialog.cpp:199
-msgid "Name"
-msgstr "Όνομα"
-
-#. i18n: ectx: property (windowTitle), widget (QWidget, JoinChatRoomDialog)
-#: dialogs/join-chat-room-dialog.ui:20
-msgid "Join Chatroom"
-msgstr "Είσοδος στην αίθουσα συνομιλίας"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: dialogs/join-chat-room-dialog.ui:29
-msgid "Enter chat room:"
-msgstr "Εισέλθετε στην αίθουσα συνομιλίας:"
-
-#. i18n: ectx: attribute (title), widget (QWidget, favoritesTab)
-#: dialogs/join-chat-room-dialog.ui:47
-msgid "Favorites"
-msgstr "Αγαπημένα"
-
-#. i18n: ectx: property (text), widget (QPushButton, addFavoritePushButton)
-#: dialogs/join-chat-room-dialog.ui:63
-msgid "Add Room"
-msgstr "Προσθήκη αίθουσας"
-
-#. i18n: ectx: property (text), widget (QPushButton, removeFavoritePushButton)
-#: dialogs/join-chat-room-dialog.ui:73
-msgid "Remove Room"
-msgstr "Αφαίρεση αίθουσας"
-
-#. i18n: ectx: attribute (title), widget (QWidget, recentTab)
-#: dialogs/join-chat-room-dialog.ui:98
-msgid "Recent"
-msgstr "Πρόσφατο"
-
-#. i18n: ectx: property (text), widget (QPushButton, removeRecentPushButton)
-#: dialogs/join-chat-room-dialog.ui:112
-msgid "Remove"
-msgstr "Αφαίρεση"
-
-#. i18n: ectx: property (text), widget (QPushButton, clearRecentPushButton)
-#: dialogs/join-chat-room-dialog.ui:122
-msgid "Clear list"
-msgstr "Καθαρισμός λίστας"
-
-#. i18n: ectx: attribute (title), widget (QWidget, queryTab)
-#. i18n: ectx: property (text), widget (QPushButton, queryPushButton)
-#: dialogs/join-chat-room-dialog.ui:145 dialogs/join-chat-room-dialog.ui:176
-msgid "Query"
-msgstr "Ερώτηση"
-
-#. i18n: ectx: property (text), widget (QLabel, serverLabel)
-#: dialogs/join-chat-room-dialog.ui:151
-msgid "Server to be queried:"
-msgstr "Εξυπηρετητής που θα ερωτηθεί:"
-
-#. i18n: ectx: property (clickMessage), widget (KLineEdit, serverLineEdit)
-#: dialogs/join-chat-room-dialog.ui:163
-msgid "Leave blank for the selected account's default server"
-msgstr ""
-"Αφήστε το κενό για τον προκαθορισμένο εξυπηρετητή του επιλεγμένου λογαριασμού"
-
-#. i18n: ectx: property (text), widget (QPushButton, stopPushButton)
-#: dialogs/join-chat-room-dialog.ui:186
-msgid "Stop"
-msgstr "Διακοπή"
-
-#. i18n: ectx: property (clickMessage), widget (KLineEdit, filterBar)
-#: dialogs/join-chat-room-dialog.ui:217
-msgid "Search rooms"
-msgstr "Αναζήτηση αιθουσών"
 
 #: dialogs/remove-contact-dialog.cpp:45
 msgid "Remove the selected contact?"
@@ -429,16 +336,16 @@ msgstr "Διαμόρφωση προσαρμοσμένων καταστάσεων
 msgid "Now listening to..."
 msgstr "Τώρα ακούω..."
 
-#: global-presence-chooser.cpp:195
+#: global-presence-chooser.cpp:196
 msgid "Click to change your presence message"
 msgstr "Κάνετε κλικ για να αλλάξετε το μήνυμα παρουσίας"
 
-#: global-presence-chooser.cpp:231
+#: global-presence-chooser.cpp:232
 msgctxt "Presence string when the account is connecting"
 msgid "Connecting..."
 msgstr "Συνδέεται..."
 
-#: global-presence-chooser.cpp:319
+#: global-presence-chooser.cpp:333
 msgid ""
 "This plugin is currently disabled. Do you want to enable it and use as your "
 "presence?"
@@ -446,91 +353,11 @@ msgstr ""
 "Το πρόσθετο αυτό είναι τώρα ανενεργό. Θέλετε να το ενεργοποιήσετε και να το "
 "χρησιμοποιήσετε για την παρουσία σας;"
 
-#: global-presence-chooser.cpp:320
+#: global-presence-chooser.cpp:334
 msgid "Plugin disabled"
 msgstr "Ανενεργό πρόσθετο"
 
-#: main-widget.cpp:116
-msgid "Add New Contacts..."
-msgstr "Προσθήκη νέων επαφών..."
-
-#: main-widget.cpp:120
-msgid "Contacts are shown by accounts. Click to show them in groups."
-msgstr ""
-"Οι επαφές φαίνονται από τους λογαριασμούς. Με κλικ θα εμφανιστούν σε ομάδες"
-
-#: main-widget.cpp:121
-msgid "Contacts are shown in groups. Click to show them in accounts."
-msgstr ""
-"Οι επαφές εμφανίζονται σε ομάδες. Με κλικ θα εμφανιστούν σε λογαριασμούς."
-
-#: main-widget.cpp:130
-msgid "Offline contacts are hidden. Click to show them."
-msgstr "Οι εκτός σύνδεσης επαφές είναι σε απόκρυψη. Με κλικ εμφανίζονται."
-
-#: main-widget.cpp:131
-msgid "Offline contacts are shown. Click to hide them."
-msgstr "Οι εκτός σύνδεσης επαφές φαίνονται. Με κλικ αποκρύπτονται."
-
-#: main-widget.cpp:140
-msgid "List is sorted by name. Click to sort by presence."
-msgstr ""
-"Η λίστα είναι ταξινομημένη κατά όνομα. Με κλικ την ταξινομείτε κατά παρουσία."
-
-#: main-widget.cpp:141
-msgid "List is sorted by presence. Click to sort by name."
-msgstr ""
-"Η λίστα είναι ταξινομημένη κατά παρουσία. Με κλικ την ταξινομείτε κατά όνομα."
-
-#: main-widget.cpp:148
-msgid "Find Contact"
-msgstr "Εύρεση επαφής"
-
-#: main-widget.cpp:165
-msgid "Instant Messaging Settings..."
-msgstr "Ρυθμίσεις στιγμιαίων μηνυμάτων..."
-
-#: main-widget.cpp:171
-msgid "Contact List Type"
-msgstr "Τύπος λίστας επαφών"
-
-#: main-widget.cpp:172
-msgid "Use Full List"
-msgstr "Χρήση πλήρους λίστας"
-
-#: main-widget.cpp:180
-msgid "Use Normal List"
-msgstr "Χρήση κανονικής λίστας"
-
-#: main-widget.cpp:189
-msgid "Use Minimalistic List"
-msgstr "Χρήση μινιμαλιστικής λίστας"
-
-#: main-widget.cpp:200
-msgid "Shown Contacts"
-msgstr "Εμφανιζόμενες επαφές"
-
-#: main-widget.cpp:207
-msgid "Show all contacts"
-msgstr "Να εμφανίζονται όλες οι επαφές"
-
-#: main-widget.cpp:214
-msgid "Show unblocked contacts"
-msgstr "Να εμφανίζονται οι χωρίς φραγή επαφές"
-
-#: main-widget.cpp:221
-msgid "Show blocked contacts"
-msgstr "Να εμφανίζονται οι με φραγή επαφές"
-
-#: main-widget.cpp:238
-msgid "Join Chat Room..."
-msgstr "Εισέλθετε στην αίθουσα συνομιλίας..."
-
-#: main-widget.cpp:241
-msgid "Make a Call..."
-msgstr "Κάνετε μία κλήση..."
-
-#: main-widget.cpp:325
+#: main-widget.cpp:163
 msgid ""
 "Something unexpected happened to the core part of your Instant Messaging "
 "system and it couldn't be initialized. Try restarting the Contact List."
@@ -539,11 +366,11 @@ msgstr ""
 "δεν ήταν δυνατό να αρχικοποιηθεί. Προσπαθήστε να επανεκκινήσετε τη λίστα "
 "επαφών."
 
-#: main-widget.cpp:327
+#: main-widget.cpp:165
 msgid "IM system failed to initialize"
 msgstr "Απέτυχε η αρχικοποίηση του συστήματος στιγμιαίων μηνυμάτων"
 
-#: main-widget.cpp:440
+#: main-widget.cpp:270
 msgid ""
 "You do not have any other presence controls active (a Presence widget for "
 "example).\n"
@@ -553,80 +380,273 @@ msgstr ""
 "παρουσίας για παράδειγμα).\n"
 "Θέλετε να παραμείνετε σε σύνδεση ή να βγείτε εκτός;"
 
-#: main-widget.cpp:442
+#: main-widget.cpp:272
 msgid "No Other Presence Controls Found"
 msgstr "Δεν βρέθηκαν άλλα συστατικά ελέγχου παρουσίας"
 
-#: main-widget.cpp:443
+#: main-widget.cpp:273
 msgid "Stay Online"
 msgstr "Να παραμείνω σε σύνδεση"
 
-#: main-widget.cpp:444
+#: main-widget.cpp:274
 msgid "Go Offline"
 msgstr "Να βγω εκτός σύνδεσης"
+
+#: main-widget.cpp:384
+msgid "Contacts"
+msgstr "Επαφές"
+
+#: main-widget.cpp:396
+msgid "View"
+msgstr "Προβολή"
+
+#: main-widget.cpp:401 main-widget.cpp:436
+msgid "Contact List Type"
+msgstr "Τύπος λίστας επαφών"
+
+#: main-widget.cpp:404 main-widget.cpp:441
+msgid "Shown Contacts"
+msgstr "Εμφανιζόμενες επαφές"
+
+#: main-widget.cpp:513
+msgid "Instant Messaging Settings..."
+msgstr "Ρυθμίσεις στιγμιαίων μηνυμάτων..."
+
+#: main-widget.cpp:518
+msgid "Join Chat Room..."
+msgstr "Εισέλθετε στην αίθουσα συνομιλίας..."
+
+#: main-widget.cpp:519
+msgid "Make a Call..."
+msgstr "Κάνετε μία κλήση..."
+
+#: main-widget.cpp:520
+msgid "Add New Contacts..."
+msgstr "Προσθήκη νέων επαφών..."
+
+#: main-widget.cpp:521
+msgid "Find Contact"
+msgstr "Εύρεση επαφής"
+
+#: main-widget.cpp:526
+msgid "Show Contacts by Groups"
+msgstr "Εμφάνιση επαφών ανά ομάδα"
+
+#: main-widget.cpp:527
+msgid "Show Contacts by Accounts"
+msgstr "Εμφάνιση επαφών ανά λογαριασμό"
+
+#: main-widget.cpp:534
+msgid "Show Offline Contacts"
+msgstr "Εμφάνιση των εκτός σύνδεσης επαφών"
+
+#: main-widget.cpp:535
+msgid "Hide Offline Contacts"
+msgstr "Απόκρυψη των εκτός σύνδεσης επαφών"
+
+#: main-widget.cpp:543
+msgid "Sort by Presence"
+msgstr "Ταξινόμηση κατά παρουσία"
+
+#: main-widget.cpp:544
+msgid "Sort by Name"
+msgstr "Ταξινόμηση κατά όνομα"
+
+#: main-widget.cpp:552
+msgid "Use Full List"
+msgstr "Χρήση πλήρους λίστας"
+
+#: main-widget.cpp:554
+msgid "Use Normal List"
+msgstr "Χρήση κανονικής λίστας"
+
+#: main-widget.cpp:558
+msgid "Use Minimalistic List"
+msgstr "Χρήση μινιμαλιστικής λίστας"
+
+#: main-widget.cpp:565
+msgid "Show All Contacts"
+msgstr "Εμφάνιση όλων των επαφών"
+
+#: main-widget.cpp:567
+msgid "Show Unblocked Contacts"
+msgstr "Εμφάνιση των χωρίς φραγή επαφών"
+
+#: main-widget.cpp:569
+msgid "Show Blocked Contacts"
+msgstr "Εμφάνιση των με φραγή επαφών"
 
 #. i18n: ectx: property (windowTitle), widget (QMainWindow, MainWindow)
 #: main-widget.ui:14
 msgid "KDE IM Contacts"
 msgstr "KDE IM Contacts"
 
-#: main.cpp:36 main.cpp:37
+#: main.cpp:37 main.cpp:38
 msgid "KDE Telepathy Contact List"
 msgstr "Λίστα επαφών KDE Telepathy"
 
-#: main.cpp:38
+#: main.cpp:39
 msgid "(C) 2011, Martin Klapetek"
 msgstr "(C) 2011, Martin Klapetek"
 
-#: main.cpp:40
+#: main.cpp:41
 msgctxt "@info:credit"
 msgid "Martin Klapetek"
 msgstr "Martin Klapetek"
 
-#: main.cpp:40
+#: main.cpp:41
 msgid "Developer"
 msgstr "Προγραμματιστής"
 
-#: main.cpp:48
+#: main.cpp:49
 msgid "Show Telepathy debugging information"
 msgstr "Εμφάνιση πληροφοριών διόρθωσης σφαλμάτων του telepathy"
 
-#: rooms-model.cpp:72
-msgid "Password required"
-msgstr "Απαιτείται κωδικός πρόσβασης"
-
-#: rooms-model.cpp:74
-msgid "No password required"
-msgstr "Δεν απαιτείται κωδικός πρόσβασης"
-
-#: rooms-model.cpp:94
-msgid "Member count"
-msgstr "Καταμέτρηση μελών"
-
-#: rooms-model.cpp:114
-msgctxt "Chatrooms name"
-msgid "Name"
-msgstr "Όνομα"
-
-#: rooms-model.cpp:116
-msgctxt "Chatrooms description"
-msgid "Description"
-msgstr "Περιγραφή"
-
-#: tooltips/contacttooltip.cpp:59
-msgctxt "This is an IM user status"
-msgid "Unknown"
-msgstr "Άγνωστη"
-
-#: tooltips/contacttooltip.cpp:69
+#: tooltips/contacttooltip.cpp:56
 msgctxt "This is an IM user status"
 msgid "Error Getting Presence"
 msgstr "Σφάλμα ανάκτησης παρουσίας"
+
+#: tooltips/contacttooltip.cpp:72
+#, kde-format
+msgid "Account: %1"
+msgstr "Λογαριασμός: %1"
 
 #. i18n: ectx: property (text), widget (QLabel, blockedLabel)
 #: tooltips/contacttooltip.ui:126
 msgid "User is blocked"
 msgstr "Ο χρήστης είναι σε φραγή"
+
+#, fuzzy
+#~| msgid "Settings"
+#~ msgid "Settings..."
+#~ msgstr "Ρυθμίσεις"
+
+#~ msgid "Contacts are shown by accounts. Click to show them in groups."
+#~ msgstr ""
+#~ "Οι επαφές φαίνονται από τους λογαριασμούς. Με κλικ θα εμφανιστούν σε "
+#~ "ομάδες"
+
+#~ msgid "Contacts are shown in groups. Click to show them in accounts."
+#~ msgstr ""
+#~ "Οι επαφές εμφανίζονται σε ομάδες. Με κλικ θα εμφανιστούν σε λογαριασμούς."
+
+#~ msgid "Offline contacts are hidden. Click to show them."
+#~ msgstr "Οι εκτός σύνδεσης επαφές είναι σε απόκρυψη. Με κλικ εμφανίζονται."
+
+#~ msgid "Offline contacts are shown. Click to hide them."
+#~ msgstr "Οι εκτός σύνδεσης επαφές φαίνονται. Με κλικ αποκρύπτονται."
+
+#~ msgid "List is sorted by name. Click to sort by presence."
+#~ msgstr ""
+#~ "Η λίστα είναι ταξινομημένη κατά όνομα. Με κλικ την ταξινομείτε κατά "
+#~ "παρουσία."
+
+#~ msgid "List is sorted by presence. Click to sort by name."
+#~ msgstr ""
+#~ "Η λίστα είναι ταξινομημένη κατά παρουσία. Με κλικ την ταξινομείτε κατά "
+#~ "όνομα."
+
+#~ msgctxt "This is an IM user status"
+#~ msgid "Unknown"
+#~ msgstr "Άγνωστη"
+
+#~ msgid "Dialog"
+#~ msgstr "Διάλογος"
+
+#~ msgid "Avatar Here"
+#~ msgstr "Εδώ το avatar"
+
+#~ msgid "Contact Display Name"
+#~ msgstr "Όνομα επαφής στην οθόνη"
+
+#~ msgid "Presence String"
+#~ msgstr "Συμβολοσειρά παρουσίας"
+
+#~ msgid "Contact can see when you are online:"
+#~ msgstr "Η επαφή μπορεί να δει πότε είστε σε σύνδεση:"
+
+#~ msgid "TextLabel"
+#~ msgstr "TextLabel"
+
+#~ msgid "You can see when the contact is online:"
+#~ msgstr "Μπορείτε να δείτε πότε η επαφή είναι σε σύνδεση:"
+
+#~ msgid "Contact is blocked:"
+#~ msgstr "Η επαφή είναι σε φραγή:"
+
+#~ msgid "This room is already in your favorites."
+#~ msgstr "Η αίθουσα αυτή είναι ήδη στις αγαπημένες σας."
+
+#~ msgid "Add room"
+#~ msgstr "Προσθήκη αίθουσας"
+
+#~ msgid "Name"
+#~ msgstr "Όνομα"
+
+#~ msgid "Join Chatroom"
+#~ msgstr "Είσοδος στην αίθουσα συνομιλίας"
+
+#~ msgid "Enter chat room:"
+#~ msgstr "Εισέλθετε στην αίθουσα συνομιλίας:"
+
+#~ msgid "Favorites"
+#~ msgstr "Αγαπημένα"
+
+#~ msgid "Add Room"
+#~ msgstr "Προσθήκη αίθουσας"
+
+#~ msgid "Remove Room"
+#~ msgstr "Αφαίρεση αίθουσας"
+
+#~ msgid "Recent"
+#~ msgstr "Πρόσφατο"
+
+#~ msgid "Remove"
+#~ msgstr "Αφαίρεση"
+
+#~ msgid "Clear list"
+#~ msgstr "Καθαρισμός λίστας"
+
+#~ msgid "Query"
+#~ msgstr "Ερώτηση"
+
+#~ msgid "Server to be queried:"
+#~ msgstr "Εξυπηρετητής που θα ερωτηθεί:"
+
+#~ msgid "Leave blank for the selected account's default server"
+#~ msgstr ""
+#~ "Αφήστε το κενό για τον προκαθορισμένο εξυπηρετητή του επιλεγμένου "
+#~ "λογαριασμού"
+
+#~ msgid "Stop"
+#~ msgstr "Διακοπή"
+
+#~ msgid "Search rooms"
+#~ msgstr "Αναζήτηση αιθουσών"
+
+#~ msgid "Password required"
+#~ msgstr "Απαιτείται κωδικός πρόσβασης"
+
+#~ msgid "No password required"
+#~ msgstr "Δεν απαιτείται κωδικός πρόσβασης"
+
+#~ msgid "Member count"
+#~ msgstr "Καταμέτρηση μελών"
+
+#~ msgctxt "Chatrooms name"
+#~ msgid "Name"
+#~ msgstr "Όνομα"
+
+#~ msgctxt "Chatrooms description"
+#~ msgid "Description"
+#~ msgstr "Περιγραφή"
+
+#~ msgid "Show/Hide Groups"
+#~ msgstr "Εμφάνιση/απόκρυψη ομάδων"
+
+#~ msgid "Hide/Show Offline Users"
+#~ msgstr "Εμφάνιση/απόκρυψη χρηστών εκτός σύνδεσης"
 
 #~ msgid ""
 #~ "Seems like you forgot to select an account. Also do not forget to connect "
@@ -644,6 +664,3 @@ msgstr "Ο χρήστης είναι σε φραγή"
 #~ msgstr ""
 #~ "Ένα σφάλμα που δεν είχαμε υπολογίσει απλά συνέβη και έτσι η επαφή δεν "
 #~ "ήταν δυνατό να προστεθεί. Συγγνώμη."
-
-#~ msgid "Account Error"
-#~ msgstr "Σφάλμα λογαριασμού"

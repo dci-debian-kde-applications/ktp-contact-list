@@ -44,11 +44,13 @@ class AccountsFilterModel;
 class ContactDelegate;
 class FilterBar;
 class KJob;
-class ContactModelItem;
 
 class MainWidget : public KMainWindow, Ui::MainWindow
 {
     Q_OBJECT
+    //this is needed otherwise this class is exported as .ktp-contactlist interface
+    //and dashes are not allowed in dbus interface names, so this interface would not work otherwise
+    Q_CLASSINFO("D-Bus Interface", "org.kde.KTp.ContactList")
 public:
     MainWidget(QWidget *parent = 0);
     ~MainWidget();
@@ -75,6 +77,7 @@ public:
 public Q_SLOTS:
     void showMessageToUser(const QString &text, const SystemMessageType type);
     void goOffline();
+    Q_INVOKABLE void toggleWindowVisibility();
 
 private Q_SLOTS:
     void toggleSearchWidget(bool show);
@@ -92,6 +95,19 @@ private:
     ///Was moved to telepathy-kded-module
     //void handleConnectionError(const Tp::AccountPtr &account);      /** handle connection errors for given account. This method provides visual notification */
     void closeEvent(QCloseEvent *e);
+    KAction *createAction(const QString& text, QObject *signalReceiver, const char* slot, const KIcon& icon);
+    KAction *createAction(const QString& text, QObject *signalReceiver, const char* slot, bool isChecked, const KIcon& icon);
+    void setupActions(const KConfigGroup&);
+    void setupGlobalMenu();
+    void setupToolBar();
+    void setupTelepathy();
+
+    KMenuBar               *m_globalMenu;
+    KAction                *m_settingsDialog;
+    KAction                *m_joinChatRoom;
+    KAction                *m_makeCall;
+    QActionGroup           *m_contactListTypeGroup;
+    QActionGroup           *m_blockedFilterGroup;
 
     KMenu                  *m_accountMenu;
     KSelectAction          *m_setStatusAction;
@@ -102,6 +118,7 @@ private:
     KDualAction            *m_showOfflineAction;
     KAction                *m_searchContactAction;
     KDualAction            *m_sortByPresenceAction;
+    KAction                *m_quitAction;
 
     Tp::AccountManagerPtr  m_accountManager;
 

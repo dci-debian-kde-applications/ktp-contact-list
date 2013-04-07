@@ -1,5 +1,7 @@
 project (ktp-contactlist)
 
+set(KTP_CONTACT_LIST_VERSION "0.6.0")
+
 set (CMAKE_MODULE_PATH
      "${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules"
      ${CMAKE_MODULE_PATH}
@@ -10,21 +12,23 @@ set(KDE_MIN_VERSION "4.4.75")
 find_package (KDE4 4.4.75 REQUIRED)
 find_package (TelepathyQt4 0.9.3 REQUIRED)
 find_package (KTp REQUIRED)
+find_package (TelepathyLoggerQt4 0.5.60 REQUIRED)
 
 include (KDE4Defaults)
 include (MacroLibrary)
 
 add_definitions (${KDE4_DEFINITIONS}
+                 ${TELEPATHY_LOGGER_QT4_DEFINITIONS}
 )
 
 include_directories (${KDE4_INCLUDES}
                      ${TELEPATHY_QT4_INCLUDE_DIR}
+                     ${TELEPATHY_LOGGER_QT4_INCLUDE_DIRS}
                      ${KTP_INCLUDE_DIR}
 )
 
 
 set (ktp_contactlist_SRCS
-     rooms-model.cpp
      contact-list-widget.cpp
      context-menu.cpp
      abstract-contact-delegate.cpp
@@ -40,9 +44,7 @@ set (ktp_contactlist_SRCS
      main.cpp
      main-widget.cpp
      global-presence-chooser.cpp
-     dialogs/join-chat-room-dialog.cpp
      dialogs/remove-contact-dialog.cpp
-     dialogs/contact-info.cpp
      dialogs/custom-presence-dialog.cpp
      presence-model.cpp
      tooltips/ktooltip.cpp
@@ -51,12 +53,11 @@ set (ktp_contactlist_SRCS
      tooltips/contacttooltip.cpp
 )
 
+configure_file(version.h.in ${CMAKE_CURRENT_BINARY_DIR}/version.h)
 
 kde4_add_ui_files (ktp_contactlist_SRCS
                    main-widget.ui
-                   dialogs/join-chat-room-dialog.ui
                    dialogs/remove-contact-dialog.ui
-                   dialogs/contact-info.ui
                    tooltips/contacttooltip.ui
 )
 
@@ -72,7 +73,10 @@ target_link_libraries (ktp-contactlist
                        ${KDE4_KDEUI_LIBS}
                        ${KDE4_KIO_LIBS}
                        ${KDE4_KCMUTILS_LIBS}
+                       ${TELEPATHY_LOGGER_QT4_LIBRARIES}
+                       ${KDE4_KNOTIFYCONFIG_LIBS}
 )
+
 
 # Install:
 install (TARGETS ktp-contactlist

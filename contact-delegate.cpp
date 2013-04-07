@@ -34,11 +34,7 @@
 #include <KGlobalSettings>
 #include <KDE/KLocale>
 
-#include <KTp/Models/accounts-model.h>
-#include <KTp/Models/contact-model-item.h>
-#include <KTp/Models/proxy-tree-node.h>
-#include <KTp/Models/groups-model-item.h>
-#include <KTp/Models/groups-model.h>
+#include <KTp/types.h>
 #include <KTp/presence.h>
 
 ContactDelegate::ContactDelegate(QObject * parent)
@@ -72,36 +68,38 @@ void ContactDelegate::paintContact(QPainter *painter, const QStyleOptionViewItem
     iconRect.setSize(QSize(m_avatarSize, m_avatarSize));
     iconRect.moveTo(QPoint(iconRect.x() + m_spacing, iconRect.y() + m_spacing));
 
-    QPixmap avatar;
-    avatar.load(index.data(AccountsModel::AvatarRole).toString());
-
-    bool noContactAvatar = avatar.isNull();
-
-    if (noContactAvatar) {
-        avatar = SmallIcon("im-user", KIconLoader::SizeMedium);
+    QPixmap avatar(qvariant_cast<QPixmap>(index.data(KTp::ContactAvatarPixmapRole)));
+    if (index.data(KTp::ContactUnreadMessageCountRole).toInt() > 0) {
+        avatar = SmallIcon("mail-unread-new", KIconLoader::SizeMedium);
     }
 
     QPainterPath roundedPath;
     roundedPath.addRoundedRect(iconRect, 20, 20, Qt::RelativeSize);
 
-    if (!noContactAvatar) {
-        painter->save();
-        painter->setClipPath(roundedPath);
-    }
+    painter->save();
+    painter->setClipPath(roundedPath);
 
     style->drawItemPixmap(painter, iconRect, Qt::AlignCenter, avatar.scaled(iconRect.size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
 
-    if (!noContactAvatar) {
-        painter->restore();
-        painter->drawPath(roundedPath);
-    }
+    painter->restore();
 
-    KTp::Presence presence = index.data(AccountsModel::PresenceRole).value<KTp::Presence>();
+    QPen thinLinePen;
+    thinLinePen.setWidth(0);
+    thinLinePen.setColor(option.palette.color(QPalette::Disabled, QPalette::Text));
+
+    painter->save();
+
+    painter->setPen(thinLinePen);
+    painter->setRenderHint(QPainter::Antialiasing, false);
+    painter->drawPath(roundedPath);
+
+    //clear the font and AA setting
+    painter->restore();
 
     // This value is used to set the correct width for the username and the presence message.
     int rightIconsWidth = m_presenceIconSize + m_spacing;
 
-    QPixmap icon = presence.icon().pixmap(KIconLoader::SizeSmallMedium);
+    QPixmap icon = KIcon(index.data(KTp::ContactPresenceIconRole).toString()).pixmap(KIconLoader::SizeSmallMedium);
 
     QRect statusIconRect = optV4.rect;
     statusIconRect.setSize(QSize(m_presenceIconSize, m_presenceIconSize));
@@ -111,7 +109,7 @@ void ContactDelegate::paintContact(QPainter *painter, const QStyleOptionViewItem
     painter->drawPixmap(statusIconRect, icon);
 
     // Right now we only check for 'phone', as that's the most interesting type.
-    if (index.data(AccountsModel::ClientTypesRole).toStringList().contains(QLatin1String("phone"))) {
+    if (index.data(KTp::ContactClientTypesRole).toStringList().contains(QLatin1String("phone"))) {
         // Additional space is needed for the icons, don't add too much spacing between the two icons
         rightIconsWidth += m_presenceIconSize + m_spacing / 2;
 
@@ -162,7 +160,7 @@ void ContactDelegate::paintContact(QPainter *painter, const QStyleOptionViewItem
 
     painter->setFont(KGlobalSettings::smallestReadableFont());
     painter->drawText(statusMsgRect,
-                      statusFontMetrics.elidedText(presence.statusMessage().simplified(),
+                      statusFontMetrics.elidedText(index.data(KTp::ContactPresenceMessageRole).toString().trimmed(),
                                                    Qt::ElideRight, statusMsgRect.width()));
 
     painter->restore();
