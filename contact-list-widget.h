@@ -24,8 +24,6 @@
 #include <TelepathyQt/Types>
 #include <TelepathyQt/Connection>
 
-class AccountsModel;
-class ContactModelItem;
 class ContactListWidgetPrivate;
 
 namespace Tp {
@@ -42,7 +40,6 @@ public:
     explicit ContactListWidget(QWidget* parent);
     virtual ~ContactListWidget();
 
-    AccountsModel *accountsModel();
     void setAccountManager(const Tp::AccountManagerPtr &accountManager);
 
 public Q_SLOTS:
@@ -68,16 +65,19 @@ private Q_SLOTS:
     void onNewGroupModelItemsInserted(const QModelIndex &index, int start, int end);
     void addOverlayButtons();
 
-    void startTextChannel(ContactModelItem *contactItem);
-    void startFileTransferChannel(ContactModelItem *contactItem);
-    void startAudioChannel(ContactModelItem *contactItem);
-    void startVideoChannel(ContactModelItem *contactItem);
-    void startDesktopSharing(ContactModelItem *contactItem);
+    void startTextChannel(const Tp::AccountPtr &account, const Tp::ContactPtr &contact);
+    void startFileTransferChannel(const Tp::AccountPtr &account, const Tp::ContactPtr &contact);
+    void startAudioChannel(const Tp::AccountPtr &account, const Tp::ContactPtr &contact);
+    void startVideoChannel(const Tp::AccountPtr &account, const Tp::ContactPtr &contact);
+    void startDesktopSharing(const Tp::AccountPtr &account, const Tp::ContactPtr &contact);
+    void startLogViewer(const Tp::AccountPtr &account, const Tp::ContactPtr &contact);
+
 
 Q_SIGNALS:
     void enableOverlays(bool);
     void accountManagerReady(Tp::PendingOperation* op);
     void genericOperationFinished(Tp::PendingOperation* op);
+
 
 protected:
     void setDropIndicatorRect(const QRect &rect);
@@ -93,10 +93,9 @@ protected:
     virtual void drawBranches(QPainter *painter, const QRect &rect, const QModelIndex &index) const;
 
 private:
-    void requestFileTransferChannels(const Tp::AccountPtr& account,
-                                     const Tp::ContactPtr& contact,
-                                     const QStringList& filenames,
-                                     const QDateTime& userActionTime);
+    void requestFileTransferChannels(const Tp::AccountPtr &account,
+                                     const Tp::ContactPtr &contact,
+                                     const QStringList &filenames);
 
     void loadGroupStatesFromConfig();
 

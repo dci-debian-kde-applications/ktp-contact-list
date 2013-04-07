@@ -176,18 +176,19 @@ GlobalPresenceChooser::GlobalPresenceChooser(QWidget *parent) :
     KComboBox(parent),
     m_globalPresence(new KTp::GlobalPresence(this)),
     m_model(new PresenceModel(this)),
-    m_modelExtended(new PresenceModelExtended(m_model, this))
+    m_modelExtended(new PresenceModelExtended(m_model, this)),
+    m_busyOverlay(new KPixmapSequenceOverlayPainter(this))
 {
     this->setModel(m_modelExtended);
-    setEditable(false);
     //needed for mousemove events
     setMouseTracking(true);
 
-    m_busyOverlay = new KPixmapSequenceOverlayPainter(this);
     m_busyOverlay->setSequence(KPixmapSequence("process-working"));
-    m_busyOverlay->setWidget(this);
+    setEditable(false);
 
     onPresenceChanged(m_globalPresence->currentPresence());
+    //we need to check if there is some account connecting and if so, spin the spinner
+    onConnectionStatusChanged(m_globalPresence->connectionStatus());
 
     m_changePresenceMessageButton = new QPushButton(this);
     m_changePresenceMessageButton->setIcon(KIcon("document-edit"));
@@ -297,6 +298,19 @@ bool GlobalPresenceChooser::event(QEvent *e)
     return KComboBox::event(e); // krazy:exclude=qclasses
 }
 
+void GlobalPresenceChooser::setEditable(bool editable)
+{
+    if (editable) {
+        m_busyOverlay->setWidget(0);
+    } else {
+        m_busyOverlay->setWidget(this);
+        if (m_globalPresence->connectionStatus() == Tp::ConnectionStatusConnecting) {
+            m_busyOverlay->start(); // If telepathy is still connecting, overlay must be spinning again.
+        }
+    }
+    KComboBox::setEditable(editable);
+}
+
 void GlobalPresenceChooser::onCurrentIndexChanged(int index)
 {
     if (index == -1) {
@@ -372,7 +386,6 @@ void GlobalPresenceChooser::onPresenceChanged(const KTp::Presence &presence)
             if (itemPresence != m_modelExtended->temporaryPresence()) {
                 m_modelExtended->removeTemporaryPresence();
             }
-            m_busyOverlay->stop();
             return;
         }
     }

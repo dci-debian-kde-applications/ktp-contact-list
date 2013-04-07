@@ -34,12 +34,7 @@
 #include <KGlobalSettings>
 #include <KDE/KLocale>
 
-#include <KTp/Models/accounts-model.h>
-#include <KTp/Models/contact-model-item.h>
-#include <KTp/Models/proxy-tree-node.h>
-#include <KTp/Models/groups-model-item.h>
-#include <KTp/Models/groups-model.h>
-#include <KTp/presence.h>
+#include <KTp/types.h>
 
 ContactDelegateCompact::ContactDelegateCompact(ContactDelegateCompact::ListSize size, QObject * parent)
     : AbstractContactDelegate(parent)
@@ -69,23 +64,18 @@ void ContactDelegateCompact::paintContact(QPainter * painter, const QStyleOption
     iconRect.setSize(QSize(m_avatarSize, m_avatarSize));
     iconRect.moveTo(QPoint(iconRect.x() + m_spacing, iconRect.y() + m_spacing));
 
-    QPixmap avatar;
-    avatar.load(index.data(AccountsModel::AvatarRole).toString());
+    QPixmap avatar(qvariant_cast<QPixmap>(index.data(KTp::ContactAvatarPixmapRole)));
 
-    bool noContactAvatar = avatar.isNull();
-
-    if (noContactAvatar) {
-        avatar = SmallIcon("im-user", KIconLoader::SizeMedium);
+    if (index.data(KTp::ContactUnreadMessageCountRole).toInt() > 0) {
+        avatar = SmallIcon("mail-unread-new", KIconLoader::SizeMedium);
     }
 
     style->drawItemPixmap(painter, iconRect, Qt::AlignCenter, avatar.scaled(iconRect.size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
 
-    KTp::Presence presence = index.data(AccountsModel::PresenceRole).value<KTp::Presence>();
-
     // This value is used to set the correct width for the username and the presence message.
     int rightIconsWidth = m_presenceIconSize + m_spacing;
 
-    QPixmap icon = presence.icon().pixmap(KIconLoader::SizeSmallMedium);
+    QPixmap icon = KIcon(index.data(KTp::ContactPresenceIconRole).toString()).pixmap(KIconLoader::SizeSmallMedium);
 
     QRect statusIconRect = optV4.rect;
 
@@ -96,7 +86,7 @@ void ContactDelegateCompact::paintContact(QPainter * painter, const QStyleOption
     painter->drawPixmap(statusIconRect, icon);
 
     // Right now we only check for 'phone', as that's the most interesting type.
-    if (index.data(AccountsModel::ClientTypesRole).toStringList().contains(QLatin1String("phone"))) {
+    if (index.data(KTp::ContactClientTypesRole).toStringList().contains(QLatin1String("phone"))) {
         // Additional space is needed for the icons, don't add too much spacing between the two icons
         rightIconsWidth += m_clientTypeIconSize + (m_spacing / 2);
 
@@ -146,7 +136,7 @@ void ContactDelegateCompact::paintContact(QPainter * painter, const QStyleOption
     }
 
     painter->drawText(presenceMessageRect,
-                      nameFontMetrics.elidedText(presence.statusMessage().simplified(),
+                      nameFontMetrics.elidedText(index.data(KTp::ContactPresenceMessageRole).toString().trimmed(),
                                                  Qt::ElideRight, presenceMessageRect.width()));
 
     painter->restore();
@@ -162,10 +152,12 @@ QSize ContactDelegateCompact::sizeHintContact(const QStyleOptionViewItem &option
 void ContactDelegateCompact::setListMode(ContactDelegateCompact::ListSize size)
 {
     if (size == ContactDelegateCompact::Mini) {
-        m_spacing = 2;
-        m_avatarSize = IconSize(KIconLoader::Toolbar);
-        m_presenceIconSize = qMax(12, KGlobalSettings::smallestReadableFont().pixelSize() + m_spacing);
-        m_clientTypeIconSize = qMax(12, KGlobalSettings::smallestReadableFont().pixelSize() + m_spacing);
+        m_spacing = 1;
+        int iconSize = qMax(KIconLoader::global()->currentSize(KIconLoader::Small),
+                            KGlobalSettings::smallestReadableFont().pixelSize() + m_spacing);
+        m_avatarSize = iconSize;
+        m_presenceIconSize = iconSize;
+        m_clientTypeIconSize = iconSize;
     } else if (size == ContactDelegateCompact::Normal) {
         m_spacing = 4;
         m_avatarSize = IconSize(KIconLoader::Toolbar);

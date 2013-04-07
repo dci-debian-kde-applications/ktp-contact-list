@@ -24,7 +24,7 @@
 #include "ui_contacttooltip.h"
 #include "ktooltip.h"
 
-#include <KTp/Models/accounts-model.h>
+#include <KTp/types.h>
 #include <KTp/text-parser.h>
 #include <KTp/presence.h>
 
@@ -40,31 +40,18 @@ ContactToolTip::ContactToolTip(const QModelIndex &index) :
 {
     ui->setupUi(this);
     ui->nameLabel->setText(index.data(Qt::DisplayRole).toString());
-    ui->idLabel->setText(index.data(AccountsModel::IdRole).toString());
+    ui->idLabel->setText(index.data(KTp::IdRole).toString());
     ui->avatarLabel->setScaledContents(false);
     ui->avatarLabel->setAlignment(Qt::AlignCenter);
 
-    QString avatar = index.data(AccountsModel::AvatarRole).toString();
-    if (avatar.isEmpty()) {
-        ui->avatarLabel->setPixmap(KIconLoader::global()->loadIcon("im-user", KIconLoader::NoGroup, 96));
-    } else {
-        QPixmap avatarPixmap(avatar);
-        ui->avatarLabel->setPixmap(avatarPixmap.scaled(ui->avatarLabel->size(), Qt::KeepAspectRatio));
-    }
+    QPixmap avatarPixmap(qvariant_cast<QPixmap>(index.data(KTp::ContactAvatarPixmapRole)));
+    ui->avatarLabel->setPixmap(avatarPixmap.scaled(ui->avatarLabel->size(), Qt::KeepAspectRatio));
 
-    KTp::Presence presence = index.data(AccountsModel::PresenceRole).value<KTp::Presence>();
+    QString presenceMessage = index.data(KTp::ContactPresenceMessageRole).toString();
+    QString presenceIconPath = index.data(KTp::ContactPresenceIconRole).toString();
+    QString presenceText = index.data(KTp::ContactPresenceNameRole).toString();
 
-    QString presenceMessage;
-    QString presenceIconPath = KIconLoader::global()->iconPath("task-attention", 1);
-    QString presenceText = i18nc("This is an IM user status", "Unknown");
-
-    if (presence.isValid()) {
-        presenceMessage = getTextWithHyperlinks(presence.statusMessage());
-        presenceIconPath = KIconLoader::global()->iconPath(presence.icon().name(), 1);
-        presenceText = presence.displayString();
-    }
-
-    if (presence.type() == Tp::ConnectionPresenceTypeError) {
+    if (index.data(KTp::ContactPresenceTypeRole).toInt() == Tp::ConnectionPresenceTypeError) {
         presenceIconPath = KIconLoader::global()->iconPath("task-attention", 1);
         presenceText = i18nc("This is an IM user status", "Error Getting Presence");
 
@@ -78,7 +65,12 @@ ContactToolTip::ContactToolTip(const QModelIndex &index) :
     ui->presenceIcon->setPixmap(QPixmap(presenceIconPath));
     ui->presenceLabel->setText(presenceText);
     ui->presenceMessageLabel->setText(presenceMessage);
-    ui->blockedLabel->setShown(index.data(AccountsModel::BlockedRole).toBool());
+    ui->blockedLabel->setShown(index.data(KTp::ContactIsBlockedRole).toBool());
+
+    const Tp::AccountPtr account = index.data(KTp::AccountRole).value<Tp::AccountPtr>();
+    if (!account.isNull()) {
+        ui->accountLabel->setText(i18n("Account: %1", account->displayName()));
+    }
 
     connect(ui->presenceMessageLabel, SIGNAL(linkActivated(QString)), this, SLOT(openLink(QString)));
 }

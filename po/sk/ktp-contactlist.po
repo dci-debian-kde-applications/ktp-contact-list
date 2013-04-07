@@ -1,11 +1,11 @@
 # translation of ktp-contactlist.po to Slovak
-# Roman Paholik <wizzardsk@gmail.com>, 2012.
+# Roman Paholik <wizzardsk@gmail.com>, 2012, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: ktp-contactlist\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-01-18 09:34+0100\n"
-"PO-Revision-Date: 2012-08-29 22:39+0200\n"
+"POT-Creation-Date: 2013-03-27 10:06+0100\n"
+"PO-Revision-Date: 2013-03-27 14:29+0100\n"
 "Last-Translator: Roman Paholík <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
 "Language: sk\n"
@@ -68,30 +68,46 @@ msgctxt "@action:inmenu This is the IM presence message"
 msgid "Set message..."
 msgstr "Nastaviť správu..."
 
-#: contact-list-widget.cpp:144
+#: contact-list-widget.cpp:156
 msgid "You have no IM accounts configured. Would you like to do that now?"
 msgstr "Nemáte nastavené žiadne IM účty. Chcete to urobiť teraz?"
 
-#: contact-list-widget.cpp:145
+#: contact-list-widget.cpp:157
 msgid "No Accounts Found"
 msgstr "Nenájdený žiadny účet"
 
-#: contact-list-widget.cpp:167
+#: contact-list-widget.cpp:172
 msgid ""
 "It appears you do not have the IM Accounts control module installed. Please "
-"install telepathy-accounts-kcm package."
+"install ktp-accounts-kcm package."
 msgstr ""
 "Zdá sa, že nemáte nainštalovaný ovládací modul IM účtov. Prosím nainštalujte "
-"balík telepathy-accounts-kcm."
+"balík ktp-accounts-kcm."
 
-#: contact-list-widget.cpp:168
+#: contact-list-widget.cpp:173
 msgid "IM Accounts KCM Plugin Is Not Installed"
 msgstr "KCM Plugin IM účtov nie je nainštalovaný"
 
-#: contact-list-widget.cpp:403
+#: contact-list-widget.cpp:191
+msgid "Notifications"
+msgstr "Upozornenia"
+
+#: contact-list-widget.cpp:381
 #, kde-format
 msgid "Choose files to send to %1"
 msgstr "Vybrať súbory na odoslanie do %1"
+
+#: contact-list-widget.cpp:695
+msgid "&Move here"
+msgstr "Presunúť sem"
+
+#: contact-list-widget.cpp:699
+msgid "&Copy here"
+msgstr "Kopírovať sem"
+
+#: contact-list-widget.cpp:703
+msgid "C&ancel"
+msgstr "&Zrušiť"
 
 #: contact-overlays.cpp:134 contact-overlays.cpp:135
 msgid "Start Chat"
@@ -117,7 +133,7 @@ msgstr "Spustiť video hovor"
 msgid "Start a video call"
 msgstr "Spustiť video hovor"
 
-#: contact-overlays.cpp:171 contact-overlays.cpp:172 context-menu.cpp:129
+#: contact-overlays.cpp:171 contact-overlays.cpp:172 context-menu.cpp:138
 msgid "Send File..."
 msgstr "Odoslať súbor..."
 
@@ -126,89 +142,105 @@ msgid "Send a file"
 msgstr "Odoslať súbor"
 
 #: contact-overlays.cpp:183 contact-overlays.cpp:184
-msgid "Share my desktop"
+msgid "Share My Desktop"
 msgstr "Zdieľať moju plochu"
 
 #: contact-overlays.cpp:184
 msgid "Share desktop using RFB"
 msgstr "Zdieľať plochu pomocou RFB"
 
-#: context-menu.cpp:93
+#: contact-overlays.cpp:195 contact-overlays.cpp:196
+msgid "Open Log Viewer"
+msgstr "Otvoriť prehliadač záznamov"
+
+#: contact-overlays.cpp:196
+msgid "Show conversation logs"
+msgstr "Zobraziť záznamy rozhovorov"
+
+#: context-menu.cpp:102
 msgid "Start Chat..."
 msgstr "Začať rozhovor..."
 
-#: context-menu.cpp:109
+#: context-menu.cpp:118
 msgid "Start Audio Call..."
 msgstr "Spustiť zvukový hovor..."
 
-#: context-menu.cpp:119
+#: context-menu.cpp:128
 msgid "Start Video Call..."
 msgstr "Spustiť video hovor..."
 
-#: context-menu.cpp:139
+#: context-menu.cpp:148
 msgid "Share my desktop..."
 msgstr "Zdieľať moju plochu..."
 
-#: context-menu.cpp:161
+#: context-menu.cpp:158
+msgid "Open Log Viewer..."
+msgstr "Otvoriť prehliadač záznamov..."
+
+#: context-menu.cpp:170
+msgid "Configure Notifications..."
+msgstr "Nastaviť upozornenia..."
+
+#: context-menu.cpp:187
 msgid "Presence message link"
 msgid_plural "Presence message links"
 msgstr[0] "Odkaz správy o prítomnosti"
 msgstr[1] "Odkazy správy o prítomnosti"
 msgstr[2] "Odkazy správy o prítomnosti"
 
-#: context-menu.cpp:176
+#: context-menu.cpp:201
 msgid "Remove Contact From This Group"
 msgstr "Odstrániť kontakt z tejto skupiny"
 
-#: context-menu.cpp:180
+#: context-menu.cpp:205
 msgid "Move to Group"
 msgstr "Presunúť do skupiny"
 
-#: context-menu.cpp:198
+#: context-menu.cpp:223
 msgid "Create New Group..."
 msgstr "Vytvoriť novú skupinu..."
 
-#: context-menu.cpp:217
+#: context-menu.cpp:242
 msgid "Re-request Contact Authorization"
 msgstr "Znovu vyžiadať overenie kontaktu"
 
-#: context-menu.cpp:223
+#: context-menu.cpp:248
 msgid "Resend Contact Authorization"
 msgstr "Znovu poslať autorizáciu kontaktu"
 
-#: context-menu.cpp:231
+#: context-menu.cpp:256
 msgid "Unblock Contact"
 msgstr "Odblokovať kontakt"
 
-#: context-menu.cpp:235
+#: context-menu.cpp:260
 msgid "Block Contact"
 msgstr "Zablokovať kontakt"
 
-#: context-menu.cpp:243
+#: context-menu.cpp:268
 msgid "Remove Contact"
 msgstr "Odstrániť kontakt"
 
-#: context-menu.cpp:248
+#: context-menu.cpp:273
 msgid "Show Info..."
 msgstr "Zobraziť informácie..."
 
-#: context-menu.cpp:271
+#: context-menu.cpp:294
 msgid "Rename Group..."
 msgstr "Premenovať skupinu..."
 
-#: context-menu.cpp:277
+#: context-menu.cpp:300
 msgid "Delete Group"
 msgstr "Odstrániť skupinu"
 
-#: context-menu.cpp:432 context-menu.cpp:457
+#: context-menu.cpp:471 context-menu.cpp:496
 msgid "New Group Name"
 msgstr "Názov novej skupiny:"
 
-#: context-menu.cpp:433 context-menu.cpp:458
+#: context-menu.cpp:472 context-menu.cpp:497
 msgid "Please enter the new group name"
 msgstr "Zadajte názov novej skupiny"
 
-#: context-menu.cpp:487
+#: context-menu.cpp:530
 #, kde-format
 msgid ""
 "Do you really want to remove group %1?\n"
@@ -219,57 +251,9 @@ msgstr ""
 "\n"
 "Všetky kontakty budú presunuté do skupiny 'Nezoskupené'"
 
-#: context-menu.cpp:489
+#: context-menu.cpp:532
 msgid "Remove Group"
 msgstr "Odstrániť skupinu"
-
-#. i18n: ectx: property (windowTitle), widget (QWidget, ContactInfo)
-#: dialogs/contact-info.ui:14
-msgid "Dialog"
-msgstr "Dialóg"
-
-#. i18n: ectx: property (text), widget (QLabel, avatarLabel)
-#: dialogs/contact-info.ui:28
-msgid "Avatar Here"
-msgstr "Avatar sem"
-
-#. i18n: ectx: property (text), widget (QLabel, idLabel)
-#: dialogs/contact-info.ui:37
-msgid "ContactID"
-msgstr "ContactID"
-
-#. i18n: ectx: property (text), widget (QLabel, nameLabel)
-#: dialogs/contact-info.ui:59
-msgid "Contact Display Name"
-msgstr "Zobrazený názov kontaktu"
-
-#. i18n: ectx: property (text), widget (QLabel, presenceLabel)
-#: dialogs/contact-info.ui:69
-msgid "Presence String"
-msgstr "Reťazec prítomnosti"
-
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: dialogs/contact-info.ui:114
-msgid "Contact can see when you are online:"
-msgstr "Kontakt môže vidieť, kedy ste pripojený:"
-
-#. i18n: ectx: property (text), widget (QLabel, publishStateLabel)
-#. i18n: ectx: property (text), widget (QLabel, subscriptionStateLabel)
-#. i18n: ectx: property (text), widget (QLabel, blockedLabel)
-#: dialogs/contact-info.ui:121 dialogs/contact-info.ui:135
-#: dialogs/contact-info.ui:149
-msgid "TextLabel"
-msgstr "TextLabel"
-
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: dialogs/contact-info.ui:128
-msgid "You can see when the contact is online:"
-msgstr "Môžete vidieť kedy je kontakt pripojený:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: dialogs/contact-info.ui:142
-msgid "Contact is blocked:"
-msgstr "Kontakt je blokovaný"
 
 #: dialogs/custom-presence-dialog.cpp:70
 msgid "Edit Custom Presences"
@@ -298,84 +282,6 @@ msgstr "Pridať prítomnosť"
 #: dialogs/custom-presence-dialog.cpp:103
 msgid "Remove Presence"
 msgstr "Odstrániť prítomnosť"
-
-#: dialogs/join-chat-room-dialog.cpp:197
-msgid "This room is already in your favorites."
-msgstr "Táto miestnosť je už vo vašich obľúbených."
-
-#: dialogs/join-chat-room-dialog.cpp:199
-msgid "Add room"
-msgstr "Pridať miestnosť"
-
-#: dialogs/join-chat-room-dialog.cpp:199
-msgid "Name"
-msgstr "Názov"
-
-#. i18n: ectx: property (windowTitle), widget (QWidget, JoinChatRoomDialog)
-#: dialogs/join-chat-room-dialog.ui:20
-msgid "Join Chatroom"
-msgstr "Vstúpiť do miestnosti"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: dialogs/join-chat-room-dialog.ui:29
-msgid "Enter chat room:"
-msgstr "Vstúpiť do miestnosti:"
-
-#. i18n: ectx: attribute (title), widget (QWidget, favoritesTab)
-#: dialogs/join-chat-room-dialog.ui:47
-msgid "Favorites"
-msgstr "Obľúbené"
-
-#. i18n: ectx: property (text), widget (QPushButton, addFavoritePushButton)
-#: dialogs/join-chat-room-dialog.ui:63
-msgid "Add Room"
-msgstr "Pridať miestnosť"
-
-#. i18n: ectx: property (text), widget (QPushButton, removeFavoritePushButton)
-#: dialogs/join-chat-room-dialog.ui:73
-msgid "Remove Room"
-msgstr "Odstrániť miestnosť"
-
-#. i18n: ectx: attribute (title), widget (QWidget, recentTab)
-#: dialogs/join-chat-room-dialog.ui:98
-msgid "Recent"
-msgstr "Nedávne"
-
-#. i18n: ectx: property (text), widget (QPushButton, removeRecentPushButton)
-#: dialogs/join-chat-room-dialog.ui:112
-msgid "Remove"
-msgstr "Odstrániť"
-
-#. i18n: ectx: property (text), widget (QPushButton, clearRecentPushButton)
-#: dialogs/join-chat-room-dialog.ui:122
-msgid "Clear list"
-msgstr "Vyčistiť zoznam"
-
-#. i18n: ectx: attribute (title), widget (QWidget, queryTab)
-#. i18n: ectx: property (text), widget (QPushButton, queryPushButton)
-#: dialogs/join-chat-room-dialog.ui:145 dialogs/join-chat-room-dialog.ui:176
-msgid "Query"
-msgstr "Otázka"
-
-#. i18n: ectx: property (text), widget (QLabel, serverLabel)
-#: dialogs/join-chat-room-dialog.ui:151
-msgid "Server to be queried:"
-msgstr "Server na dotazovanie:"
-
-#. i18n: ectx: property (clickMessage), widget (KLineEdit, serverLineEdit)
-#: dialogs/join-chat-room-dialog.ui:163
-msgid "Leave blank for the selected account's default server"
-msgstr "Nechajte prázdne pre predvolený server vybraného účtu"
-
-#. i18n: ectx: property (text), widget (QPushButton, stopPushButton)
-#: dialogs/join-chat-room-dialog.ui:186
-msgid "Stop"
-msgstr "Zastaviť"
-
-#. i18n: ectx: property (clickMessage), widget (KLineEdit, filterBar)
-#: dialogs/join-chat-room-dialog.ui:217
-msgid "Search rooms"
-msgstr "Hľadať miestnosti"
 
 #: dialogs/remove-contact-dialog.cpp:45
 msgid "Remove the selected contact?"
@@ -424,16 +330,16 @@ msgstr "Upraviť vlastné prítomnosti..."
 msgid "Now listening to..."
 msgstr "Práve počúvam..."
 
-#: global-presence-chooser.cpp:195
+#: global-presence-chooser.cpp:196
 msgid "Click to change your presence message"
 msgstr "Kliknite na zmenu vašej správy o prítomnosti"
 
-#: global-presence-chooser.cpp:231
+#: global-presence-chooser.cpp:232
 msgctxt "Presence string when the account is connecting"
 msgid "Connecting..."
 msgstr "Pripájanie..."
 
-#: global-presence-chooser.cpp:319
+#: global-presence-chooser.cpp:333
 msgid ""
 "This plugin is currently disabled. Do you want to enable it and use as your "
 "presence?"
@@ -441,91 +347,11 @@ msgstr ""
 "Tento plugin je práve zakázaný. Chcete ho povoliť a použiť ako vašu "
 "prítomnosť?"
 
-#: global-presence-chooser.cpp:320
+#: global-presence-chooser.cpp:334
 msgid "Plugin disabled"
 msgstr "Plugin zakázaný"
 
-#: main-widget.cpp:116
-msgid "Add New Contacts..."
-msgstr "Pridať nové kontakty..."
-
-#: main-widget.cpp:120
-msgid "Contacts are shown by accounts. Click to show them in groups."
-msgstr ""
-"Kontakty sú zobrazené podľa účtov. Kliknite na zobrazenie ich v skupinách."
-
-#: main-widget.cpp:121
-msgid "Contacts are shown in groups. Click to show them in accounts."
-msgstr ""
-"Kontakty sú zobrazené v skupinách. Kliknite na zobrazenie ich v účtoch."
-
-#: main-widget.cpp:130
-msgid "Offline contacts are hidden. Click to show them."
-msgstr "Nepripojené kontakty sú skryté. Kliknite na zobrazenie ich."
-
-#: main-widget.cpp:131
-msgid "Offline contacts are shown. Click to hide them."
-msgstr "Nepripojené kontakty sú zobrazené. Kliknite na skrytie ich."
-
-#: main-widget.cpp:140
-msgid "List is sorted by name. Click to sort by presence."
-msgstr ""
-"Zoznam je zoradený podľa mena. Kliknite sem na zoradenie podľa prítomnosti."
-
-#: main-widget.cpp:141
-msgid "List is sorted by presence. Click to sort by name."
-msgstr ""
-"Zoznam je zoradený podľa prítomnosti. Kliknite sem na zoradenie podľa mena."
-
-#: main-widget.cpp:148
-msgid "Find Contact"
-msgstr "Nájsť kontakt"
-
-#: main-widget.cpp:165
-msgid "Instant Messaging Settings..."
-msgstr "Nastavenia instant messagingu..."
-
-#: main-widget.cpp:171
-msgid "Contact List Type"
-msgstr "Typ zoznamu kontaktov"
-
-#: main-widget.cpp:172
-msgid "Use Full List"
-msgstr "Použiť plný zoznam"
-
-#: main-widget.cpp:180
-msgid "Use Normal List"
-msgstr "Použiť normálny zoznam"
-
-#: main-widget.cpp:189
-msgid "Use Minimalistic List"
-msgstr "Použiť minimalistický zoznam"
-
-#: main-widget.cpp:200
-msgid "Shown Contacts"
-msgstr "Zobrazené kontakty"
-
-#: main-widget.cpp:207
-msgid "Show all contacts"
-msgstr "Zobraziť všetky kontakty"
-
-#: main-widget.cpp:214
-msgid "Show unblocked contacts"
-msgstr "Zobraziť neblokované kontakty"
-
-#: main-widget.cpp:221
-msgid "Show blocked contacts"
-msgstr "Zobraziť blokované kontakty"
-
-#: main-widget.cpp:238
-msgid "Join Chat Room..."
-msgstr "Vstúpiť do miestnosti..."
-
-#: main-widget.cpp:241
-msgid "Make a Call..."
-msgstr "Spustiť hovor..."
-
-#: main-widget.cpp:325
+#: main-widget.cpp:163
 msgid ""
 "Something unexpected happened to the core part of your Instant Messaging "
 "system and it couldn't be initialized. Try restarting the Contact List."
@@ -533,11 +359,11 @@ msgstr ""
 "Stalo sa niečo neočakávané integrálnej časti instant messaging systému a "
 "nemohol byť inicializovaný. Skúste reštartovať zoznam kontaktov."
 
-#: main-widget.cpp:327
+#: main-widget.cpp:165
 msgid "IM system failed to initialize"
 msgstr "Zlyhala inicializácia IM systému"
 
-#: main-widget.cpp:440
+#: main-widget.cpp:270
 msgid ""
 "You do not have any other presence controls active (a Presence widget for "
 "example).\n"
@@ -547,75 +373,137 @@ msgstr ""
 "Prítomnosť).\n"
 "Chcete ostať pripojený alebo radšej sa odpojiť?"
 
-#: main-widget.cpp:442
+#: main-widget.cpp:272
 msgid "No Other Presence Controls Found"
 msgstr "Nenájdené žiadne ďalšie ovládače neprítomnosti"
 
-#: main-widget.cpp:443
+#: main-widget.cpp:273
 msgid "Stay Online"
 msgstr "Ostať pripojený"
 
-#: main-widget.cpp:444
+#: main-widget.cpp:274
 msgid "Go Offline"
 msgstr "Prejsť offline"
+
+#: main-widget.cpp:384
+msgid "Contacts"
+msgstr "Kontakty"
+
+#: main-widget.cpp:396
+msgid "View"
+msgstr "Zobraziť"
+
+#: main-widget.cpp:401 main-widget.cpp:436
+msgid "Contact List Type"
+msgstr "Typ zoznamu kontaktov"
+
+#: main-widget.cpp:404 main-widget.cpp:441
+msgid "Shown Contacts"
+msgstr "Zobrazené kontakty"
+
+#: main-widget.cpp:513
+msgid "Instant Messaging Settings..."
+msgstr "Nastavenia instant messagingu..."
+
+#: main-widget.cpp:518
+msgid "Join Chat Room..."
+msgstr "Vstúpiť do miestnosti..."
+
+#: main-widget.cpp:519
+msgid "Make a Call..."
+msgstr "Spustiť hovor..."
+
+#: main-widget.cpp:520
+msgid "Add New Contacts..."
+msgstr "Pridať nové kontakty..."
+
+#: main-widget.cpp:521
+msgid "Find Contact"
+msgstr "Nájsť kontakt"
+
+#: main-widget.cpp:526
+msgid "Show Contacts by Groups"
+msgstr "Zobraziť kontakty podľa skupín"
+
+#: main-widget.cpp:527
+msgid "Show Contacts by Accounts"
+msgstr "Zobraziť kontakty podľa účtov"
+
+#: main-widget.cpp:534
+msgid "Show Offline Contacts"
+msgstr "Zobraziť odhlásené kontakty"
+
+#: main-widget.cpp:535
+msgid "Hide Offline Contacts"
+msgstr "Skryť odhlásené kontakty"
+
+#: main-widget.cpp:543
+msgid "Sort by Presence"
+msgstr "Zoradiť podľa prítomnosti"
+
+#: main-widget.cpp:544
+msgid "Sort by Name"
+msgstr "Zoradiť podľa mena"
+
+#: main-widget.cpp:552
+msgid "Use Full List"
+msgstr "Použiť plný zoznam"
+
+#: main-widget.cpp:554
+msgid "Use Normal List"
+msgstr "Použiť normálny zoznam"
+
+#: main-widget.cpp:558
+msgid "Use Minimalistic List"
+msgstr "Použiť minimalistický zoznam"
+
+#: main-widget.cpp:565
+msgid "Show All Contacts"
+msgstr "Zobraziť všetky kontakty"
+
+#: main-widget.cpp:567
+msgid "Show Unblocked Contacts"
+msgstr "Zobraziť neblokované kontakty"
+
+#: main-widget.cpp:569
+msgid "Show Blocked Contacts"
+msgstr "Zobraziť blokované kontakty"
 
 #. i18n: ectx: property (windowTitle), widget (QMainWindow, MainWindow)
 #: main-widget.ui:14
 msgid "KDE IM Contacts"
 msgstr "KDE IM kontakty"
 
-#: main.cpp:36 main.cpp:37
+#: main.cpp:37 main.cpp:38
 msgid "KDE Telepathy Contact List"
 msgstr "Zoznam kontaktov KDE Telepathy"
 
-#: main.cpp:38
+#: main.cpp:39
 msgid "(C) 2011, Martin Klapetek"
 msgstr "(C) 2011, Martin Klapetek"
 
-#: main.cpp:40
+#: main.cpp:41
 msgctxt "@info:credit"
 msgid "Martin Klapetek"
 msgstr "Martin Klapetek"
 
-#: main.cpp:40
+#: main.cpp:41
 msgid "Developer"
 msgstr "Vývojár"
 
-#: main.cpp:48
+#: main.cpp:49
 msgid "Show Telepathy debugging information"
 msgstr "Zobraziť ladiace informácie Tepelathy"
 
-#: rooms-model.cpp:72
-msgid "Password required"
-msgstr "Nutné heslo"
-
-#: rooms-model.cpp:74
-msgid "No password required"
-msgstr "Heslo sa nevyžaduje"
-
-#: rooms-model.cpp:94
-msgid "Member count"
-msgstr "Počet členov"
-
-#: rooms-model.cpp:114
-msgctxt "Chatrooms name"
-msgid "Name"
-msgstr "Názov"
-
-#: rooms-model.cpp:116
-msgctxt "Chatrooms description"
-msgid "Description"
-msgstr "Popis"
-
-#: tooltips/contacttooltip.cpp:59
-msgctxt "This is an IM user status"
-msgid "Unknown"
-msgstr "Neznámy"
-
-#: tooltips/contacttooltip.cpp:69
+#: tooltips/contacttooltip.cpp:56
 msgctxt "This is an IM user status"
 msgid "Error Getting Presence"
 msgstr "Chyba získania prítomnosti"
+
+#: tooltips/contacttooltip.cpp:72
+#, kde-format
+msgid "Account: %1"
+msgstr "Účet: %1"
 
 #. i18n: ectx: property (text), widget (QLabel, blockedLabel)
 #: tooltips/contacttooltip.ui:126

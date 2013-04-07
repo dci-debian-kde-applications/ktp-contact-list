@@ -21,15 +21,16 @@
 #define CONTEXT_MENU_H
 
 #include <QObject>
-#include <QModelIndex>
+#include <QPersistentModelIndex>
 #include <QStringList>
 
 #include <TelepathyQt/Types>
 
+#include <TelepathyLoggerQt4/LogManager>
+
 #include "contact-list-widget.h"
 
 class AccountsModel;
-class ContactModelItem;
 class KMenu;
 class QAction;
 
@@ -52,6 +53,7 @@ private Q_SLOTS:
     void onStartVideoChatTriggered();
     void onStartFileTransferTriggered();
     void onStartDesktopSharingTriggered();
+    void onOpenLogViewerTriggered();
     void onUnblockContactTriggered();
     void onRemoveContactFromGroupTriggered();
     void onCreateNewGroupTriggered();
@@ -62,11 +64,13 @@ private Q_SLOTS:
     void onOpenLinkTriggered(QAction *action);      /** triggered from custom contact menu when user clicks contact link */
     void onRerequestAuthorization();
     void onResendAuthorization();
+    void onNotificationConfigureTriggered();
 
 private:
     ContactListWidget     *m_mainWidget;
-    QModelIndex            m_currentIndex;
+    QPersistentModelIndex  m_currentIndex;
     Tp::AccountManagerPtr  m_accountManager;
+    Tpl::LogManagerPtr     m_logManager;
 };
 
 #endif // CONTEXT_MENU_H

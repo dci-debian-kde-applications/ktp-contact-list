@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Ni Hui <shuizhuyuanluo@126.com>, 2012.
-# Weng Xuetian <wengxt@gmail.com>, 2013.
+# Weng Xuetian <wengxt@gmail.com>, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-01-18 09:34+0100\n"
-"PO-Revision-Date: 2013-01-12 11:48-0500\n"
+"POT-Creation-Date: 2013-03-27 10:06+0100\n"
+"PO-Revision-Date: 2012-12-10 21:35-0500\n"
 "Last-Translator: Weng Xuetian <wengxt@gmail.com>\n"
 "Language-Team: Chinese Simplified <kde-china@kde.org>\n"
 "Language: zh_CN\n"
@@ -71,29 +71,45 @@ msgctxt "@action:inmenu This is the IM presence message"
 msgid "Set message..."
 msgstr "设定消息..."
 
-#: contact-list-widget.cpp:144
+#: contact-list-widget.cpp:156
 msgid "You have no IM accounts configured. Would you like to do that now?"
 msgstr "您还没有配置有效的即时通讯账户。您想要现在配置吗？"
 
-#: contact-list-widget.cpp:145
+#: contact-list-widget.cpp:157
 msgid "No Accounts Found"
 msgstr "未找到账户"
 
-#: contact-list-widget.cpp:167
+#: contact-list-widget.cpp:172
 msgid ""
 "It appears you do not have the IM Accounts control module installed. Please "
-"install telepathy-accounts-kcm package."
-msgstr ""
-"看起来您并未安装即时通讯账户控制模块。请安装 telepathy-accounts-kcm 包。"
+"install ktp-accounts-kcm package."
+msgstr "您并未安装即时通讯账户控制模块。请安装 ktp-accounts-kcm 软件包。"
 
-#: contact-list-widget.cpp:168
+#: contact-list-widget.cpp:173
 msgid "IM Accounts KCM Plugin Is Not Installed"
 msgstr "即时通讯账户控制模块未安装"
 
-#: contact-list-widget.cpp:403
+#: contact-list-widget.cpp:191
+#, fuzzy
+msgid "Notifications"
+msgstr "配置通知..."
+
+#: contact-list-widget.cpp:381
 #, kde-format
 msgid "Choose files to send to %1"
 msgstr "选择要发送给 %1 的文件"
+
+#: contact-list-widget.cpp:695
+msgid "&Move here"
+msgstr ""
+
+#: contact-list-widget.cpp:699
+msgid "&Copy here"
+msgstr ""
+
+#: contact-list-widget.cpp:703
+msgid "C&ancel"
+msgstr ""
 
 #: contact-overlays.cpp:134 contact-overlays.cpp:135
 msgid "Start Chat"
@@ -119,7 +135,7 @@ msgstr "视频"
 msgid "Start a video call"
 msgstr "视频呼叫"
 
-#: contact-overlays.cpp:171 contact-overlays.cpp:172 context-menu.cpp:129
+#: contact-overlays.cpp:171 contact-overlays.cpp:172 context-menu.cpp:138
 msgid "Send File..."
 msgstr "发送文件..."
 
@@ -128,87 +144,105 @@ msgid "Send a file"
 msgstr "发送文件"
 
 #: contact-overlays.cpp:183 contact-overlays.cpp:184
-msgid "Share my desktop"
+#, fuzzy
+msgid "Share My Desktop"
 msgstr "共享桌面"
 
 #: contact-overlays.cpp:184
 msgid "Share desktop using RFB"
 msgstr "使用 RFB 共享桌面"
 
-#: context-menu.cpp:93
+#: contact-overlays.cpp:195 contact-overlays.cpp:196
+msgid "Open Log Viewer"
+msgstr "打开日志查看器"
+
+#: contact-overlays.cpp:196
+msgid "Show conversation logs"
+msgstr "显示对话日志"
+
+#: context-menu.cpp:102
 msgid "Start Chat..."
 msgstr "聊天..."
 
-#: context-menu.cpp:109
+#: context-menu.cpp:118
 msgid "Start Audio Call..."
 msgstr "语音..."
 
-#: context-menu.cpp:119
+#: context-menu.cpp:128
 msgid "Start Video Call..."
 msgstr "视频..."
 
-#: context-menu.cpp:139
+#: context-menu.cpp:148
 msgid "Share my desktop..."
 msgstr "共享桌面..."
 
-#: context-menu.cpp:161
+#: context-menu.cpp:158
+msgid "Open Log Viewer..."
+msgstr "打开日志查看器..."
+
+#: context-menu.cpp:170
+#, fuzzy
+msgid "Configure Notifications..."
+msgstr "配置通知..."
+
+#: context-menu.cpp:187
 msgid "Presence message link"
 msgid_plural "Presence message links"
 msgstr[0] "状态消息链接"
 
-#: context-menu.cpp:176
+#: context-menu.cpp:201
 msgid "Remove Contact From This Group"
 msgstr "从此分组中删除联系人"
 
-#: context-menu.cpp:180
+#: context-menu.cpp:205
 msgid "Move to Group"
 msgstr "移动到分组"
 
-#: context-menu.cpp:198
+#: context-menu.cpp:223
 msgid "Create New Group..."
 msgstr "创建新分组..."
 
-#: context-menu.cpp:217
+#: context-menu.cpp:242
 msgid "Re-request Contact Authorization"
 msgstr "重新请求认证"
 
-#: context-menu.cpp:223
+#: context-menu.cpp:248
 msgid "Resend Contact Authorization"
 msgstr "重新发送联系人认证"
 
-#: context-menu.cpp:231
+#: context-menu.cpp:256
 msgid "Unblock Contact"
 msgstr "取消屏蔽联系人"
 
-#: context-menu.cpp:235
+#: context-menu.cpp:260
 msgid "Block Contact"
 msgstr "屏蔽联系人"
 
-#: context-menu.cpp:243
+#: context-menu.cpp:268
 msgid "Remove Contact"
 msgstr "删除联系人"
 
-#: context-menu.cpp:248
+#: context-menu.cpp:273
 msgid "Show Info..."
 msgstr "显示信息..."
 
-#: context-menu.cpp:271
+#: context-menu.cpp:294
 msgid "Rename Group..."
 msgstr "重命名分组..."
 
-#: context-menu.cpp:277
+#: context-menu.cpp:300
 msgid "Delete Group"
 msgstr "删除分组"
 
-#: context-menu.cpp:432 context-menu.cpp:457
+#: context-menu.cpp:471 context-menu.cpp:496
 msgid "New Group Name"
 msgstr "新分组名称"
 
-#: context-menu.cpp:433 context-menu.cpp:458
+#: context-menu.cpp:472 context-menu.cpp:497
 msgid "Please enter the new group name"
 msgstr "请输入新分组的名称"
 
-#: context-menu.cpp:487
+#: context-menu.cpp:530
 #, kde-format
 msgid ""
 "Do you really want to remove group %1?\n"
@@ -219,57 +253,9 @@ msgstr ""
 "\n"
 "该组所有联系人将移动到“未分组”"
 
-#: context-menu.cpp:489
+#: context-menu.cpp:532
 msgid "Remove Group"
 msgstr "删除分组"
-
-#. i18n: ectx: property (windowTitle), widget (QWidget, ContactInfo)
-#: dialogs/contact-info.ui:14
-msgid "Dialog"
-msgstr "对话框"
-
-#. i18n: ectx: property (text), widget (QLabel, avatarLabel)
-#: dialogs/contact-info.ui:28
-msgid "Avatar Here"
-msgstr "此处是头像"
-
-#. i18n: ectx: property (text), widget (QLabel, idLabel)
-#: dialogs/contact-info.ui:37
-msgid "ContactID"
-msgstr "联系人ID"
-
-#. i18n: ectx: property (text), widget (QLabel, nameLabel)
-#: dialogs/contact-info.ui:59
-msgid "Contact Display Name"
-msgstr "联系人显示名称"
-
-#. i18n: ectx: property (text), widget (QLabel, presenceLabel)
-#: dialogs/contact-info.ui:69
-msgid "Presence String"
-msgstr "状态字符串"
-
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: dialogs/contact-info.ui:114
-msgid "Contact can see when you are online:"
-msgstr "联系人是否能看见您在线状态："
-
-#. i18n: ectx: property (text), widget (QLabel, publishStateLabel)
-#. i18n: ectx: property (text), widget (QLabel, subscriptionStateLabel)
-#. i18n: ectx: property (text), widget (QLabel, blockedLabel)
-#: dialogs/contact-info.ui:121 dialogs/contact-info.ui:135
-#: dialogs/contact-info.ui:149
-msgid "TextLabel"
-msgstr "文本标签"
-
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: dialogs/contact-info.ui:128
-msgid "You can see when the contact is online:"
-msgstr "您是否可以看见该联系人在线状态："
-
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: dialogs/contact-info.ui:142
-msgid "Contact is blocked:"
-msgstr "联系人已屏蔽"
 
 #: dialogs/custom-presence-dialog.cpp:70
 msgid "Edit Custom Presences"
@@ -298,84 +284,6 @@ msgstr "添加状态"
 #: dialogs/custom-presence-dialog.cpp:103
 msgid "Remove Presence"
 msgstr "删除状态"
-
-#: dialogs/join-chat-room-dialog.cpp:197
-msgid "This room is already in your favorites."
-msgstr "这个聊天室已经在收藏夹中。"
-
-#: dialogs/join-chat-room-dialog.cpp:199
-msgid "Add room"
-msgstr "添加聊天室"
-
-#: dialogs/join-chat-room-dialog.cpp:199
-msgid "Name"
-msgstr "名称"
-
-#. i18n: ectx: property (windowTitle), widget (QWidget, JoinChatRoomDialog)
-#: dialogs/join-chat-room-dialog.ui:20
-msgid "Join Chatroom"
-msgstr "加入聊天室"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: dialogs/join-chat-room-dialog.ui:29
-msgid "Enter chat room:"
-msgstr "输入聊天室："
-
-#. i18n: ectx: attribute (title), widget (QWidget, favoritesTab)
-#: dialogs/join-chat-room-dialog.ui:47
-msgid "Favorites"
-msgstr "收藏夹"
-
-#. i18n: ectx: property (text), widget (QPushButton, addFavoritePushButton)
-#: dialogs/join-chat-room-dialog.ui:63
-msgid "Add Room"
-msgstr "添加聊天室"
-
-#. i18n: ectx: property (text), widget (QPushButton, removeFavoritePushButton)
-#: dialogs/join-chat-room-dialog.ui:73
-msgid "Remove Room"
-msgstr "删除聊天室"
-
-#. i18n: ectx: attribute (title), widget (QWidget, recentTab)
-#: dialogs/join-chat-room-dialog.ui:98
-msgid "Recent"
-msgstr "最近"
-
-#. i18n: ectx: property (text), widget (QPushButton, removeRecentPushButton)
-#: dialogs/join-chat-room-dialog.ui:112
-msgid "Remove"
-msgstr "删除"
-
-#. i18n: ectx: property (text), widget (QPushButton, clearRecentPushButton)
-#: dialogs/join-chat-room-dialog.ui:122
-msgid "Clear list"
-msgstr "清除列表"
-
-#. i18n: ectx: attribute (title), widget (QWidget, queryTab)
-#. i18n: ectx: property (text), widget (QPushButton, queryPushButton)
-#: dialogs/join-chat-room-dialog.ui:145 dialogs/join-chat-room-dialog.ui:176
-msgid "Query"
-msgstr "查询"
-
-#. i18n: ectx: property (text), widget (QLabel, serverLabel)
-#: dialogs/join-chat-room-dialog.ui:151
-msgid "Server to be queried:"
-msgstr "要查询的服务器："
-
-#. i18n: ectx: property (clickMessage), widget (KLineEdit, serverLineEdit)
-#: dialogs/join-chat-room-dialog.ui:163
-msgid "Leave blank for the selected account's default server"
-msgstr "留空以使用选中账号的默认服务器"
-
-#. i18n: ectx: property (text), widget (QPushButton, stopPushButton)
-#: dialogs/join-chat-room-dialog.ui:186
-msgid "Stop"
-msgstr "停止"
-
-#. i18n: ectx: property (clickMessage), widget (KLineEdit, filterBar)
-#: dialogs/join-chat-room-dialog.ui:217
-msgid "Search rooms"
-msgstr "搜索聊天室"
 
 #: dialogs/remove-contact-dialog.cpp:45
 msgid "Remove the selected contact?"
@@ -424,112 +332,36 @@ msgstr "配置自定义状态..."
 msgid "Now listening to..."
 msgstr "正在收听..."
 
-#: global-presence-chooser.cpp:195
+#: global-presence-chooser.cpp:196
 msgid "Click to change your presence message"
 msgstr "单击这里更改您的状态消息"
 
-#: global-presence-chooser.cpp:231
+#: global-presence-chooser.cpp:232
 msgctxt "Presence string when the account is connecting"
 msgid "Connecting..."
 msgstr "正在连接..."
 
-#: global-presence-chooser.cpp:319
+#: global-presence-chooser.cpp:333
 msgid ""
 "This plugin is currently disabled. Do you want to enable it and use as your "
 "presence?"
 msgstr "此插件当前被禁用。您是否想启用并且将其作为您的在线状态？"
 
-#: global-presence-chooser.cpp:320
+#: global-presence-chooser.cpp:334
 msgid "Plugin disabled"
 msgstr "插件已禁用"
 
-#: main-widget.cpp:116
-msgid "Add New Contacts..."
-msgstr "添加新联系人..."
-
-#: main-widget.cpp:120
-msgid "Contacts are shown by accounts. Click to show them in groups."
-msgstr "按账户显示联系人。点击以分组显示。"
-
-#: main-widget.cpp:121
-msgid "Contacts are shown in groups. Click to show them in accounts."
-msgstr "按分组显示联系人。点击以按账户显示。"
-
-#: main-widget.cpp:130
-msgid "Offline contacts are hidden. Click to show them."
-msgstr "离线联系人被隐藏。点击以显示。"
-
-#: main-widget.cpp:131
-msgid "Offline contacts are shown. Click to hide them."
-msgstr "离线联系人已显示。点击以隐藏。"
-
-#: main-widget.cpp:140
-msgid "List is sorted by name. Click to sort by presence."
-msgstr "列表按名字排序。点击以按在线状态排序。"
-
-#: main-widget.cpp:141
-msgid "List is sorted by presence. Click to sort by name."
-msgstr "列表按在线状态排序。点击以按名字排序。"
-
-#: main-widget.cpp:148
-msgid "Find Contact"
-msgstr "查找联系人"
-
-#: main-widget.cpp:165
-msgid "Instant Messaging Settings..."
-msgstr "即时通讯设置..."
-
-#: main-widget.cpp:171
-msgid "Contact List Type"
-msgstr "联系人列表类型"
-
-#: main-widget.cpp:172
-msgid "Use Full List"
-msgstr "使用完整列表"
-
-#: main-widget.cpp:180
-msgid "Use Normal List"
-msgstr "使用普通列表"
-
-#: main-widget.cpp:189
-msgid "Use Minimalistic List"
-msgstr "使用简洁列表"
-
-#: main-widget.cpp:200
-msgid "Shown Contacts"
-msgstr "显示联系人"
-
-#: main-widget.cpp:207
-msgid "Show all contacts"
-msgstr "显示所有联系人"
-
-#: main-widget.cpp:214
-msgid "Show unblocked contacts"
-msgstr "显示未屏蔽联系人"
-
-#: main-widget.cpp:221
-msgid "Show blocked contacts"
-msgstr "显示屏蔽联系人"
-
-#: main-widget.cpp:238
-msgid "Join Chat Room..."
-msgstr "加入聊天室..."
-
-#: main-widget.cpp:241
-msgid "Make a Call..."
-msgstr "进行呼叫..."
-
-#: main-widget.cpp:325
+#: main-widget.cpp:163
 msgid ""
 "Something unexpected happened to the core part of your Instant Messaging "
 "system and it couldn't be initialized. Try restarting the Contact List."
 msgstr "即时通讯系统的核心发生未预期的错误，无法初始化。请尝试重启联系人列表。"
 
-#: main-widget.cpp:327
+#: main-widget.cpp:165
 msgid "IM system failed to initialize"
 msgstr "即时通讯系统初始化失败"
 
-#: main-widget.cpp:440
+#: main-widget.cpp:270
 msgid ""
 "You do not have any other presence controls active (a Presence widget for "
 "example).\n"
@@ -538,75 +370,147 @@ msgstr ""
 "您没有其他活动的在线状态控制器 (例如即时通讯状态小部件)。\n"
 "您想要保持在线还是离线？"
 
-#: main-widget.cpp:442
+#: main-widget.cpp:272
 msgid "No Other Presence Controls Found"
 msgstr "未找到其他在线状态控制器"
 
-#: main-widget.cpp:443
+#: main-widget.cpp:273
 msgid "Stay Online"
 msgstr "保持在线"
 
-#: main-widget.cpp:444
+#: main-widget.cpp:274
 msgid "Go Offline"
 msgstr "转为离线"
+
+#: main-widget.cpp:384
+#, fuzzy
+msgid "Contacts"
+msgstr "联系人ID"
+
+#: main-widget.cpp:396
+msgid "View"
+msgstr ""
+
+#: main-widget.cpp:401 main-widget.cpp:436
+msgid "Contact List Type"
+msgstr "联系人列表类型"
+
+#: main-widget.cpp:404 main-widget.cpp:441
+msgid "Shown Contacts"
+msgstr "显示联系人"
+
+#: main-widget.cpp:513
+msgid "Instant Messaging Settings..."
+msgstr "即时通讯设置..."
+
+#: main-widget.cpp:518
+msgid "Join Chat Room..."
+msgstr "加入聊天室..."
+
+#: main-widget.cpp:519
+msgid "Make a Call..."
+msgstr "进行呼叫..."
+
+#: main-widget.cpp:520
+msgid "Add New Contacts..."
+msgstr "添加新联系人..."
+
+#: main-widget.cpp:521
+msgid "Find Contact"
+msgstr "查找联系人"
+
+#: main-widget.cpp:526
+#, fuzzy
+msgid "Show Contacts by Groups"
+msgstr "显示所有联系人"
+
+#: main-widget.cpp:527
+#, fuzzy
+msgid "Show Contacts by Accounts"
+msgstr "显示所有联系人"
+
+#: main-widget.cpp:534
+#, fuzzy
+msgid "Show Offline Contacts"
+msgstr "显示所有联系人"
+
+#: main-widget.cpp:535
+#, fuzzy
+msgid "Hide Offline Contacts"
+msgstr "显示所有联系人"
+
+#: main-widget.cpp:543
+#, fuzzy
+msgid "Sort by Presence"
+msgstr "删除状态"
+
+#: main-widget.cpp:544
+#, fuzzy
+msgid "Sort by Name"
+msgstr "删除状态"
+
+#: main-widget.cpp:552
+msgid "Use Full List"
+msgstr "使用完整列表"
+
+#: main-widget.cpp:554
+msgid "Use Normal List"
+msgstr "使用普通列表"
+
+#: main-widget.cpp:558
+msgid "Use Minimalistic List"
+msgstr "使用简洁列表"
+
+#: main-widget.cpp:565
+#, fuzzy
+msgid "Show All Contacts"
+msgstr "显示所有联系人"
+
+#: main-widget.cpp:567
+#, fuzzy
+msgid "Show Unblocked Contacts"
+msgstr "显示未屏蔽联系人"
+
+#: main-widget.cpp:569
+#, fuzzy
+msgid "Show Blocked Contacts"
+msgstr "显示屏蔽联系人"
 
 #. i18n: ectx: property (windowTitle), widget (QMainWindow, MainWindow)
 #: main-widget.ui:14
 msgid "KDE IM Contacts"
 msgstr "KDE 即时通讯联系人"
 
-#: main.cpp:36 main.cpp:37
+#: main.cpp:37 main.cpp:38
 msgid "KDE Telepathy Contact List"
 msgstr "KDE Telepathy 联系人列表"
 
-#: main.cpp:38
+#: main.cpp:39
 msgid "(C) 2011, Martin Klapetek"
 msgstr "(C) 2011，Martin Klapetek"
 
-#: main.cpp:40
+#: main.cpp:41
 msgctxt "@info:credit"
 msgid "Martin Klapetek"
 msgstr "Martin Klapetek"
 
-#: main.cpp:40
+#: main.cpp:41
 msgid "Developer"
 msgstr "开发者"
 
-#: main.cpp:48
+#: main.cpp:49
 msgid "Show Telepathy debugging information"
 msgstr "显示 Telepathy 调试信息"
 
-#: rooms-model.cpp:72
-msgid "Password required"
-msgstr "需要密码"
-
-#: rooms-model.cpp:74
-msgid "No password required"
-msgstr "不需要密码"
-
-#: rooms-model.cpp:94
-msgid "Member count"
-msgstr "成员数"
-
-#: rooms-model.cpp:114
-msgctxt "Chatrooms name"
-msgid "Name"
-msgstr "名称"
-
-#: rooms-model.cpp:116
-msgctxt "Chatrooms description"
-msgid "Description"
-msgstr "描述"
-
-#: tooltips/contacttooltip.cpp:59
-msgctxt "This is an IM user status"
-msgid "Unknown"
-msgstr "未知"
-
-#: tooltips/contacttooltip.cpp:69
+#: tooltips/contacttooltip.cpp:56
 msgctxt "This is an IM user status"
 msgid "Error Getting Presence"
 msgstr "获取在线状态错误"
+
+#: tooltips/contacttooltip.cpp:72
+#, fuzzy, kde-format
+msgid "Account: %1"
+msgstr "账户："
 
 #. i18n: ectx: property (text), widget (QLabel, blockedLabel)
 #: tooltips/contacttooltip.ui:126
@@ -614,21 +518,128 @@ msgid "User is blocked"
 msgstr "用户已被屏蔽"
 
 #, fuzzy
+#~| msgctxt "Presence string when the account is connecting"
+#~| msgid "Connecting..."
+#~ msgid "Settings..."
+#~ msgstr "正在连接..."
+
+#~ msgid "Contacts are shown by accounts. Click to show them in groups."
+#~ msgstr "按账户显示联系人。点击以分组显示。"
+
+#~ msgid "Contacts are shown in groups. Click to show them in accounts."
+#~ msgstr "按分组显示联系人。点击以按账户显示。"
+
+#~ msgid "Offline contacts are hidden. Click to show them."
+#~ msgstr "离线联系人被隐藏。点击以显示。"
+
+#~ msgid "Offline contacts are shown. Click to hide them."
+#~ msgstr "离线联系人已显示。点击以隐藏。"
+
+#~ msgid "List is sorted by name. Click to sort by presence."
+#~ msgstr "列表按名字排序。点击以按在线状态排序。"
+
+#~ msgid "List is sorted by presence. Click to sort by name."
+#~ msgstr "列表按在线状态排序。点击以按名字排序。"
+
+#~ msgctxt "This is an IM user status"
+#~ msgid "Unknown"
+#~ msgstr "未知"
+
+#~ msgid "Dialog"
+#~ msgstr "对话框"
+
+#~ msgid "Avatar Here"
+#~ msgstr "此处是头像"
+
+#~ msgid "Contact Display Name"
+#~ msgstr "联系人显示名称"
+
+#~ msgid "Presence String"
+#~ msgstr "状态字符串"
+
+#~ msgid "Contact can see when you are online:"
+#~ msgstr "联系人是否能看见您在线状态："
+
+#~ msgid "TextLabel"
+#~ msgstr "文本标签"
+
+#~ msgid "You can see when the contact is online:"
+#~ msgstr "您是否可以看见该联系人在线状态："
+
+#~ msgid "Contact is blocked:"
+#~ msgstr "联系人已屏蔽"
+
+#~ msgid "This room is already in your favorites."
+#~ msgstr "此聊天室已经在收藏夹中。"
+
+#~ msgid "Add room"
+#~ msgstr "添加聊天室"
+
+#~ msgid "Name"
+#~ msgstr "名称"
+
+#~ msgid "Join Chatroom"
+#~ msgstr "加入聊天室"
+
+#~ msgid "Enter chat room:"
+#~ msgstr "输入聊天室："
+
+#~ msgid "Favorites"
+#~ msgstr "收藏夹"
+
+#~ msgid "Add Room"
+#~ msgstr "添加聊天室"
+
+#~ msgid "Remove Room"
+#~ msgstr "删除聊天室"
+
+#~ msgid "Recent"
+#~ msgstr "最近"
+
+#~ msgid "Remove"
+#~ msgstr "删除"
+
+#~ msgid "Clear list"
+#~ msgstr "清除列表"
+
+#~ msgid "Query"
+#~ msgstr "查询"
+
+#~ msgid "Server to be queried:"
+#~ msgstr "要查询的服务器"
+
+#~ msgid "Stop"
+#~ msgstr "停止"
+
+#~ msgid "Search rooms"
+#~ msgstr "搜索聊天室"
+
+#~ msgid "Password required"
+#~ msgstr "要求密码"
+
+#~ msgid "No password required"
+#~ msgstr "不要求密码"
+
+#~ msgctxt "Chatrooms name"
+#~ msgid "Name"
+#~ msgstr "名称"
+
+#~ msgctxt "Chatrooms description"
+#~ msgid "Description"
+#~ msgstr "描述"
+
+#, fuzzy
+#~| msgid "Show/Hide groups"
 #~ msgid "Show/Hide Groups"
 #~ msgstr "显示/隐藏分组"
 
 #, fuzzy
+#~| msgid "Hide/Show offline users"
 #~ msgid "Hide/Show Offline Users"
 #~ msgstr "隐藏/显示离线用户"
 
-#~ msgid "Configure accounts..."
-#~ msgstr "配置账户..."
+#~ msgid "Screen Name:"
+#~ msgstr "屏幕名称："
 
 #~ msgid "Join chat room"
 #~ msgstr "加入聊天室"
-
-#~ msgid "Account:"
-#~ msgstr "账户："
-
-#~ msgid "Screen Name:"
-#~ msgstr "屏幕名称："
