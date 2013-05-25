@@ -8,7 +8,9 @@ Build-Depends: debhelper (>= 9),
  libtelepathy-qt4-dev (>= 0.9.3),
  kdelibs5-dev (>= 4:4.6),
  cmake (>= 2.8),
- libktpcommoninternalsprivate-dev (>= 0.5.1)
+ libtelepathy-logger-dev,
+ libtelepathy-logger-qt4-dev (>= 0.5.60),
+ libktpcommoninternalsprivate-dev (>= 0.6.2)
 Standards-Version: 3.9.3
 Homepage: https://projects.kde.org/projects/extragear/network/telepathy/ktp-contact-list
 Vcs-Git: git://anonscm.debian.org/pkg-kde/kde-extras/kde-telepathy/ktp-contact-list.git
