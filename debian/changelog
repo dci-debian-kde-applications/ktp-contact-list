@@ -1,10 +1,17 @@
-ktp-contact-list (0.5.3-1) UNRELEASED; urgency=low
+ktp-contact-list (0.6.2-1) UNRELEASED; urgency=low
 
+  [ Ritesh Raj Sarraf ]
   * [7dc19bd] Imported Upstream version 0.5.1
   * [fb223af] Imported Upstream version 0.5.3
   * [26c5e17] bump version dependencies
+  * Imported Upstream version 0.6.0
 
- -- Ritesh Raj Sarraf <rrs@debian.org>  Wed, 20 Feb 2013 23:55:45 +0530
+  [ Diane Trout ]
+  * KDE-Telepathy is now in stable release.
+  * Imported Upstream version 0.6.2
+  * Bump ktp-common-internals version
+
+ -- Ritesh Raj Sarraf <rrs@debian.org>  Sat, 25 May 2013 09:54:40 -0700
 
 ktp-contact-list (0.4.0-1) unstable; urgency=low
 
