@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktp-contactlist\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-03-27 10:06+0100\n"
+"POT-Creation-Date: 2013-05-04 11:29+0200\n"
 "PO-Revision-Date: 2013-03-21 12:09+0100\n"
 "Last-Translator: Burkhard Lück <lueck@hube-lueck.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -332,16 +332,16 @@ msgstr "Eigene Statusmeldungen einrichten ..."
 msgid "Now listening to..."
 msgstr "Ich höre gerade ..."
 
-#: global-presence-chooser.cpp:196
+#: global-presence-chooser.cpp:192
 msgid "Click to change your presence message"
 msgstr "Klicken Sie, um Ihren Status zu ändern"
 
-#: global-presence-chooser.cpp:232
+#: global-presence-chooser.cpp:231
 msgctxt "Presence string when the account is connecting"
 msgid "Connecting..."
 msgstr "Verbindung wird aufgebaut ..."
 
-#: global-presence-chooser.cpp:333
+#: global-presence-chooser.cpp:332
 msgid ""
 "This plugin is currently disabled. Do you want to enable it and use as your "
 "presence?"
@@ -349,11 +349,11 @@ msgstr ""
 "Dieses Modul ist zurzeit deaktiviert. Möchten Sie es aktivieren und als Ihre "
 "Statusmeldung verwenden?"
 
-#: global-presence-chooser.cpp:334
+#: global-presence-chooser.cpp:333
 msgid "Plugin disabled"
 msgstr "Modul deaktiviert"
 
-#: main-widget.cpp:163
+#: main-widget.cpp:209
 msgid ""
 "Something unexpected happened to the core part of your Instant Messaging "
 "system and it couldn't be initialized. Try restarting the Contact List."
@@ -362,11 +362,11 @@ msgstr ""
 "unerwarteten Fehlers nicht initialisiert werden. Versuchen Sie, die "
 "Kontaktliste neu zu starten."
 
-#: main-widget.cpp:165
+#: main-widget.cpp:211
 msgid "IM system failed to initialize"
 msgstr "IM-System kann nicht initialisiert werden"
 
-#: main-widget.cpp:270
+#: main-widget.cpp:316
 msgid ""
 "You do not have any other presence controls active (a Presence widget for "
 "example).\n"
@@ -376,99 +376,99 @@ msgstr ""
 "Miniprogramm).\n"
 "Möchten Sie online bleiben oder lieber offline gehen?"
 
-#: main-widget.cpp:272
+#: main-widget.cpp:318
 msgid "No Other Presence Controls Found"
 msgstr "Keine anderen Status-Anwendungen gefunden"
 
-#: main-widget.cpp:273
+#: main-widget.cpp:319
 msgid "Stay Online"
 msgstr "Online bleiben"
 
-#: main-widget.cpp:274
+#: main-widget.cpp:320
 msgid "Go Offline"
 msgstr "Offline gehen"
 
-#: main-widget.cpp:384
+#: main-widget.cpp:430
 msgid "Contacts"
 msgstr "Kontakte"
 
-#: main-widget.cpp:396
+#: main-widget.cpp:442
 msgid "View"
 msgstr "Ansicht"
 
-#: main-widget.cpp:401 main-widget.cpp:436
+#: main-widget.cpp:447 main-widget.cpp:482
 msgid "Contact List Type"
 msgstr "Art der Kontaktliste"
 
-#: main-widget.cpp:404 main-widget.cpp:441
+#: main-widget.cpp:450 main-widget.cpp:487
 msgid "Shown Contacts"
 msgstr "Angezeigte Kontakte"
 
-#: main-widget.cpp:513
+#: main-widget.cpp:559
 msgid "Instant Messaging Settings..."
 msgstr "Instant-Messaging-Einstellungen ..."
 
-#: main-widget.cpp:518
+#: main-widget.cpp:564
 msgid "Join Chat Room..."
 msgstr "Chatraum betreten ..."
 
-#: main-widget.cpp:519
+#: main-widget.cpp:565
 msgid "Make a Call..."
 msgstr "Anrufen ..."
 
-#: main-widget.cpp:520
+#: main-widget.cpp:566
 msgid "Add New Contacts..."
 msgstr "Neue Kontakte hinzufügen ..."
 
-#: main-widget.cpp:521
+#: main-widget.cpp:567
 msgid "Find Contact"
 msgstr "Kontakt suchen"
 
-#: main-widget.cpp:526
+#: main-widget.cpp:572
 msgid "Show Contacts by Groups"
 msgstr "Kontakte nach Gruppen anzeigen"
 
-#: main-widget.cpp:527
+#: main-widget.cpp:573
 msgid "Show Contacts by Accounts"
 msgstr "Kontakte nach Konten anzeigen"
 
-#: main-widget.cpp:534
+#: main-widget.cpp:580
 msgid "Show Offline Contacts"
 msgstr "„Offline“-Kontakte anzeigen"
 
-#: main-widget.cpp:535
+#: main-widget.cpp:581
 msgid "Hide Offline Contacts"
 msgstr "„Offline“-Kontakte ausblenden"
 
-#: main-widget.cpp:543
+#: main-widget.cpp:589
 msgid "Sort by Presence"
 msgstr "Nach Anwesenheit sortieren"
 
-#: main-widget.cpp:544
+#: main-widget.cpp:590
 msgid "Sort by Name"
 msgstr "Nach Namen sortieren"
 
-#: main-widget.cpp:552
+#: main-widget.cpp:598
 msgid "Use Full List"
 msgstr "Vollständige Liste verwenden"
 
-#: main-widget.cpp:554
+#: main-widget.cpp:600
 msgid "Use Normal List"
 msgstr "Normale Liste verwenden"
 
-#: main-widget.cpp:558
+#: main-widget.cpp:604
 msgid "Use Minimalistic List"
 msgstr "Minimale Liste verwenden"
 
-#: main-widget.cpp:565
+#: main-widget.cpp:611
 msgid "Show All Contacts"
 msgstr "Alle Kontakte anzeigen"
 
-#: main-widget.cpp:567
+#: main-widget.cpp:613
 msgid "Show Unblocked Contacts"
 msgstr "Freigegebene Kontakte anzeigen"
 
-#: main-widget.cpp:569
+#: main-widget.cpp:615
 msgid "Show Blocked Contacts"
 msgstr "Blockierte Kontakte anzeigen"
 
@@ -498,12 +498,12 @@ msgstr "Entwickler"
 msgid "Show Telepathy debugging information"
 msgstr "Telepathy-Debugging-Informationen anzeigen"
 
-#: tooltips/contacttooltip.cpp:56
+#: tooltips/contacttooltip.cpp:58
 msgctxt "This is an IM user status"
 msgid "Error Getting Presence"
 msgstr "Fehler beim Empfangen des Status"
 
-#: tooltips/contacttooltip.cpp:72
+#: tooltips/contacttooltip.cpp:76
 #, kde-format
 msgid "Account: %1"
 msgstr "Zugang: %1"

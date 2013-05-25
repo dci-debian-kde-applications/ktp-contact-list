@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: telepathy-contactslist-prototype\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-03-27 10:06+0100\n"
+"POT-Creation-Date: 2013-05-04 11:29+0200\n"
 "PO-Revision-Date: 2011-05-09 19:00+0900\n"
 "Last-Translator: Sahran <sahran@live.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -325,143 +325,143 @@ msgstr ""
 msgid "Now listening to..."
 msgstr ""
 
-#: global-presence-chooser.cpp:196
+#: global-presence-chooser.cpp:192
 msgid "Click to change your presence message"
 msgstr ""
 
-#: global-presence-chooser.cpp:232
+#: global-presence-chooser.cpp:231
 msgctxt "Presence string when the account is connecting"
 msgid "Connecting..."
 msgstr ""
 
-#: global-presence-chooser.cpp:333
+#: global-presence-chooser.cpp:332
 msgid ""
 "This plugin is currently disabled. Do you want to enable it and use as your "
 "presence?"
 msgstr ""
 
-#: global-presence-chooser.cpp:334
+#: global-presence-chooser.cpp:333
 msgid "Plugin disabled"
 msgstr ""
 
-#: main-widget.cpp:163
+#: main-widget.cpp:209
 msgid ""
 "Something unexpected happened to the core part of your Instant Messaging "
 "system and it couldn't be initialized. Try restarting the Contact List."
 msgstr ""
 
-#: main-widget.cpp:165
+#: main-widget.cpp:211
 msgid "IM system failed to initialize"
 msgstr ""
 
-#: main-widget.cpp:270
+#: main-widget.cpp:316
 msgid ""
 "You do not have any other presence controls active (a Presence widget for "
 "example).\n"
 "Do you want to stay online or would you rather go offline?"
 msgstr ""
 
-#: main-widget.cpp:272
+#: main-widget.cpp:318
 msgid "No Other Presence Controls Found"
 msgstr ""
 
-#: main-widget.cpp:273
+#: main-widget.cpp:319
 msgid "Stay Online"
 msgstr ""
 
-#: main-widget.cpp:274
+#: main-widget.cpp:320
 msgid "Go Offline"
 msgstr ""
 
-#: main-widget.cpp:384
+#: main-widget.cpp:430
 msgid "Contacts"
 msgstr ""
 
-#: main-widget.cpp:396
+#: main-widget.cpp:442
 msgid "View"
 msgstr ""
 
-#: main-widget.cpp:401 main-widget.cpp:436
+#: main-widget.cpp:447 main-widget.cpp:482
 msgid "Contact List Type"
 msgstr ""
 
-#: main-widget.cpp:404 main-widget.cpp:441
+#: main-widget.cpp:450 main-widget.cpp:487
 msgid "Shown Contacts"
 msgstr ""
 
-#: main-widget.cpp:513
+#: main-widget.cpp:559
 msgid "Instant Messaging Settings..."
 msgstr ""
 
-#: main-widget.cpp:518
+#: main-widget.cpp:564
 msgid "Join Chat Room..."
 msgstr ""
 
-#: main-widget.cpp:519
+#: main-widget.cpp:565
 msgid "Make a Call..."
 msgstr ""
 
-#: main-widget.cpp:520
+#: main-widget.cpp:566
 msgid "Add New Contacts..."
 msgstr ""
 
-#: main-widget.cpp:521
+#: main-widget.cpp:567
 msgid "Find Contact"
 msgstr ""
 
-#: main-widget.cpp:526
+#: main-widget.cpp:572
 #, fuzzy
 msgid "Show Contacts by Groups"
 msgstr "ئالاقەداش توس"
 
-#: main-widget.cpp:527
+#: main-widget.cpp:573
 #, fuzzy
 msgid "Show Contacts by Accounts"
 msgstr "ئالاقەداش توس"
 
-#: main-widget.cpp:534
+#: main-widget.cpp:580
 #, fuzzy
 msgid "Show Offline Contacts"
 msgstr "ئالاقەداش توس"
 
-#: main-widget.cpp:535
+#: main-widget.cpp:581
 #, fuzzy
 msgid "Hide Offline Contacts"
 msgstr "ئالاقەداش توس"
 
-#: main-widget.cpp:543
+#: main-widget.cpp:589
 #, fuzzy
 msgid "Sort by Presence"
 msgstr "ئىسمىنى تەرتىپلەش"
 
-#: main-widget.cpp:544
+#: main-widget.cpp:590
 #, fuzzy
 msgid "Sort by Name"
 msgstr "ئىسمىنى تەرتىپلەش"
 
-#: main-widget.cpp:552
+#: main-widget.cpp:598
 msgid "Use Full List"
 msgstr ""
 
-#: main-widget.cpp:554
+#: main-widget.cpp:600
 msgid "Use Normal List"
 msgstr ""
 
-#: main-widget.cpp:558
+#: main-widget.cpp:604
 msgid "Use Minimalistic List"
 msgstr ""
 
-#: main-widget.cpp:565
+#: main-widget.cpp:611
 #, fuzzy
 msgid "Show All Contacts"
 msgstr "ئالاقەداش توس"
 
-#: main-widget.cpp:567
+#: main-widget.cpp:613
 #, fuzzy
 msgid "Show Unblocked Contacts"
 msgstr "ئالاقەداش توس"
 
-#: main-widget.cpp:569
+#: main-widget.cpp:615
 #, fuzzy
 msgid "Show Blocked Contacts"
 msgstr "ئالاقەداش توس"
@@ -492,12 +492,12 @@ msgstr "ئىجادىيەتچى"
 msgid "Show Telepathy debugging information"
 msgstr ""
 
-#: tooltips/contacttooltip.cpp:56
+#: tooltips/contacttooltip.cpp:58
 msgctxt "This is an IM user status"
 msgid "Error Getting Presence"
 msgstr ""
 
-#: tooltips/contacttooltip.cpp:72
+#: tooltips/contacttooltip.cpp:76
 #, fuzzy, kde-format
 msgid "Account: %1"
 msgstr "ھېسابات:"

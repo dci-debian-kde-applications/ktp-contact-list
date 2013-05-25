@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-03-27 10:06+0100\n"
+"POT-Creation-Date: 2013-05-04 11:29+0200\n"
 "PO-Revision-Date: 2013-03-18 14:20+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -338,16 +338,16 @@ msgstr "Налаштувати нетипові повідомлення щод�
 msgid "Now listening to..."
 msgstr "Зараз слухає…"
 
-#: global-presence-chooser.cpp:196
+#: global-presence-chooser.cpp:192
 msgid "Click to change your presence message"
 msgstr "Натисніть, щоб змінити ваше повідомлення про присутність"
 
-#: global-presence-chooser.cpp:232
+#: global-presence-chooser.cpp:231
 msgctxt "Presence string when the account is connecting"
 msgid "Connecting..."
 msgstr "Встановлення з’єднання…"
 
-#: global-presence-chooser.cpp:333
+#: global-presence-chooser.cpp:332
 msgid ""
 "This plugin is currently disabled. Do you want to enable it and use as your "
 "presence?"
@@ -355,11 +355,11 @@ msgstr ""
 "Цей додаток вимкнено. Бажаєте увімкнути його і скористатися ним для показу "
 "повідомлень щодо присутності."
 
-#: global-presence-chooser.cpp:334
+#: global-presence-chooser.cpp:333
 msgid "Plugin disabled"
 msgstr "Додаток вимкнено"
 
-#: main-widget.cpp:163
+#: main-widget.cpp:209
 msgid ""
 "Something unexpected happened to the core part of your Instant Messaging "
 "system and it couldn't be initialized. Try restarting the Contact List."
@@ -367,11 +367,11 @@ msgstr ""
 "У основній частині системи обміну повідомленнями сталася якась помилка, отже "
 "її не вдалося ініціалізувати. Спробуйте перезапустити список контактів."
 
-#: main-widget.cpp:165
+#: main-widget.cpp:211
 msgid "IM system failed to initialize"
 msgstr "Не вдалося ініціалізувати систему обміну повідомленнями"
 
-#: main-widget.cpp:270
+#: main-widget.cpp:316
 msgid ""
 "You do not have any other presence controls active (a Presence widget for "
 "example).\n"
@@ -381,99 +381,99 @@ msgstr ""
 "присутності) не використано.\n"
 "Залишити стан «у мережі» чи перейти до стану «поза мережею»?"
 
-#: main-widget.cpp:272
+#: main-widget.cpp:318
 msgid "No Other Presence Controls Found"
 msgstr "Не знайдено інших засобів керування станом присутності"
 
-#: main-widget.cpp:273
+#: main-widget.cpp:319
 msgid "Stay Online"
 msgstr "Залишатися в мережі"
 
-#: main-widget.cpp:274
+#: main-widget.cpp:320
 msgid "Go Offline"
 msgstr "Вийти з мережі"
 
-#: main-widget.cpp:384
+#: main-widget.cpp:430
 msgid "Contacts"
 msgstr "Контакти"
 
-#: main-widget.cpp:396
+#: main-widget.cpp:442
 msgid "View"
 msgstr "Перегляд"
 
-#: main-widget.cpp:401 main-widget.cpp:436
+#: main-widget.cpp:447 main-widget.cpp:482
 msgid "Contact List Type"
 msgstr "Тип списку контактів"
 
-#: main-widget.cpp:404 main-widget.cpp:441
+#: main-widget.cpp:450 main-widget.cpp:487
 msgid "Shown Contacts"
 msgstr "Показані контакти"
 
-#: main-widget.cpp:513
+#: main-widget.cpp:559
 msgid "Instant Messaging Settings..."
 msgstr "Параметри обміну повідомленнями…"
 
-#: main-widget.cpp:518
+#: main-widget.cpp:564
 msgid "Join Chat Room..."
 msgstr "Приєднатися до кімнати балачки…"
 
-#: main-widget.cpp:519
+#: main-widget.cpp:565
 msgid "Make a Call..."
 msgstr "Подзвонити…"
 
-#: main-widget.cpp:520
+#: main-widget.cpp:566
 msgid "Add New Contacts..."
 msgstr "Додати нові контакти…"
 
-#: main-widget.cpp:521
+#: main-widget.cpp:567
 msgid "Find Contact"
 msgstr "Знайти контакт"
 
-#: main-widget.cpp:526
+#: main-widget.cpp:572
 msgid "Show Contacts by Groups"
 msgstr "Показувати список контактів за групами"
 
-#: main-widget.cpp:527
+#: main-widget.cpp:573
 msgid "Show Contacts by Accounts"
 msgstr "Показувати список контактів за обліковими записами"
 
-#: main-widget.cpp:534
+#: main-widget.cpp:580
 msgid "Show Offline Contacts"
 msgstr "Показувати від’єднаних користувачів"
 
-#: main-widget.cpp:535
+#: main-widget.cpp:581
 msgid "Hide Offline Contacts"
 msgstr "Приховати від’єднаних користувачів"
 
-#: main-widget.cpp:543
+#: main-widget.cpp:589
 msgid "Sort by Presence"
 msgstr "Впорядкувати за присутністю"
 
-#: main-widget.cpp:544
+#: main-widget.cpp:590
 msgid "Sort by Name"
 msgstr "Впорядкувати за назвою"
 
-#: main-widget.cpp:552
+#: main-widget.cpp:598
 msgid "Use Full List"
 msgstr "Повний список"
 
-#: main-widget.cpp:554
+#: main-widget.cpp:600
 msgid "Use Normal List"
 msgstr "Звичайний список"
 
-#: main-widget.cpp:558
+#: main-widget.cpp:604
 msgid "Use Minimalistic List"
 msgstr "Мінімалістичний список"
 
-#: main-widget.cpp:565
+#: main-widget.cpp:611
 msgid "Show All Contacts"
 msgstr "Показати всі контакти"
 
-#: main-widget.cpp:567
+#: main-widget.cpp:613
 msgid "Show Unblocked Contacts"
 msgstr "Показати незаблоковані контакти"
 
-#: main-widget.cpp:569
+#: main-widget.cpp:615
 msgid "Show Blocked Contacts"
 msgstr "Показати блоковані контакти"
 
@@ -503,12 +503,12 @@ msgstr "Розробник"
 msgid "Show Telepathy debugging information"
 msgstr "Показати діагностичні дані Telepathy"
 
-#: tooltips/contacttooltip.cpp:56
+#: tooltips/contacttooltip.cpp:58
 msgctxt "This is an IM user status"
 msgid "Error Getting Presence"
 msgstr "Помилка під час спроби отримання даних присутності"
 
-#: tooltips/contacttooltip.cpp:72
+#: tooltips/contacttooltip.cpp:76
 #, kde-format
 msgid "Account: %1"
 msgstr "Обліковий запис: %1"

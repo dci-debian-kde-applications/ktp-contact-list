@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-03-27 10:06+0100\n"
-"PO-Revision-Date: 2013-03-14 13:21+0800\n"
+"POT-Creation-Date: 2013-05-04 11:29+0200\n"
+"PO-Revision-Date: 2013-04-22 12:48+0800\n"
 "Last-Translator: Franklin Weng <franklin at goodhorse dot idv dot tw>\n"
 "Language-Team: Chinese Traditional <kde-tw@googlegroups.com>\n"
 "Language: zh_TW\n"
@@ -179,7 +179,6 @@ msgid "Open Log Viewer..."
 msgstr "開啟紀錄檢視器"
 
 #: context-menu.cpp:170
-#, fuzzy
 msgid "Configure Notifications..."
 msgstr "設定通知..."
 
@@ -330,26 +329,26 @@ msgstr "設定自訂上線狀態..."
 msgid "Now listening to..."
 msgstr "正在收聽..."
 
-#: global-presence-chooser.cpp:196
+#: global-presence-chooser.cpp:192
 msgid "Click to change your presence message"
 msgstr "點擊以變更您的上線訊息"
 
-#: global-presence-chooser.cpp:232
+#: global-presence-chooser.cpp:231
 msgctxt "Presence string when the account is connecting"
 msgid "Connecting..."
 msgstr "連線中..."
 
-#: global-presence-chooser.cpp:333
+#: global-presence-chooser.cpp:332
 msgid ""
 "This plugin is currently disabled. Do you want to enable it and use as your "
 "presence?"
 msgstr "此外掛程式目前已關閉。您要開啟它並做為您的上線狀態控制元件嗎？"
 
-#: global-presence-chooser.cpp:334
+#: global-presence-chooser.cpp:333
 msgid "Plugin disabled"
 msgstr "外掛程式已關閉"
 
-#: main-widget.cpp:163
+#: main-widget.cpp:209
 msgid ""
 "Something unexpected happened to the core part of your Instant Messaging "
 "system and it couldn't be initialized. Try restarting the Contact List."
@@ -357,11 +356,11 @@ msgstr ""
 "您的即時訊息系統核心部件發生了一些未預期的錯誤，無法初始化。請重新啟動聯絡人"
 "清單。"
 
-#: main-widget.cpp:165
+#: main-widget.cpp:211
 msgid "IM system failed to initialize"
 msgstr "即時訊息系統初始化失敗"
 
-#: main-widget.cpp:270
+#: main-widget.cpp:316
 msgid ""
 "You do not have any other presence controls active (a Presence widget for "
 "example).\n"
@@ -370,108 +369,99 @@ msgstr ""
 "您沒有任何其他作用中的上線狀態控制（如上線狀態元件）。\n"
 "您要保持在上線狀態還是要離線？"
 
-#: main-widget.cpp:272
+#: main-widget.cpp:318
 msgid "No Other Presence Controls Found"
 msgstr "找不到其他上線狀態控制元件"
 
-#: main-widget.cpp:273
+#: main-widget.cpp:319
 msgid "Stay Online"
 msgstr "留在線上"
 
-#: main-widget.cpp:274
+#: main-widget.cpp:320
 msgid "Go Offline"
 msgstr "離線"
 
-#: main-widget.cpp:384
+#: main-widget.cpp:430
 msgid "Contacts"
 msgstr "聯絡人"
 
-#: main-widget.cpp:396
+#: main-widget.cpp:442
 msgid "View"
 msgstr "檢視"
 
-#: main-widget.cpp:401 main-widget.cpp:436
+#: main-widget.cpp:447 main-widget.cpp:482
 msgid "Contact List Type"
 msgstr "聯絡人清單型態"
 
-#: main-widget.cpp:404 main-widget.cpp:441
+#: main-widget.cpp:450 main-widget.cpp:487
 msgid "Shown Contacts"
 msgstr "已顯示聯絡人"
 
-#: main-widget.cpp:513
+#: main-widget.cpp:559
 msgid "Instant Messaging Settings..."
 msgstr "即時訊息設定..."
 
-#: main-widget.cpp:518
+#: main-widget.cpp:564
 msgid "Join Chat Room..."
 msgstr "加入聊天室..."
 
-#: main-widget.cpp:519
+#: main-widget.cpp:565
 msgid "Make a Call..."
 msgstr "執行呼叫..."
 
-#: main-widget.cpp:520
+#: main-widget.cpp:566
 msgid "Add New Contacts..."
 msgstr "新增聯絡人..."
 
-#: main-widget.cpp:521
+#: main-widget.cpp:567
 msgid "Find Contact"
 msgstr "尋找聯絡人"
 
-#: main-widget.cpp:526
-#, fuzzy
+#: main-widget.cpp:572
 msgid "Show Contacts by Groups"
 msgstr "依群組顯示聯絡人"
 
-#: main-widget.cpp:527
-#, fuzzy
+#: main-widget.cpp:573
 msgid "Show Contacts by Accounts"
 msgstr "依帳號顯示聯絡人"
 
-#: main-widget.cpp:534
-#, fuzzy
+#: main-widget.cpp:580
 msgid "Show Offline Contacts"
 msgstr "顯示離線聯絡人"
 
-#: main-widget.cpp:535
-#, fuzzy
+#: main-widget.cpp:581
 msgid "Hide Offline Contacts"
-msgstr "顯示離線聯絡人"
+msgstr "隱藏離線聯絡人"
 
-#: main-widget.cpp:543
-#, fuzzy
+#: main-widget.cpp:589
 msgid "Sort by Presence"
-msgstr "依上線狀態排序"
+msgstr "依出現排序"
 
-#: main-widget.cpp:544
-#, fuzzy
+#: main-widget.cpp:590
 msgid "Sort by Name"
 msgstr "依名稱排序"
 
-#: main-widget.cpp:552
+#: main-widget.cpp:598
 msgid "Use Full List"
 msgstr "使用完整清單"
 
-#: main-widget.cpp:554
+#: main-widget.cpp:600
 msgid "Use Normal List"
 msgstr "使用普通清單"
 
-#: main-widget.cpp:558
+#: main-widget.cpp:604
 msgid "Use Minimalistic List"
 msgstr "使用最小化清單"
 
-#: main-widget.cpp:565
-#, fuzzy
+#: main-widget.cpp:611
 msgid "Show All Contacts"
 msgstr "顯示所有聯絡人"
 
-#: main-widget.cpp:567
-#, fuzzy
+#: main-widget.cpp:613
 msgid "Show Unblocked Contacts"
 msgstr "顯示未被封鎖的聯絡人"
 
-#: main-widget.cpp:569
-#, fuzzy
+#: main-widget.cpp:615
 msgid "Show Blocked Contacts"
 msgstr "顯示已被封鎖的聯絡人"
 
@@ -501,12 +491,12 @@ msgstr "開發者"
 msgid "Show Telepathy debugging information"
 msgstr "顯示 Telepathy 除錯資訊"
 
-#: tooltips/contacttooltip.cpp:56
+#: tooltips/contacttooltip.cpp:58
 msgctxt "This is an IM user status"
 msgid "Error Getting Presence"
 msgstr "取得上線狀態時發生錯誤"
 
-#: tooltips/contacttooltip.cpp:72
+#: tooltips/contacttooltip.cpp:76
 #, kde-format
 msgid "Account: %1"
 msgstr "帳號：%1"

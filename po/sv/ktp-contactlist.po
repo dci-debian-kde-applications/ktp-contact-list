@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-03-27 10:06+0100\n"
+"POT-Creation-Date: 2013-05-04 11:29+0200\n"
 "PO-Revision-Date: 2013-03-23 08:26+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@comhem.se>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -331,16 +331,16 @@ msgstr "Anpassa anpassade närvaron..."
 msgid "Now listening to..."
 msgstr "Lyssnar nu på..."
 
-#: global-presence-chooser.cpp:196
+#: global-presence-chooser.cpp:192
 msgid "Click to change your presence message"
 msgstr "Klicka för att ändra närvaromeddelande"
 
-#: global-presence-chooser.cpp:232
+#: global-presence-chooser.cpp:231
 msgctxt "Presence string when the account is connecting"
 msgid "Connecting..."
 msgstr "Ansluter..."
 
-#: global-presence-chooser.cpp:333
+#: global-presence-chooser.cpp:332
 msgid ""
 "This plugin is currently disabled. Do you want to enable it and use as your "
 "presence?"
@@ -348,11 +348,11 @@ msgstr ""
 "Insticksprogrammet är för närvarande inaktiverat. Vill du aktivera det och "
 "använda för din närvaro."
 
-#: global-presence-chooser.cpp:334
+#: global-presence-chooser.cpp:333
 msgid "Plugin disabled"
 msgstr "Insticksprogram inaktiverat"
 
-#: main-widget.cpp:163
+#: main-widget.cpp:209
 msgid ""
 "Something unexpected happened to the core part of your Instant Messaging "
 "system and it couldn't be initialized. Try restarting the Contact List."
@@ -361,11 +361,11 @@ msgstr ""
 "direktmeddelanden, och det kunde inte initieras. Försök att starta om "
 "kontaktlistan."
 
-#: main-widget.cpp:165
+#: main-widget.cpp:211
 msgid "IM system failed to initialize"
 msgstr "Systemet för direktmeddelanden kunde inte initieras"
 
-#: main-widget.cpp:270
+#: main-widget.cpp:316
 msgid ""
 "You do not have any other presence controls active (a Presence widget for "
 "example).\n"
@@ -375,99 +375,99 @@ msgstr ""
 "närvarokomponent).\n"
 "Vill du förbli uppkopplad, eller vill du hellre koppla ner?"
 
-#: main-widget.cpp:272
+#: main-widget.cpp:318
 msgid "No Other Presence Controls Found"
 msgstr "Inga andra närvarokontroller hittades"
 
-#: main-widget.cpp:273
+#: main-widget.cpp:319
 msgid "Stay Online"
 msgstr "Förbli uppkopplad"
 
-#: main-widget.cpp:274
+#: main-widget.cpp:320
 msgid "Go Offline"
 msgstr "Koppla ner"
 
-#: main-widget.cpp:384
+#: main-widget.cpp:430
 msgid "Contacts"
 msgstr "Kontakter"
 
-#: main-widget.cpp:396
+#: main-widget.cpp:442
 msgid "View"
 msgstr "Visa"
 
-#: main-widget.cpp:401 main-widget.cpp:436
+#: main-widget.cpp:447 main-widget.cpp:482
 msgid "Contact List Type"
 msgstr "Typ av kontaktlista"
 
-#: main-widget.cpp:404 main-widget.cpp:441
+#: main-widget.cpp:450 main-widget.cpp:487
 msgid "Shown Contacts"
 msgstr "Visade kontakter"
 
-#: main-widget.cpp:513
+#: main-widget.cpp:559
 msgid "Instant Messaging Settings..."
 msgstr "Inställningar av direktmeddelanden..."
 
-#: main-widget.cpp:518
+#: main-widget.cpp:564
 msgid "Join Chat Room..."
 msgstr "Gå med i chattrum"
 
-#: main-widget.cpp:519
+#: main-widget.cpp:565
 msgid "Make a Call..."
 msgstr "Ring samtal..."
 
-#: main-widget.cpp:520
+#: main-widget.cpp:566
 msgid "Add New Contacts..."
 msgstr "Lägg till nya kontakter..."
 
-#: main-widget.cpp:521
+#: main-widget.cpp:567
 msgid "Find Contact"
 msgstr "Sök kontakt"
 
-#: main-widget.cpp:526
+#: main-widget.cpp:572
 msgid "Show Contacts by Groups"
 msgstr "Visa kontakter i grupper"
 
-#: main-widget.cpp:527
+#: main-widget.cpp:573
 msgid "Show Contacts by Accounts"
 msgstr "Visa kontakter enligt konton"
 
-#: main-widget.cpp:534
+#: main-widget.cpp:580
 msgid "Show Offline Contacts"
 msgstr "Visa nerkopplade kontakter"
 
-#: main-widget.cpp:535
+#: main-widget.cpp:581
 msgid "Hide Offline Contacts"
 msgstr "Dölj nerkopplade kontakter"
 
-#: main-widget.cpp:543
+#: main-widget.cpp:589
 msgid "Sort by Presence"
 msgstr "Sortera enligt närvaro"
 
-#: main-widget.cpp:544
+#: main-widget.cpp:590
 msgid "Sort by Name"
 msgstr "Sortera enligt namn"
 
-#: main-widget.cpp:552
+#: main-widget.cpp:598
 msgid "Use Full List"
 msgstr "Använd fullständig lista"
 
-#: main-widget.cpp:554
+#: main-widget.cpp:600
 msgid "Use Normal List"
 msgstr "Använd normal lista"
 
-#: main-widget.cpp:558
+#: main-widget.cpp:604
 msgid "Use Minimalistic List"
 msgstr "Använd kompakt lista"
 
-#: main-widget.cpp:565
+#: main-widget.cpp:611
 msgid "Show All Contacts"
 msgstr "Visa alla kontakter"
 
-#: main-widget.cpp:567
+#: main-widget.cpp:613
 msgid "Show Unblocked Contacts"
 msgstr "Visa oblockerade kontakter"
 
-#: main-widget.cpp:569
+#: main-widget.cpp:615
 msgid "Show Blocked Contacts"
 msgstr "Visa blockerade kontakter"
 
@@ -497,12 +497,12 @@ msgstr "Utvecklare"
 msgid "Show Telepathy debugging information"
 msgstr "Visa felsökningsinformation för Telepathy"
 
-#: tooltips/contacttooltip.cpp:56
+#: tooltips/contacttooltip.cpp:58
 msgctxt "This is an IM user status"
 msgid "Error Getting Presence"
 msgstr "Fel när närvaro skulle hämtas"
 
-#: tooltips/contacttooltip.cpp:72
+#: tooltips/contacttooltip.cpp:76
 #, kde-format
 msgid "Account: %1"
 msgstr "Konto: %1"

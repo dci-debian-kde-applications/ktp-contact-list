@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktp-contactlist\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-03-27 10:06+0100\n"
+"POT-Creation-Date: 2013-05-04 11:29+0200\n"
 "PO-Revision-Date: 2013-03-27 14:29+0100\n"
 "Last-Translator: Roman Paholík <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -330,16 +330,16 @@ msgstr "Upraviť vlastné prítomnosti..."
 msgid "Now listening to..."
 msgstr "Práve počúvam..."
 
-#: global-presence-chooser.cpp:196
+#: global-presence-chooser.cpp:192
 msgid "Click to change your presence message"
 msgstr "Kliknite na zmenu vašej správy o prítomnosti"
 
-#: global-presence-chooser.cpp:232
+#: global-presence-chooser.cpp:231
 msgctxt "Presence string when the account is connecting"
 msgid "Connecting..."
 msgstr "Pripájanie..."
 
-#: global-presence-chooser.cpp:333
+#: global-presence-chooser.cpp:332
 msgid ""
 "This plugin is currently disabled. Do you want to enable it and use as your "
 "presence?"
@@ -347,11 +347,11 @@ msgstr ""
 "Tento plugin je práve zakázaný. Chcete ho povoliť a použiť ako vašu "
 "prítomnosť?"
 
-#: global-presence-chooser.cpp:334
+#: global-presence-chooser.cpp:333
 msgid "Plugin disabled"
 msgstr "Plugin zakázaný"
 
-#: main-widget.cpp:163
+#: main-widget.cpp:209
 msgid ""
 "Something unexpected happened to the core part of your Instant Messaging "
 "system and it couldn't be initialized. Try restarting the Contact List."
@@ -359,11 +359,11 @@ msgstr ""
 "Stalo sa niečo neočakávané integrálnej časti instant messaging systému a "
 "nemohol byť inicializovaný. Skúste reštartovať zoznam kontaktov."
 
-#: main-widget.cpp:165
+#: main-widget.cpp:211
 msgid "IM system failed to initialize"
 msgstr "Zlyhala inicializácia IM systému"
 
-#: main-widget.cpp:270
+#: main-widget.cpp:316
 msgid ""
 "You do not have any other presence controls active (a Presence widget for "
 "example).\n"
@@ -373,99 +373,99 @@ msgstr ""
 "Prítomnosť).\n"
 "Chcete ostať pripojený alebo radšej sa odpojiť?"
 
-#: main-widget.cpp:272
+#: main-widget.cpp:318
 msgid "No Other Presence Controls Found"
 msgstr "Nenájdené žiadne ďalšie ovládače neprítomnosti"
 
-#: main-widget.cpp:273
+#: main-widget.cpp:319
 msgid "Stay Online"
 msgstr "Ostať pripojený"
 
-#: main-widget.cpp:274
+#: main-widget.cpp:320
 msgid "Go Offline"
 msgstr "Prejsť offline"
 
-#: main-widget.cpp:384
+#: main-widget.cpp:430
 msgid "Contacts"
 msgstr "Kontakty"
 
-#: main-widget.cpp:396
+#: main-widget.cpp:442
 msgid "View"
 msgstr "Zobraziť"
 
-#: main-widget.cpp:401 main-widget.cpp:436
+#: main-widget.cpp:447 main-widget.cpp:482
 msgid "Contact List Type"
 msgstr "Typ zoznamu kontaktov"
 
-#: main-widget.cpp:404 main-widget.cpp:441
+#: main-widget.cpp:450 main-widget.cpp:487
 msgid "Shown Contacts"
 msgstr "Zobrazené kontakty"
 
-#: main-widget.cpp:513
+#: main-widget.cpp:559
 msgid "Instant Messaging Settings..."
 msgstr "Nastavenia instant messagingu..."
 
-#: main-widget.cpp:518
+#: main-widget.cpp:564
 msgid "Join Chat Room..."
 msgstr "Vstúpiť do miestnosti..."
 
-#: main-widget.cpp:519
+#: main-widget.cpp:565
 msgid "Make a Call..."
 msgstr "Spustiť hovor..."
 
-#: main-widget.cpp:520
+#: main-widget.cpp:566
 msgid "Add New Contacts..."
 msgstr "Pridať nové kontakty..."
 
-#: main-widget.cpp:521
+#: main-widget.cpp:567
 msgid "Find Contact"
 msgstr "Nájsť kontakt"
 
-#: main-widget.cpp:526
+#: main-widget.cpp:572
 msgid "Show Contacts by Groups"
 msgstr "Zobraziť kontakty podľa skupín"
 
-#: main-widget.cpp:527
+#: main-widget.cpp:573
 msgid "Show Contacts by Accounts"
 msgstr "Zobraziť kontakty podľa účtov"
 
-#: main-widget.cpp:534
+#: main-widget.cpp:580
 msgid "Show Offline Contacts"
 msgstr "Zobraziť odhlásené kontakty"
 
-#: main-widget.cpp:535
+#: main-widget.cpp:581
 msgid "Hide Offline Contacts"
 msgstr "Skryť odhlásené kontakty"
 
-#: main-widget.cpp:543
+#: main-widget.cpp:589
 msgid "Sort by Presence"
 msgstr "Zoradiť podľa prítomnosti"
 
-#: main-widget.cpp:544
+#: main-widget.cpp:590
 msgid "Sort by Name"
 msgstr "Zoradiť podľa mena"
 
-#: main-widget.cpp:552
+#: main-widget.cpp:598
 msgid "Use Full List"
 msgstr "Použiť plný zoznam"
 
-#: main-widget.cpp:554
+#: main-widget.cpp:600
 msgid "Use Normal List"
 msgstr "Použiť normálny zoznam"
 
-#: main-widget.cpp:558
+#: main-widget.cpp:604
 msgid "Use Minimalistic List"
 msgstr "Použiť minimalistický zoznam"
 
-#: main-widget.cpp:565
+#: main-widget.cpp:611
 msgid "Show All Contacts"
 msgstr "Zobraziť všetky kontakty"
 
-#: main-widget.cpp:567
+#: main-widget.cpp:613
 msgid "Show Unblocked Contacts"
 msgstr "Zobraziť neblokované kontakty"
 
-#: main-widget.cpp:569
+#: main-widget.cpp:615
 msgid "Show Blocked Contacts"
 msgstr "Zobraziť blokované kontakty"
 
@@ -495,12 +495,12 @@ msgstr "Vývojár"
 msgid "Show Telepathy debugging information"
 msgstr "Zobraziť ladiace informácie Tepelathy"
 
-#: tooltips/contacttooltip.cpp:56
+#: tooltips/contacttooltip.cpp:58
 msgctxt "This is an IM user status"
 msgid "Error Getting Presence"
 msgstr "Chyba získania prítomnosti"
 
-#: tooltips/contacttooltip.cpp:72
+#: tooltips/contacttooltip.cpp:76
 #, kde-format
 msgid "Account: %1"
 msgstr "Účet: %1"

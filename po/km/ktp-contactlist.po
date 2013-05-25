@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: telepathy-contactslist-prototype\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-03-27 10:06+0100\n"
+"POT-Creation-Date: 2013-05-04 11:29+0200\n"
 "PO-Revision-Date: 2012-07-03 11:15+0700\n"
 "Last-Translator: Sophea <sophea@khmeros.info>\n"
 "Language-Team: Khmer <>\n"
@@ -338,26 +338,26 @@ msgstr "កំណត់​រចនាសម្ព័ន្ធ​វត្តម
 msgid "Now listening to..."
 msgstr "ឥឡូវ​កំពុង​ស្ដាប់..."
 
-#: global-presence-chooser.cpp:196
+#: global-presence-chooser.cpp:192
 msgid "Click to change your presence message"
 msgstr "ចុច​ដើម្បី​ប្ដូរ​វត្តមាន​សារ​របស់​អ្នក"
 
-#: global-presence-chooser.cpp:232
+#: global-presence-chooser.cpp:231
 msgctxt "Presence string when the account is connecting"
 msgid "Connecting..."
 msgstr "កំពុង​តភ្ជាប់..."
 
-#: global-presence-chooser.cpp:333
+#: global-presence-chooser.cpp:332
 msgid ""
 "This plugin is currently disabled. Do you want to enable it and use as your "
 "presence?"
 msgstr "បាន​បិទ​កម្មវិធី​ជំនួយ​បច្ចុប្បន្ន ។ តើ​អ្នក​ចង់​បើក​វា ហើយ​ប្រើ​ជា​វត្តមាន​របស់​អ្នក​ដែរ​ឬទេ ?"
 
-#: global-presence-chooser.cpp:334
+#: global-presence-chooser.cpp:333
 msgid "Plugin disabled"
 msgstr "បាន​បិទ​កម្មវិធី​ជំនួយ"
 
-#: main-widget.cpp:163
+#: main-widget.cpp:209
 msgid ""
 "Something unexpected happened to the core part of your Instant Messaging "
 "system and it couldn't be initialized. Try restarting the Contact List."
@@ -365,11 +365,11 @@ msgstr ""
 "មាន​បញ្ហា​ដែល​មិន​រំពឹង​ទុក​បាន​កើតឡើង​ចំពោះ​ផ្នែក​សំខាន់​នៃ​ប្រព័ន្ធ​សារ​បន្ទាន់​របស់​អ្នក ហើយ​វា​មិន​អាច​ត្រូវ​បាន​"
 "ចាប់ផ្ដើម​ទេ ។ ព្យាយាម​ចាប់ផ្ដើម​បញ្ជី​ទំនាក់ទំនង ។"
 
-#: main-widget.cpp:165
+#: main-widget.cpp:211
 msgid "IM system failed to initialize"
 msgstr "បាន​បរាជ័យ​ក្នុង​ការ​ចាប់ផ្ដើម​ប្រព័ន្ធ​សារ​បន្ទាន់"
 
-#: main-widget.cpp:270
+#: main-widget.cpp:316
 msgid ""
 "You do not have any other presence controls active (a Presence widget for "
 "example).\n"
@@ -378,111 +378,111 @@ msgstr ""
 "អ្នក​មិន​មាន​ការ​គ្រប់គ្រង​វត្តមាន​ផ្សេងទៀត​សកម្ម​ទេ (ឧទាហរណ៍ វត្តមាន​ធាតុ​ក្រាហ្វិក) ។\n"
 "តើ​អ្នក​ចង់​នៅ​លើ​បណ្ដាញ ឬ​នៅ​ក្រៅ​បណ្ដាញ ?"
 
-#: main-widget.cpp:272
+#: main-widget.cpp:318
 msgid "No Other Presence Controls Found"
 msgstr "រក​មិន​ឃើញ​ការ​គ្រប់គ្រង​វត្តមាន​ផ្សេងទៀត​ទេ"
 
-#: main-widget.cpp:273
+#: main-widget.cpp:319
 msgid "Stay Online"
 msgstr "នៅ​លើ​បណ្ដាញ"
 
-#: main-widget.cpp:274
+#: main-widget.cpp:320
 msgid "Go Offline"
 msgstr "នៅ​ក្រៅ​បណ្ដាញ"
 
-#: main-widget.cpp:384
+#: main-widget.cpp:430
 #, fuzzy
 msgid "Contacts"
 msgstr "លេខ​សម្គាល់​ទំនាក់ទំនង"
 
-#: main-widget.cpp:396
+#: main-widget.cpp:442
 msgid "View"
 msgstr ""
 
-#: main-widget.cpp:401 main-widget.cpp:436
+#: main-widget.cpp:447 main-widget.cpp:482
 msgid "Contact List Type"
 msgstr "ប្រភេទ​បញ្ជី​ទំនាក់ទំនង"
 
-#: main-widget.cpp:404 main-widget.cpp:441
+#: main-widget.cpp:450 main-widget.cpp:487
 msgid "Shown Contacts"
 msgstr "បាន​បង្ហាញ​ទំនាក់ទំនង"
 
-#: main-widget.cpp:513
+#: main-widget.cpp:559
 msgid "Instant Messaging Settings..."
 msgstr "ការ​កំណត់​សារ​បន្ទាន់..."
 
-#: main-widget.cpp:518
+#: main-widget.cpp:564
 msgid "Join Chat Room..."
 msgstr "ចូលរួម​បន្ទប់​ជជែក..."
 
-#: main-widget.cpp:519
+#: main-widget.cpp:565
 #, fuzzy
 msgid "Make a Call..."
 msgstr "ចាប់ផ្ដើម​ការ​ហៅ​ជា​សំឡេង..."
 
-#: main-widget.cpp:520
+#: main-widget.cpp:566
 msgid "Add New Contacts..."
 msgstr "បន្ថែម​ទំនាក់ទំនង​ថ្មី..."
 
-#: main-widget.cpp:521
+#: main-widget.cpp:567
 msgid "Find Contact"
 msgstr "រក​ទំនាក់ទំនង"
 
-#: main-widget.cpp:526
+#: main-widget.cpp:572
 #, fuzzy
 msgid "Show Contacts by Groups"
 msgstr "បង្ហាញ​ទំនាក់ទំនង​ទាំងអស់"
 
-#: main-widget.cpp:527
+#: main-widget.cpp:573
 #, fuzzy
 msgid "Show Contacts by Accounts"
 msgstr "បង្ហាញ​ទំនាក់ទំនង​ទាំងអស់"
 
-#: main-widget.cpp:534
+#: main-widget.cpp:580
 #, fuzzy
 msgid "Show Offline Contacts"
 msgstr "បង្ហាញ​ទំនាក់ទំនង​ទាំងអស់"
 
-#: main-widget.cpp:535
+#: main-widget.cpp:581
 #, fuzzy
 msgid "Hide Offline Contacts"
 msgstr "បង្ហាញ​ទំនាក់ទំនង​ទាំងអស់"
 
-#: main-widget.cpp:543
+#: main-widget.cpp:589
 #, fuzzy
 msgid "Sort by Presence"
 msgstr "យក​វត្តមាន​ចេញ"
 
-#: main-widget.cpp:544
+#: main-widget.cpp:590
 #, fuzzy
 msgid "Sort by Name"
 msgstr "យក​វត្តមាន​ចេញ"
 
-#: main-widget.cpp:552
+#: main-widget.cpp:598
 msgid "Use Full List"
 msgstr "ប្រើ​បញ្ជី​ពេញលេញ"
 
-#: main-widget.cpp:554
+#: main-widget.cpp:600
 #, fuzzy
 msgid "Use Normal List"
 msgstr "ប្រើ​បញ្ជី​បង្ហាប់"
 
-#: main-widget.cpp:558
+#: main-widget.cpp:604
 #, fuzzy
 msgid "Use Minimalistic List"
 msgstr "ប្រើ​បញ្ជី​បង្ហាប់"
 
-#: main-widget.cpp:565
+#: main-widget.cpp:611
 #, fuzzy
 msgid "Show All Contacts"
 msgstr "បង្ហាញ​ទំនាក់ទំនង​ទាំងអស់"
 
-#: main-widget.cpp:567
+#: main-widget.cpp:613
 #, fuzzy
 msgid "Show Unblocked Contacts"
 msgstr "បង្ហាញ​ទំនាក់ទំនង​ដែល​មិន​បាន​ទប់ស្កាត់"
 
-#: main-widget.cpp:569
+#: main-widget.cpp:615
 #, fuzzy
 msgid "Show Blocked Contacts"
 msgstr "បង្ហាញ​ទំនាក់ទំនង​ដែល​បាន​ទប់ស្កាត់"
@@ -513,12 +513,12 @@ msgstr "អ្នក​អភិវឌ្ឍន៍"
 msgid "Show Telepathy debugging information"
 msgstr "បង្ហាញ​ព័ត៌មាន​បំបាត់​កំហុស​របស់ Telepathy"
 
-#: tooltips/contacttooltip.cpp:56
+#: tooltips/contacttooltip.cpp:58
 msgctxt "This is an IM user status"
 msgid "Error Getting Presence"
 msgstr "កំហុស​ក្នុង​ការ​យក​វត្តមាន"
 
-#: tooltips/contacttooltip.cpp:72
+#: tooltips/contacttooltip.cpp:76
 #, fuzzy, kde-format
 msgid "Account: %1"
 msgstr "កំហុស​គណនី"

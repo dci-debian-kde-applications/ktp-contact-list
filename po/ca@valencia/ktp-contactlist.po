@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktp-contactlist\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-03-27 10:06+0100\n"
+"POT-Creation-Date: 2013-05-04 11:29+0200\n"
 "PO-Revision-Date: 2012-09-24 19:08+0200\n"
 "Last-Translator: Josep Ma. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -344,16 +344,16 @@ msgstr "Configura les presències personalitzades..."
 msgid "Now listening to..."
 msgstr "Ara s'escolta a..."
 
-#: global-presence-chooser.cpp:196
+#: global-presence-chooser.cpp:192
 msgid "Click to change your presence message"
 msgstr "Cliqueu per canviar el missatge de presència"
 
-#: global-presence-chooser.cpp:232
+#: global-presence-chooser.cpp:231
 msgctxt "Presence string when the account is connecting"
 msgid "Connecting..."
 msgstr "S'està connectant..."
 
-#: global-presence-chooser.cpp:333
+#: global-presence-chooser.cpp:332
 msgid ""
 "This plugin is currently disabled. Do you want to enable it and use as your "
 "presence?"
@@ -361,11 +361,11 @@ msgstr ""
 "Este connector ara està desactivat. Voleu activar-lo i utilitzar-lo com a la "
 "vostra presència?"
 
-#: global-presence-chooser.cpp:334
+#: global-presence-chooser.cpp:333
 msgid "Plugin disabled"
 msgstr "Connector desactivat"
 
-#: main-widget.cpp:163
+#: main-widget.cpp:209
 msgid ""
 "Something unexpected happened to the core part of your Instant Messaging "
 "system and it couldn't be initialized. Try restarting the Contact List."
@@ -374,11 +374,11 @@ msgstr ""
 "missatgeria instantània i no s'ha pogut inicialitzar. Proveu de reiniciar la "
 "llista de contactes."
 
-#: main-widget.cpp:165
+#: main-widget.cpp:211
 msgid "IM system failed to initialize"
 msgstr "El sistema de MI ha fallat en inicialitzar-se"
 
-#: main-widget.cpp:270
+#: main-widget.cpp:316
 msgid ""
 "You do not have any other presence controls active (a Presence widget for "
 "example).\n"
@@ -388,121 +388,121 @@ msgstr ""
 "Presència).\n"
 "Preferiu estar connectat o desconnectat?"
 
-#: main-widget.cpp:272
+#: main-widget.cpp:318
 msgid "No Other Presence Controls Found"
 msgstr "No s'han trobat altres control de presència"
 
-#: main-widget.cpp:273
+#: main-widget.cpp:319
 msgid "Stay Online"
 msgstr "Romandre connectat"
 
-#: main-widget.cpp:274
+#: main-widget.cpp:320
 msgid "Go Offline"
 msgstr "Desconnecta"
 
-#: main-widget.cpp:384
+#: main-widget.cpp:430
 #, fuzzy
 #| msgid "ContactID"
 msgid "Contacts"
 msgstr "ContactID"
 
-#: main-widget.cpp:396
+#: main-widget.cpp:442
 msgid "View"
 msgstr ""
 
-#: main-widget.cpp:401 main-widget.cpp:436
+#: main-widget.cpp:447 main-widget.cpp:482
 msgid "Contact List Type"
 msgstr "Tipus de llista de contactes"
 
-#: main-widget.cpp:404 main-widget.cpp:441
+#: main-widget.cpp:450 main-widget.cpp:487
 msgid "Shown Contacts"
 msgstr "Mostra els contactes"
 
-#: main-widget.cpp:513
+#: main-widget.cpp:559
 msgid "Instant Messaging Settings..."
 msgstr "Arranjament de missatgeria instantània..."
 
-#: main-widget.cpp:518
+#: main-widget.cpp:564
 msgid "Join Chat Room..."
 msgstr "Entra a la sala de xat..."
 
-#: main-widget.cpp:519
+#: main-widget.cpp:565
 msgid "Make a Call..."
 msgstr "Fes una trucada..."
 
-#: main-widget.cpp:520
+#: main-widget.cpp:566
 msgid "Add New Contacts..."
 msgstr "Afig contactes nous..."
 
-#: main-widget.cpp:521
+#: main-widget.cpp:567
 msgid "Find Contact"
 msgstr "Cerca contacte"
 
-#: main-widget.cpp:526
+#: main-widget.cpp:572
 #, fuzzy
 #| msgid "Show all contacts"
 msgid "Show Contacts by Groups"
 msgstr "Mostra tots els contactes"
 
-#: main-widget.cpp:527
+#: main-widget.cpp:573
 #, fuzzy
 #| msgid "Show all contacts"
 msgid "Show Contacts by Accounts"
 msgstr "Mostra tots els contactes"
 
-#: main-widget.cpp:534
+#: main-widget.cpp:580
 #, fuzzy
 #| msgid "Show all contacts"
 msgid "Show Offline Contacts"
 msgstr "Mostra tots els contactes"
 
-#: main-widget.cpp:535
+#: main-widget.cpp:581
 #, fuzzy
 #| msgid "Show all contacts"
 msgid "Hide Offline Contacts"
 msgstr "Mostra tots els contactes"
 
-#: main-widget.cpp:543
+#: main-widget.cpp:589
 #, fuzzy
 #| msgid "Remove Presence"
 msgid "Sort by Presence"
 msgstr "Elimina presència"
 
-#: main-widget.cpp:544
+#: main-widget.cpp:590
 #, fuzzy
 #| msgid "Remove Presence"
 msgid "Sort by Name"
 msgstr "Elimina presència"
 
-#: main-widget.cpp:552
+#: main-widget.cpp:598
 msgid "Use Full List"
 msgstr "Usa la llista completa"
 
-#: main-widget.cpp:554
+#: main-widget.cpp:600
 #, fuzzy
 #| msgid "Use Compact List"
 msgid "Use Normal List"
 msgstr "Usa la llista compacta"
 
-#: main-widget.cpp:558
+#: main-widget.cpp:604
 #, fuzzy
 #| msgid "Use Compact List"
 msgid "Use Minimalistic List"
 msgstr "Usa la llista compacta"
 
-#: main-widget.cpp:565
+#: main-widget.cpp:611
 #, fuzzy
 #| msgid "Show all contacts"
 msgid "Show All Contacts"
 msgstr "Mostra tots els contactes"
 
-#: main-widget.cpp:567
+#: main-widget.cpp:613
 #, fuzzy
 #| msgid "Show unblocked contacts"
 msgid "Show Unblocked Contacts"
 msgstr "Mostra els contactes no bloquejats"
 
-#: main-widget.cpp:569
+#: main-widget.cpp:615
 #, fuzzy
 #| msgid "Show blocked contacts"
 msgid "Show Blocked Contacts"
@@ -534,12 +534,12 @@ msgstr "Desenvolupador"
 msgid "Show Telepathy debugging information"
 msgstr "Mostra informació de depuració del Telepathy"
 
-#: tooltips/contacttooltip.cpp:56
+#: tooltips/contacttooltip.cpp:58
 msgctxt "This is an IM user status"
 msgid "Error Getting Presence"
 msgstr "Error en obtindre presència"
 
-#: tooltips/contacttooltip.cpp:72
+#: tooltips/contacttooltip.cpp:76
 #, fuzzy, kde-format
 #| msgid "Account:"
 msgid "Account: %1"

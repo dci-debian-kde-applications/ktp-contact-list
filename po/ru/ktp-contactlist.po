@@ -2,13 +2,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Yuri Efremov <yur.arh@gmail.com>, 2012, 2013.
+# Alexander Lakhin <exclusion@gmail.com>, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-03-27 10:06+0100\n"
-"PO-Revision-Date: 2013-03-09 13:01+0400\n"
-"Last-Translator: Yuri Efremov <yur.arh@gmail.com>\n"
+"POT-Creation-Date: 2013-05-04 11:29+0200\n"
+"PO-Revision-Date: 2013-05-09 20:40+0400\n"
+"Last-Translator: Alexander Lakhin <exclusion@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -185,9 +186,8 @@ msgid "Open Log Viewer..."
 msgstr "Просмотр журнала..."
 
 #: context-menu.cpp:170
-#, fuzzy
 msgid "Configure Notifications..."
-msgstr "Настроить уведомления ..."
+msgstr "Настроить уведомления..."
 
 #: context-menu.cpp:187
 msgid "Presence message link"
@@ -339,16 +339,16 @@ msgstr "Другой статус..."
 msgid "Now listening to..."
 msgstr "Сейчас слушаю..."
 
-#: global-presence-chooser.cpp:196
+#: global-presence-chooser.cpp:192
 msgid "Click to change your presence message"
 msgstr "Нажмите, чтобы изменить сообщение статуса"
 
-#: global-presence-chooser.cpp:232
+#: global-presence-chooser.cpp:231
 msgctxt "Presence string when the account is connecting"
 msgid "Connecting..."
 msgstr "Соединение..."
 
-#: global-presence-chooser.cpp:333
+#: global-presence-chooser.cpp:332
 msgid ""
 "This plugin is currently disabled. Do you want to enable it and use as your "
 "presence?"
@@ -356,11 +356,11 @@ msgstr ""
 "Этот модуль отключён. Хотите включить его и использовать в качестве вашего "
 "статуса?"
 
-#: global-presence-chooser.cpp:334
+#: global-presence-chooser.cpp:333
 msgid "Plugin disabled"
 msgstr "Модуль отключён"
 
-#: main-widget.cpp:163
+#: main-widget.cpp:209
 msgid ""
 "Something unexpected happened to the core part of your Instant Messaging "
 "system and it couldn't be initialized. Try restarting the Contact List."
@@ -369,11 +369,11 @@ msgstr ""
 "ошибка. По этой причине он не может быть инициализирован. Попробуйте "
 "перезапустить список контактов."
 
-#: main-widget.cpp:165
+#: main-widget.cpp:211
 msgid "IM system failed to initialize"
 msgstr "Ошибка инициализации системы обмена сообщениями"
 
-#: main-widget.cpp:270
+#: main-widget.cpp:316
 msgid ""
 "You do not have any other presence controls active (a Presence widget for "
 "example).\n"
@@ -383,108 +383,99 @@ msgstr ""
 "статусом).\n"
 "Оставаться в сети или выйти?"
 
-#: main-widget.cpp:272
+#: main-widget.cpp:318
 msgid "No Other Presence Controls Found"
 msgstr "Не найдено других средств управления статусом"
 
-#: main-widget.cpp:273
+#: main-widget.cpp:319
 msgid "Stay Online"
 msgstr "Оставаться в сети"
 
-#: main-widget.cpp:274
+#: main-widget.cpp:320
 msgid "Go Offline"
 msgstr "Выйти из сети"
 
-#: main-widget.cpp:384
+#: main-widget.cpp:430
 msgid "Contacts"
 msgstr "Контакты"
 
-#: main-widget.cpp:396
+#: main-widget.cpp:442
 msgid "View"
 msgstr "Вид"
 
-#: main-widget.cpp:401 main-widget.cpp:436
+#: main-widget.cpp:447 main-widget.cpp:482
 msgid "Contact List Type"
 msgstr "Тип списка контактов"
 
-#: main-widget.cpp:404 main-widget.cpp:441
+#: main-widget.cpp:450 main-widget.cpp:487
 msgid "Shown Contacts"
 msgstr "Отображение контактов"
 
-#: main-widget.cpp:513
+#: main-widget.cpp:559
 msgid "Instant Messaging Settings..."
 msgstr "Параметры мгновенных сообщений..."
 
-#: main-widget.cpp:518
+#: main-widget.cpp:564
 msgid "Join Chat Room..."
 msgstr "Присоединиться к чату..."
 
-#: main-widget.cpp:519
+#: main-widget.cpp:565
 msgid "Make a Call..."
 msgstr "Позвонить..."
 
-#: main-widget.cpp:520
+#: main-widget.cpp:566
 msgid "Add New Contacts..."
 msgstr "Добавить контакты..."
 
-#: main-widget.cpp:521
+#: main-widget.cpp:567
 msgid "Find Contact"
 msgstr "Поиск контакта"
 
-#: main-widget.cpp:526
-#, fuzzy
+#: main-widget.cpp:572
 msgid "Show Contacts by Groups"
 msgstr "Показывать контакты по группам"
 
-#: main-widget.cpp:527
-#, fuzzy
+#: main-widget.cpp:573
 msgid "Show Contacts by Accounts"
 msgstr "Показывать контакты по учётным записям"
 
-#: main-widget.cpp:534
-#, fuzzy
+#: main-widget.cpp:580
 msgid "Show Offline Contacts"
-msgstr "Показывать контакты, которые не в сети"
+msgstr "Показывать контакты не в сети"
 
-#: main-widget.cpp:535
-#, fuzzy
+#: main-widget.cpp:581
 msgid "Hide Offline Contacts"
-msgstr "Показывать контакты, которые не в сети"
+msgstr "Скрывать контакты не в сети"
 
-#: main-widget.cpp:543
-#, fuzzy
+#: main-widget.cpp:589
 msgid "Sort by Presence"
 msgstr "Сортировать по статусу"
 
-#: main-widget.cpp:544
-#, fuzzy
+#: main-widget.cpp:590
 msgid "Sort by Name"
 msgstr "Сортировать по имени"
 
-#: main-widget.cpp:552
+#: main-widget.cpp:598
 msgid "Use Full List"
 msgstr "Использовать полный список"
 
-#: main-widget.cpp:554
+#: main-widget.cpp:600
 msgid "Use Normal List"
 msgstr "Использовать обычный список"
 
-#: main-widget.cpp:558
+#: main-widget.cpp:604
 msgid "Use Minimalistic List"
 msgstr "Использовать компактный список"
 
-#: main-widget.cpp:565
-#, fuzzy
+#: main-widget.cpp:611
 msgid "Show All Contacts"
 msgstr "Показать все контакты"
 
-#: main-widget.cpp:567
-#, fuzzy
+#: main-widget.cpp:613
 msgid "Show Unblocked Contacts"
-msgstr "Показать не заблокированные контакты"
+msgstr "Показать незаблокированные контакты"
 
-#: main-widget.cpp:569
-#, fuzzy
+#: main-widget.cpp:615
 msgid "Show Blocked Contacts"
 msgstr "Показать заблокированные контакты"
 
@@ -514,12 +505,12 @@ msgstr "Разработчик"
 msgid "Show Telepathy debugging information"
 msgstr "Показать подробности отладки Telepathy"
 
-#: tooltips/contacttooltip.cpp:56
+#: tooltips/contacttooltip.cpp:58
 msgctxt "This is an IM user status"
 msgid "Error Getting Presence"
 msgstr "Ошибка получения статуса"
 
-#: tooltips/contacttooltip.cpp:72
+#: tooltips/contacttooltip.cpp:76
 #, kde-format
 msgid "Account: %1"
 msgstr "Учётная запись: %1"
