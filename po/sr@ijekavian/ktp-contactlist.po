@@ -5,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktp-contactlist\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-03-27 10:06+0100\n"
-"PO-Revision-Date: 2013-03-23 13:23+0100\n"
+"POT-Creation-Date: 2013-05-04 11:29+0200\n"
+"PO-Revision-Date: 2013-04-28 16:01+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@ijekavian\n"
@@ -95,7 +95,7 @@ msgstr "Прикључак контролног модула ИМ налога �
 
 #: contact-list-widget.cpp:191
 msgid "Notifications"
-msgstr "Обавештења"
+msgstr "Обавјештења"
 
 # >> @title:window
 #: contact-list-widget.cpp:381
@@ -105,11 +105,11 @@ msgstr "Избор фајлова за слање примаоцу %1"
 
 #: contact-list-widget.cpp:695
 msgid "&Move here"
-msgstr "&Премести овде"
+msgstr "&Премјести овдје"
 
 #: contact-list-widget.cpp:699
 msgid "&Copy here"
-msgstr "&Копирај овде"
+msgstr "&Копирај овдје"
 
 #: contact-list-widget.cpp:703
 msgid "C&ancel"
@@ -185,7 +185,7 @@ msgstr "Отвори приказивач дневника..."
 
 #: context-menu.cpp:170
 msgid "Configure Notifications..."
-msgstr "Подеси обавештења..."
+msgstr "Подеси обавјештења..."
 
 #: context-menu.cpp:187
 msgid "Presence message link"
@@ -247,6 +247,7 @@ msgstr "Ново име групе"
 msgid "Please enter the new group name"
 msgstr "Унесите ново име за групу"
 
+# >! ui: Ungrouped --> ?
 #: context-menu.cpp:530
 #, kde-format
 msgid ""
@@ -256,7 +257,7 @@ msgid ""
 msgstr ""
 "Желите ли заиста да уклоните групу %1?\n"
 "\n"
-"Сви контакти ће бити премјештени у групу „негруписани“."
+"Сви контакти ће бити премјештени међу негруписане."
 
 # >> @title:window
 #: context-menu.cpp:532
@@ -339,16 +340,16 @@ msgstr "Подеси посебне присутности..."
 msgid "Now listening to..."
 msgstr "Тренутно слушам..."
 
-#: global-presence-chooser.cpp:196
+#: global-presence-chooser.cpp:192
 msgid "Click to change your presence message"
-msgstr "Кликните да промените поруку присутности"
+msgstr "Кликните да промијените поруку присутности"
 
-#: global-presence-chooser.cpp:232
+#: global-presence-chooser.cpp:231
 msgctxt "Presence string when the account is connecting"
 msgid "Connecting..."
 msgstr "Повезујем се..."
 
-#: global-presence-chooser.cpp:333
+#: global-presence-chooser.cpp:332
 msgid ""
 "This plugin is currently disabled. Do you want to enable it and use as your "
 "presence?"
@@ -356,11 +357,11 @@ msgstr ""
 "Овај прикључак је искључен. Желите ли да га укључите и користите као своју "
 "присутност?"
 
-#: global-presence-chooser.cpp:334
+#: global-presence-chooser.cpp:333
 msgid "Plugin disabled"
 msgstr "Прикључак је искључен"
 
-#: main-widget.cpp:163
+#: main-widget.cpp:209
 msgid ""
 "Something unexpected happened to the core part of your Instant Messaging "
 "system and it couldn't be initialized. Try restarting the Contact List."
@@ -368,11 +369,11 @@ msgstr ""
 "Нешто неочекивано се десило са језгром брзогласничког система и зато не може "
 "да се покрене. Покушајте поново да покренете списак контаката."
 
-#: main-widget.cpp:165
+#: main-widget.cpp:211
 msgid "IM system failed to initialize"
 msgstr "ИМ систем не може да се покрене"
 
-#: main-widget.cpp:270
+#: main-widget.cpp:316
 msgid ""
 "You do not have any other presence controls active (a Presence widget for "
 "example).\n"
@@ -382,101 +383,101 @@ msgstr ""
 "примјер).\n"
 "Желите ли да останете на вези или бисте радије отишли ван везе?"
 
-#: main-widget.cpp:272
+#: main-widget.cpp:318
 msgid "No Other Presence Controls Found"
 msgstr "Ниједан управљач присутношћу није нађен"
 
-#: main-widget.cpp:273
+#: main-widget.cpp:319
 msgid "Stay Online"
 msgstr "Остани на вези"
 
-#: main-widget.cpp:274
+#: main-widget.cpp:320
 msgid "Go Offline"
 msgstr "Иди ван везе"
 
 # >> @title:menu
-#: main-widget.cpp:384
+#: main-widget.cpp:430
 msgid "Contacts"
 msgstr "Контакти"
 
 # >> @title:menu
-#: main-widget.cpp:396
+#: main-widget.cpp:442
 msgid "View"
 msgstr "Приказ"
 
-#: main-widget.cpp:401 main-widget.cpp:436
+#: main-widget.cpp:447 main-widget.cpp:482
 msgid "Contact List Type"
 msgstr "Тип списка контаката"
 
-#: main-widget.cpp:404 main-widget.cpp:441
+#: main-widget.cpp:450 main-widget.cpp:487
 msgid "Shown Contacts"
 msgstr "Прикажи контакте"
 
-#: main-widget.cpp:513
+#: main-widget.cpp:559
 msgid "Instant Messaging Settings..."
 msgstr "Брзогласничке поставке..."
 
-#: main-widget.cpp:518
+#: main-widget.cpp:564
 msgid "Join Chat Room..."
 msgstr "Придружи се соби за ћаскање..."
 
-#: main-widget.cpp:519
+#: main-widget.cpp:565
 msgid "Make a Call..."
 msgstr "Позови..."
 
-#: main-widget.cpp:520
+#: main-widget.cpp:566
 msgid "Add New Contacts..."
 msgstr "Додај нове контакте..."
 
-#: main-widget.cpp:521
+#: main-widget.cpp:567
 msgid "Find Contact"
 msgstr "Нађи контакт"
 
-#: main-widget.cpp:526
+#: main-widget.cpp:572
 msgid "Show Contacts by Groups"
 msgstr "Прикажи контакте по групама"
 
-#: main-widget.cpp:527
+#: main-widget.cpp:573
 msgid "Show Contacts by Accounts"
 msgstr "Прикажи контакте по налозима"
 
-#: main-widget.cpp:534
+#: main-widget.cpp:580
 msgid "Show Offline Contacts"
 msgstr "Прикажи контакте ван везе"
 
-#: main-widget.cpp:535
+#: main-widget.cpp:581
 msgid "Hide Offline Contacts"
 msgstr "Сакриј контакте ван везе"
 
-#: main-widget.cpp:543
+#: main-widget.cpp:589
 msgid "Sort by Presence"
 msgstr "Поређај по присутности"
 
-#: main-widget.cpp:544
+#: main-widget.cpp:590
 msgid "Sort by Name"
 msgstr "Поређај по имену"
 
-#: main-widget.cpp:552
+#: main-widget.cpp:598
 msgid "Use Full List"
 msgstr "Пун списак"
 
-#: main-widget.cpp:554
+#: main-widget.cpp:600
 msgid "Use Normal List"
 msgstr "Нормалан списак"
 
-#: main-widget.cpp:558
+#: main-widget.cpp:604
 msgid "Use Minimalistic List"
 msgstr "Минималистички списак"
 
-#: main-widget.cpp:565
+#: main-widget.cpp:611
 msgid "Show All Contacts"
 msgstr "Прикажи све контакте"
 
-#: main-widget.cpp:567
+#: main-widget.cpp:613
 msgid "Show Unblocked Contacts"
 msgstr "Прикажи неблокиране контакте"
 
-#: main-widget.cpp:569
+#: main-widget.cpp:615
 msgid "Show Blocked Contacts"
 msgstr "Прикажи блокиране контакте"
 
@@ -506,12 +507,12 @@ msgstr "Програмер"
 msgid "Show Telepathy debugging information"
 msgstr "Прикажи исправљачке податке Телепатије"
 
-#: tooltips/contacttooltip.cpp:56
+#: tooltips/contacttooltip.cpp:58
 msgctxt "This is an IM user status"
 msgid "Error Getting Presence"
 msgstr "Грешка у добављању присутности"
 
-#: tooltips/contacttooltip.cpp:72
+#: tooltips/contacttooltip.cpp:76
 #, kde-format
 msgid "Account: %1"
 msgstr "Налог: %1"

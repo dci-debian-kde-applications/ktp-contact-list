@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Ni Hui <shuizhuyuanluo@126.com>, 2012.
-# Weng Xuetian <wengxt@gmail.com>, 2012.
+# Weng Xuetian <wengxt@gmail.com>, 2012, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-03-27 10:06+0100\n"
-"PO-Revision-Date: 2012-12-10 21:35-0500\n"
+"POT-Creation-Date: 2013-05-04 11:29+0200\n"
+"PO-Revision-Date: 2013-04-06 16:07-0400\n"
 "Last-Translator: Weng Xuetian <wengxt@gmail.com>\n"
 "Language-Team: Chinese Simplified <kde-china@kde.org>\n"
 "Language: zh_CN\n"
@@ -90,9 +90,8 @@ msgid "IM Accounts KCM Plugin Is Not Installed"
 msgstr "即时通讯账户控制模块未安装"
 
 #: contact-list-widget.cpp:191
-#, fuzzy
 msgid "Notifications"
-msgstr "配置通知..."
+msgstr "通知"
 
 #: contact-list-widget.cpp:381
 #, kde-format
@@ -101,15 +100,15 @@ msgstr "选择要发送给 %1 的文件"
 
 #: contact-list-widget.cpp:695
 msgid "&Move here"
-msgstr ""
+msgstr "移动到此处(&M)"
 
 #: contact-list-widget.cpp:699
 msgid "&Copy here"
-msgstr ""
+msgstr "复制到此处(&C)"
 
 #: contact-list-widget.cpp:703
 msgid "C&ancel"
-msgstr ""
+msgstr "取消(&A)"
 
 #: contact-overlays.cpp:134 contact-overlays.cpp:135
 msgid "Start Chat"
@@ -144,7 +143,6 @@ msgid "Send a file"
 msgstr "发送文件"
 
 #: contact-overlays.cpp:183 contact-overlays.cpp:184
-#, fuzzy
 msgid "Share My Desktop"
 msgstr "共享桌面"
 
@@ -181,7 +179,6 @@ msgid "Open Log Viewer..."
 msgstr "打开日志查看器..."
 
 #: context-menu.cpp:170
-#, fuzzy
 msgid "Configure Notifications..."
 msgstr "配置通知..."
 
@@ -332,36 +329,36 @@ msgstr "配置自定义状态..."
 msgid "Now listening to..."
 msgstr "正在收听..."
 
-#: global-presence-chooser.cpp:196
+#: global-presence-chooser.cpp:192
 msgid "Click to change your presence message"
 msgstr "单击这里更改您的状态消息"
 
-#: global-presence-chooser.cpp:232
+#: global-presence-chooser.cpp:231
 msgctxt "Presence string when the account is connecting"
 msgid "Connecting..."
 msgstr "正在连接..."
 
-#: global-presence-chooser.cpp:333
+#: global-presence-chooser.cpp:332
 msgid ""
 "This plugin is currently disabled. Do you want to enable it and use as your "
 "presence?"
 msgstr "此插件当前被禁用。您是否想启用并且将其作为您的在线状态？"
 
-#: global-presence-chooser.cpp:334
+#: global-presence-chooser.cpp:333
 msgid "Plugin disabled"
 msgstr "插件已禁用"
 
-#: main-widget.cpp:163
+#: main-widget.cpp:209
 msgid ""
 "Something unexpected happened to the core part of your Instant Messaging "
 "system and it couldn't be initialized. Try restarting the Contact List."
 msgstr "即时通讯系统的核心发生未预期的错误，无法初始化。请尝试重启联系人列表。"
 
-#: main-widget.cpp:165
+#: main-widget.cpp:211
 msgid "IM system failed to initialize"
 msgstr "即时通讯系统初始化失败"
 
-#: main-widget.cpp:270
+#: main-widget.cpp:316
 msgid ""
 "You do not have any other presence controls active (a Presence widget for "
 "example).\n"
@@ -370,109 +367,99 @@ msgstr ""
 "您没有其他活动的在线状态控制器 (例如即时通讯状态小部件)。\n"
 "您想要保持在线还是离线？"
 
-#: main-widget.cpp:272
+#: main-widget.cpp:318
 msgid "No Other Presence Controls Found"
 msgstr "未找到其他在线状态控制器"
 
-#: main-widget.cpp:273
+#: main-widget.cpp:319
 msgid "Stay Online"
 msgstr "保持在线"
 
-#: main-widget.cpp:274
+#: main-widget.cpp:320
 msgid "Go Offline"
 msgstr "转为离线"
 
-#: main-widget.cpp:384
-#, fuzzy
+#: main-widget.cpp:430
 msgid "Contacts"
-msgstr "联系人ID"
+msgstr "联系人"
 
-#: main-widget.cpp:396
+#: main-widget.cpp:442
 msgid "View"
-msgstr ""
+msgstr "查看"
 
-#: main-widget.cpp:401 main-widget.cpp:436
+#: main-widget.cpp:447 main-widget.cpp:482
 msgid "Contact List Type"
 msgstr "联系人列表类型"
 
-#: main-widget.cpp:404 main-widget.cpp:441
+#: main-widget.cpp:450 main-widget.cpp:487
 msgid "Shown Contacts"
 msgstr "显示联系人"
 
-#: main-widget.cpp:513
+#: main-widget.cpp:559
 msgid "Instant Messaging Settings..."
 msgstr "即时通讯设置..."
 
-#: main-widget.cpp:518
+#: main-widget.cpp:564
 msgid "Join Chat Room..."
 msgstr "加入聊天室..."
 
-#: main-widget.cpp:519
+#: main-widget.cpp:565
 msgid "Make a Call..."
 msgstr "进行呼叫..."
 
-#: main-widget.cpp:520
+#: main-widget.cpp:566
 msgid "Add New Contacts..."
 msgstr "添加新联系人..."
 
-#: main-widget.cpp:521
+#: main-widget.cpp:567
 msgid "Find Contact"
 msgstr "查找联系人"
 
-#: main-widget.cpp:526
-#, fuzzy
+#: main-widget.cpp:572
 msgid "Show Contacts by Groups"
-msgstr "显示所有联系人"
+msgstr "按分组显示联系人"
 
-#: main-widget.cpp:527
-#, fuzzy
+#: main-widget.cpp:573
 msgid "Show Contacts by Accounts"
-msgstr "显示所有联系人"
+msgstr "按账户显示联系人"
 
-#: main-widget.cpp:534
-#, fuzzy
+#: main-widget.cpp:580
 msgid "Show Offline Contacts"
-msgstr "显示所有联系人"
+msgstr "显示离线联系人"
 
-#: main-widget.cpp:535
-#, fuzzy
+#: main-widget.cpp:581
 msgid "Hide Offline Contacts"
-msgstr "显示所有联系人"
+msgstr "隐藏离线联系人"
 
-#: main-widget.cpp:543
-#, fuzzy
+#: main-widget.cpp:589
 msgid "Sort by Presence"
-msgstr "删除状态"
+msgstr "按状态排序"
 
-#: main-widget.cpp:544
-#, fuzzy
+#: main-widget.cpp:590
 msgid "Sort by Name"
-msgstr "删除状态"
+msgstr "按名称排序"
 
-#: main-widget.cpp:552
+#: main-widget.cpp:598
 msgid "Use Full List"
 msgstr "使用完整列表"
 
-#: main-widget.cpp:554
+#: main-widget.cpp:600
 msgid "Use Normal List"
 msgstr "使用普通列表"
 
-#: main-widget.cpp:558
+#: main-widget.cpp:604
 msgid "Use Minimalistic List"
 msgstr "使用简洁列表"
 
-#: main-widget.cpp:565
-#, fuzzy
+#: main-widget.cpp:611
 msgid "Show All Contacts"
 msgstr "显示所有联系人"
 
-#: main-widget.cpp:567
-#, fuzzy
+#: main-widget.cpp:613
 msgid "Show Unblocked Contacts"
 msgstr "显示未屏蔽联系人"
 
-#: main-widget.cpp:569
-#, fuzzy
+#: main-widget.cpp:615
 msgid "Show Blocked Contacts"
 msgstr "显示屏蔽联系人"
 
@@ -502,15 +489,15 @@ msgstr "开发者"
 msgid "Show Telepathy debugging information"
 msgstr "显示 Telepathy 调试信息"
 
-#: tooltips/contacttooltip.cpp:56
+#: tooltips/contacttooltip.cpp:58
 msgctxt "This is an IM user status"
 msgid "Error Getting Presence"
 msgstr "获取在线状态错误"
 
-#: tooltips/contacttooltip.cpp:72
-#, fuzzy, kde-format
+#: tooltips/contacttooltip.cpp:76
+#, kde-format
 msgid "Account: %1"
-msgstr "账户："
+msgstr "账户：%1"
 
 #. i18n: ectx: property (text), widget (QLabel, blockedLabel)
 #: tooltips/contacttooltip.ui:126
