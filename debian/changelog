@@ -11,6 +11,7 @@ ktp-contact-list (0.6.2-1) UNRELEASED; urgency=low
   * Imported Upstream version 0.6.2
   * Bump ktp-common-internals version
   * Set Uploaders to Diane Trout and Michał Zając
+  * Update Standards-Version to 3.9.4. No changes needed.
 
  -- Ritesh Raj Sarraf <rrs@debian.org>  Sat, 25 May 2013 09:54:40 -0700
 
