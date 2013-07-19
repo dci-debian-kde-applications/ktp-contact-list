@@ -1,9 +1,11 @@
 ktp-contact-list (0.6.2-1) UNRELEASED; urgency=low
 
   [ Diane Trout ]
-  * KDE-Telepathy is now in stable release.
+  * Update watch file as KDE-Telepathy is now in KDE stable release.
   * Imported Upstream version 0.6.2
-  * Bump ktp-common-internals version
+  * Bump ktp-common-internals dependency to 0.6.2
+  * Bump libtelepathy-qt4-dev dependency to 0.9.3
+  * Add dependency on libtelepathy-logger-qt
   * Set Uploaders to Diane Trout and Michał Zając
   * Update Standards-Version to 3.9.4. No changes needed.
 
