@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-05-04 11:29+0200\n"
+"POT-Creation-Date: 2013-07-13 05:11+0000\n"
 "PO-Revision-Date: 2013-04-06 16:07-0400\n"
 "Last-Translator: Weng Xuetian <wengxt@gmail.com>\n"
 "Language-Team: Chinese Simplified <kde-china@kde.org>\n"
@@ -98,15 +98,15 @@ msgstr "通知"
 msgid "Choose files to send to %1"
 msgstr "选择要发送给 %1 的文件"
 
-#: contact-list-widget.cpp:695
+#: contact-list-widget.cpp:697
 msgid "&Move here"
 msgstr "移动到此处(&M)"
 
-#: contact-list-widget.cpp:699
+#: contact-list-widget.cpp:701
 msgid "&Copy here"
 msgstr "复制到此处(&C)"
 
-#: contact-list-widget.cpp:703
+#: contact-list-widget.cpp:705
 msgid "C&ancel"
 msgstr "取消(&A)"
 

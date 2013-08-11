@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktp-contactlist\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-05-04 11:29+0200\n"
+"POT-Creation-Date: 2013-07-13 05:11+0000\n"
 "PO-Revision-Date: 2013-05-08 22:46-0300\n"
 "Last-Translator: André Marcelo Alvarenga <alvarenga@kde.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_br@kde.org>\n"
@@ -105,15 +105,15 @@ msgstr "Notificações"
 msgid "Choose files to send to %1"
 msgstr "Escolha os arquivos a enviar para %1"
 
-#: contact-list-widget.cpp:695
+#: contact-list-widget.cpp:697
 msgid "&Move here"
 msgstr "&Mover aqui"
 
-#: contact-list-widget.cpp:699
+#: contact-list-widget.cpp:701
 msgid "&Copy here"
 msgstr "&Copiar aqui"
 
-#: contact-list-widget.cpp:703
+#: contact-list-widget.cpp:705
 msgid "C&ancel"
 msgstr "C&ancelar"
 

@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-05-04 11:29+0200\n"
-"PO-Revision-Date: 2013-05-01 14:32+0200\n"
+"POT-Creation-Date: 2013-07-13 05:11+0000\n"
+"PO-Revision-Date: 2013-07-08 03:53+0200\n"
 "Last-Translator: Volkan Gezer <volkangezer@gmail.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 1.5\n"
 
 msgctxt "NAME OF TRANSLATORS"
@@ -102,15 +102,15 @@ msgstr "Bildirimler"
 msgid "Choose files to send to %1"
 msgstr "%1 kullanıcısına gönderilecek dosyaları seç"
 
-#: contact-list-widget.cpp:695
+#: contact-list-widget.cpp:697
 msgid "&Move here"
 msgstr "Buraya &taşı"
 
-#: contact-list-widget.cpp:699
+#: contact-list-widget.cpp:701
 msgid "&Copy here"
 msgstr "Buraya &kopyala"
 
-#: contact-list-widget.cpp:703
+#: contact-list-widget.cpp:705
 msgid "C&ancel"
 msgstr "İ&ptal"
 
@@ -183,15 +183,14 @@ msgid "Open Log Viewer..."
 msgstr "Günlük Görüntüleyiciyi Aç..."
 
 #: context-menu.cpp:170
-#, fuzzy
-#| msgid "Configure Notifications ..."
 msgid "Configure Notifications..."
 msgstr "Bildirimleri Yapılandır..."
 
 #: context-menu.cpp:187
 msgid "Presence message link"
 msgid_plural "Presence message links"
-msgstr[0] "Durum mesajı bağlantıları"
+msgstr[0] "Durum mesajı bağlantısı"
+msgstr[1] "Durum mesajı bağlantıları"
 
 #: context-menu.cpp:201
 msgid "Remove Contact From This Group"

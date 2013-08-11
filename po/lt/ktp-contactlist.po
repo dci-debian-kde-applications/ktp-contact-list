@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l 10n\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-05-04 11:29+0200\n"
+"POT-Creation-Date: 2013-07-13 05:11+0000\n"
 "PO-Revision-Date: 2013-04-11 20:35+0300\n"
 "Last-Translator: Liudas Ališauskas <liudas.alisauskas@gmail.com>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -102,15 +102,15 @@ msgstr "Pranešimai"
 msgid "Choose files to send to %1"
 msgstr "Pasirinkite, kuriuos failus siųsti %1"
 
-#: contact-list-widget.cpp:695
+#: contact-list-widget.cpp:697
 msgid "&Move here"
 msgstr "&Perkelti čia"
 
-#: contact-list-widget.cpp:699
+#: contact-list-widget.cpp:701
 msgid "&Copy here"
 msgstr "&Kopijuoti čia"
 
-#: contact-list-widget.cpp:703
+#: contact-list-widget.cpp:705
 msgid "C&ancel"
 msgstr "A&tšaukti"
 

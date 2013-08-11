@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: telepathy-contactslist-prototype\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-05-04 11:29+0200\n"
+"POT-Creation-Date: 2013-07-13 05:11+0000\n"
 "PO-Revision-Date: 2013-03-15 10:15+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -96,15 +96,15 @@ msgstr "Notificações"
 msgid "Choose files to send to %1"
 msgstr "Escolher os ficheiros a enviar para %1"
 
-#: contact-list-widget.cpp:695
+#: contact-list-widget.cpp:697
 msgid "&Move here"
 msgstr "&Mover para aqui"
 
-#: contact-list-widget.cpp:699
+#: contact-list-widget.cpp:701
 msgid "&Copy here"
 msgstr "&Copiar para aqui"
 
-#: contact-list-widget.cpp:703
+#: contact-list-widget.cpp:705
 msgid "C&ancel"
 msgstr "C&ancelar"
 

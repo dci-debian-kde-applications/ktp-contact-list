@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-05-04 11:29+0200\n"
+"POT-Creation-Date: 2013-07-13 05:11+0000\n"
 "PO-Revision-Date: 2013-04-21 09:46+0200\n"
 "Last-Translator: Marce Villarino <mvillarino@kde-espana.es>\n"
 "Language-Team: Galician <proxecto@trasno.net>\n"
@@ -106,15 +106,15 @@ msgstr "Notificacións"
 msgid "Choose files to send to %1"
 msgstr "Escolle os ficheiros que enviar a %1"
 
-#: contact-list-widget.cpp:695
+#: contact-list-widget.cpp:697
 msgid "&Move here"
 msgstr "&Mover para aquí"
 
-#: contact-list-widget.cpp:699
+#: contact-list-widget.cpp:701
 msgid "&Copy here"
 msgstr "&Copiar aquí"
 
-#: contact-list-widget.cpp:703
+#: contact-list-widget.cpp:705
 msgid "C&ancel"
 msgstr "C&ancelar"
 
