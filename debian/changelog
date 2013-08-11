@@ -1,4 +1,4 @@
-ktp-contact-list (0.6.2-1) UNRELEASED; urgency=low
+ktp-contact-list (0.6.3-1) unstable; urgency=low
 
   [ Diane Trout ]
   * Update watch file as KDE-Telepathy is now in KDE stable release.
@@ -9,7 +9,12 @@ ktp-contact-list (0.6.2-1) UNRELEASED; urgency=low
   * Set Uploaders to Diane Trout and Michał Zając
   * Update Standards-Version to 3.9.4. No changes needed.
 
- -- Diane Trout <diane@ghic.org>  Tue, 09 Jul 2013 22:13:37 -0700
+  [ Mark Purcell ] 
+  * Imported Upstream version 0.6.3
+  * Add myself to Uploaders
+  * Update Build-Depends: libktpcommoninternalsprivate-dev (>= 0.6.3)
+
+ -- Mark Purcell <msp@debian.org>  Sun, 11 Aug 2013 10:33:39 +1000
 
 ktp-contact-list (0.4.0-1) unstable; urgency=low
 
