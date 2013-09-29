@@ -26,8 +26,6 @@
 
 #include <TelepathyQt/Types>
 
-#include <TelepathyLoggerQt4/LogManager>
-
 #include "contact-list-widget.h"
 
 class AccountsModel;
@@ -70,7 +68,6 @@ private:
     ContactListWidget     *m_mainWidget;
     QPersistentModelIndex  m_currentIndex;
     Tp::AccountManagerPtr  m_accountManager;
-    Tpl::LogManagerPtr     m_logManager;
 };
 
 #endif // CONTEXT_MENU_H

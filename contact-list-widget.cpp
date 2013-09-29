@@ -59,6 +59,33 @@
 #include "contact-delegate-compact.h"
 #include "contact-overlays.h"
 
+
+#ifdef HAVE_KPEOPLE
+#include <kpeople/personsmodel.h>
+#endif
+
+//create a new style that does not draw the vertical lines in the tree view
+//this maps "draw branch" to "draw right arrow" and "draw down arrow"
+//we cannot just override drawBranches as then we cannot highlight the active branch
+//Qt does so by utilising some internal methods of QTreeView
+class NoLinesStyle: public QProxyStyle
+{
+    void drawPrimitive(QStyle::PrimitiveElement element, const QStyleOption *option, QPainter *painter, const QWidget *widget = 0) const
+    {
+        if (element == QStyle::PE_IndicatorBranch) {
+            if (option->state & QStyle::State_Children) {
+                if (option->state & QStyle::State_Open) {
+                    return QProxyStyle::drawPrimitive(PE_IndicatorArrowDown, option, painter, widget);
+                } else {
+                    return QProxyStyle::drawPrimitive(PE_IndicatorArrowRight, option, painter, widget);
+                }
+            }
+        } else {
+            return QProxyStyle::drawPrimitive(element, option, painter, widget);
+        }
+    }
+};
+
 ContactListWidget::ContactListWidget(QWidget *parent)
     : QTreeView(parent),
       d_ptr(new ContactListWidgetPrivate)
@@ -75,8 +102,9 @@ ContactListWidget::ContactListWidget(QWidget *parent)
     d->model->setTrackUnreadMessages(true);
     d->model->setDynamicSortFilter(true);
     d->model->setSortRole(Qt::DisplayRole);
+    d->style.reset(new NoLinesStyle());
 
-
+    setStyle(d->style.data());
     setSortingEnabled(true);
     sortByColumn(0, Qt::AscendingOrder);
     loadGroupStatesFromConfig();
@@ -85,16 +113,21 @@ ContactListWidget::ContactListWidget(QWidget *parent)
             this, SLOT(onNewGroupModelItemsInserted(QModelIndex,int,int)));
 
     header()->hide();
-    setRootIsDecorated(false);
     setSortingEnabled(true);
     setEditTriggers(NoEditTriggers);
     setContextMenuPolicy(Qt::CustomContextMenu);
-    setIndentation(0);
+    if (KTp::kpeopleEnabled()) {
+        setIndentation(25);
+    } else {
+        setIndentation(0);
+    }
     setMouseTracking(true);
     setExpandsOnDoubleClick(false); //the expanding/collapsing is handled manually
     setDragEnabled(false); // we handle drag&drop ourselves
     viewport()->setAcceptDrops(true);
     setDropIndicatorShown(true);
+    setSelectionMode(ExtendedSelection);
+    setSelectionBehavior(SelectItems);
 
     QString delegateMode = guiConfigGroup.readEntry("selected_delegate", "normal");
 
@@ -149,6 +182,9 @@ void ContactListWidget::setAccountManager(const Tp::AccountManagerPtr &accountMa
     // See https://bugs.kde.org/show_bug.cgi?id=316260
     setModel(d->model);
 
+    connect(selectionModel(), SIGNAL(selectionChanged(QItemSelection,QItemSelection)),
+            this, SIGNAL(contactSelectionChanged()));
+
     QList<Tp::AccountPtr> accounts = accountManager->allAccounts();
 
     if(accounts.count() == 0) {
@@ -192,6 +228,7 @@ void ContactListWidget::showSettingsKCM()
     notificationPage->setIcon(KIcon("preferences-desktop-notification"));
     dialog->addPage(notificationPage);
 
+    dialog->resize(700, 640);
     dialog->setAttribute(Qt::WA_DeleteOnClose);
     dialog->exec();
 }
@@ -227,17 +264,69 @@ void ContactListWidget::onContactListClicked(const QModelIndex& index)
     }
 }
 
-void ContactListWidget::onContactListDoubleClicked(const QModelIndex& index)
+void ContactListWidget::onContactListDoubleClicked(const QModelIndex &index)
 {
     if (!index.isValid()) {
         return;
     }
 
-    if (index.data(KTp::RowTypeRole).toInt() == KTp::ContactRowType) {
-        KTp::ContactPtr contact = index.data(KTp::ContactRole).value<KTp::ContactPtr>();
-        Tp::AccountPtr account = index.data(KTp::AccountRole).value<Tp::AccountPtr>();
-        startTextChannel(account, contact);
+    Tp::AccountPtr account = index.data(KTp::AccountRole).value<Tp::AccountPtr>();
+    KTp::ContactPtr contact = index.data(KTp::ContactRole).value<KTp::ContactPtr>();
+
+    if (account.isNull()) {
+        kWarning() << "Account is null!";
+        return;
     }
+
+    //contact should be null only if the account is offline
+    if (!contact.isNull()) {
+        startTextChannel(account, contact);
+        return;
+    }
+
+    if (!account->isOnline()) {
+        KGuiItem yes(i18nc("Label of a dialog's 'OK' button; %1 is account name, eg. 'Connect account GTalk'",
+                           "Connect account %1", account->displayName()), QLatin1String("dialog-ok"));
+        if (KMessageBox::questionYesNo(this,
+            i18n("The account for this contact is disconnected. Do you want to connect it?"),
+                                        i18n("Account offline"),
+                                        yes,
+                                        KStandardGuiItem::no()) == KMessageBox::Yes) {
+
+            QString contactId = index.data(KTp::RowTypeRole).toUInt() == KTp::PersonRowType
+                                    ? index.data(KTp::IdRole).toList().first().toString()
+                                    : index.data(KTp::IdRole).toString();
+            if (!account->isEnabled()) {
+                Tp::PendingOperation *op = account->setEnabled(true);
+                op->setProperty("contactId", contactId);
+                connect(op, SIGNAL(finished(Tp::PendingOperation*)),
+                        this, SLOT(accountEnablingFinished(Tp::PendingOperation*)));
+            } else {
+                account->ensureTextChat(contactId,
+                                        QDateTime::currentDateTime(),
+                                        QLatin1String("org.freedesktop.Telepathy.Client.KTp.TextUi"));
+            }
+        }
+    }
+}
+
+void ContactListWidget::accountEnablingFinished(Tp::PendingOperation *op)
+{
+    if (op->isError()) {
+        kWarning() << "Account enabling failed" << op->errorMessage();
+        return;
+    }
+
+    Tp::AccountPtr account = Tp::AccountPtr(qobject_cast<Tp::Account*>(sender()));
+
+    if (account.isNull()) {
+        kWarning() << "Null account passed!";
+        return;
+    }
+
+    account->ensureTextChat(op->property("contactId").toString(),
+                            QDateTime::currentDateTime(),
+                            QLatin1String("org.freedesktop.Telepathy.Client.KTp.TextUi"));
 }
 
 void ContactListWidget::addOverlayButtons()
@@ -248,15 +337,19 @@ void ContactListWidget::addOverlayButtons()
     AudioChannelContactOverlay *audioOverlay = new AudioChannelContactOverlay(d->delegate);
     VideoChannelContactOverlay *videoOverlay = new VideoChannelContactOverlay(d->delegate);
     FileTransferContactOverlay *fileOverlay  = new FileTransferContactOverlay(d->delegate);
-    DesktopSharingContactOverlay *desktopOverlay = new DesktopSharingContactOverlay(d->delegate);
-    LogViewerOverlay *logViewerOverlay = new LogViewerOverlay(d->delegate);
 
     d->delegate->installOverlay(textOverlay);
     d->delegate->installOverlay(audioOverlay);
     d->delegate->installOverlay(videoOverlay);
     d->delegate->installOverlay(fileOverlay);
-    d->delegate->installOverlay(desktopOverlay);
+
+    LogViewerOverlay *logViewerOverlay = new LogViewerOverlay(d->delegate);
     d->delegate->installOverlay(logViewerOverlay);
+    connect(logViewerOverlay, SIGNAL(activated(Tp::AccountPtr,Tp::ContactPtr)),
+            this, SLOT(startLogViewer(Tp::AccountPtr, Tp::ContactPtr)));
+
+    connect(this, SIGNAL(enableOverlays(bool)),
+            logViewerOverlay, SLOT(setActive(bool)));
 
     d->delegate->setViewOnAllOverlays(this);
     d->delegate->setAllOverlaysActive(true);
@@ -280,12 +373,6 @@ void ContactListWidget::addOverlayButtons()
     connect(videoOverlay, SIGNAL(activated(Tp::AccountPtr, Tp::ContactPtr)),
             this, SLOT(startVideoChannel(Tp::AccountPtr, Tp::ContactPtr)));
 
-    connect(desktopOverlay, SIGNAL(activated(Tp::AccountPtr, Tp::ContactPtr)),
-            this, SLOT(startDesktopSharing(Tp::AccountPtr, Tp::ContactPtr)));
-
-    connect(logViewerOverlay, SIGNAL(activated(Tp::AccountPtr,Tp::ContactPtr)),
-            this, SLOT(startLogViewer(Tp::AccountPtr, Tp::ContactPtr)));
-
     connect(this, SIGNAL(enableOverlays(bool)),
             textOverlay, SLOT(setActive(bool)));
 
@@ -297,12 +384,30 @@ void ContactListWidget::addOverlayButtons()
 
     connect(this, SIGNAL(enableOverlays(bool)),
             fileOverlay, SLOT(setActive(bool)));
+}
 
-    connect(this, SIGNAL(enableOverlays(bool)),
-            desktopOverlay, SLOT(setActive(bool)));
+void ContactListWidget::setGroupMode(KTp::ContactsModel::GroupMode groupMode)
+{
+    Q_D(ContactListWidget);
 
-    connect(this, SIGNAL(enableOverlays(bool)),
-            logViewerOverlay, SLOT(setActive(bool)));
+    d->model->setGroupMode(groupMode);
+    //we want to draw branches for contacts, but not for headers like account names or group names
+    //so we turn it on only when we are in no grouping mode
+    if (groupMode == KTp::ContactsModel::NoGrouping) {
+        setRootIsDecorated(true);
+    } else {
+        setRootIsDecorated(false);
+    }
+}
+
+void ContactListWidget::showGrouped()
+{
+    toggleGroups(true);
+}
+
+void ContactListWidget::showUngrouped()
+{
+    toggleGroups(false);
 }
 
 void ContactListWidget::toggleGroups(bool show)
@@ -310,9 +415,13 @@ void ContactListWidget::toggleGroups(bool show)
     Q_D(ContactListWidget);
 
     if (show) {
-        d->model->setGroupMode(KTp::ContactsModel::GroupGrouping);
+        setGroupMode(KTp::ContactsModel::GroupGrouping);
     } else {
-        d->model->setGroupMode(KTp::ContactsModel::AccountGrouping);
+        if (KTp::kpeopleEnabled()) {
+            setGroupMode(KTp::ContactsModel::NoGrouping);
+        } else {
+            setGroupMode(KTp::ContactsModel::AccountGrouping);
+        }
     }
     d->groupMode = d->model->groupMode();
 
@@ -342,6 +451,8 @@ void ContactListWidget::startTextChannel(const Tp::AccountPtr &account, const Tp
     Tp::PendingOperation *op = KTp::Actions::startChat(account, contact, true);
     connect(op, SIGNAL(finished(Tp::PendingOperation*)),
             SIGNAL(genericOperationFinished(Tp::PendingOperation*)));
+
+    Q_EMIT actionStarted();
 }
 
 void ContactListWidget::startAudioChannel(const Tp::AccountPtr &account, const Tp::ContactPtr &contact)
@@ -349,6 +460,8 @@ void ContactListWidget::startAudioChannel(const Tp::AccountPtr &account, const T
     Tp::PendingOperation *op = KTp::Actions::startAudioCall(account, contact);
     connect(op, SIGNAL(finished(Tp::PendingOperation*)),
             SIGNAL(genericOperationFinished(Tp::PendingOperation*)));
+
+    Q_EMIT actionStarted();
 }
 
 void ContactListWidget::startVideoChannel(const Tp::AccountPtr &account, const Tp::ContactPtr &contact)
@@ -356,6 +469,8 @@ void ContactListWidget::startVideoChannel(const Tp::AccountPtr &account, const T
     Tp::PendingOperation *op = KTp::Actions::startAudioVideoCall(account, contact);
     connect(op, SIGNAL(finished(Tp::PendingOperation*)),
             SIGNAL(genericOperationFinished(Tp::PendingOperation*)));
+
+    Q_EMIT actionStarted();
 }
 
 void ContactListWidget::startDesktopSharing(const Tp::AccountPtr &account, const Tp::ContactPtr &contact)
@@ -363,12 +478,16 @@ void ContactListWidget::startDesktopSharing(const Tp::AccountPtr &account, const
     Tp::PendingOperation *op = KTp::Actions::startDesktopSharing(account, contact);
     connect(op, SIGNAL(finished(Tp::PendingOperation*)),
             SIGNAL(genericOperationFinished(Tp::PendingOperation*)));
+
+    Q_EMIT actionStarted();
 }
 
 void ContactListWidget::startLogViewer(const Tp::AccountPtr &account, const Tp::ContactPtr &contact)
 {
     //log viewer is not a Tp handler so does not return a pending operation
     KTp::Actions::openLogViewer(account, contact);
+
+    Q_EMIT actionStarted();
 }
 
 void ContactListWidget::startFileTransferChannel(const Tp::AccountPtr &account, const Tp::ContactPtr &contact)
@@ -396,6 +515,8 @@ void ContactListWidget::requestFileTransferChannels(const Tp::AccountPtr &accoun
         connect(op, SIGNAL(finished(Tp::PendingOperation*)),
                 SIGNAL(genericOperationFinished(Tp::PendingOperation*)));
     }
+
+    Q_EMIT actionStarted();
 }
 
 void ContactListWidget::onNewGroupModelItemsInserted(const QModelIndex& index, int start, int end)
@@ -510,9 +631,9 @@ void ContactListWidget::setFilterString(const QString& string)
     Q_D(ContactListWidget);
 
     if (string.isEmpty()) {
-        d->model->setGroupMode(d->groupMode);
+        setGroupMode(d->groupMode);
     } else {
-        d->model->setGroupMode(KTp::ContactsModel::NoGrouping);
+        setGroupMode(KTp::ContactsModel::NoGrouping);
     }
 
     d->model->setPresenceTypeFilterFlags(string.isEmpty() && !d->showOffline ? KTp::ContactsFilterModel::ShowOnlyConnected : KTp::ContactsFilterModel::DoNotFilterByPresence);
@@ -546,8 +667,10 @@ void ContactListWidget::keyPressEvent(QKeyEvent *event)
     //we don't want people starting chats using single click, we can't use activated()
     //and have to do it ourselves, therefore this. Change only after discussing with the team!
     if (event->key() == Qt::Key_Enter || event->key() == Qt::Key_Return) {
-        //start the chat only if the index is valid and has a parent (ie. is not a group/account)
-        if (currentIndex().isValid() && currentIndex().parent().isValid()) {
+        //start the chat only if the index is valid and index is a valid contact or person
+        if (currentIndex().isValid() &&
+            (currentIndex().data(KTp::RowTypeRole).toInt() == KTp::ContactRowType
+            || currentIndex().data(KTp::RowTypeRole).toInt() == KTp::PersonRowType)) {
             onContactListDoubleClicked(currentIndex());
         }
     }
@@ -561,12 +684,13 @@ void ContactListWidget::mousePressEvent(QMouseEvent *event)
 
     QTreeView::mousePressEvent(event);
 
-    QModelIndex index = indexAt(event->pos());
+    const QModelIndex index = indexAt(event->pos());
     d->shouldDrag = false;
     d->dragSourceGroup.clear();
 
-    // if no contact, no drag
-    if (index.data(KTp::RowTypeRole).toInt() != KTp::ContactRowType) {
+    // if no contact or person, no drag
+    int type = index.data(KTp::RowTypeRole).toInt();
+    if (type != KTp::ContactRowType && type != KTp::PersonRowType ) {
         return;
     }
 
@@ -582,7 +706,7 @@ void ContactListWidget::mouseMoveEvent(QMouseEvent *event)
 
     QTreeView::mouseMoveEvent(event);
 
-    QModelIndex index = indexAt(event->pos());
+    const QModelIndex index = indexAt(event->pos());
 
     if (!(event->buttons() & Qt::LeftButton)) {
         return;
@@ -614,6 +738,11 @@ void ContactListWidget::mouseMoveEvent(QMouseEvent *event)
     }
 
     mimeData->setData("application/vnd.telepathy.contact", encodedData);
+
+    kDebug() <<  index.data(KTp::NepomukUriRole).toString().toLatin1();
+
+    mimeData->setData("application/vnd.kpeople.uri", index.data(KTp::NepomukUriRole).toString().toLatin1());
+
     QPixmap dragIndicator = QPixmap::grabWidget(this, visualRect(index).adjusted(3,3,3,3));
 
     QDrag *drag = new QDrag(this);
@@ -635,7 +764,7 @@ void ContactListWidget::dropEvent(QDropEvent *event)
 {
     Q_D(ContactListWidget);
 
-    QModelIndex index = indexAt(event->pos());
+    const QModelIndex index = indexAt(event->pos());
 
     if (!index.isValid()) {
         return;
@@ -657,7 +786,21 @@ void ContactListWidget::dropEvent(QDropEvent *event)
             requestFileTransferChannels(account, contact, filenames);
             event->acceptProposedAction();
         }
-
+    } else if ((index.data(KTp::RowTypeRole).toInt() == KTp::ContactRowType || index.data(KTp::RowTypeRole).toInt() == KTp::PersonRowType) &&
+                event->mimeData()->hasFormat("application/vnd.kpeople.uri") && KTp::kpeopleEnabled()) {
+        #ifdef HAVE_KPEOPLE
+        QUrl droppedUri(index.data(KTp::NepomukUriRole).toUrl());
+        QUrl draggedUri(event->mimeData()->data("application/vnd.kpeople.uri"));
+        if(droppedUri != draggedUri) {
+            KMenu menu;
+            QAction *mergeAction = menu.addAction(i18n("Merge contacts"));
+            QAction *result = menu.exec(mapToGlobal(event->pos()));
+            if (result == mergeAction) {
+                KPeople::PersonsModel::createPersonFromUris(QList<QUrl>() << droppedUri << draggedUri);
+            }
+            event->acceptProposedAction();
+        }
+        #endif
     } else if (event->mimeData()->hasFormat("application/vnd.telepathy.contact")) {
         kDebug() << "Contact dropped";
 
@@ -788,9 +931,7 @@ void ContactListWidget::dragEnterEvent(QDragEnterEvent *event)
 
 void ContactListWidget::dragMoveEvent(QDragMoveEvent *event)
 {
-    Q_D(ContactListWidget);
-
-    QModelIndex index = indexAt(event->pos());
+    const QModelIndex index = indexAt(event->pos());
     setDropIndicatorRect(QRect());
 
     QAbstractItemView::dragMoveEvent(event);
@@ -800,11 +941,10 @@ void ContactListWidget::dragMoveEvent(QDragMoveEvent *event)
     if (event->mimeData()->hasUrls() && index.data(KTp::ContactCanFileTransferRole).toBool()) {
         event->acceptProposedAction();
         setDropIndicatorRect(visualRect(index));
-    } else if (event->mimeData()->hasFormat("application/vnd.telepathy.contact") &&
-               (index.data(KTp::RowTypeRole).toInt() == KTp::GroupRowType ||
-                index.data(KTp::RowTypeRole).toInt() == KTp::ContactRowType)
-               && d->model->groupMode() == KTp::ContactsModel::GroupGrouping) {
-        // Contacts dropping is only allowed if groups are enabled in appearance settings.
+    } else if (event->mimeData()->hasFormat("application/vnd.telepathy.contact")) {
+        event->acceptProposedAction();
+        setDropIndicatorRect(visualRect(index));
+    } else if (event->mimeData()->hasFormat("application/vnd.kpeople.uri")) {
         event->acceptProposedAction();
         setDropIndicatorRect(visualRect(index));
     } else {
@@ -834,10 +974,13 @@ void ContactListWidget::paintEvent(QPaintEvent *event)
 
 void ContactListWidget::drawBranches(QPainter *painter, const QRect &rect, const QModelIndex &index) const
 {
-    Q_UNUSED(painter);
-    Q_UNUSED(rect);
-    Q_UNUSED(index);
+    if (indentation() > 0) {
+        if (model()->rowCount(index) > 1) {
+            QTreeView::drawBranches(painter, rect, index);
+        }
+    }
 
+    //if no indentation (non kpeople mode) do nothing
     // There is a 0px identation set in the constructor, with setIndentation(0).
     // Because of that, no branches are shown, so they should be disabled completely (overriding drawBranches).
     // Leaving branches enabled with 0px identation results in a 1px branch line on the left of all items,

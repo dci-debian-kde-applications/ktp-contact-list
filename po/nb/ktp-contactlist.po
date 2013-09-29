@@ -1,12 +1,12 @@
 # Translation of ktp-contactlist to Norwegian Bokmål
 #
-# Bjørn Steensrud <bjornst@skogkatt.homelinux.org>, 2012.
+# Bjørn Steensrud <bjornst@skogkatt.homelinux.org>, 2012, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-05-04 11:29+0200\n"
-"PO-Revision-Date: 2012-12-10 21:58+0100\n"
+"POT-Creation-Date: 2013-07-13 05:11+0000\n"
+"PO-Revision-Date: 2013-09-18 12:53+0200\n"
 "Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
 "Language-Team: Norwegian Bokmål <i18n-nb@lister.ping.uio.no>\n"
 "Language: nb\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 1.4\n"
+"X-Generator: Lokalize 1.5\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -85,7 +85,7 @@ msgid ""
 "It appears you do not have the IM Accounts control module installed. Please "
 "install ktp-accounts-kcm package."
 msgstr ""
-"Det ser ut til at du ike har installert styringsmodulen IM Accounts. "
+"Det ser ut til at du ikke har installert styringsmodulen IM Accounts. "
 "Installer pakka ktp-accounts-kcm."
 
 #: contact-list-widget.cpp:173
@@ -94,22 +94,22 @@ msgstr "KCM programtillegg for lynmeldingskontoer er ikke installert"
 
 #: contact-list-widget.cpp:191
 msgid "Notifications"
-msgstr ""
+msgstr "Varslinger"
 
 #: contact-list-widget.cpp:381
 #, kde-format
 msgid "Choose files to send to %1"
 msgstr "Velg filer som skal sendes til %1"
 
-#: contact-list-widget.cpp:695
+#: contact-list-widget.cpp:697
 msgid "&Move here"
-msgstr ""
+msgstr "&Flytt hit"
 
-#: contact-list-widget.cpp:699
+#: contact-list-widget.cpp:701
 msgid "&Copy here"
 msgstr "&Kopier hit"
 
-#: contact-list-widget.cpp:703
+#: contact-list-widget.cpp:705
 msgid "C&ancel"
 msgstr "&Avbryt"
 
@@ -390,7 +390,7 @@ msgstr "Koble fra"
 
 #: main-widget.cpp:430
 msgid "Contacts"
-msgstr ""
+msgstr "Kontakter"
 
 #: main-widget.cpp:442
 msgid "View"
@@ -410,7 +410,7 @@ msgstr "Lynmeldingsinnstillinger …"
 
 #: main-widget.cpp:564
 msgid "Join Chat Room..."
-msgstr "Gå inn i pratetom …"
+msgstr "Gå inn i praterom …"
 
 #: main-widget.cpp:565
 msgid "Make a Call..."
@@ -426,27 +426,27 @@ msgstr "Finn kontakt"
 
 #: main-widget.cpp:572
 msgid "Show Contacts by Groups"
-msgstr ""
+msgstr "Vis kontakter etter grupper"
 
 #: main-widget.cpp:573
 msgid "Show Contacts by Accounts"
-msgstr ""
+msgstr "Vis kontakter etter kontoer"
 
 #: main-widget.cpp:580
 msgid "Show Offline Contacts"
-msgstr ""
+msgstr "Vis frakoblede kontakter"
 
 #: main-widget.cpp:581
 msgid "Hide Offline Contacts"
-msgstr ""
+msgstr "Skjul frakoblede kontakter"
 
 #: main-widget.cpp:589
 msgid "Sort by Presence"
-msgstr ""
+msgstr "Sortert etter tilstedeværelse"
 
 #: main-widget.cpp:590
 msgid "Sort by Name"
-msgstr ""
+msgstr "Sortert etter navn"
 
 #: main-widget.cpp:598
 msgid "Use Full List"
@@ -462,15 +462,15 @@ msgstr "Bruk minimalistisk liste"
 
 #: main-widget.cpp:611
 msgid "Show All Contacts"
-msgstr ""
+msgstr "Vis alle kontakter"
 
 #: main-widget.cpp:613
 msgid "Show Unblocked Contacts"
-msgstr ""
+msgstr "Vis ublokkerte kontakter"
 
 #: main-widget.cpp:615
 msgid "Show Blocked Contacts"
-msgstr ""
+msgstr "Vis blokkerte kontakter"
 
 #. i18n: ectx: property (windowTitle), widget (QMainWindow, MainWindow)
 #: main-widget.ui:14
@@ -506,7 +506,7 @@ msgstr "Feil mens Tilstede ble hentet"
 #: tooltips/contacttooltip.cpp:76
 #, kde-format
 msgid "Account: %1"
-msgstr ""
+msgstr "Konto: %1"
 
 #. i18n: ectx: property (text), widget (QLabel, blockedLabel)
 #: tooltips/contacttooltip.ui:126

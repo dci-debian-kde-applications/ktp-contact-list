@@ -43,6 +43,7 @@
 #include <KTp/types.h>
 #include <KTp/Widgets/add-contact-dialog.h>
 #include <KTp/Widgets/join-chat-room-dialog.h>
+#include <KTp/Widgets/start-chat-dialog.h>
 
 #include <KDebug>
 #include <KDialog>
@@ -60,57 +61,17 @@
 #include <KStandardAction>
 #include <KWindowSystem>
 
+#ifdef HAVE_KPEOPLE
+#include <kpeople/widgets/mergedialog.h>
+#include <KPeople/PersonsModel>
+#include <KPeople/PersonsModelFeature>
+#endif
+
 #include "ui_main-widget.h"
 #include "account-buttons-panel.h"
 #include "contact-list-application.h"
 #include "tooltips/tooltipmanager.h"
 #include "context-menu.h"
-
-/** Start of bodge to work around https://bugs.freedesktop.org/show_bug.cgi?id=57739
-    Due to a bug in TelepathyQt if we request a feature that the connection does not support, it simply fails.
-
-    Local-XMPP does not support grouping, so salut the local-xmpp spec does not either.
-    When we request the ContactRosterGroups feature on all connections, salut fails and therefore doesn't show any contacts.
-
-    Fetching ContactRosterGroups seperately is not a viable option as contacts would move after loading
-
-    In this hack we make a new ConnectionFactory that fetches ContactRosterGroups on all connections _Except_ salut
-    by overriding the featuresFor method which determines which features should be added to a given DBus proxy, in this case a connection.
-
-    When https://bugs.freedesktop.org/show_bug.cgi?id=57739 is fixes all this code should be removed and we should create a standard Tp::ConnectionFactory
- */
-namespace KTp {
-    class ConnectionFactory : Tp::ConnectionFactory {
-    public:
-        static Tp::ConnectionFactoryPtr create(const QDBusConnection &bus, const Tp::Features &features=Tp::Features());
-    protected:
-        ConnectionFactory(const QDBusConnection &bus, const Tp::Features& features);
-        virtual Tp::Features featuresFor(const Tp::DBusProxyPtr &proxy) const;
-    };
-}
-
-Tp::ConnectionFactoryPtr KTp::ConnectionFactory::create(const QDBusConnection &bus, const Tp::Features &features)
-{
-    return Tp::ConnectionFactoryPtr(new KTp::ConnectionFactory(bus, features));
-}
-
-KTp::ConnectionFactory::ConnectionFactory(const QDBusConnection &bus, const Tp::Features &features): Tp::ConnectionFactory(bus, features)
-{
-}
-
-Tp::Features KTp::ConnectionFactory::featuresFor(const Tp::DBusProxyPtr &proxy) const
-{
-    Tp::Features features = Tp::FixedFeatureFactory::featuresFor(proxy);
-
-    Tp::ConnectionPtr cm = Tp::ConnectionPtr::qObjectCast<>(proxy);
-    if (cm && cm->cmName() == QLatin1String("salut")) {
-        features.remove(Tp::Connection::FeatureRosterGroups);
-    }
-    return features;
-}
-/** End of bodge*/
-
-
 
 bool kde_tp_filter_contacts_by_publication_status(const Tp::ContactPtr &contact)
 {
@@ -123,6 +84,7 @@ MainWidget::MainWidget(QWidget *parent)
       m_settingsDialog(NULL),
       m_joinChatRoom(NULL),
       m_makeCall(NULL),
+      m_mergeContacts(NULL),
       m_contactListTypeGroup(NULL),
       m_blockedFilterGroup(NULL),
       m_quitAction(NULL)
@@ -154,12 +116,12 @@ MainWidget::MainWidget(QWidget *parent)
     connect(m_contactsListView, SIGNAL(customContextMenuRequested(QPoint)),
             this, SLOT(onCustomContextMenuRequested(QPoint)));
 
-    connect(m_groupContactsAction, SIGNAL(triggered(bool)),
-            m_contactsListView, SLOT(toggleGroups(bool)));
     connect(m_showOfflineAction, SIGNAL(toggled(bool)),
             m_contactsListView, SLOT(toggleOfflineContacts(bool)));
     connect(m_sortByPresenceAction, SIGNAL(activeChanged(bool)),
             m_contactsListView, SLOT(toggleSortByPresence(bool)));
+    connect(m_metacontactToggleAction, SIGNAL(triggered(bool)),
+            this, SLOT(onMetacontactToggleTriggered()));
 
     connect(m_filterBar, SIGNAL(filterChanged(QString)),
             m_contactsListView, SLOT(setFilterString(QString)));
@@ -171,9 +133,12 @@ MainWidget::MainWidget(QWidget *parent)
     connect(m_contactsListView, SIGNAL(genericOperationFinished(Tp::PendingOperation*)),
             this, SLOT(onGenericOperationFinished(Tp::PendingOperation*)));
 
-    bool useGroups = guiConfigGroup.readEntry("use_groups", true);
-    m_groupContactsAction->setChecked(useGroups);
-    m_groupContactsAction->setActive(useGroups);
+    connect(m_contactsListView, SIGNAL(actionStarted()),
+            this, SLOT(hideSearchWidget()));
+
+    connect(m_contactsListView, SIGNAL(contactSelectionChanged()),
+            this, SLOT(onContactSelectionChanged()));
+
 
     bool showOffline = guiConfigGroup.readEntry("show_offline", false);
     m_showOfflineAction->setChecked(showOffline);
@@ -182,6 +147,7 @@ MainWidget::MainWidget(QWidget *parent)
     bool sortByPresence = guiConfigGroup.readEntry("sort_by_presence", true);
     m_sortByPresenceAction->setActive(sortByPresence);
 
+    bool useGroups = guiConfigGroup.readEntry("use_groups", true);
     m_contactsListView->toggleGroups(useGroups);
     m_contactsListView->toggleOfflineContacts(showOffline);
     m_contactsListView->toggleSortByPresence(sortByPresence);
@@ -193,7 +159,7 @@ MainWidget::~MainWidget()
     KSharedConfigPtr config = KGlobal::config();
     KConfigGroup configGroup(config, "GUI");
     configGroup.writeEntry("pin_filterbar", m_searchContactAction->isChecked());
-    configGroup.writeEntry("use_groups", m_groupContactsAction->isChecked());
+    configGroup.writeEntry("use_groups", m_groupContactsActionGroup->actions().first()->isChecked());
     configGroup.writeEntry("show_offline", m_showOfflineAction->isChecked());
     configGroup.writeEntry("sort_by_presence", m_sortByPresenceAction->isActive());
     configGroup.config()->sync();
@@ -242,6 +208,14 @@ void MainWidget::onAddContactRequest()
     dialog->show();
 }
 
+void MainWidget::onStartChatRequest()
+{
+    KTp::StartChatDialog *dialog = new KTp::StartChatDialog(m_accountManager, this);
+    dialog->setAttribute(Qt::WA_DeleteOnClose);
+    dialog->show();
+}
+
+
 void MainWidget::onCustomContextMenuRequested(const QPoint &pos)
 {
     QModelIndex index = m_contactsListView->indexAt(pos);
@@ -254,7 +228,7 @@ void MainWidget::onCustomContextMenuRequested(const QPoint &pos)
 
     KMenu *menu = 0;
 
-    if (type == KTp::ContactRowType) {
+    if (type == KTp::ContactRowType || type == KTp::PersonRowType) {
         menu = m_contextMenu->contactContextMenu(index);
     } else if (type == KTp::GroupRowType) {
         menu = m_contextMenu->groupContextMenu(index);
@@ -296,6 +270,19 @@ void MainWidget::onJoinChatRoomRequested()
 void MainWidget::onMakeCallRequested()
 {
     KToolInvocation::kdeinitExec(QLatin1String("ktp-dialout-ui"));
+}
+
+void MainWidget::onMergeContactsDialogRequested()
+{
+#ifdef HAVE_KPEOPLE
+    KPeople::MergeDialog* mergeDialog = new KPeople::MergeDialog(this);
+    //create a new model that queries all the data otherwise we will only show IM contacts
+    KPeople::PersonsModel* model = new KPeople::PersonsModel(mergeDialog);
+    mergeDialog->setPersonsModel(model);
+    model->startQuery(KPeople::PersonsModelFeature::allFeatures());
+    mergeDialog->show();
+    mergeDialog->setAttribute(Qt::WA_DeleteOnClose);
+#endif
 }
 
 void MainWidget::closeEvent(QCloseEvent* e)
@@ -408,13 +395,19 @@ void MainWidget::onUsePerAccountPresenceTriggered()
 
 void MainWidget::toggleSearchWidget(bool show)
 {
-        if(show) {
-            m_filterBar->show();
-        } else {
-            m_contactsListView->setFilterString(QString());
-            m_filterBar->clear();
-            m_filterBar->hide();
-        }
+    m_searchContactAction->setChecked(show);
+    if(show) {
+        m_filterBar->show();
+    } else {
+        m_contactsListView->setFilterString(QString());
+        m_filterBar->clear();
+        m_filterBar->hide();
+    }
+}
+
+void MainWidget::hideSearchWidget()
+{
+    toggleSearchWidget(false);
 }
 
 void MainWidget::setupGlobalMenu()
@@ -433,6 +426,9 @@ void MainWidget::setupGlobalMenu()
     if (!KStandardDirs::findExe("ktp-dialout-ui").isEmpty()) {
         contacts->addAction(m_makeCall);
     }
+    if (KTp::kpeopleEnabled()) {
+        contacts->addAction(m_mergeContacts);
+    }
     contacts->addAction(m_settingsDialog);
     contacts->addSeparator();
     contacts->addAction(m_quitAction);
@@ -440,7 +436,6 @@ void MainWidget::setupGlobalMenu()
     m_globalMenu->addMenu(contacts);
 
     KMenu *view = new KMenu(i18n("View"), m_globalMenu);
-    view->addAction(m_groupContactsAction);
     view->addAction(m_showOfflineAction);
     view->addAction(m_sortByPresenceAction);
     view->addSeparator();
@@ -450,6 +445,9 @@ void MainWidget::setupGlobalMenu()
     KMenu *view_blockedFilterMenu = new KMenu(i18n("Shown Contacts"), view);
     view_blockedFilterMenu->addActions(m_blockedFilterGroup->actions());
     view->addMenu(view_blockedFilterMenu);
+    KMenu *view_showGroupedMenu = new KMenu(i18n("Contact Grouping"), view);
+    view_showGroupedMenu->addActions(m_groupContactsActionGroup->actions());
+    view->addMenu(view_showGroupedMenu);
     m_globalMenu->addMenu(view);
 
     m_globalMenu->addMenu(helpMenu());
@@ -458,11 +456,16 @@ void MainWidget::setupGlobalMenu()
 void MainWidget::setupToolBar()
 {
     m_toolBar->setToolButtonStyle(Qt::ToolButtonIconOnly);
+    if (KTp::kpeopleEnabled()) {
+        m_toolBar->addAction(m_metacontactToggleAction);
+    }
     m_toolBar->addAction(m_addContactAction);
-    m_toolBar->addAction(m_groupContactsAction);
+    m_toolBar->addAction(m_searchContactAction);
     m_toolBar->addAction(m_showOfflineAction);
     m_toolBar->addAction(m_sortByPresenceAction);
-    m_toolBar->addAction(m_searchContactAction);
+    m_toolBar->addSeparator();
+    m_toolBar->addAction(m_startChatAction);
+    m_toolBar->addAction(m_joinChatRoom);
 
     QWidget *toolBarSpacer = new QWidget(this);
     toolBarSpacer->setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::MinimumExpanding);
@@ -488,10 +491,17 @@ void MainWidget::setupToolBar()
     setBlockedFilterMenu->addActions(m_blockedFilterGroup->actions());
     settingsButtonMenu->addMenu(setBlockedFilterMenu);
 
-    settingsButtonMenu->addAction(m_joinChatRoom);
+    KMenu *showGroupedMenu = new KMenu(settingsButton);
+    showGroupedMenu->setTitle(i18n("Contact Grouping"));
+    showGroupedMenu->addActions(m_groupContactsActionGroup->actions());
+    settingsButtonMenu->addMenu(showGroupedMenu);
 
     if (!KStandardDirs::findExe("ktp-dialout-ui").isEmpty()) {
         settingsButtonMenu->addAction(m_makeCall);
+    }
+
+    if (KTp::kpeopleEnabled()) {
+        settingsButtonMenu->addAction(m_mergeContacts);
     }
 
     settingsButtonMenu->addSeparator();
@@ -512,10 +522,8 @@ void MainWidget::setupTelepathy()
                                                                        << Tp::Account::FeatureProtocolInfo
                                                                        << Tp::Account::FeatureProfile);
 
-    Tp::ConnectionFactoryPtr connectionFactory = KTp::ConnectionFactory::create(QDBusConnection::sessionBus(),
+    Tp::ConnectionFactoryPtr connectionFactory = Tp::ConnectionFactory::create(QDBusConnection::sessionBus(),
                                                                                Tp::Features() << Tp::Connection::FeatureCore
-                                                                               << Tp::Connection::FeatureRosterGroups
-                                                                               << Tp::Connection::FeatureRoster
                                                                                << Tp::Connection::FeatureSelfContact);
 
     Tp::ContactFactoryPtr contactFactory = KTp::ContactFactory::create(Tp::Features()  << Tp::Contact::FeatureAlias
@@ -562,26 +570,37 @@ void MainWidget::setupActions(const KConfigGroup& guiConfigGroup)
     m_quitAction->setMenuRole(QAction::QuitRole);
 
     m_joinChatRoom = createAction(i18n("Join Chat Room..."), this, SLOT(onJoinChatRoomRequested()));
+    m_joinChatRoom->setIcon(KIcon("im-irc"));
     m_makeCall = createAction(i18n("Make a Call..."), this, SLOT(onMakeCallRequested()));
+    m_mergeContacts = createAction(i18n("Merge Contacts..."), this, SLOT(onMergeContactsDialogRequested()));
     m_addContactAction = createAction(i18n("Add New Contacts..."), this, SLOT(onAddContactRequest()), KIcon("list-add-user"));
     m_searchContactAction = createAction(i18n("Find Contact"), this, SLOT(toggleSearchWidget(bool)),
-                                         guiConfigGroup.readEntry("pin_filterbar", true), KIcon("edit-find-user"));
+                                         guiConfigGroup.readEntry("pin_filterbar", true), KIcon("edit-find"));
     m_searchContactAction->setShortcut(KStandardShortcut::find());
+    m_startChatAction = createAction(i18n("Start a chat..."), this, SLOT(onStartChatRequest()), KIcon("telepathy-kde"));
 
     // Dual actions
-    m_groupContactsAction = new KDualAction(i18n("Show Contacts by Groups"),
-                                            i18n("Show Contacts by Accounts"),
-                                            this);
-    m_groupContactsAction->setActiveIcon(KIcon("user-group-properties"));
-    m_groupContactsAction->setInactiveIcon(KIcon("user-group-properties"));
-    m_groupContactsAction->setCheckable(true);
-    m_groupContactsAction->setChecked(true);
+    m_metacontactToggleAction = new KDualAction(i18n("Split Selected Contacts"),
+                                                i18n("Merge Selected Contacts"),
+                                                this);
+    m_metacontactToggleAction->setActiveIcon(KIcon("user-group-new"));
+    m_metacontactToggleAction->setInactiveIcon(KIcon("user-group-delete"));
+    m_metacontactToggleAction->setActive(true);
+    m_metacontactToggleAction->setDisabled(true);
+    m_metacontactToggleAction->setAutoToggle(false);
+
+    m_groupContactsActionGroup = new QActionGroup(this);
+    m_groupContactsActionGroup->setExclusive(true);
+    m_groupContactsActionGroup->addAction(createAction(i18n("Show Contacts by Groups"), m_contactsListView, SLOT(showGrouped()),
+                                          guiConfigGroup.readEntry("use_groups", true)));
+    m_groupContactsActionGroup->addAction(createAction(i18n("Show Contacts by Accounts"), m_contactsListView, SLOT(showUngrouped()),
+                                          ! guiConfigGroup.readEntry("use_groups", true)));
 
     m_showOfflineAction = new KDualAction(i18n("Show Offline Contacts"),
                                           i18n("Hide Offline Contacts"),
                                           this);
-    m_showOfflineAction->setActiveIcon(KIcon("meeting-attending-tentative"));
-    m_showOfflineAction->setInactiveIcon(KIcon("meeting-attending-tentative"));
+    m_showOfflineAction->setActiveIcon(KIcon("show-offline"));
+    m_showOfflineAction->setInactiveIcon(KIcon("show-offline"));
     m_showOfflineAction->setCheckable(true);
     m_showOfflineAction->setChecked(false);
     m_showOfflineAction->setShortcut(QKeySequence(Qt::CTRL + Qt::Key_S));
@@ -623,6 +642,156 @@ void MainWidget::toggleWindowVisibility()
     } else {
         KWindowSystem::forceActiveWindow(this->effectiveWinId());
     }
+}
+
+void MainWidget::onContactSelectionChanged()
+{
+    QModelIndexList selection = m_contactsListView->selectionModel()->selectedIndexes();
+    if (selection.size() == 0) {
+        //if nothing is selected, disable the button
+        m_metacontactToggleAction->setActive(true);
+        m_metacontactToggleAction->setDisabled(true);
+        return;
+    } else if (selection.size() == 1) {
+        QModelIndex index = selection.first();
+        if (index.data(KTp::RowTypeRole).toInt() == KTp::PersonRowType ||
+            (index.parent().isValid() && index.parent().data(KTp::RowTypeRole).toInt() == KTp::PersonRowType)) {
+            //if a person is selected or a subcontact is selected, switch to unlink action and enable
+            m_metacontactToggleAction->setActive(false);
+            m_metacontactToggleAction->setEnabled(true);
+            return;
+        }
+    } else if (selection.size() > 1) {
+        bool invalid = false;
+        //we cannot merge child contact of a person with anything else
+        Q_FOREACH (const QModelIndex &index, selection) {
+            if (index.parent().isValid() && index.parent().data(KTp::RowTypeRole).toInt() == KTp::PersonRowType) {
+                invalid = true;
+                break;
+            }
+        }
+
+        if (!invalid) {
+            m_metacontactToggleAction->setActive(true);
+            m_metacontactToggleAction->setEnabled(true);
+            return;
+        }
+    }
+
+    m_metacontactToggleAction->setActive(true);
+    m_metacontactToggleAction->setDisabled(true);
+}
+
+void MainWidget::onMetacontactToggleTriggered()
+{
+#ifdef HAVE_KPEOPLE
+    const QModelIndexList selection = m_contactsListView->selectionModel()->selectedIndexes();
+
+    Q_ASSERT(!selection.isEmpty());
+    if (m_metacontactToggleAction->isActive()) {
+        //we're merging contacts
+        bool invalid = false;
+        QModelIndex person;
+        QList<QUrl> uris;
+
+        Q_FOREACH (const QModelIndex &index, selection) {
+            if (index.parent().isValid()
+                    && index.parent().data(KTp::RowTypeRole).toInt() == KTp::PersonRowType) {
+                //we can merge only standalone contacts, not a contact that's already part of a person
+                invalid = true;
+                kDebug() << "Found selected subcontact, aborting";
+                break;
+            }
+
+            //the selection can have at most one person, so if we encounter second person
+            //we break and do nothing
+            if (index.data(KTp::RowTypeRole).toInt() == KTp::PersonRowType) {
+                if (person.isValid()) {
+                    invalid = true;
+                    kDebug() << "Found second person, aborting";
+                    break;
+                } else {
+                    kDebug() << "Found a person, adding";
+                    person = index;
+                }
+            }
+
+            //if we're dealing with contact that's a child of selected person
+            //(we should never get here)
+            if (index.parent().isValid() && index.parent() == person) {
+                invalid = true;
+                kDebug() << "Found subcontact of selected person, aborting";
+                break;
+            }
+
+            uris << index.data(KTp::NepomukUriRole).toUrl();
+        }
+
+        if (!invalid) {
+            KPeople::PersonsModel::createPersonFromUris(uris);
+        }
+    } else {
+        //we're removing contacts from person
+        QList<QUrl> contacts;
+        QUrl personUri;
+
+        if (selection.size() == 1) {
+            QModelIndex index = selection.first();
+            if (index.data(KTp::RowTypeRole).toInt() == KTp::PersonRowType) {
+                //the user selected person, which means removing the person
+                personUri = index.data(KTp::NepomukUriRole).toUrl();
+                for (int i = 0; i < m_contactsListView->model()->rowCount(index); i++) {
+                    contacts << index.child(i, 0).data(KTp::NepomukUriRole).toUrl();
+                }
+            } else {
+                //user selected one of person's contacts
+                if (index.parent().isValid() && index.parent().data(KTp::RowTypeRole).toInt() == KTp::PersonRowType) {
+                    personUri = index.parent().data(KTp::NepomukUriRole).toUrl();
+                    contacts.append(index.data(KTp::NepomukUriRole).toUrl());
+                } else {
+                    return;
+                }
+            }
+
+            KPeople::PersonsModel::unlinkContactFromPerson(personUri, contacts);
+
+        } else if (selection.size() > 1) {
+            QModelIndex person;
+            bool invalid = false;
+            QList<QUrl> contactUris;
+            Q_FOREACH (const QModelIndex &index, selection) {
+                if (!person.isValid()) {
+                    if (index.data(KTp::RowTypeRole).toInt() == KTp::PersonRowType) {
+                        //if the current index is person
+                        person = index;
+
+                    } else if (index.parent().isValid() && index.parent().data(KTp::RowTypeRole).toInt() == KTp::PersonRowType) {
+                        //if the current index is contact that has valid person as parent
+                        person = index.parent();
+                    }
+                } else {
+                    if (index.data(KTp::RowTypeRole).toInt() == KTp::PersonRowType
+                            || (index.parent().isValid() && index.parent() != person)) {
+                        //we can have max 1 person in the selection
+                        //second one means break; also contact from different person
+                        //than the one we already have means break
+                        kDebug() << "Found second person in selection, aborting";
+                        invalid = true;
+                        break;
+                    }
+                }
+
+                if (index.data(KTp::RowTypeRole).toInt() == KTp::ContactRowType) {
+                    contactUris << index.data(KTp::NepomukUriRole).toUrl();
+                }
+            }
+
+            if (!invalid) {
+                KPeople::PersonsModel::unlinkContactFromPerson(person.data(KTp::NepomukUriRole).toUrl(), contactUris);
+            }
+        }
+    }
+#endif
 }
 
 #include "main-widget.moc"

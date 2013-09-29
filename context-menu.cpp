@@ -31,18 +31,21 @@
 
 
 #include <KTp/text-parser.h>
-#include <KTp/Widgets/notificationconfigdialog.h>
+#include <KTp/Widgets/notification-config-dialog.h>
 #include <KTp/contact-info-dialog.h>
 #include <KTp/types.h>
 #include <KTp/Models/contacts-model.h>
+#include <KTp/Logger/log-manager.h>
+#include <KTp/Logger/log-entity.h>
 
 #include <TelepathyQt/ContactManager>
 #include <TelepathyQt/Account>
 #include <TelepathyQt/PendingOperation>
 
-#include <TelepathyLoggerQt4/Entity>
-#include <TelepathyLoggerQt4/LogManager>
-#include <TelepathyLoggerQt4/Init>
+#ifdef HAVE_KPEOPLE
+#include <kpeople/personpluginmanager.h>
+#include <kpeople/widgets/persondetailsdialog.h>
+#endif
 
 #include "dialogs/remove-contact-dialog.h"
 
@@ -52,9 +55,6 @@ ContextMenu::ContextMenu(ContactListWidget *mainWidget)
     : QObject(mainWidget)
 {
     m_mainWidget = mainWidget;
-
-    Tpl::init();
-    m_logManager = Tpl::LogManager::instance();
 }
 
 
@@ -66,7 +66,7 @@ ContextMenu::~ContextMenu()
 void ContextMenu::setAccountManager(const Tp::AccountManagerPtr &accountManager)
 {
     m_accountManager = accountManager;
-    m_logManager->setAccountManagerPtr(accountManager);
+    KTp::LogManager::instance()->setAccountManager(accountManager);
 }
 
 KMenu* ContextMenu::contactContextMenu(const QModelIndex &index)
@@ -98,72 +98,75 @@ KMenu* ContextMenu::contactContextMenu(const QModelIndex &index)
     KMenu *menu = new KMenu();
     menu->addTitle(contact->alias());
 
-    //must be a QAction because menu->addAction returns QAction, breaks compilation otherwise
-    QAction *action = menu->addAction(i18n("Start Chat..."));
-    action->setIcon(KIcon("text-x-generic"));
-    action->setDisabled(true);
-    connect(action, SIGNAL(triggered(bool)),
-            SLOT(onStartTextChatTriggered()));
+    QAction *action;
 
-    if (index.data(KTp::ContactCanTextChatRole).toBool()) {
-        action->setEnabled(true);
-    }
+    if (KTp::kpeopleEnabled()) {
+    #ifdef HAVE_KPEOPLE
+        menu->addActions(KPeople::PersonPluginManager::actionsForPerson(
+            KPeople::PersonData::createFromUri(index.data(KTp::NepomukUriRole).toString()), menu));
+    #endif
+    } else {
+        //must be a QAction because menu->addAction returns QAction, breaks compilation otherwise
+        action = menu->addAction(i18n("Start Chat..."));
+        action->setIcon(KIcon("text-x-generic"));
+        action->setDisabled(true);
+        connect(action, SIGNAL(triggered(bool)),
+                SLOT(onStartTextChatTriggered()));
 
-    Tp::ConnectionPtr accountConnection = account->connection();
-    if (accountConnection.isNull()) {
-        kDebug() << "Account connection is nulled.";
-        return 0;
-    }
+        if (index.data(KTp::ContactCanTextChatRole).toBool()) {
+            action->setEnabled(true);
+        }
 
-    action = menu->addAction(i18n("Start Audio Call..."));
-    action->setIcon(KIcon("audio-headset"));
-    action->setDisabled(true);
-    connect(action, SIGNAL(triggered(bool)),
-            SLOT(onStartAudioChatTriggered()));
+        action = menu->addAction(i18n("Start Audio Call..."));
+        action->setIcon(KIcon("audio-headset"));
+        action->setDisabled(true);
+        connect(action, SIGNAL(triggered(bool)),
+                SLOT(onStartAudioChatTriggered()));
 
-    if (index.data(KTp::ContactCanAudioCallRole).toBool()) {
-        action->setEnabled(true);
-    }
+        if (index.data(KTp::ContactCanAudioCallRole).toBool()) {
+            action->setEnabled(true);
+        }
 
-    action = menu->addAction(i18n("Start Video Call..."));
-    action->setIcon(KIcon("camera-web"));
-    action->setDisabled(true);
-    connect(action, SIGNAL(triggered(bool)),
-            SLOT(onStartVideoChatTriggered()));
+        action = menu->addAction(i18n("Start Video Call..."));
+        action->setIcon(KIcon("camera-web"));
+        action->setDisabled(true);
+        connect(action, SIGNAL(triggered(bool)),
+                SLOT(onStartVideoChatTriggered()));
 
-    if (index.data(KTp::ContactCanVideoCallRole).toBool()) {
-        action->setEnabled(true);
-    }
+        if (index.data(KTp::ContactCanVideoCallRole).toBool()) {
+            action->setEnabled(true);
+        }
 
-    action = menu->addAction(i18n("Send File..."));
-    action->setIcon(KIcon("mail-attachment"));
-    action->setDisabled(true);
-    connect(action, SIGNAL(triggered(bool)),
-            SLOT(onStartFileTransferTriggered()));
+        action = menu->addAction(i18n("Send File..."));
+        action->setIcon(KIcon("mail-attachment"));
+        action->setDisabled(true);
+        connect(action, SIGNAL(triggered(bool)),
+                SLOT(onStartFileTransferTriggered()));
 
-    if (index.data(KTp::ContactCanFileTransferRole).toBool()) {
-        action->setEnabled(true);
-    }
+        if (index.data(KTp::ContactCanFileTransferRole).toBool()) {
+            action->setEnabled(true);
+        }
 
-    action = menu->addAction(i18n("Share my desktop..."));
-    action->setIcon(KIcon("krfb"));
-    action->setDisabled(true);
-    connect(action, SIGNAL(triggered(bool)),
-            SLOT(onStartDesktopSharingTriggered()));
+        action = menu->addAction(i18n("Share my desktop..."));
+        action->setIcon(KIcon("krfb"));
+        action->setDisabled(true);
+        connect(action, SIGNAL(triggered(bool)),
+                SLOT(onStartDesktopSharingTriggered()));
 
-    if (index.data(KTp::ContactTubesRole).toStringList().contains(QLatin1String("rfb"))) {
-        action->setEnabled(true);
-    }
+        if (index.data(KTp::ContactTubesRole).toStringList().contains(QLatin1String("rfb"))) {
+            action->setEnabled(true);
+        }
 
-    action = menu->addAction(i18n("Open Log Viewer..."));
-    action->setIcon(KIcon("documentation"));
-    action->setDisabled(true);
-    connect(action, SIGNAL(triggered(bool)),
-            SLOT(onOpenLogViewerTriggered()));
+        action = menu->addAction(i18n("Open Log Viewer..."));
+        action->setIcon(KIcon("documentation"));
+        action->setDisabled(true);
+        connect(action, SIGNAL(triggered(bool)),
+                SLOT(onOpenLogViewerTriggered()));
 
-    Tpl::EntityPtr entity = Tpl::Entity::create(contact, Tpl::EntityTypeContact);
-    if (m_logManager->exists(account, entity, Tpl::EventTypeMaskText)) {
-        action->setEnabled(true);
+        KTp::LogEntity entity(Tp::HandleTypeContact, contact->id());
+        if (KTp::LogManager::instance()->logsExist(account, entity)) {
+            action->setEnabled(true);
+        }
     }
 
     menu->addSeparator();
@@ -195,6 +198,12 @@ KMenu* ContextMenu::contactContextMenu(const QModelIndex &index)
     }
 
     menu->addSeparator();
+
+    Tp::ConnectionPtr accountConnection = account->connection();
+    if (accountConnection.isNull()) {
+        kDebug() << "Account connection is nulled.";
+        return 0;
+    }
 
     if (m_mainWidget->d_ptr->model->groupMode() == KTp::ContactsModel::GroupGrouping) {
         // remove contact from group action, must be QAction because menu->addAction returns QAction
@@ -335,12 +344,25 @@ void ContextMenu::onShowInfoTriggered()
         return;
     }
 
-    Tp::AccountPtr account = m_currentIndex.data(KTp::AccountRole).value<Tp::AccountPtr>();
-    Tp::ContactPtr contact = m_currentIndex.data(KTp::ContactRole).value<KTp::ContactPtr>();
-    if (account && contact) {
-        KTp::ContactInfoDialog* contactInfoDialog = new KTp::ContactInfoDialog(account, contact, m_mainWidget);
-        contactInfoDialog->setAttribute(Qt::WA_DeleteOnClose);
-        contactInfoDialog->show();
+    if (KTp::kpeopleEnabled()) {
+    #ifdef HAVE_KPEOPLE
+        const QUrl &uri = m_currentIndex.data(KTp::NepomukUriRole).toUrl();
+        KPeople::PersonDataPtr person = KPeople::PersonData::createFromUri(uri);
+        if (person->isValid()) {
+            KPeople::PersonDetailsDialog *view = new KPeople::PersonDetailsDialog(m_mainWidget);
+            view->setPerson(person);
+            view->setAttribute(Qt::WA_DeleteOnClose);
+            view->show();
+        }
+    #endif
+    } else {
+        const Tp::AccountPtr &account = m_currentIndex.data(KTp::AccountRole).value<Tp::AccountPtr>();
+        const Tp::ContactPtr &contact = m_currentIndex.data(KTp::ContactRole).value<KTp::ContactPtr>();
+        if (account && contact) {
+            KTp::ContactInfoDialog* contactInfoDialog = new KTp::ContactInfoDialog(account, contact, m_mainWidget);
+            contactInfoDialog->setAttribute(Qt::WA_DeleteOnClose);
+            contactInfoDialog->show();
+        }
     }
 }
 

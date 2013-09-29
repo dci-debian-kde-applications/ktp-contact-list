@@ -47,12 +47,18 @@ public:
 
     void removePresence(const KTp::Presence &presence);
 
+    //updates context menu of presence applet
+    void syncCustomPresencesToDisk();
+
+    //updates context menu of presence applet
+    int updatePresenceApplet();
+
     /** Returns the index of a given presence, adding it if needed*/
     QModelIndex indexOf(const KTp::Presence &presence);
 
     //protected:
     virtual QVariant data(const QModelIndex &index, int role) const;
-    virtual int rowCount(const QModelIndex &parent) const;
+    virtual int rowCount(const QModelIndex &parent = QModelIndex()) const;
 
 private:
 

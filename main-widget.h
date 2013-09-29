@@ -81,14 +81,19 @@ public Q_SLOTS:
 
 private Q_SLOTS:
     void toggleSearchWidget(bool show);
+    void hideSearchWidget();
     void onAccountManagerReady(Tp::PendingOperation* op);
     void onAddContactRequest();
+    void onStartChatRequest();
     void onUseGlobalPresenceTriggered();
     void onUsePerAccountPresenceTriggered();
     void onJoinChatRoomRequested();                 /** join chat room action is triggered */
     void onMakeCallRequested();
+    void onMergeContactsDialogRequested();
     void onCustomContextMenuRequested(const QPoint &point);
     void onGenericOperationFinished(Tp::PendingOperation *operation);   /** called when a Tp::PendingOperation finishes. Used to check for errors */
+    void onContactSelectionChanged();
+    void onMetacontactToggleTriggered();
 
 private:
     QStringList extractLinksFromIndex(const QModelIndex &index);    /** extract links from a QModelIndex pointing to a contact */
@@ -106,17 +111,19 @@ private:
     KAction                *m_settingsDialog;
     KAction                *m_joinChatRoom;
     KAction                *m_makeCall;
+    KAction                *m_mergeContacts;
     QActionGroup           *m_contactListTypeGroup;
     QActionGroup           *m_blockedFilterGroup;
 
     KMenu                  *m_accountMenu;
     KSelectAction          *m_setStatusAction;
 
-
+    KDualAction            *m_metacontactToggleAction;
     KAction                *m_addContactAction;
-    KDualAction            *m_groupContactsAction;
+    QActionGroup           *m_groupContactsActionGroup;
     KDualAction            *m_showOfflineAction;
     KAction                *m_searchContactAction;
+    KAction                *m_startChatAction;
     KDualAction            *m_sortByPresenceAction;
     KAction                *m_quitAction;
 
