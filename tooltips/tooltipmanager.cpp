@@ -21,6 +21,7 @@
 
 #include "ktooltip.h"
 #include "contacttooltip.h"
+#include "persontooltip.h"
 
 #include <QRect>
 #include <QTimer>
@@ -116,7 +117,8 @@ void ToolTipManager::requestToolTip(const QModelIndex &index)
         KToolTip::hideTip();
 
         QRect rect = d->view->visualRect(index);
-        d->itemRect = QRect(d->view->viewport()->mapToGlobal(rect.topLeft()),
+        // use 0 as the left x coordinate to make sure the tooltip does not cover the tree view controls
+        d->itemRect = QRect(d->view->viewport()->mapToGlobal(QPoint(0, rect.topLeft().y())),
                             d->view->viewport()->mapToGlobal(rect.bottomRight()));
         d->item = index;
         d->timer->start(300);
@@ -149,7 +151,8 @@ void ToolTipManager::showToolTip(const QModelIndex &menuItem)
         return;
     }
 
-    if (menuItem.data(KTp::RowTypeRole).toUInt() != KTp::ContactRowType) {
+    if (menuItem.data(KTp::RowTypeRole).toUInt() != KTp::ContactRowType
+        && menuItem.data(KTp::RowTypeRole).toUInt() != KTp::PersonRowType) {
         return;
     }
 
@@ -194,7 +197,11 @@ void ToolTipManager::showToolTip(const QModelIndex &menuItem)
 
 QWidget * ToolTipManager::createTipContent(const QModelIndex &index)
 {
-     return new ContactToolTip(index);
+    if (index.data(KTp::RowTypeRole).toUInt() == KTp::PersonRowType) {
+        return new PersonToolTip(index);
+    } else {
+        return new ContactToolTip(index);
+    }
 }
 
 #include "tooltipmanager.moc"

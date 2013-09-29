@@ -23,6 +23,7 @@
 #include <QTreeView>
 #include <TelepathyQt/Types>
 #include <TelepathyQt/Connection>
+#include <KTp/Models/contacts-model.h>
 
 class ContactListWidgetPrivate;
 
@@ -41,10 +42,12 @@ public:
     virtual ~ContactListWidget();
 
     void setAccountManager(const Tp::AccountManagerPtr &accountManager);
+    void toggleGroups(bool show);
 
 public Q_SLOTS:
     void toggleOfflineContacts(bool show);
-    void toggleGroups(bool show);
+    void showGrouped();
+    void showUngrouped();
     void toggleSortByPresence(bool sort);
 
     void setFilterString(const QString &string);
@@ -71,13 +74,15 @@ private Q_SLOTS:
     void startVideoChannel(const Tp::AccountPtr &account, const Tp::ContactPtr &contact);
     void startDesktopSharing(const Tp::AccountPtr &account, const Tp::ContactPtr &contact);
     void startLogViewer(const Tp::AccountPtr &account, const Tp::ContactPtr &contact);
+    void accountEnablingFinished(Tp::PendingOperation *op);
 
 
 Q_SIGNALS:
     void enableOverlays(bool);
     void accountManagerReady(Tp::PendingOperation* op);
     void genericOperationFinished(Tp::PendingOperation* op);
-
+    void actionStarted();
+    void contactSelectionChanged();
 
 protected:
     void setDropIndicatorRect(const QRect &rect);
@@ -93,6 +98,9 @@ protected:
     virtual void drawBranches(QPainter *painter, const QRect &rect, const QModelIndex &index) const;
 
 private:
+    /** Internally set the group mode used by the model. Note this function does not update d->groupMode*/
+    void setGroupMode(KTp::ContactsModel::GroupMode groupMode);
+
     void requestFileTransferChannels(const Tp::AccountPtr &account,
                                      const Tp::ContactPtr &contact,
                                      const QStringList &filenames);
