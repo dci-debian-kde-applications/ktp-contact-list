@@ -1,6 +1,7 @@
 ktp-contact-list (0.6.80-1) UNRELEASED; urgency=low
 
   * Imported Upstream version 0.6.80
+  * Bump Build-Depends of libktpcommoninternalsprivate-dev to 0.6.80
 
  -- Diane Trout <diane@ghic.org>  Sun, 29 Sep 2013 08:34:10 -0700
 
