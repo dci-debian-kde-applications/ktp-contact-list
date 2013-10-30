@@ -6,9 +6,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-07-13 05:11+0000\n"
-"PO-Revision-Date: 2013-03-18 13:24+0100\n"
-"Last-Translator: Freek de Kruijf <f.de.kruijf@gmail.com>\n"
+"POT-Creation-Date: 2013-10-26 04:57+0000\n"
+"PO-Revision-Date: 2013-10-01 10:08+0200\n"
+"Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
@@ -70,15 +70,15 @@ msgctxt "@action:inmenu This is the IM presence message"
 msgid "Set message..."
 msgstr "Bericht instellen..."
 
-#: contact-list-widget.cpp:156
+#: contact-list-widget.cpp:192
 msgid "You have no IM accounts configured. Would you like to do that now?"
 msgstr "U hebt geen IM-account ingesteld. Wilt u dat nu doen?"
 
-#: contact-list-widget.cpp:157
+#: contact-list-widget.cpp:193
 msgid "No Accounts Found"
 msgstr "Geen accounts gevonden"
 
-#: contact-list-widget.cpp:172
+#: contact-list-widget.cpp:208
 msgid ""
 "It appears you do not have the IM Accounts control module installed. Please "
 "install ktp-accounts-kcm package."
@@ -86,28 +86,50 @@ msgstr ""
 "Het lijkt er op dat u de besturingsmodule van IM-accounts niet hebt "
 "geïnstalleerd. Gaarne het pakket ktp-accounts-kcm installeren."
 
-#: contact-list-widget.cpp:173
+#: contact-list-widget.cpp:209
 msgid "IM Accounts KCM Plugin Is Not Installed"
 msgstr "KCM-plug-in van IM-accounts is niet geïnstalleerd"
 
-#: contact-list-widget.cpp:191
+#: contact-list-widget.cpp:227
 msgid "Notifications"
 msgstr "Meldingen"
 
-#: contact-list-widget.cpp:381
+#: contact-list-widget.cpp:289
+#, kde-format
+msgctxt ""
+"Label of a dialog's 'OK' button; %1 is account name, eg. 'Connect account "
+"GTalk'"
+msgid "Connect account %1"
+msgstr "Account %1 verbinden"
+
+#: contact-list-widget.cpp:291
+msgid ""
+"The account for this contact is disconnected. Do you want to connect it?"
+msgstr ""
+"Het account voor deze contactpersoon is niet verbonden. Wilt u het verbinden?"
+
+#: contact-list-widget.cpp:292
+msgid "Account offline"
+msgstr "Account offline"
+
+#: contact-list-widget.cpp:500
 #, kde-format
 msgid "Choose files to send to %1"
 msgstr "De te verzenden bestanden naar %1 kiezen"
 
-#: contact-list-widget.cpp:697
+#: contact-list-widget.cpp:796
+msgid "Merge contacts"
+msgstr "Contactpersonen samenvoegen"
+
+#: contact-list-widget.cpp:838
 msgid "&Move here"
 msgstr "Hierheen &verplaatsen"
 
-#: contact-list-widget.cpp:701
+#: contact-list-widget.cpp:842
 msgid "&Copy here"
 msgstr "Hierheen &kopiëren"
 
-#: contact-list-widget.cpp:705
+#: contact-list-widget.cpp:846
 msgid "C&ancel"
 msgstr "&Annuleren"
 
@@ -135,7 +157,7 @@ msgstr "Een video-oproep starten"
 msgid "Start a video call"
 msgstr "Een video-oproep starten"
 
-#: contact-overlays.cpp:171 contact-overlays.cpp:172 context-menu.cpp:138
+#: contact-overlays.cpp:171 contact-overlays.cpp:172 context-menu.cpp:140
 msgid "Send File..."
 msgstr "Bestand verzenden..."
 
@@ -144,104 +166,96 @@ msgid "Send a file"
 msgstr "Een bestand verzenden"
 
 #: contact-overlays.cpp:183 contact-overlays.cpp:184
-msgid "Share My Desktop"
-msgstr "Mijn bureaublad delen"
-
-#: contact-overlays.cpp:184
-msgid "Share desktop using RFB"
-msgstr "Bureaublad delen met behulp van RFB"
-
-#: contact-overlays.cpp:195 contact-overlays.cpp:196
 msgid "Open Log Viewer"
 msgstr "Logweergave openen"
 
-#: contact-overlays.cpp:196
+#: contact-overlays.cpp:184
 msgid "Show conversation logs"
 msgstr "Conversatielogs tonen"
 
-#: context-menu.cpp:102
+#: context-menu.cpp:110
 msgid "Start Chat..."
 msgstr "&Chat starten..."
 
-#: context-menu.cpp:118
+#: context-menu.cpp:120
 msgid "Start Audio Call..."
 msgstr "Start een geluidsoproep..."
 
-#: context-menu.cpp:128
+#: context-menu.cpp:130
 msgid "Start Video Call..."
 msgstr "Start een video-oproep..."
 
-#: context-menu.cpp:148
+#: context-menu.cpp:150
 msgid "Share my desktop..."
 msgstr "Mijn bureaublad delen..."
 
-#: context-menu.cpp:158
+#: context-menu.cpp:160
 msgid "Open Log Viewer..."
 msgstr "Logweergave openen..."
 
-#: context-menu.cpp:170
+#: context-menu.cpp:173
 msgid "Configure Notifications..."
 msgstr "Meldingen instellen..."
 
-#: context-menu.cpp:187
+#: context-menu.cpp:190
 msgid "Presence message link"
 msgid_plural "Presence message links"
 msgstr[0] "Koppeling naar aanwezigheidsboodschap"
 msgstr[1] "Koppelingen naar aanwezigheidsboodschappen"
 
-#: context-menu.cpp:201
+#: context-menu.cpp:210
 msgid "Remove Contact From This Group"
 msgstr "Contactpersoon uit deze groep verwijderen"
 
-#: context-menu.cpp:205
+#: context-menu.cpp:214
 msgid "Move to Group"
 msgstr "Naar groep verplaatsen"
 
-#: context-menu.cpp:223
+#: context-menu.cpp:232
 msgid "Create New Group..."
 msgstr "Nieuwe groep aanmaken..."
 
-#: context-menu.cpp:242
+#: context-menu.cpp:251
 msgid "Re-request Contact Authorization"
 msgstr "Contactautorisatie opnieuw verzoeken"
 
-#: context-menu.cpp:248
+#: context-menu.cpp:257
 msgid "Resend Contact Authorization"
 msgstr "Contactautorisatie opnieuw verzenden"
 
-#: context-menu.cpp:256
+#: context-menu.cpp:265
 msgid "Unblock Contact"
 msgstr "Blokkering van contactpersoon opheffen"
 
-#: context-menu.cpp:260
+#: context-menu.cpp:269
 msgid "Block Contact"
 msgstr "Contactpersoon blokkeren"
 
-#: context-menu.cpp:268
+#: context-menu.cpp:277
 msgid "Remove Contact"
 msgstr "Contactpersoon verwijderen"
 
-#: context-menu.cpp:273
+#: context-menu.cpp:282
 msgid "Show Info..."
 msgstr "Informatie tonen..."
 
-#: context-menu.cpp:294
+#: context-menu.cpp:303
 msgid "Rename Group..."
 msgstr "Groep hernoemen..."
 
-#: context-menu.cpp:300
+#: context-menu.cpp:309
 msgid "Delete Group"
 msgstr "Groep verwijderen"
 
-#: context-menu.cpp:471 context-menu.cpp:496
+#: context-menu.cpp:493 context-menu.cpp:518
 msgid "New Group Name"
 msgstr "Nieuwe groepsnaam"
 
-#: context-menu.cpp:472 context-menu.cpp:497
+#: context-menu.cpp:494 context-menu.cpp:519
 msgid "Please enter the new group name"
 msgstr "Gaarne een nieuwe groepsnaam invoeren"
 
-#: context-menu.cpp:530
+#: context-menu.cpp:552
 #, kde-format
 msgid ""
 "Do you really want to remove group %1?\n"
@@ -252,7 +266,7 @@ msgstr ""
 "\n"
 "Merk op dat alle contactpersonen naar de groep 'Niet-gegroepeerd' gaan"
 
-#: context-menu.cpp:532
+#: context-menu.cpp:554
 msgid "Remove Group"
 msgstr "Groep verwijderen"
 
@@ -335,12 +349,12 @@ msgstr "Luistert nu naar..."
 msgid "Click to change your presence message"
 msgstr "Klik om uw aanwezigheidsbericht te wijzigen"
 
-#: global-presence-chooser.cpp:231
+#: global-presence-chooser.cpp:232
 msgctxt "Presence string when the account is connecting"
 msgid "Connecting..."
 msgstr "Verbinden..."
 
-#: global-presence-chooser.cpp:332
+#: global-presence-chooser.cpp:333
 msgid ""
 "This plugin is currently disabled. Do you want to enable it and use as your "
 "presence?"
@@ -348,11 +362,11 @@ msgstr ""
 "Deze plug-in is nu uitgeschakeld. Wilt u het inschakelen en gebruiken als uw "
 "aanwezigheid?"
 
-#: global-presence-chooser.cpp:333
+#: global-presence-chooser.cpp:334
 msgid "Plugin disabled"
 msgstr "Plug-in uitgeschakeld"
 
-#: main-widget.cpp:209
+#: main-widget.cpp:175
 msgid ""
 "Something unexpected happened to the core part of your Instant Messaging "
 "system and it couldn't be initialized. Try restarting the Contact List."
@@ -361,11 +375,11 @@ msgstr ""
 "systeem en het kon niet worden geïnitialiseerd. Probeer de contactenlijst te "
 "herstarten."
 
-#: main-widget.cpp:211
+#: main-widget.cpp:177
 msgid "IM system failed to initialize"
 msgstr "Initialisatie van IM is mislukt"
 
-#: main-widget.cpp:316
+#: main-widget.cpp:303
 msgid ""
 "You do not have any other presence controls active (a Presence widget for "
 "example).\n"
@@ -375,99 +389,123 @@ msgstr ""
 "Aanwezigheidswidget).\n"
 "Wilt u online blijven of wilt u liever offline gaan?"
 
-#: main-widget.cpp:318
+#: main-widget.cpp:305
 msgid "No Other Presence Controls Found"
 msgstr "Geen andere besturing van aanwezigheid gevonden"
 
-#: main-widget.cpp:319
+#: main-widget.cpp:306
 msgid "Stay Online"
 msgstr "Online blijven"
 
-#: main-widget.cpp:320
+#: main-widget.cpp:307
 msgid "Go Offline"
 msgstr "Offline gaan"
 
-#: main-widget.cpp:430
+#: main-widget.cpp:423 tooltips/persontooltip.cpp:55
 msgid "Contacts"
 msgstr "Contactpersonen"
 
-#: main-widget.cpp:442
+#: main-widget.cpp:438
 msgid "View"
 msgstr "Beeld"
 
-#: main-widget.cpp:447 main-widget.cpp:482
+#: main-widget.cpp:442 main-widget.cpp:485
 msgid "Contact List Type"
 msgstr "Type contactenlijst"
 
-#: main-widget.cpp:450 main-widget.cpp:487
+#: main-widget.cpp:445 main-widget.cpp:490
 msgid "Shown Contacts"
 msgstr "Getoonde contactpersoon"
 
-#: main-widget.cpp:559
+#: main-widget.cpp:448 main-widget.cpp:495
+msgid "Contact Grouping"
+msgstr "Groepering van contactpersonen"
+
+#: main-widget.cpp:572
 msgid "Instant Messaging Settings..."
 msgstr "Instellingen voor Instant Messaging..."
 
-#: main-widget.cpp:564
+#: main-widget.cpp:577
 msgid "Join Chat Room..."
 msgstr "Aan chatroom deelnemen"
 
-#: main-widget.cpp:565
+#: main-widget.cpp:579
 msgid "Make a Call..."
 msgstr "Start een oproep..."
 
-#: main-widget.cpp:566
+#: main-widget.cpp:580
+msgid "Merge Contacts..."
+msgstr "Contactpersonen samenvoegen..."
+
+#: main-widget.cpp:581
 msgid "Add New Contacts..."
 msgstr "Nieuwe contactpersonen toevoegen..."
 
-#: main-widget.cpp:567
+#: main-widget.cpp:582
 msgid "Find Contact"
 msgstr "Contactpersoon zoeken"
 
-#: main-widget.cpp:572
+#: main-widget.cpp:585
+msgid "Start a chat..."
+msgstr "Een chat starten..."
+
+#: main-widget.cpp:588
+msgid "Split Selected Contacts"
+msgstr "Geselecteerde contactpersonen opsplitsen"
+
+#: main-widget.cpp:589
+msgid "Merge Selected Contacts"
+msgstr "Geselecteerde contactpersonen samenvoegen"
+
+#: main-widget.cpp:599
 msgid "Show Contacts by Groups"
 msgstr "Contactpersonen per groep tonen"
 
-#: main-widget.cpp:573
+#: main-widget.cpp:603
+msgid "Do not group"
+msgstr "Niet groeperen"
+
+#: main-widget.cpp:606
 msgid "Show Contacts by Accounts"
 msgstr "Contactpersonen per account tonen"
 
-#: main-widget.cpp:580
+#: main-widget.cpp:611
 msgid "Show Offline Contacts"
 msgstr "Contactpersonen die offline zijn tonen"
 
-#: main-widget.cpp:581
+#: main-widget.cpp:612
 msgid "Hide Offline Contacts"
 msgstr "Contactpersonen die offline zijn verbergen"
 
-#: main-widget.cpp:589
+#: main-widget.cpp:620
 msgid "Sort by Presence"
 msgstr "Sorteren op aanwezigheid"
 
-#: main-widget.cpp:590
+#: main-widget.cpp:621
 msgid "Sort by Name"
 msgstr "Sorteren op naam"
 
-#: main-widget.cpp:598
+#: main-widget.cpp:629
 msgid "Use Full List"
 msgstr "Volledige lijst gebruiken"
 
-#: main-widget.cpp:600
+#: main-widget.cpp:631
 msgid "Use Normal List"
 msgstr "Normale lijst gebruiken"
 
-#: main-widget.cpp:604
+#: main-widget.cpp:635
 msgid "Use Minimalistic List"
 msgstr "Minimale lijst gebruiken"
 
-#: main-widget.cpp:611
+#: main-widget.cpp:642
 msgid "Show All Contacts"
 msgstr "Alle contactpersoon tonen"
 
-#: main-widget.cpp:613
+#: main-widget.cpp:644
 msgid "Show Unblocked Contacts"
 msgstr "Niet geblokkeerde contactpersonen tonen"
 
-#: main-widget.cpp:615
+#: main-widget.cpp:646
 msgid "Show Blocked Contacts"
 msgstr "Geblokkeerde contactpersonen tonen"
 
@@ -508,9 +546,15 @@ msgid "Account: %1"
 msgstr "Account: %1"
 
 #. i18n: ectx: property (text), widget (QLabel, blockedLabel)
-#: tooltips/contacttooltip.ui:126
+#: tooltips/contacttooltip.ui:126 tooltips/persontooltip.ui:33
 msgid "User is blocked"
 msgstr "Gebruiker is geblokkeerd"
+
+#~ msgid "Share My Desktop"
+#~ msgstr "Mijn bureaublad delen"
+
+#~ msgid "Share desktop using RFB"
+#~ msgstr "Bureaublad delen met behulp van RFB"
 
 #~| msgid "Settings"
 #~ msgid "Settings..."
@@ -653,9 +697,6 @@ msgstr "Gebruiker is geblokkeerd"
 #~ msgstr ""
 #~ "Er deed zich zojuist een fout voor die we niet hadden verwacht, daarom "
 #~ "kon de contactpersoon niet worden toegevoegd."
-
-#~ msgid "Account Error"
-#~ msgstr "Fout in account"
 
 #~ msgid "Screen Name:"
 #~ msgstr "Schermnaam:"
