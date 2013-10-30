@@ -515,32 +515,37 @@ void MainWidget::setupToolBar()
 void MainWidget::setupTelepathy()
 {
     Tp::registerTypes();
-    Tp::AccountFactoryPtr  accountFactory = Tp::AccountFactory::create(QDBusConnection::sessionBus(),
-                                                                       Tp::Features() << Tp::Account::FeatureCore
-                                                                       << Tp::Account::FeatureAvatar
-                                                                       << Tp::Account::FeatureCapabilities
-                                                                       << Tp::Account::FeatureProtocolInfo
-                                                                       << Tp::Account::FeatureProfile);
 
-    Tp::ConnectionFactoryPtr connectionFactory = Tp::ConnectionFactory::create(QDBusConnection::sessionBus(),
-                                                                               Tp::Features() << Tp::Connection::FeatureCore
-                                                                               << Tp::Connection::FeatureSelfContact);
+    if (KTp::kpeopleEnabled()) {
+        m_accountManager = KTp::accountManager();
+    } else {
 
-    Tp::ContactFactoryPtr contactFactory = KTp::ContactFactory::create(Tp::Features()  << Tp::Contact::FeatureAlias
-                                                                      << Tp::Contact::FeatureAvatarToken
-                                                                      << Tp::Contact::FeatureAvatarData
-                                                                      << Tp::Contact::FeatureSimplePresence
-                                                                      << Tp::Contact::FeatureCapabilities
-                                                                      << Tp::Contact::FeatureClientTypes);
+        Tp::AccountFactoryPtr  accountFactory = Tp::AccountFactory::create(QDBusConnection::sessionBus(),
+                                                                        Tp::Features() << Tp::Account::FeatureCore
+                                                                        << Tp::Account::FeatureAvatar
+                                                                        << Tp::Account::FeatureCapabilities
+                                                                        << Tp::Account::FeatureProtocolInfo
+                                                                        << Tp::Account::FeatureProfile);
 
-    Tp::ChannelFactoryPtr channelFactory = Tp::ChannelFactory::create(QDBusConnection::sessionBus());
-    channelFactory->addFeaturesForTextChats(Tp::Features() << Tp::Channel::FeatureCore << Tp::TextChannel::FeatureMessageQueue);
+        Tp::ConnectionFactoryPtr connectionFactory = Tp::ConnectionFactory::create(QDBusConnection::sessionBus(),
+                                                                                Tp::Features() << Tp::Connection::FeatureCore
+                                                                                << Tp::Connection::FeatureSelfContact);
 
-    m_accountManager = Tp::AccountManager::create(QDBusConnection::sessionBus(),
-                                                  accountFactory,
-                                                  connectionFactory,
-                                                  channelFactory,
-                                                  contactFactory);
+        Tp::ContactFactoryPtr contactFactory = KTp::ContactFactory::create(Tp::Features()  << Tp::Contact::FeatureAlias
+                                                                        << Tp::Contact::FeatureAvatarToken
+                                                                        << Tp::Contact::FeatureAvatarData
+                                                                        << Tp::Contact::FeatureSimplePresence
+                                                                        << Tp::Contact::FeatureCapabilities
+                                                                        << Tp::Contact::FeatureClientTypes);
+
+        Tp::ChannelFactoryPtr channelFactory = Tp::ChannelFactory::create(QDBusConnection::sessionBus());
+
+        m_accountManager = Tp::AccountManager::create(QDBusConnection::sessionBus(),
+                                                    accountFactory,
+                                                    connectionFactory,
+                                                    channelFactory,
+                                                    contactFactory);
+    }
 
     connect(m_accountManager->becomeReady(), SIGNAL(finished(Tp::PendingOperation*)),
             this, SLOT(onAccountManagerReady(Tp::PendingOperation*)));
@@ -593,7 +598,14 @@ void MainWidget::setupActions(const KConfigGroup& guiConfigGroup)
     m_groupContactsActionGroup->setExclusive(true);
     m_groupContactsActionGroup->addAction(createAction(i18n("Show Contacts by Groups"), m_contactsListView, SLOT(showGrouped()),
                                           guiConfigGroup.readEntry("use_groups", true)));
-    m_groupContactsActionGroup->addAction(createAction(i18n("Show Contacts by Accounts"), m_contactsListView, SLOT(showUngrouped()),
+    QString useGroupsDisabledText;
+    if (KTp::kpeopleEnabled()) {
+        useGroupsDisabledText = i18n("Do not group");
+    }
+    else {
+        useGroupsDisabledText = i18n("Show Contacts by Accounts");
+    }
+    m_groupContactsActionGroup->addAction(createAction(useGroupsDisabledText, m_contactsListView, SLOT(showUngrouped()),
                                           ! guiConfigGroup.readEntry("use_groups", true)));
 
     m_showOfflineAction = new KDualAction(i18n("Show Offline Contacts"),

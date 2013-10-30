@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-07-13 05:11+0000\n"
-"PO-Revision-Date: 2013-05-09 20:40+0400\n"
+"POT-Creation-Date: 2013-10-26 04:57+0000\n"
+"PO-Revision-Date: 2013-09-28 15:29+0400\n"
 "Last-Translator: Alexander Lakhin <exclusion@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -75,16 +75,16 @@ msgctxt "@action:inmenu This is the IM presence message"
 msgid "Set message..."
 msgstr "Установить сообщение..."
 
-#: contact-list-widget.cpp:156
+#: contact-list-widget.cpp:192
 msgid "You have no IM accounts configured. Would you like to do that now?"
 msgstr ""
 "У вас нет настроенных учётных записей. Настроить учётную запись сейчас?"
 
-#: contact-list-widget.cpp:157
+#: contact-list-widget.cpp:193
 msgid "No Accounts Found"
 msgstr "Не найдено учётных записей"
 
-#: contact-list-widget.cpp:172
+#: contact-list-widget.cpp:208
 msgid ""
 "It appears you do not have the IM Accounts control module installed. Please "
 "install ktp-accounts-kcm package."
@@ -92,28 +92,49 @@ msgstr ""
 "Похоже, в вашей системе не установлен модуль управления учётными записями "
 "системы обмена сообщениями. Установите пакет ktp-accounts-kcm."
 
-#: contact-list-widget.cpp:173
+#: contact-list-widget.cpp:209
 msgid "IM Accounts KCM Plugin Is Not Installed"
 msgstr "Не установлен модуль управления учётными записями"
 
-#: contact-list-widget.cpp:191
+#: contact-list-widget.cpp:227
 msgid "Notifications"
 msgstr "Уведомления"
 
-#: contact-list-widget.cpp:381
+#: contact-list-widget.cpp:289
+#, kde-format
+msgctxt ""
+"Label of a dialog's 'OK' button; %1 is account name, eg. 'Connect account "
+"GTalk'"
+msgid "Connect account %1"
+msgstr "Подключить %1"
+
+#: contact-list-widget.cpp:291
+msgid ""
+"The account for this contact is disconnected. Do you want to connect it?"
+msgstr "Нет подключения для этого контакта. Вы хотите подключиться?"
+
+#: contact-list-widget.cpp:292
+msgid "Account offline"
+msgstr "Пользователь не в сети"
+
+#: contact-list-widget.cpp:500
 #, kde-format
 msgid "Choose files to send to %1"
 msgstr "Выбор файлов для отправки собеседнику %1"
 
-#: contact-list-widget.cpp:697
+#: contact-list-widget.cpp:796
+msgid "Merge contacts"
+msgstr "Объединить контакты"
+
+#: contact-list-widget.cpp:838
 msgid "&Move here"
 msgstr "&Переместить сюда"
 
-#: contact-list-widget.cpp:701
+#: contact-list-widget.cpp:842
 msgid "&Copy here"
 msgstr "&Скопировать сюда"
 
-#: contact-list-widget.cpp:705
+#: contact-list-widget.cpp:846
 msgid "C&ancel"
 msgstr "О&тмена"
 
@@ -141,7 +162,7 @@ msgstr "Видеовызов"
 msgid "Start a video call"
 msgstr "Выполнить видеовызов"
 
-#: contact-overlays.cpp:171 contact-overlays.cpp:172 context-menu.cpp:138
+#: contact-overlays.cpp:171 contact-overlays.cpp:172 context-menu.cpp:140
 msgid "Send File..."
 msgstr "Отправить файл..."
 
@@ -150,46 +171,38 @@ msgid "Send a file"
 msgstr "Отправить файл"
 
 #: contact-overlays.cpp:183 contact-overlays.cpp:184
-msgid "Share My Desktop"
-msgstr "Показать рабочий стол"
-
-#: contact-overlays.cpp:184
-msgid "Share desktop using RFB"
-msgstr "Показать рабочий стол, используя RFB"
-
-#: contact-overlays.cpp:195 contact-overlays.cpp:196
 msgid "Open Log Viewer"
 msgstr "Просмотр журнала"
 
-#: contact-overlays.cpp:196
+#: contact-overlays.cpp:184
 msgid "Show conversation logs"
 msgstr "Показать журнал бесед"
 
-#: context-menu.cpp:102
+#: context-menu.cpp:110
 msgid "Start Chat..."
 msgstr "Написать сообщение..."
 
-#: context-menu.cpp:118
+#: context-menu.cpp:120
 msgid "Start Audio Call..."
 msgstr "Аудиовызов..."
 
-#: context-menu.cpp:128
+#: context-menu.cpp:130
 msgid "Start Video Call..."
 msgstr "Видеовызов..."
 
-#: context-menu.cpp:148
+#: context-menu.cpp:150
 msgid "Share my desktop..."
 msgstr "Показать рабочий стол"
 
-#: context-menu.cpp:158
+#: context-menu.cpp:160
 msgid "Open Log Viewer..."
 msgstr "Просмотр журнала..."
 
-#: context-menu.cpp:170
+#: context-menu.cpp:173
 msgid "Configure Notifications..."
 msgstr "Настроить уведомления..."
 
-#: context-menu.cpp:187
+#: context-menu.cpp:190
 msgid "Presence message link"
 msgid_plural "Presence message links"
 msgstr[0] "Ссылки сообщения статуса"
@@ -197,59 +210,59 @@ msgstr[1] "Ссылки сообщения статуса"
 msgstr[2] "Ссылки сообщения статуса"
 msgstr[3] "Ссылка сообщения статуса"
 
-#: context-menu.cpp:201
+#: context-menu.cpp:210
 msgid "Remove Contact From This Group"
 msgstr "Удалить контакт из этой группы"
 
-#: context-menu.cpp:205
+#: context-menu.cpp:214
 msgid "Move to Group"
 msgstr "Переместить в группу"
 
-#: context-menu.cpp:223
+#: context-menu.cpp:232
 msgid "Create New Group..."
 msgstr "Создать новую группу..."
 
-#: context-menu.cpp:242
+#: context-menu.cpp:251
 msgid "Re-request Contact Authorization"
 msgstr "Повторно запросить авторизацию"
 
-#: context-menu.cpp:248
+#: context-menu.cpp:257
 msgid "Resend Contact Authorization"
 msgstr "Повторно авторизовать"
 
-#: context-menu.cpp:256
+#: context-menu.cpp:265
 msgid "Unblock Contact"
 msgstr "Разблокировать контакт"
 
-#: context-menu.cpp:260
+#: context-menu.cpp:269
 msgid "Block Contact"
 msgstr "Заблокировать контакт"
 
-#: context-menu.cpp:268
+#: context-menu.cpp:277
 msgid "Remove Contact"
 msgstr "Удалить контакт"
 
-#: context-menu.cpp:273
+#: context-menu.cpp:282
 msgid "Show Info..."
 msgstr "Показать информацию..."
 
-#: context-menu.cpp:294
+#: context-menu.cpp:303
 msgid "Rename Group..."
 msgstr "Переименовать группу..."
 
-#: context-menu.cpp:300
+#: context-menu.cpp:309
 msgid "Delete Group"
 msgstr "Удалить группу"
 
-#: context-menu.cpp:471 context-menu.cpp:496
+#: context-menu.cpp:493 context-menu.cpp:518
 msgid "New Group Name"
 msgstr "Имя новой группы"
 
-#: context-menu.cpp:472 context-menu.cpp:497
+#: context-menu.cpp:494 context-menu.cpp:519
 msgid "Please enter the new group name"
 msgstr "Введите имя новой группы"
 
-#: context-menu.cpp:530
+#: context-menu.cpp:552
 #, kde-format
 msgid ""
 "Do you really want to remove group %1?\n"
@@ -260,7 +273,7 @@ msgstr ""
 "\n"
 "Заметьте, что все контакты будут перемещены в группу «Без группы»."
 
-#: context-menu.cpp:532
+#: context-menu.cpp:554
 msgid "Remove Group"
 msgstr "Удалить группу"
 
@@ -343,12 +356,12 @@ msgstr "Сейчас слушаю..."
 msgid "Click to change your presence message"
 msgstr "Нажмите, чтобы изменить сообщение статуса"
 
-#: global-presence-chooser.cpp:231
+#: global-presence-chooser.cpp:232
 msgctxt "Presence string when the account is connecting"
 msgid "Connecting..."
 msgstr "Соединение..."
 
-#: global-presence-chooser.cpp:332
+#: global-presence-chooser.cpp:333
 msgid ""
 "This plugin is currently disabled. Do you want to enable it and use as your "
 "presence?"
@@ -356,11 +369,11 @@ msgstr ""
 "Этот модуль отключён. Хотите включить его и использовать в качестве вашего "
 "статуса?"
 
-#: global-presence-chooser.cpp:333
+#: global-presence-chooser.cpp:334
 msgid "Plugin disabled"
 msgstr "Модуль отключён"
 
-#: main-widget.cpp:209
+#: main-widget.cpp:175
 msgid ""
 "Something unexpected happened to the core part of your Instant Messaging "
 "system and it couldn't be initialized. Try restarting the Contact List."
@@ -369,11 +382,11 @@ msgstr ""
 "ошибка. По этой причине он не может быть инициализирован. Попробуйте "
 "перезапустить список контактов."
 
-#: main-widget.cpp:211
+#: main-widget.cpp:177
 msgid "IM system failed to initialize"
 msgstr "Ошибка инициализации системы обмена сообщениями"
 
-#: main-widget.cpp:316
+#: main-widget.cpp:303
 msgid ""
 "You do not have any other presence controls active (a Presence widget for "
 "example).\n"
@@ -383,99 +396,125 @@ msgstr ""
 "статусом).\n"
 "Оставаться в сети или выйти?"
 
-#: main-widget.cpp:318
+#: main-widget.cpp:305
 msgid "No Other Presence Controls Found"
 msgstr "Не найдено других средств управления статусом"
 
-#: main-widget.cpp:319
+#: main-widget.cpp:306
 msgid "Stay Online"
 msgstr "Оставаться в сети"
 
-#: main-widget.cpp:320
+#: main-widget.cpp:307
 msgid "Go Offline"
 msgstr "Выйти из сети"
 
-#: main-widget.cpp:430
+#: main-widget.cpp:423 tooltips/persontooltip.cpp:55
 msgid "Contacts"
 msgstr "Контакты"
 
-#: main-widget.cpp:442
+#: main-widget.cpp:438
 msgid "View"
 msgstr "Вид"
 
-#: main-widget.cpp:447 main-widget.cpp:482
+#: main-widget.cpp:442 main-widget.cpp:485
 msgid "Contact List Type"
 msgstr "Тип списка контактов"
 
-#: main-widget.cpp:450 main-widget.cpp:487
+#: main-widget.cpp:445 main-widget.cpp:490
 msgid "Shown Contacts"
 msgstr "Отображение контактов"
 
-#: main-widget.cpp:559
+#: main-widget.cpp:448 main-widget.cpp:495
+msgid "Contact Grouping"
+msgstr "Группировка контактов"
+
+#: main-widget.cpp:572
 msgid "Instant Messaging Settings..."
 msgstr "Параметры мгновенных сообщений..."
 
-#: main-widget.cpp:564
+#: main-widget.cpp:577
 msgid "Join Chat Room..."
 msgstr "Присоединиться к чату..."
 
-#: main-widget.cpp:565
+#: main-widget.cpp:579
 msgid "Make a Call..."
 msgstr "Позвонить..."
 
-#: main-widget.cpp:566
+#: main-widget.cpp:580
+msgid "Merge Contacts..."
+msgstr "Объединить контакты..."
+
+#: main-widget.cpp:581
 msgid "Add New Contacts..."
 msgstr "Добавить контакты..."
 
-#: main-widget.cpp:567
+#: main-widget.cpp:582
 msgid "Find Contact"
 msgstr "Поиск контакта"
 
-#: main-widget.cpp:572
+#: main-widget.cpp:585
+msgid "Start a chat..."
+msgstr "Начать общение..."
+
+#: main-widget.cpp:588
+msgid "Split Selected Contacts"
+msgstr "Разделить выбранные контакты"
+
+#: main-widget.cpp:589
+msgid "Merge Selected Contacts"
+msgstr "Объединить выбранные контакты"
+
+#: main-widget.cpp:599
 msgid "Show Contacts by Groups"
 msgstr "Показывать контакты по группам"
 
-#: main-widget.cpp:573
+#: main-widget.cpp:603
+#, fuzzy
+#| msgid "Move to Group"
+msgid "Do not group"
+msgstr "Переместить в группу"
+
+#: main-widget.cpp:606
 msgid "Show Contacts by Accounts"
 msgstr "Показывать контакты по учётным записям"
 
-#: main-widget.cpp:580
+#: main-widget.cpp:611
 msgid "Show Offline Contacts"
 msgstr "Показывать контакты не в сети"
 
-#: main-widget.cpp:581
+#: main-widget.cpp:612
 msgid "Hide Offline Contacts"
 msgstr "Скрывать контакты не в сети"
 
-#: main-widget.cpp:589
+#: main-widget.cpp:620
 msgid "Sort by Presence"
 msgstr "Сортировать по статусу"
 
-#: main-widget.cpp:590
+#: main-widget.cpp:621
 msgid "Sort by Name"
 msgstr "Сортировать по имени"
 
-#: main-widget.cpp:598
+#: main-widget.cpp:629
 msgid "Use Full List"
 msgstr "Использовать полный список"
 
-#: main-widget.cpp:600
+#: main-widget.cpp:631
 msgid "Use Normal List"
 msgstr "Использовать обычный список"
 
-#: main-widget.cpp:604
+#: main-widget.cpp:635
 msgid "Use Minimalistic List"
 msgstr "Использовать компактный список"
 
-#: main-widget.cpp:611
+#: main-widget.cpp:642
 msgid "Show All Contacts"
 msgstr "Показать все контакты"
 
-#: main-widget.cpp:613
+#: main-widget.cpp:644
 msgid "Show Unblocked Contacts"
 msgstr "Показать незаблокированные контакты"
 
-#: main-widget.cpp:615
+#: main-widget.cpp:646
 msgid "Show Blocked Contacts"
 msgstr "Показать заблокированные контакты"
 
@@ -516,130 +555,6 @@ msgid "Account: %1"
 msgstr "Учётная запись: %1"
 
 #. i18n: ectx: property (text), widget (QLabel, blockedLabel)
-#: tooltips/contacttooltip.ui:126
+#: tooltips/contacttooltip.ui:126 tooltips/persontooltip.ui:33
 msgid "User is blocked"
 msgstr "Пользователь заблокирован"
-
-#, fuzzy
-#~| msgid "Settings"
-#~ msgid "Settings..."
-#~ msgstr "Настройка"
-
-#~ msgid "Contacts are shown by accounts. Click to show them in groups."
-#~ msgstr ""
-#~ "Контакты показаны по учётным записям. Нажмите, чтобы изменить отображение "
-#~ "по группам."
-
-#~ msgid "Contacts are shown in groups. Click to show them in accounts."
-#~ msgstr ""
-#~ "Контакты показаны по группам. Нажмите, чтобы изменить отображение по "
-#~ "учётным записям."
-
-#~ msgid "Offline contacts are hidden. Click to show them."
-#~ msgstr "Контакты, которых нет в сети, скрыты. Нажмите, чтобы показать их."
-
-#~ msgid "Offline contacts are shown. Click to hide them."
-#~ msgstr "Контакты, которых нет в сети, показаны. Нажмите, чтобы скрыть их."
-
-#~ msgid "List is sorted by name. Click to sort by presence."
-#~ msgstr ""
-#~ "Список сортируется по имени. Нажмите, чтобы сортировать по статусу "
-#~ "присутствия."
-
-#~ msgid "List is sorted by presence. Click to sort by name."
-#~ msgstr ""
-#~ "Список сортируется по статусу присутствия. Нажмите, чтобы сортировать по "
-#~ "имени."
-
-#~ msgctxt "This is an IM user status"
-#~ msgid "Unknown"
-#~ msgstr "Неизвестно"
-
-#~ msgid "Dialog"
-#~ msgstr "Диалоговое окно"
-
-#~ msgid "Avatar Here"
-#~ msgstr "Аватор"
-
-#~ msgid "Contact Display Name"
-#~ msgstr "Показываемое имя собеседника"
-
-#~ msgid "Presence String"
-#~ msgstr "Строка статуса"
-
-#~ msgid "Contact can see when you are online:"
-#~ msgstr "Собеседник может видеть, когда вы в сети:"
-
-#~ msgid "TextLabel"
-#~ msgstr "Текстовая метка"
-
-#~ msgid "You can see when the contact is online:"
-#~ msgstr "Вы можете видеть, когда собеседник в сети:"
-
-#~ msgid "Contact is blocked:"
-#~ msgstr "Контакт заблокирован:"
-
-#~ msgid "This room is already in your favorites."
-#~ msgstr "Канал уже в избранном."
-
-#~ msgid "Add room"
-#~ msgstr "Добавить канал"
-
-#~ msgid "Name"
-#~ msgstr "Имя"
-
-#~ msgid "Join Chatroom"
-#~ msgstr "Войти на канал"
-
-#~ msgid "Enter chat room:"
-#~ msgstr "Введите имя канал:"
-
-#~ msgid "Favorites"
-#~ msgstr "Избранное"
-
-#~ msgid "Add Room"
-#~ msgstr "Добавить канал"
-
-#~ msgid "Remove Room"
-#~ msgstr "Удалить канал"
-
-#~ msgid "Recent"
-#~ msgstr "Последние"
-
-#~ msgid "Remove"
-#~ msgstr "Удалить"
-
-#~ msgid "Clear list"
-#~ msgstr "Очистить список"
-
-#~ msgid "Query"
-#~ msgstr "Запрос"
-
-#~ msgid "Server to be queried:"
-#~ msgstr "Сервер для запросов:"
-
-#~ msgid "Leave blank for the selected account's default server"
-#~ msgstr "Оставьте пустым, по умолчанию сервер выбранной учётной записи"
-
-#~ msgid "Stop"
-#~ msgstr "Остановить"
-
-#~ msgid "Search rooms"
-#~ msgstr "Поиск каналов"
-
-#~ msgid "Password required"
-#~ msgstr "Требуется пароль"
-
-#~ msgid "No password required"
-#~ msgstr "Не требуется пароль"
-
-#~ msgid "Member count"
-#~ msgstr "Количество участников"
-
-#~ msgctxt "Chatrooms name"
-#~ msgid "Name"
-#~ msgstr "Имя"
-
-#~ msgctxt "Chatrooms description"
-#~ msgid "Description"
-#~ msgstr "Описание"

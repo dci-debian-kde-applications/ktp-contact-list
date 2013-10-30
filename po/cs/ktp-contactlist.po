@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-07-13 05:11+0000\n"
-"PO-Revision-Date: 2013-04-09 17:00+0200\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"POT-Creation-Date: 2013-10-26 04:57+0000\n"
+"PO-Revision-Date: 2013-10-01 12:26+0200\n"
+"Last-Translator: Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
@@ -71,15 +71,15 @@ msgctxt "@action:inmenu This is the IM presence message"
 msgid "Set message..."
 msgstr "Nastavit zprávu..."
 
-#: contact-list-widget.cpp:156
+#: contact-list-widget.cpp:192
 msgid "You have no IM accounts configured. Would you like to do that now?"
 msgstr "Nemáte nastaven IM účet. Přejete si jej nyní nastavit?"
 
-#: contact-list-widget.cpp:157
+#: contact-list-widget.cpp:193
 msgid "No Accounts Found"
 msgstr "Účty nenalezeny"
 
-#: contact-list-widget.cpp:172
+#: contact-list-widget.cpp:208
 msgid ""
 "It appears you do not have the IM Accounts control module installed. Please "
 "install ktp-accounts-kcm package."
@@ -87,28 +87,49 @@ msgstr ""
 "Vypadá to, že nemáte nainstalován modul ovládání účtů komunikátoru. Prosím, "
 "nainstalujte balíček ktp-accounts-kcm."
 
-#: contact-list-widget.cpp:173
+#: contact-list-widget.cpp:209
 msgid "IM Accounts KCM Plugin Is Not Installed"
 msgstr "Modul KCM účtů komunikátoru není nainstalován"
 
-#: contact-list-widget.cpp:191
+#: contact-list-widget.cpp:227
 msgid "Notifications"
 msgstr "Oznamování"
 
-#: contact-list-widget.cpp:381
+#: contact-list-widget.cpp:289
+#, kde-format
+msgctxt ""
+"Label of a dialog's 'OK' button; %1 is account name, eg. 'Connect account "
+"GTalk'"
+msgid "Connect account %1"
+msgstr "Připojit účet %1"
+
+#: contact-list-widget.cpp:291
+msgid ""
+"The account for this contact is disconnected. Do you want to connect it?"
+msgstr "Účet pro tento kontakt je odpojen. Chcete jej připojit?"
+
+#: contact-list-widget.cpp:292
+msgid "Account offline"
+msgstr "Účet je odpojený"
+
+#: contact-list-widget.cpp:500
 #, kde-format
 msgid "Choose files to send to %1"
 msgstr "Vyberte soubory pro odeslání k %1"
 
-#: contact-list-widget.cpp:697
+#: contact-list-widget.cpp:796
+msgid "Merge contacts"
+msgstr "Sloučit kontakty"
+
+#: contact-list-widget.cpp:838
 msgid "&Move here"
 msgstr "&Přesunout sem"
 
-#: contact-list-widget.cpp:701
+#: contact-list-widget.cpp:842
 msgid "&Copy here"
 msgstr "&Kopírovat sem"
 
-#: contact-list-widget.cpp:705
+#: contact-list-widget.cpp:846
 msgid "C&ancel"
 msgstr "Z&rušit"
 
@@ -136,7 +157,7 @@ msgstr "Zahájit video hovor"
 msgid "Start a video call"
 msgstr "Zahájit video hovor"
 
-#: contact-overlays.cpp:171 contact-overlays.cpp:172 context-menu.cpp:138
+#: contact-overlays.cpp:171 contact-overlays.cpp:172 context-menu.cpp:140
 msgid "Send File..."
 msgstr "Poslat soubor..."
 
@@ -145,105 +166,97 @@ msgid "Send a file"
 msgstr "Poslat soubor"
 
 #: contact-overlays.cpp:183 contact-overlays.cpp:184
-msgid "Share My Desktop"
-msgstr "Sdílet plochu"
-
-#: contact-overlays.cpp:184
-msgid "Share desktop using RFB"
-msgstr "Sdílet plochu pomocí RFB"
-
-#: contact-overlays.cpp:195 contact-overlays.cpp:196
 msgid "Open Log Viewer"
 msgstr "Otevřít prohlížeč záznamů"
 
-#: contact-overlays.cpp:196
+#: contact-overlays.cpp:184
 msgid "Show conversation logs"
 msgstr "Zobrazit záznamy konverzace"
 
-#: context-menu.cpp:102
+#: context-menu.cpp:110
 msgid "Start Chat..."
 msgstr "Zahájit rozhovor..."
 
-#: context-menu.cpp:118
+#: context-menu.cpp:120
 msgid "Start Audio Call..."
 msgstr "Zahájit zvukový hovor..."
 
-#: context-menu.cpp:128
+#: context-menu.cpp:130
 msgid "Start Video Call..."
 msgstr "Zahájit video hovor..."
 
-#: context-menu.cpp:148
+#: context-menu.cpp:150
 msgid "Share my desktop..."
 msgstr "Sdílet plochu..."
 
-#: context-menu.cpp:158
+#: context-menu.cpp:160
 msgid "Open Log Viewer..."
 msgstr "Otevřít prohlížeč záznamů..."
 
-#: context-menu.cpp:170
+#: context-menu.cpp:173
 msgid "Configure Notifications..."
 msgstr "Nastavit oznamování..."
 
-#: context-menu.cpp:187
+#: context-menu.cpp:190
 msgid "Presence message link"
 msgid_plural "Presence message links"
 msgstr[0] "Odkaz zprávy o přítomnosti"
 msgstr[1] "Odkazy zprávy o přítomnosti"
 msgstr[2] "Odkazů zprávy o přítomnosti"
 
-#: context-menu.cpp:201
+#: context-menu.cpp:210
 msgid "Remove Contact From This Group"
 msgstr "Odstranit kontakt z této skupiny"
 
-#: context-menu.cpp:205
+#: context-menu.cpp:214
 msgid "Move to Group"
 msgstr "Přesunout do skupiny"
 
-#: context-menu.cpp:223
+#: context-menu.cpp:232
 msgid "Create New Group..."
 msgstr "Vytvořit novou skupinu..."
 
-#: context-menu.cpp:242
+#: context-menu.cpp:251
 msgid "Re-request Contact Authorization"
 msgstr "Znovu vyžádat oprávnění kontaktu"
 
-#: context-menu.cpp:248
+#: context-menu.cpp:257
 msgid "Resend Contact Authorization"
 msgstr "Znovu zaslat oprávnění kontaktu"
 
-#: context-menu.cpp:256
+#: context-menu.cpp:265
 msgid "Unblock Contact"
 msgstr "Odblokovat kontakt"
 
-#: context-menu.cpp:260
+#: context-menu.cpp:269
 msgid "Block Contact"
 msgstr "Blokovat kontakt"
 
-#: context-menu.cpp:268
+#: context-menu.cpp:277
 msgid "Remove Contact"
 msgstr "Odstranit kontakt"
 
-#: context-menu.cpp:273
+#: context-menu.cpp:282
 msgid "Show Info..."
 msgstr "Zobrazit informace..."
 
-#: context-menu.cpp:294
+#: context-menu.cpp:303
 msgid "Rename Group..."
 msgstr "Přejmenovat skupinu..."
 
-#: context-menu.cpp:300
+#: context-menu.cpp:309
 msgid "Delete Group"
 msgstr "Smazat skupinu"
 
-#: context-menu.cpp:471 context-menu.cpp:496
+#: context-menu.cpp:493 context-menu.cpp:518
 msgid "New Group Name"
 msgstr "Název nové skupiny:"
 
-#: context-menu.cpp:472 context-menu.cpp:497
+#: context-menu.cpp:494 context-menu.cpp:519
 msgid "Please enter the new group name"
 msgstr "Prosím zadejte jméno nové skupiny"
 
-#: context-menu.cpp:530
+#: context-menu.cpp:552
 #, kde-format
 msgid ""
 "Do you really want to remove group %1?\n"
@@ -254,7 +267,7 @@ msgstr ""
 "\n"
 "Všechny kontakty ze skupiny budou přesunuty do skupiny 'Bez skupiny'"
 
-#: context-menu.cpp:532
+#: context-menu.cpp:554
 msgid "Remove Group"
 msgstr "Odstranit skupinu"
 
@@ -337,23 +350,23 @@ msgstr "Nyní poslouchám..."
 msgid "Click to change your presence message"
 msgstr "Klikněte ke změně zprávy stavu"
 
-#: global-presence-chooser.cpp:231
+#: global-presence-chooser.cpp:232
 msgctxt "Presence string when the account is connecting"
 msgid "Connecting..."
 msgstr "Připojuji se..."
 
-#: global-presence-chooser.cpp:332
+#: global-presence-chooser.cpp:333
 msgid ""
 "This plugin is currently disabled. Do you want to enable it and use as your "
 "presence?"
 msgstr ""
 "Rozšíření je nyní zakázáno. Přejete si jej povolit a použít jako svůj stav?"
 
-#: global-presence-chooser.cpp:333
+#: global-presence-chooser.cpp:334
 msgid "Plugin disabled"
 msgstr "Modul vypnut"
 
-#: main-widget.cpp:209
+#: main-widget.cpp:175
 msgid ""
 "Something unexpected happened to the core part of your Instant Messaging "
 "system and it couldn't be initialized. Try restarting the Contact List."
@@ -361,11 +374,11 @@ msgstr ""
 "Stalo se něco neočekávaného klíčové části vašeho IM systému a ten nemohl být "
 "inicializován. Zkuste restartovat Seznam kontaktů."
 
-#: main-widget.cpp:211
+#: main-widget.cpp:177
 msgid "IM system failed to initialize"
 msgstr "Selhala inicializace IM systému"
 
-#: main-widget.cpp:316
+#: main-widget.cpp:303
 msgid ""
 "You do not have any other presence controls active (a Presence widget for "
 "example).\n"
@@ -374,99 +387,123 @@ msgstr ""
 "Nemáte spuštěny žádné další ovládání stavu (např. widget stavu).\n"
 "Přejete si zůstat připojeni a nebo se odpojit?"
 
-#: main-widget.cpp:318
+#: main-widget.cpp:305
 msgid "No Other Presence Controls Found"
 msgstr "Žádné další ovládání stavu nenalezeno"
 
-#: main-widget.cpp:319
+#: main-widget.cpp:306
 msgid "Stay Online"
 msgstr "Zůstat připojen"
 
-#: main-widget.cpp:320
+#: main-widget.cpp:307
 msgid "Go Offline"
 msgstr "Odpojit"
 
-#: main-widget.cpp:430
+#: main-widget.cpp:423 tooltips/persontooltip.cpp:55
 msgid "Contacts"
 msgstr "Kontakty"
 
-#: main-widget.cpp:442
+#: main-widget.cpp:438
 msgid "View"
 msgstr "Pohled"
 
-#: main-widget.cpp:447 main-widget.cpp:482
+#: main-widget.cpp:442 main-widget.cpp:485
 msgid "Contact List Type"
 msgstr "Typ seznamu kontaktů"
 
-#: main-widget.cpp:450 main-widget.cpp:487
+#: main-widget.cpp:445 main-widget.cpp:490
 msgid "Shown Contacts"
 msgstr "Zobrazit kontakty"
 
-#: main-widget.cpp:559
+#: main-widget.cpp:448 main-widget.cpp:495
+msgid "Contact Grouping"
+msgstr "Seskupovaní kontaktů"
+
+#: main-widget.cpp:572
 msgid "Instant Messaging Settings..."
 msgstr "Nastavení komunikátoru..."
 
-#: main-widget.cpp:564
+#: main-widget.cpp:577
 msgid "Join Chat Room..."
 msgstr "Připojit se do místnosti..."
 
-#: main-widget.cpp:565
+#: main-widget.cpp:579
 msgid "Make a Call..."
 msgstr "Zahájit hovor..."
 
-#: main-widget.cpp:566
+#: main-widget.cpp:580
+msgid "Merge Contacts..."
+msgstr "Sloučit kontakty..."
+
+#: main-widget.cpp:581
 msgid "Add New Contacts..."
 msgstr "Přidat nové kontakty...."
 
-#: main-widget.cpp:567
+#: main-widget.cpp:582
 msgid "Find Contact"
 msgstr "Najít kontakt"
 
-#: main-widget.cpp:572
+#: main-widget.cpp:585
+msgid "Start a chat..."
+msgstr "Zahájit rozhovor..."
+
+#: main-widget.cpp:588
+msgid "Split Selected Contacts"
+msgstr "Rozdělit vybrané kontakty"
+
+#: main-widget.cpp:589
+msgid "Merge Selected Contacts"
+msgstr "Sloučit vybrané kontakty"
+
+#: main-widget.cpp:599
 msgid "Show Contacts by Groups"
 msgstr "Zobrazit kontakty podle skupin"
 
-#: main-widget.cpp:573
+#: main-widget.cpp:603
+msgid "Do not group"
+msgstr "Neseskupovat"
+
+#: main-widget.cpp:606
 msgid "Show Contacts by Accounts"
 msgstr "Zobrazit kontakty podle účtů"
 
-#: main-widget.cpp:580
+#: main-widget.cpp:611
 msgid "Show Offline Contacts"
 msgstr "Zobrazit odpojené kontakty"
 
-#: main-widget.cpp:581
+#: main-widget.cpp:612
 msgid "Hide Offline Contacts"
 msgstr "Skrýt odpojené kontakty"
 
-#: main-widget.cpp:589
+#: main-widget.cpp:620
 msgid "Sort by Presence"
 msgstr "Seřadit podle přítomnosti"
 
-#: main-widget.cpp:590
+#: main-widget.cpp:621
 msgid "Sort by Name"
 msgstr "Seřadit podle názvu"
 
-#: main-widget.cpp:598
+#: main-widget.cpp:629
 msgid "Use Full List"
 msgstr "Použít plný seznam"
 
-#: main-widget.cpp:600
+#: main-widget.cpp:631
 msgid "Use Normal List"
 msgstr "Použít normální seznam"
 
-#: main-widget.cpp:604
+#: main-widget.cpp:635
 msgid "Use Minimalistic List"
 msgstr "Použít minimalistický seznam"
 
-#: main-widget.cpp:611
+#: main-widget.cpp:642
 msgid "Show All Contacts"
 msgstr "Zobrazit všechny kontakty"
 
-#: main-widget.cpp:613
+#: main-widget.cpp:644
 msgid "Show Unblocked Contacts"
 msgstr "Zobrazit odblokované kontakty"
 
-#: main-widget.cpp:615
+#: main-widget.cpp:646
 msgid "Show Blocked Contacts"
 msgstr "Zobrazit blokované kontakty"
 
@@ -507,6 +544,6 @@ msgid "Account: %1"
 msgstr "Účet: %1"
 
 #. i18n: ectx: property (text), widget (QLabel, blockedLabel)
-#: tooltips/contacttooltip.ui:126
+#: tooltips/contacttooltip.ui:126 tooltips/persontooltip.ui:33
 msgid "User is blocked"
 msgstr "Uživatel je blokován"
