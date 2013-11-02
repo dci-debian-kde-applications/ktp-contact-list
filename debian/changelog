@@ -1,7 +1,8 @@
 ktp-contact-list (0.7.0-1) UNRELEASED; urgency=low
 
-  * Imported Upstream version 0.7.0
-  * Bump Build-Depends of libktpcommoninternalsprivate-dev to 0.6.80
+  * New upstream release.
+  * Bump Build-Depends of libktpcommoninternalsprivate-dev to 0.7.0
+  * Bump depends kde-telepathy-data to 0.7.0
 
  -- Diane Trout <diane@ghic.org>  Tue, 29 Oct 2013 22:10:23 -0700
 
