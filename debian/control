@@ -10,7 +10,7 @@ Build-Depends: debhelper (>= 9),
  cmake (>= 2.8),
  libtelepathy-logger-dev,
  libtelepathy-logger-qt4-dev (>= 0.5.60),
- libktpcommoninternalsprivate-dev (>= 0.7.0),
+ libktpcommoninternalsprivate-dev (>= 0.7.80),
 # libkpeople-dev
 Standards-Version: 3.9.5
 Homepage: https://projects.kde.org/projects/extragear/network/telepathy/ktp-contact-list
@@ -19,7 +19,7 @@ Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-kde/kde-extras/kde-telepath
 
 Package: kde-telepathy-contact-list
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, kde-telepathy-data (>= 0.7.0)
+Depends: ${shlibs:Depends}, ${misc:Depends}, kde-telepathy-data (>= 0.7.80)
 Recommends: kde-telepathy
 Description: Telepathy contact list for the KDE Plasma Desktop
  This package provides a contact list application based on telepathy,
