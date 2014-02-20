@@ -43,8 +43,10 @@
 #include <TelepathyQt/PendingOperation>
 
 #ifdef HAVE_KPEOPLE
-#include <kpeople/personpluginmanager.h>
 #include <kpeople/widgets/persondetailsdialog.h>
+#include <kpeople/global.h>
+#include <kpeople/personsmodel.h>
+#include <kpeople/persondata.h>
 #endif
 
 #include "dialogs/remove-contact-dialog.h"
@@ -102,8 +104,12 @@ KMenu* ContextMenu::contactContextMenu(const QModelIndex &index)
 
     if (KTp::kpeopleEnabled()) {
     #ifdef HAVE_KPEOPLE
-        menu->addActions(KPeople::PersonPluginManager::actionsForPerson(
-            KPeople::PersonData::createFromUri(index.data(KTp::NepomukUriRole).toString()), menu));
+        if (index.parent().isValid()) {
+            menu->addActions(KPeople::actionsForPerson(index.data(KTp::ContactVCardRole).value<KABC::Addressee>(), KABC::AddresseeList(), menu));
+        } else {
+            KPeople::PersonData p(index.data(KTp::PersonIdRole).toString());
+            menu->addActions(KPeople::actionsForPerson(p.person(), p.contacts(), menu));
+        }
     #endif
     } else {
         //must be a QAction because menu->addAction returns QAction, breaks compilation otherwise
@@ -346,10 +352,10 @@ void ContextMenu::onShowInfoTriggered()
 
     if (KTp::kpeopleEnabled()) {
     #ifdef HAVE_KPEOPLE
-        const QUrl &uri = m_currentIndex.data(KTp::NepomukUriRole).toUrl();
-        KPeople::PersonDataPtr person = KPeople::PersonData::createFromUri(uri);
-        if (person->isValid()) {
+        const QString &personId = m_currentIndex.data(KTp::PersonIdRole).toString();
+        if (!personId.isEmpty()) {
             KPeople::PersonDetailsDialog *view = new KPeople::PersonDetailsDialog(m_mainWidget);
+            KPeople::PersonData *person = new KPeople::PersonData(personId, view);
             view->setPerson(person);
             view->setAttribute(Qt::WA_DeleteOnClose);
             view->show();
