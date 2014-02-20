@@ -1,6 +1,6 @@
 project (ktp-contactlist)
 
-set(KTP_CONTACT_LIST_VERSION "0.7.0")
+set(KTP_CONTACT_LIST_VERSION "0.7.80")
 
 set (CMAKE_MODULE_PATH
      "${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules"
@@ -12,14 +12,16 @@ set(KDE_MIN_VERSION "4.4.75")
 find_package (KDE4 4.4.75 REQUIRED)
 find_package (TelepathyQt4 0.9.3 REQUIRED)
 find_package (KTp REQUIRED)
-find_package (KPeople QUIET)
+find_package (KPeople 0.2)
+
 
 macro_log_feature(KPEOPLE_FOUND "KPeople" "Support for KDE Contact Aggregation" "https://projects.kde.org/libkpeople" FALSE "" "")
 macro_display_feature_log()
 
 if (KPEOPLE_FOUND)
     add_definitions(-DHAVE_KPEOPLE)
-    include_directories(${KPEOPLE_INCLUDES})
+    find_package (KdepimLibs REQUIRED)
+    include_directories(${KPEOPLE_INCLUDES} ${KDEPIMLIBS_INCLUDE_DIRS})
 endif (KPEOPLE_FOUND)
 
 include (KDE4Defaults)
@@ -77,6 +79,7 @@ if(KPEOPLE_FOUND)
 set (ktp_contactlist_LIBS
     ${ktp_contactlist_LIBS}
     ${KPEOPLE_LIBRARY}
+    ${KDEPIMLIBS_KABC_LIBS}
     ${KPEOPLEWIDGETS_LIBRARY}
 )
 endif(KPEOPLE_FOUND)

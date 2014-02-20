@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-10-26 04:57+0000\n"
-"PO-Revision-Date: 2013-04-08 22:46+0300\n"
+"POT-Creation-Date: 2014-02-17 01:57+0000\n"
+"PO-Revision-Date: 2013-10-27 07:39+0200\n"
 "Last-Translator: Sergiu Bivol <sergiu@ase.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -71,17 +71,17 @@ msgctxt "@action:inmenu This is the IM presence message"
 msgid "Set message..."
 msgstr "Stabilire mesaj..."
 
-#: contact-list-widget.cpp:192
+#: contact-list-widget.cpp:193
 msgid "You have no IM accounts configured. Would you like to do that now?"
 msgstr ""
 "Nu aveți conturi de mesagerie instantanee configurate. Doriți să o faceți "
 "acum?"
 
-#: contact-list-widget.cpp:193
+#: contact-list-widget.cpp:194
 msgid "No Accounts Found"
 msgstr "Nu au fost găsite conturi"
 
-#: contact-list-widget.cpp:208
+#: contact-list-widget.cpp:209
 msgid ""
 "It appears you do not have the IM Accounts control module installed. Please "
 "install ktp-accounts-kcm package."
@@ -89,54 +89,49 @@ msgstr ""
 "Se pare că nu aveți instalat modulul pentru controlul conturilor de "
 "mesagerie instantanee. Instalați pachetul „ktp-accounts-kcm”."
 
-#: contact-list-widget.cpp:209
+#: contact-list-widget.cpp:210
 msgid "IM Accounts KCM Plugin Is Not Installed"
 msgstr "Modulul KCM pentru conturi MI nu este instalat"
 
-#: contact-list-widget.cpp:227
+#: contact-list-widget.cpp:228
 msgid "Notifications"
 msgstr "Notificări"
 
-#: contact-list-widget.cpp:289
-#, fuzzy, kde-format
-#| msgid "Account: %1"
+#: contact-list-widget.cpp:290
+#, kde-format
 msgctxt ""
 "Label of a dialog's 'OK' button; %1 is account name, eg. 'Connect account "
 "GTalk'"
 msgid "Connect account %1"
-msgstr "Cont: %1"
-
-#: contact-list-widget.cpp:291
-msgid ""
-"The account for this contact is disconnected. Do you want to connect it?"
-msgstr ""
+msgstr "Conectează contul %1"
 
 #: contact-list-widget.cpp:292
-#, fuzzy
-#| msgid "Go Offline"
-msgid "Account offline"
-msgstr "Deconectează-te"
+msgid ""
+"The account for this contact is disconnected. Do you want to connect it?"
+msgstr "Contul pentru acest contact e deconectat. Doriți să-l conectați?"
 
-#: contact-list-widget.cpp:500
+#: contact-list-widget.cpp:293
+msgid "Account offline"
+msgstr "Cont deconectat"
+
+#: contact-list-widget.cpp:501
 #, kde-format
 msgid "Choose files to send to %1"
 msgstr "Alegeți fișierele de trimis către %1"
 
-#: contact-list-widget.cpp:796
-#, fuzzy
-#| msgid "Remove contact"
+#: contact-list-widget.cpp:797
 msgid "Merge contacts"
-msgstr "Elimină contact"
+msgstr "Combină contacte"
 
-#: contact-list-widget.cpp:838
+#: contact-list-widget.cpp:839
 msgid "&Move here"
 msgstr "&Mută aici"
 
-#: contact-list-widget.cpp:842
+#: contact-list-widget.cpp:843
 msgid "&Copy here"
 msgstr "&Copiază aici"
 
-#: contact-list-widget.cpp:846
+#: contact-list-widget.cpp:847
 msgid "C&ancel"
 msgstr "R&enunță"
 
@@ -164,7 +159,7 @@ msgstr "Începe apel video"
 msgid "Start a video call"
 msgstr "Începe un apel video"
 
-#: contact-overlays.cpp:171 contact-overlays.cpp:172 context-menu.cpp:140
+#: contact-overlays.cpp:171 contact-overlays.cpp:172 context-menu.cpp:146
 msgid "Send File..."
 msgstr "Expediere fișier..."
 
@@ -180,90 +175,90 @@ msgstr "Deschide vizualizatorul de jurnal"
 msgid "Show conversation logs"
 msgstr "Arată jurnalul conversațiilor"
 
-#: context-menu.cpp:110
+#: context-menu.cpp:116
 msgid "Start Chat..."
 msgstr "Începe conversație..."
 
-#: context-menu.cpp:120
+#: context-menu.cpp:126
 msgid "Start Audio Call..."
 msgstr "Începe apel audio..."
 
-#: context-menu.cpp:130
+#: context-menu.cpp:136
 msgid "Start Video Call..."
 msgstr "Începe apel video..."
 
-#: context-menu.cpp:150
+#: context-menu.cpp:156
 msgid "Share my desktop..."
 msgstr "Partajează biroul meu..."
 
-#: context-menu.cpp:160
+#: context-menu.cpp:166
 msgid "Open Log Viewer..."
 msgstr "Deschide vizualizatorul de jurnal..."
 
-#: context-menu.cpp:173
+#: context-menu.cpp:179
 msgid "Configure Notifications..."
 msgstr "Configurează notificările..."
 
-#: context-menu.cpp:190
+#: context-menu.cpp:196
 msgid "Presence message link"
 msgid_plural "Presence message links"
 msgstr[0] "Legătură pentru mesaj de prezență"
 msgstr[1] "Legături pentru mesaj de prezență"
 msgstr[2] "Legături pentru mesaj de prezență"
 
-#: context-menu.cpp:210
+#: context-menu.cpp:216
 msgid "Remove Contact From This Group"
 msgstr "Elimină contactul din acest grup"
 
-#: context-menu.cpp:214
+#: context-menu.cpp:220
 msgid "Move to Group"
 msgstr "Mută la grup"
 
-#: context-menu.cpp:232
+#: context-menu.cpp:238
 msgid "Create New Group..."
 msgstr "Creare grup nou..."
 
-#: context-menu.cpp:251
+#: context-menu.cpp:257
 msgid "Re-request Contact Authorization"
 msgstr "Cere repetat autorizarea contactului"
 
-#: context-menu.cpp:257
+#: context-menu.cpp:263
 msgid "Resend Contact Authorization"
 msgstr "Trimite repetat autorizarea contactului"
 
-#: context-menu.cpp:265
+#: context-menu.cpp:271
 msgid "Unblock Contact"
 msgstr "Deblochează contact"
 
-#: context-menu.cpp:269
+#: context-menu.cpp:275
 msgid "Block Contact"
 msgstr "Blochează contact"
 
-#: context-menu.cpp:277
+#: context-menu.cpp:283
 msgid "Remove Contact"
 msgstr "Elimină contact"
 
-#: context-menu.cpp:282
+#: context-menu.cpp:288
 msgid "Show Info..."
 msgstr "Arată informații..."
 
-#: context-menu.cpp:303
+#: context-menu.cpp:309
 msgid "Rename Group..."
 msgstr "Redenumire grup..."
 
-#: context-menu.cpp:309
+#: context-menu.cpp:315
 msgid "Delete Group"
 msgstr "Șterge grupul"
 
-#: context-menu.cpp:493 context-menu.cpp:518
+#: context-menu.cpp:499 context-menu.cpp:524
 msgid "New Group Name"
 msgstr "Noua denumire a grupului"
 
-#: context-menu.cpp:494 context-menu.cpp:519
+#: context-menu.cpp:500 context-menu.cpp:525
 msgid "Please enter the new group name"
 msgstr "Introduceți denumirea nouă a grupului"
 
-#: context-menu.cpp:552
+#: context-menu.cpp:558
 #, kde-format
 msgid ""
 "Do you really want to remove group %1?\n"
@@ -274,7 +269,7 @@ msgstr ""
 "\n"
 "Rețineți că toate contactele acestuia vor fi mutate la grupul „Negrupate”"
 
-#: context-menu.cpp:554
+#: context-menu.cpp:560
 msgid "Remove Group"
 msgstr "Elimină grupul"
 
@@ -374,7 +369,7 @@ msgstr ""
 msgid "Plugin disabled"
 msgstr "Extensie dezactivată"
 
-#: main-widget.cpp:175
+#: main-widget.cpp:174
 msgid ""
 "Something unexpected happened to the core part of your Instant Messaging "
 "system and it couldn't be initialized. Try restarting the Contact List."
@@ -383,11 +378,11 @@ msgstr ""
 "mesagerie instantanee și acesta nu a putut fi inițializat. Încercați să "
 "reporniți lista de contacte."
 
-#: main-widget.cpp:177
+#: main-widget.cpp:176
 msgid "IM system failed to initialize"
 msgstr "Inițializarea sistemului de MI a eșuat"
 
-#: main-widget.cpp:303
+#: main-widget.cpp:304
 msgid ""
 "You do not have any other presence controls active (a Presence widget for "
 "example).\n"
@@ -398,135 +393,123 @@ msgstr ""
 "\n"
 "Doriți să rămîneți conectat sau să vă deconectați?"
 
-#: main-widget.cpp:305
+#: main-widget.cpp:306
 msgid "No Other Presence Controls Found"
 msgstr "Nu au fost găsite alte controale de prezență"
 
-#: main-widget.cpp:306
+#: main-widget.cpp:307
 msgid "Stay Online"
 msgstr "Rămîi conectat"
 
-#: main-widget.cpp:307
+#: main-widget.cpp:308
 msgid "Go Offline"
 msgstr "Deconectează-te"
 
-#: main-widget.cpp:423 tooltips/persontooltip.cpp:55
+#: main-widget.cpp:424 tooltips/persontooltip.cpp:55
 msgid "Contacts"
 msgstr "Contacte"
 
-#: main-widget.cpp:438
+#: main-widget.cpp:439
 msgid "View"
 msgstr "Vizualizare"
 
-#: main-widget.cpp:442 main-widget.cpp:485
+#: main-widget.cpp:443 main-widget.cpp:486
 msgid "Contact List Type"
 msgstr "Tipul listei de contacte"
 
-#: main-widget.cpp:445 main-widget.cpp:490
+#: main-widget.cpp:446 main-widget.cpp:491
 msgid "Shown Contacts"
 msgstr "Contacte afișate"
 
-#: main-widget.cpp:448 main-widget.cpp:495
-#, fuzzy
-#| msgid "Show Contacts by Groups"
+#: main-widget.cpp:449 main-widget.cpp:496
 msgid "Contact Grouping"
-msgstr "Arată contactele pe grupuri"
+msgstr "Grupare contacte"
 
-#: main-widget.cpp:572
+#: main-widget.cpp:573
 msgid "Instant Messaging Settings..."
 msgstr "Configurări mesagerie instantanee..."
 
-#: main-widget.cpp:577
+#: main-widget.cpp:578
 msgid "Join Chat Room..."
 msgstr "Alăturare la o cameră de discuții..."
 
-#: main-widget.cpp:579
+#: main-widget.cpp:580
 msgid "Make a Call..."
 msgstr "Efectuează un apel..."
 
-#: main-widget.cpp:580
-#, fuzzy
-#| msgid "Add New Contacts..."
-msgid "Merge Contacts..."
-msgstr "Adăugare contacte noi..."
-
 #: main-widget.cpp:581
+msgid "Merge Contacts..."
+msgstr "Combină contacte..."
+
+#: main-widget.cpp:582
 msgid "Add New Contacts..."
 msgstr "Adăugare contacte noi..."
 
-#: main-widget.cpp:582
+#: main-widget.cpp:583
 msgid "Find Contact"
 msgstr "Găsește contact"
 
-#: main-widget.cpp:585
-#, fuzzy
-#| msgid "Start Chat..."
+#: main-widget.cpp:586
 msgid "Start a chat..."
-msgstr "Începe conversație..."
-
-#: main-widget.cpp:588
-#, fuzzy
-#| msgid "Show Blocked Contacts"
-msgid "Split Selected Contacts"
-msgstr "Arată contacte blocate"
+msgstr "Începe o conversație..."
 
 #: main-widget.cpp:589
-#, fuzzy
-#| msgid "Remove the selected contact?"
-msgid "Merge Selected Contacts"
-msgstr "Eliminați contactul ales?"
+msgid "Split Selected Contacts"
+msgstr "Desparte contactele alese"
 
-#: main-widget.cpp:599
+#: main-widget.cpp:590
+msgid "Merge Selected Contacts"
+msgstr "Combină contactele alese"
+
+#: main-widget.cpp:600
 msgid "Show Contacts by Groups"
 msgstr "Arată contactele pe grupuri"
 
-#: main-widget.cpp:603
-#, fuzzy
-#| msgid "Move to Group"
+#: main-widget.cpp:604
 msgid "Do not group"
-msgstr "Mută la grup"
+msgstr "Nu grupa"
 
-#: main-widget.cpp:606
+#: main-widget.cpp:607
 msgid "Show Contacts by Accounts"
 msgstr "Arată contactele pe conturi"
 
-#: main-widget.cpp:611
+#: main-widget.cpp:612
 msgid "Show Offline Contacts"
 msgstr "Arată contactele deconectate"
 
-#: main-widget.cpp:612
+#: main-widget.cpp:613
 msgid "Hide Offline Contacts"
 msgstr "Ascunde contactele deconectate"
 
-#: main-widget.cpp:620
+#: main-widget.cpp:621
 msgid "Sort by Presence"
 msgstr "Sortează după prezență"
 
-#: main-widget.cpp:621
+#: main-widget.cpp:622
 msgid "Sort by Name"
 msgstr "Sortează după nume"
 
-#: main-widget.cpp:629
+#: main-widget.cpp:630
 msgid "Use Full List"
 msgstr "Folosește listă completă"
 
-#: main-widget.cpp:631
+#: main-widget.cpp:632
 msgid "Use Normal List"
 msgstr "Folosește listă obișnuită"
 
-#: main-widget.cpp:635
+#: main-widget.cpp:636
 msgid "Use Minimalistic List"
 msgstr "Folosește listă minimă"
 
-#: main-widget.cpp:642
+#: main-widget.cpp:643
 msgid "Show All Contacts"
 msgstr "Arată toate contactele"
 
-#: main-widget.cpp:644
+#: main-widget.cpp:645
 msgid "Show Unblocked Contacts"
 msgstr "Arată contacte deblocate"
 
-#: main-widget.cpp:646
+#: main-widget.cpp:647
 msgid "Show Blocked Contacts"
 msgstr "Arată contacte blocate"
 
@@ -556,12 +539,12 @@ msgstr "Dezvoltator"
 msgid "Show Telepathy debugging information"
 msgstr "Arată informații de depanare Telepathy"
 
-#: tooltips/contacttooltip.cpp:58
+#: tooltips/contacttooltip.cpp:60
 msgctxt "This is an IM user status"
 msgid "Error Getting Presence"
 msgstr "Eroare la obținerea prezenței"
 
-#: tooltips/contacttooltip.cpp:76
+#: tooltips/contacttooltip.cpp:78
 #, kde-format
 msgid "Account: %1"
 msgstr "Cont: %1"
