@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-02-17 01:57+0000\n"
-"PO-Revision-Date: 2013-10-23 10:52+0200\n"
+"POT-Creation-Date: 2013-10-26 04:57+0000\n"
+"PO-Revision-Date: 2013-10-23 10:56+0200\n"
 "Last-Translator: Balázs Úr <urbalazs@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -71,16 +71,16 @@ msgctxt "@action:inmenu This is the IM presence message"
 msgid "Set message..."
 msgstr "Üzenet megadása…"
 
-#: contact-list-widget.cpp:193
+#: contact-list-widget.cpp:192
 msgid "You have no IM accounts configured. Would you like to do that now?"
 msgstr ""
 "Nincs beállítva azonnali üzenetküldési azonosító. Szeretné most megtenni?"
 
-#: contact-list-widget.cpp:194
+#: contact-list-widget.cpp:193
 msgid "No Accounts Found"
 msgstr "Nem találhatók azonosítók"
 
-#: contact-list-widget.cpp:209
+#: contact-list-widget.cpp:208
 msgid ""
 "It appears you do not have the IM Accounts control module installed. Please "
 "install ktp-accounts-kcm package."
@@ -88,15 +88,15 @@ msgstr ""
 "Úgy tűnik nincs telepítve az azonnali üzenetküldési azonosítók "
 "beállítómodulja. Telepítse a ktp-accounts-kcm csomagot."
 
-#: contact-list-widget.cpp:210
+#: contact-list-widget.cpp:209
 msgid "IM Accounts KCM Plugin Is Not Installed"
 msgstr "Az azonnali üzenetküldési azonosítók beállítómodulja nincs telepítve"
 
-#: contact-list-widget.cpp:228
+#: contact-list-widget.cpp:227
 msgid "Notifications"
 msgstr "Értesítések"
 
-#: contact-list-widget.cpp:290
+#: contact-list-widget.cpp:289
 #, kde-format
 msgctxt ""
 "Label of a dialog's 'OK' button; %1 is account name, eg. 'Connect account "
@@ -104,33 +104,33 @@ msgctxt ""
 msgid "Connect account %1"
 msgstr "A(z) %1 fiók csatlakoztatása"
 
-#: contact-list-widget.cpp:292
+#: contact-list-widget.cpp:291
 msgid ""
 "The account for this contact is disconnected. Do you want to connect it?"
 msgstr "A partner fiókja le lett választva. Szeretné csatlakoztatni?"
 
-#: contact-list-widget.cpp:293
+#: contact-list-widget.cpp:292
 msgid "Account offline"
 msgstr "A fiók nem érhető el"
 
-#: contact-list-widget.cpp:501
+#: contact-list-widget.cpp:500
 #, kde-format
 msgid "Choose files to send to %1"
 msgstr "Válassza ki a(z) %1 partnernek küldendő fájlokat"
 
-#: contact-list-widget.cpp:797
+#: contact-list-widget.cpp:796
 msgid "Merge contacts"
 msgstr "Partnerek egyesítése"
 
-#: contact-list-widget.cpp:839
+#: contact-list-widget.cpp:838
 msgid "&Move here"
 msgstr "Mo&zgatás ide"
 
-#: contact-list-widget.cpp:843
+#: contact-list-widget.cpp:842
 msgid "&Copy here"
 msgstr "Má&solás ide"
 
-#: contact-list-widget.cpp:847
+#: contact-list-widget.cpp:846
 msgid "C&ancel"
 msgstr "&Mégse"
 
@@ -158,7 +158,7 @@ msgstr "Videohívás indítása"
 msgid "Start a video call"
 msgstr "Videohívás indítása"
 
-#: contact-overlays.cpp:171 contact-overlays.cpp:172 context-menu.cpp:146
+#: contact-overlays.cpp:171 contact-overlays.cpp:172 context-menu.cpp:140
 msgid "Send File..."
 msgstr "Fájl küldése…"
 
@@ -174,89 +174,89 @@ msgstr "Naplómegjelenítő megnyitása"
 msgid "Show conversation logs"
 msgstr "Párbeszéd naplók megjelenítése"
 
-#: context-menu.cpp:116
+#: context-menu.cpp:110
 msgid "Start Chat..."
 msgstr "Csevegés indítása…"
 
-#: context-menu.cpp:126
+#: context-menu.cpp:120
 msgid "Start Audio Call..."
 msgstr "Hanghívás indítása…"
 
-#: context-menu.cpp:136
+#: context-menu.cpp:130
 msgid "Start Video Call..."
 msgstr "Videohívás indítása…"
 
-#: context-menu.cpp:156
+#: context-menu.cpp:150
 msgid "Share my desktop..."
 msgstr "Az asztalom megosztása…"
 
-#: context-menu.cpp:166
+#: context-menu.cpp:160
 msgid "Open Log Viewer..."
 msgstr "Naplómegjelenítő megnyitása…"
 
-#: context-menu.cpp:179
+#: context-menu.cpp:173
 msgid "Configure Notifications..."
 msgstr "Az értesítések beállítása…"
 
-#: context-menu.cpp:196
+#: context-menu.cpp:190
 msgid "Presence message link"
 msgid_plural "Presence message links"
 msgstr[0] "Állapotüzenet-hivatkozás"
 msgstr[1] "Állapotüzenet-hivatkozások"
 
-#: context-menu.cpp:216
+#: context-menu.cpp:210
 msgid "Remove Contact From This Group"
 msgstr "Partner eltávolítása a csoportból"
 
-#: context-menu.cpp:220
+#: context-menu.cpp:214
 msgid "Move to Group"
 msgstr "Áthelyezés csoportba"
 
-#: context-menu.cpp:238
+#: context-menu.cpp:232
 msgid "Create New Group..."
 msgstr "Új csoport létrehozása…"
 
-#: context-menu.cpp:257
+#: context-menu.cpp:251
 msgid "Re-request Contact Authorization"
 msgstr "Partnerazonosítás újrakérése"
 
-#: context-menu.cpp:263
+#: context-menu.cpp:257
 msgid "Resend Contact Authorization"
 msgstr "Partnerazonosítás újraküldése"
 
-#: context-menu.cpp:271
+#: context-menu.cpp:265
 msgid "Unblock Contact"
 msgstr "Partner blokkolásának feloldása"
 
-#: context-menu.cpp:275
+#: context-menu.cpp:269
 msgid "Block Contact"
 msgstr "Partner blokkolása"
 
-#: context-menu.cpp:283
+#: context-menu.cpp:277
 msgid "Remove Contact"
 msgstr "Partner eltávolítása"
 
-#: context-menu.cpp:288
+#: context-menu.cpp:282
 msgid "Show Info..."
 msgstr "Információk megjelenítése…"
 
-#: context-menu.cpp:309
+#: context-menu.cpp:303
 msgid "Rename Group..."
 msgstr "Csoport átnevezése…"
 
-#: context-menu.cpp:315
+#: context-menu.cpp:309
 msgid "Delete Group"
 msgstr "Csoport törlése"
 
-#: context-menu.cpp:499 context-menu.cpp:524
+#: context-menu.cpp:493 context-menu.cpp:518
 msgid "New Group Name"
 msgstr "Új csoport neve"
 
-#: context-menu.cpp:500 context-menu.cpp:525
+#: context-menu.cpp:494 context-menu.cpp:519
 msgid "Please enter the new group name"
 msgstr "Írja be az új csoport nevét"
 
-#: context-menu.cpp:558
+#: context-menu.cpp:552
 #, kde-format
 msgid ""
 "Do you really want to remove group %1?\n"
@@ -267,7 +267,7 @@ msgstr ""
 "\n"
 "Az összes partner a „Csoportosítatlan” csoportba kerül."
 
-#: context-menu.cpp:560
+#: context-menu.cpp:554
 msgid "Remove Group"
 msgstr "Csoport törlése"
 
@@ -367,7 +367,7 @@ msgstr ""
 msgid "Plugin disabled"
 msgstr "A bővítmény ki van kapcsolva"
 
-#: main-widget.cpp:174
+#: main-widget.cpp:175
 msgid ""
 "Something unexpected happened to the core part of your Instant Messaging "
 "system and it couldn't be initialized. Try restarting the Contact List."
@@ -375,11 +375,11 @@ msgstr ""
 "Az azonnali üzenetküldő rendszer egy váratlan hiba miatt nem "
 "inicializálható. Próbálja újraindítani a partnerlistát."
 
-#: main-widget.cpp:176
+#: main-widget.cpp:177
 msgid "IM system failed to initialize"
 msgstr "Az azonnali üzenetküldő rendszer inicializálása mghiúsult"
 
-#: main-widget.cpp:304
+#: main-widget.cpp:303
 msgid ""
 "You do not have any other presence controls active (a Presence widget for "
 "example).\n"
@@ -388,123 +388,123 @@ msgstr ""
 "Nincs egy aktív állapotbeállító sem (például egy Állapot widget).\n"
 "Szeretne elérhető maradni, vagy inkább kilép?"
 
-#: main-widget.cpp:306
+#: main-widget.cpp:305
 msgid "No Other Presence Controls Found"
 msgstr "Nem található egyéb állapotbeállító"
 
-#: main-widget.cpp:307
+#: main-widget.cpp:306
 msgid "Stay Online"
 msgstr "Maradjon elérhető"
 
-#: main-widget.cpp:308
+#: main-widget.cpp:307
 msgid "Go Offline"
 msgstr "Kilépés"
 
-#: main-widget.cpp:424 tooltips/persontooltip.cpp:55
+#: main-widget.cpp:423 tooltips/persontooltip.cpp:55
 msgid "Contacts"
 msgstr "Partnerek"
 
-#: main-widget.cpp:439
+#: main-widget.cpp:438
 msgid "View"
 msgstr "Nézet"
 
-#: main-widget.cpp:443 main-widget.cpp:486
+#: main-widget.cpp:442 main-widget.cpp:485
 msgid "Contact List Type"
 msgstr "Partnerlista típusa"
 
-#: main-widget.cpp:446 main-widget.cpp:491
+#: main-widget.cpp:445 main-widget.cpp:490
 msgid "Shown Contacts"
 msgstr "Megjelenített partnerek"
 
-#: main-widget.cpp:449 main-widget.cpp:496
+#: main-widget.cpp:448 main-widget.cpp:495
 msgid "Contact Grouping"
 msgstr "Partner csoportosítás"
 
-#: main-widget.cpp:573
+#: main-widget.cpp:572
 msgid "Instant Messaging Settings..."
 msgstr "Azonnali üzenetküldés beállításai…"
 
-#: main-widget.cpp:578
+#: main-widget.cpp:577
 msgid "Join Chat Room..."
 msgstr "Csatlakozás csevegőszobához…"
 
-#: main-widget.cpp:580
+#: main-widget.cpp:579
 msgid "Make a Call..."
 msgstr "Hívás indítása…"
 
-#: main-widget.cpp:581
+#: main-widget.cpp:580
 msgid "Merge Contacts..."
 msgstr "Partnerek egyesítése…"
 
-#: main-widget.cpp:582
+#: main-widget.cpp:581
 msgid "Add New Contacts..."
 msgstr "Új partner hozzáadása…"
 
-#: main-widget.cpp:583
+#: main-widget.cpp:582
 msgid "Find Contact"
 msgstr "Partner keresése"
 
-#: main-widget.cpp:586
+#: main-widget.cpp:585
 msgid "Start a chat..."
 msgstr "Csevegés indítása…"
 
-#: main-widget.cpp:589
+#: main-widget.cpp:588
 msgid "Split Selected Contacts"
 msgstr "Kijelölt partnerek felosztása"
 
-#: main-widget.cpp:590
+#: main-widget.cpp:589
 msgid "Merge Selected Contacts"
 msgstr "Kijelölt partnerek egyesítése"
 
-#: main-widget.cpp:600
+#: main-widget.cpp:599
 msgid "Show Contacts by Groups"
 msgstr "Partnerek megjelenítése csoportok szerint"
 
-#: main-widget.cpp:604
+#: main-widget.cpp:603
 msgid "Do not group"
 msgstr "Ne csoportosítsa"
 
-#: main-widget.cpp:607
+#: main-widget.cpp:606
 msgid "Show Contacts by Accounts"
 msgstr "Partnerek megjelenítése fiókok szerint"
 
-#: main-widget.cpp:612
+#: main-widget.cpp:611
 msgid "Show Offline Contacts"
 msgstr "A nem elérhető partnerek megjelenítése"
 
-#: main-widget.cpp:613
+#: main-widget.cpp:612
 msgid "Hide Offline Contacts"
 msgstr "A nem elérhető partnerek elrejtése"
 
-#: main-widget.cpp:621
+#: main-widget.cpp:620
 msgid "Sort by Presence"
 msgstr "Rendezés jelenlét szerint"
 
-#: main-widget.cpp:622
+#: main-widget.cpp:621
 msgid "Sort by Name"
 msgstr "Rendezés név szerint"
 
-#: main-widget.cpp:630
+#: main-widget.cpp:629
 msgid "Use Full List"
 msgstr "Teljes lista"
 
-#: main-widget.cpp:632
+#: main-widget.cpp:631
 msgid "Use Normal List"
 msgstr "Normál partnerlista"
 
-#: main-widget.cpp:636
+#: main-widget.cpp:635
 msgid "Use Minimalistic List"
 msgstr "Minimalista partnerlista"
 
-#: main-widget.cpp:643
+#: main-widget.cpp:642
 msgid "Show All Contacts"
 msgstr "Összes partner megjelenítése"
 
-#: main-widget.cpp:645
+#: main-widget.cpp:644
 msgid "Show Unblocked Contacts"
 msgstr "Nem blokkolt partnerek megjelenítése"
 
-#: main-widget.cpp:647
+#: main-widget.cpp:646
 msgid "Show Blocked Contacts"
 msgstr "Blokkolt partnerek megjelenítése"
 
@@ -534,12 +534,12 @@ msgstr "Fejlesztő"
 msgid "Show Telepathy debugging information"
 msgstr "A Telepathy hibakeresési információinak megjelenítése"
 
-#: tooltips/contacttooltip.cpp:60
+#: tooltips/contacttooltip.cpp:58
 msgctxt "This is an IM user status"
 msgid "Error Getting Presence"
 msgstr "Hiba az állapot lekérdezésekor"
 
-#: tooltips/contacttooltip.cpp:78
+#: tooltips/contacttooltip.cpp:76
 #, kde-format
 msgid "Account: %1"
 msgstr "Fiók: %1"

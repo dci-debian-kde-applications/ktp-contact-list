@@ -1,13 +1,12 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2011, 2012, 2014.
-# Marta Rybczyńska <kde-i18n@rybczynska.net>, 2013.
+# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2011, 2012, 2013, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-02-17 01:57+0000\n"
+"POT-Creation-Date: 2013-10-26 04:57+0000\n"
 "PO-Revision-Date: 2014-02-03 15:43+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -72,17 +71,17 @@ msgctxt "@action:inmenu This is the IM presence message"
 msgid "Set message..."
 msgstr "Ustaw wiadomość..."
 
-#: contact-list-widget.cpp:193
+#: contact-list-widget.cpp:192
 msgid "You have no IM accounts configured. Would you like to do that now?"
 msgstr ""
 "Brakuje ci skonfigurowanego konta komunikatora internetowego. Czy chcesz "
 "tego dokonać teraz?"
 
-#: contact-list-widget.cpp:194
+#: contact-list-widget.cpp:193
 msgid "No Accounts Found"
 msgstr "Nie znaleziono żadnego konta"
 
-#: contact-list-widget.cpp:209
+#: contact-list-widget.cpp:208
 msgid ""
 "It appears you do not have the IM Accounts control module installed. Please "
 "install ktp-accounts-kcm package."
@@ -90,15 +89,15 @@ msgstr ""
 "Wygląda na to, że nie zainstalowano modułu sterującego kontami komunikatora "
 "internetowego. Proszę zainstalować pakiet ktp-accounts-kcm."
 
-#: contact-list-widget.cpp:210
+#: contact-list-widget.cpp:209
 msgid "IM Accounts KCM Plugin Is Not Installed"
 msgstr "Niezainstalowany KCM kont komunikatora internetowego"
 
-#: contact-list-widget.cpp:228
+#: contact-list-widget.cpp:227
 msgid "Notifications"
 msgstr "Powiadomienia"
 
-#: contact-list-widget.cpp:290
+#: contact-list-widget.cpp:289
 #, kde-format
 msgctxt ""
 "Label of a dialog's 'OK' button; %1 is account name, eg. 'Connect account "
@@ -106,33 +105,33 @@ msgctxt ""
 msgid "Connect account %1"
 msgstr "Podłącz konto %1"
 
-#: contact-list-widget.cpp:292
+#: contact-list-widget.cpp:291
 msgid ""
 "The account for this contact is disconnected. Do you want to connect it?"
 msgstr "Konto dla tego kontaktu jest niepodłączone. Czy chcesz je podłączyć?"
 
-#: contact-list-widget.cpp:293
+#: contact-list-widget.cpp:292
 msgid "Account offline"
 msgstr "Konto niedostępne"
 
-#: contact-list-widget.cpp:501
+#: contact-list-widget.cpp:500
 #, kde-format
 msgid "Choose files to send to %1"
 msgstr "Wybierz pliki do wysłania %1"
 
-#: contact-list-widget.cpp:797
+#: contact-list-widget.cpp:796
 msgid "Merge contacts"
 msgstr "Scal kontakty"
 
-#: contact-list-widget.cpp:839
+#: contact-list-widget.cpp:838
 msgid "&Move here"
 msgstr "&Przenieś tutaj"
 
-#: contact-list-widget.cpp:843
+#: contact-list-widget.cpp:842
 msgid "&Copy here"
 msgstr "&Kopiuj tutaj"
 
-#: contact-list-widget.cpp:847
+#: contact-list-widget.cpp:846
 msgid "C&ancel"
 msgstr "&Anuluj"
 
@@ -160,7 +159,7 @@ msgstr "Rozpocznij rozmowę wideo"
 msgid "Start a video call"
 msgstr "Rozpocznij rozmowę wideo"
 
-#: contact-overlays.cpp:171 contact-overlays.cpp:172 context-menu.cpp:146
+#: contact-overlays.cpp:171 contact-overlays.cpp:172 context-menu.cpp:140
 msgid "Send File..."
 msgstr "Wyślij plik..."
 
@@ -176,90 +175,90 @@ msgstr "Otwórz przeglądarkę dzienników"
 msgid "Show conversation logs"
 msgstr "Pokaż dzienniki rozmów"
 
-#: context-menu.cpp:116
+#: context-menu.cpp:110
 msgid "Start Chat..."
 msgstr "Rozpocznij rozmowę..."
 
-#: context-menu.cpp:126
+#: context-menu.cpp:120
 msgid "Start Audio Call..."
 msgstr "Rozpocznij rozmowę głosową..."
 
-#: context-menu.cpp:136
+#: context-menu.cpp:130
 msgid "Start Video Call..."
 msgstr "Rozpocznij rozmowę wideo..."
 
-#: context-menu.cpp:156
+#: context-menu.cpp:150
 msgid "Share my desktop..."
 msgstr "Współdziel mój pulpit..."
 
-#: context-menu.cpp:166
+#: context-menu.cpp:160
 msgid "Open Log Viewer..."
 msgstr "Otwórz przeglądarkę dzienników..."
 
-#: context-menu.cpp:179
+#: context-menu.cpp:173
 msgid "Configure Notifications..."
 msgstr "Konfiguruj powiadomienia..."
 
-#: context-menu.cpp:196
+#: context-menu.cpp:190
 msgid "Presence message link"
 msgid_plural "Presence message links"
 msgstr[0] "Odnośnik wiadomości obecności"
 msgstr[1] "Odnośniki wiadomości obecności"
 msgstr[2] "Odnośniki wiadomości obecności"
 
-#: context-menu.cpp:216
+#: context-menu.cpp:210
 msgid "Remove Contact From This Group"
 msgstr "Usuń kontakt z tej grupy"
 
-#: context-menu.cpp:220
+#: context-menu.cpp:214
 msgid "Move to Group"
 msgstr "Przenieś do grupy"
 
-#: context-menu.cpp:238
+#: context-menu.cpp:232
 msgid "Create New Group..."
 msgstr "Utwórz nową grupę..."
 
-#: context-menu.cpp:257
+#: context-menu.cpp:251
 msgid "Re-request Contact Authorization"
 msgstr "Ponownie zażądaj uwierzytelnienia kontaktu"
 
-#: context-menu.cpp:263
+#: context-menu.cpp:257
 msgid "Resend Contact Authorization"
 msgstr "Ponownie wyślij uwierzytelnianie kontaktu"
 
-#: context-menu.cpp:271
+#: context-menu.cpp:265
 msgid "Unblock Contact"
 msgstr "Odblokuj kontakt"
 
-#: context-menu.cpp:275
+#: context-menu.cpp:269
 msgid "Block Contact"
 msgstr "Zablokuj kontakt"
 
-#: context-menu.cpp:283
+#: context-menu.cpp:277
 msgid "Remove Contact"
 msgstr "Usuń kontakt"
 
-#: context-menu.cpp:288
+#: context-menu.cpp:282
 msgid "Show Info..."
 msgstr "Pokaż informacje..."
 
-#: context-menu.cpp:309
+#: context-menu.cpp:303
 msgid "Rename Group..."
 msgstr "Zmień nazwę grupy..."
 
-#: context-menu.cpp:315
+#: context-menu.cpp:309
 msgid "Delete Group"
 msgstr "Usuń grupę"
 
-#: context-menu.cpp:499 context-menu.cpp:524
+#: context-menu.cpp:493 context-menu.cpp:518
 msgid "New Group Name"
 msgstr "Nazwa nowej grupy"
 
-#: context-menu.cpp:500 context-menu.cpp:525
+#: context-menu.cpp:494 context-menu.cpp:519
 msgid "Please enter the new group name"
 msgstr "Proszę podać nazwę nowej grupy"
 
-#: context-menu.cpp:558
+#: context-menu.cpp:552
 #, kde-format
 msgid ""
 "Do you really want to remove group %1?\n"
@@ -270,7 +269,7 @@ msgstr ""
 "\n"
 "Wiedz, że wszystkie kontakty zostaną przeniesione do grupy 'Niepogrupowane'"
 
-#: context-menu.cpp:560
+#: context-menu.cpp:554
 msgid "Remove Group"
 msgstr "Usuń grupę"
 
@@ -370,7 +369,7 @@ msgstr ""
 msgid "Plugin disabled"
 msgstr "Wtyczka wyłączona"
 
-#: main-widget.cpp:174
+#: main-widget.cpp:175
 msgid ""
 "Something unexpected happened to the core part of your Instant Messaging "
 "system and it couldn't be initialized. Try restarting the Contact List."
@@ -379,11 +378,11 @@ msgstr ""
 "internetowego i nie mógł on zostać zainicjowany. Spróbuj ponownie uruchomić "
 "listę kontaktów.  "
 
-#: main-widget.cpp:176
+#: main-widget.cpp:177
 msgid "IM system failed to initialize"
 msgstr "Nieudana inicjalizacja systemu komunikatora internetowego"
 
-#: main-widget.cpp:304
+#: main-widget.cpp:303
 msgid ""
 "You do not have any other presence controls active (a Presence widget for "
 "example).\n"
@@ -393,127 +392,123 @@ msgstr ""
 "obecności).\n"
 "Czy chcesz stać się dostępnym, czy może raczej niedostępnym?"
 
-#: main-widget.cpp:306
+#: main-widget.cpp:305
 msgid "No Other Presence Controls Found"
 msgstr "Nie znaleziono innych sterowań obecnością"
 
-#: main-widget.cpp:307
+#: main-widget.cpp:306
 msgid "Stay Online"
 msgstr "Pozostań dostępnym"
 
-#: main-widget.cpp:308
+#: main-widget.cpp:307
 msgid "Go Offline"
 msgstr "Stań się niedostępnym"
 
-#: main-widget.cpp:424 tooltips/persontooltip.cpp:55
+#: main-widget.cpp:423 tooltips/persontooltip.cpp:55
 msgid "Contacts"
 msgstr "Kontakty"
 
-#: main-widget.cpp:439
+#: main-widget.cpp:438
 msgid "View"
 msgstr "Widok"
 
-#: main-widget.cpp:443 main-widget.cpp:486
+#: main-widget.cpp:442 main-widget.cpp:485
 msgid "Contact List Type"
 msgstr "Typ listy kontaktów"
 
-#: main-widget.cpp:446 main-widget.cpp:491
+#: main-widget.cpp:445 main-widget.cpp:490
 msgid "Shown Contacts"
 msgstr "Pokazywane kontakty"
 
-#: main-widget.cpp:449 main-widget.cpp:496
+#: main-widget.cpp:448 main-widget.cpp:495
 msgid "Contact Grouping"
 msgstr "Grupowanie kontaktów"
 
-#: main-widget.cpp:573
+#: main-widget.cpp:572
 msgid "Instant Messaging Settings..."
 msgstr "Ustawienia komunikatora internetowego..."
 
-#: main-widget.cpp:578
+#: main-widget.cpp:577
 msgid "Join Chat Room..."
 msgstr "Dołącz do pokoju rozmowy..."
 
-#: main-widget.cpp:580
+#: main-widget.cpp:579
 msgid "Make a Call..."
 msgstr "Zadzwoń..."
 
-#: main-widget.cpp:581
-#, fuzzy
-#| msgid "Remove contact"
+#: main-widget.cpp:580
 msgid "Merge Contacts..."
-msgstr "Usuń kontakt"
+msgstr "Scal kontakty..."
 
-#: main-widget.cpp:582
+#: main-widget.cpp:581
 msgid "Add New Contacts..."
 msgstr "Dodaj nowe kontakty..."
 
-#: main-widget.cpp:583
+#: main-widget.cpp:582
 msgid "Find Contact"
 msgstr "Znajdź kontakt"
 
-#: main-widget.cpp:586
+#: main-widget.cpp:585
 msgid "Start a chat..."
 msgstr "Rozpocznij rozmowę..."
 
-#: main-widget.cpp:589
+#: main-widget.cpp:588
 msgid "Split Selected Contacts"
 msgstr "Rozdziel wybrane kontakty"
 
-#: main-widget.cpp:590
-#, fuzzy
-#| msgid "Remove contact"
+#: main-widget.cpp:589
 msgid "Merge Selected Contacts"
-msgstr "Usuń kontakt"
+msgstr "Scal wybrane kontakty"
 
-#: main-widget.cpp:600
+#: main-widget.cpp:599
 msgid "Show Contacts by Groups"
 msgstr "Pokaż kontakty według grup"
 
-#: main-widget.cpp:604
+#: main-widget.cpp:603
 msgid "Do not group"
 msgstr "Nie grupuj"
 
-#: main-widget.cpp:607
+#: main-widget.cpp:606
 msgid "Show Contacts by Accounts"
 msgstr "Pokaż kontakty według kont"
 
-#: main-widget.cpp:612
+#: main-widget.cpp:611
 msgid "Show Offline Contacts"
 msgstr "Pokaż niedostępne kontakty"
 
-#: main-widget.cpp:613
+#: main-widget.cpp:612
 msgid "Hide Offline Contacts"
 msgstr "Ukryj niedostępne kontakty"
 
-#: main-widget.cpp:621
+#: main-widget.cpp:620
 msgid "Sort by Presence"
 msgstr "Poszereguj według obecności"
 
-#: main-widget.cpp:622
+#: main-widget.cpp:621
 msgid "Sort by Name"
 msgstr "Poszereguj według nazwy"
 
-#: main-widget.cpp:630
+#: main-widget.cpp:629
 msgid "Use Full List"
 msgstr "Użyj pełnej listy"
 
-#: main-widget.cpp:632
+#: main-widget.cpp:631
 msgid "Use Normal List"
 msgstr "Użyj normalnej listy"
 
-#: main-widget.cpp:636
+#: main-widget.cpp:635
 msgid "Use Minimalistic List"
 msgstr "Użyj minimalistycznej listy"
 
-#: main-widget.cpp:643
+#: main-widget.cpp:642
 msgid "Show All Contacts"
 msgstr "Pokaż wszystkie kontakty"
 
-#: main-widget.cpp:645
+#: main-widget.cpp:644
 msgid "Show Unblocked Contacts"
 msgstr "Pokaż odblokowane kontakty"
 
-#: main-widget.cpp:647
+#: main-widget.cpp:646
 msgid "Show Blocked Contacts"
 msgstr "Pokaż zablokowane kontakty"
 
@@ -543,12 +538,12 @@ msgstr "Programista"
 msgid "Show Telepathy debugging information"
 msgstr "Pokaż informacje debugowania dla Telepathy"
 
-#: tooltips/contacttooltip.cpp:60
+#: tooltips/contacttooltip.cpp:58
 msgctxt "This is an IM user status"
 msgid "Error Getting Presence"
 msgstr "Błąd uzyskiwania obecności"
 
-#: tooltips/contacttooltip.cpp:78
+#: tooltips/contacttooltip.cpp:76
 #, kde-format
 msgid "Account: %1"
 msgstr "Konto: %1"
@@ -558,8 +553,6 @@ msgstr "Konto: %1"
 msgid "User is blocked"
 msgstr "Użytkownik jest zablokowany"
 
-#, fuzzy
-#~| msgid "Share my desktop"
 #~ msgid "Share My Desktop"
 #~ msgstr "Współdziel mój pulpit"
 

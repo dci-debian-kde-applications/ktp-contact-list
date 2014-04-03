@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktp-contactlist\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-02-17 01:57+0000\n"
+"POT-Creation-Date: 2013-10-26 04:57+0000\n"
 "PO-Revision-Date: 2013-12-22 13:54+0200\n"
 "Last-Translator: Lasse Liehu <lasse.liehu@gmail.com>\n"
 "Language-Team: Finnish <lokalisointi@lists.coss.fi>\n"
@@ -75,15 +75,15 @@ msgctxt "@action:inmenu This is the IM presence message"
 msgid "Set message..."
 msgstr "Aseta viesti…"
 
-#: contact-list-widget.cpp:193
+#: contact-list-widget.cpp:192
 msgid "You have no IM accounts configured. Would you like to do that now?"
 msgstr "Pikaviestitilejä ei ole asetettu. Haluatko tehdä sen nyt?"
 
-#: contact-list-widget.cpp:194
+#: contact-list-widget.cpp:193
 msgid "No Accounts Found"
 msgstr "Tilejä ei löytynyt"
 
-#: contact-list-widget.cpp:209
+#: contact-list-widget.cpp:208
 msgid ""
 "It appears you do not have the IM Accounts control module installed. Please "
 "install ktp-accounts-kcm package."
@@ -91,15 +91,15 @@ msgstr ""
 "Näyttää siltä, että pikaviestitilien asetusosiota ei ole asennettu. Asenna "
 "paketti ktp-accounts-kcm."
 
-#: contact-list-widget.cpp:210
+#: contact-list-widget.cpp:209
 msgid "IM Accounts KCM Plugin Is Not Installed"
 msgstr "Pikaviestitilien KCM-liitännäistä ei ole asennettu"
 
-#: contact-list-widget.cpp:228
+#: contact-list-widget.cpp:227
 msgid "Notifications"
 msgstr "Ilmoitukset"
 
-#: contact-list-widget.cpp:290
+#: contact-list-widget.cpp:289
 #, kde-format
 msgctxt ""
 "Label of a dialog's 'OK' button; %1 is account name, eg. 'Connect account "
@@ -107,33 +107,33 @@ msgctxt ""
 msgid "Connect account %1"
 msgstr "Yhdistä tili %1"
 
-#: contact-list-widget.cpp:292
+#: contact-list-widget.cpp:291
 msgid ""
 "The account for this contact is disconnected. Do you want to connect it?"
 msgstr "Tämän käyttäjän tili ei ole verkossa. Haluatko yhdistää sen verkkoon?"
 
-#: contact-list-widget.cpp:293
+#: contact-list-widget.cpp:292
 msgid "Account offline"
 msgstr "Tili poissa verkosta"
 
-#: contact-list-widget.cpp:501
+#: contact-list-widget.cpp:500
 #, kde-format
 msgid "Choose files to send to %1"
 msgstr "Valitse käyttäjälle %1 lähetettävät tiedostot"
 
-#: contact-list-widget.cpp:797
+#: contact-list-widget.cpp:796
 msgid "Merge contacts"
 msgstr "Yhdistä yhteystiedot"
 
-#: contact-list-widget.cpp:839
+#: contact-list-widget.cpp:838
 msgid "&Move here"
 msgstr "&Siirrä tähän"
 
-#: contact-list-widget.cpp:843
+#: contact-list-widget.cpp:842
 msgid "&Copy here"
 msgstr "&Kopioi tähän"
 
-#: contact-list-widget.cpp:847
+#: contact-list-widget.cpp:846
 msgid "C&ancel"
 msgstr "&Peru"
 
@@ -161,7 +161,7 @@ msgstr "Aloita videopuhelu"
 msgid "Start a video call"
 msgstr "Aloita videopuhelu"
 
-#: contact-overlays.cpp:171 contact-overlays.cpp:172 context-menu.cpp:146
+#: contact-overlays.cpp:171 contact-overlays.cpp:172 context-menu.cpp:140
 msgid "Send File..."
 msgstr "Lähetä tiedosto…"
 
@@ -177,89 +177,89 @@ msgstr "Avaa lokikatselin"
 msgid "Show conversation logs"
 msgstr "Näytä keskustelulokit"
 
-#: context-menu.cpp:116
+#: context-menu.cpp:110
 msgid "Start Chat..."
 msgstr "Aloita keskustelu…"
 
-#: context-menu.cpp:126
+#: context-menu.cpp:120
 msgid "Start Audio Call..."
 msgstr "Aloita äänipuhelu…"
 
-#: context-menu.cpp:136
+#: context-menu.cpp:130
 msgid "Start Video Call..."
 msgstr "Aloita videopuhelu…"
 
-#: context-menu.cpp:156
+#: context-menu.cpp:150
 msgid "Share my desktop..."
 msgstr "Jaa työpöytäni…"
 
-#: context-menu.cpp:166
+#: context-menu.cpp:160
 msgid "Open Log Viewer..."
 msgstr "Avaa lokikatselin…"
 
-#: context-menu.cpp:179
+#: context-menu.cpp:173
 msgid "Configure Notifications..."
 msgstr "Ilmoitusten asetukset…"
 
-#: context-menu.cpp:196
+#: context-menu.cpp:190
 msgid "Presence message link"
 msgid_plural "Presence message links"
 msgstr[0] "Läsnäoloviestin linkki"
 msgstr[1] "Läsnäoloviestin linkit"
 
-#: context-menu.cpp:216
+#: context-menu.cpp:210
 msgid "Remove Contact From This Group"
 msgstr "Poista yhteystieto tästä ryhmästä"
 
-#: context-menu.cpp:220
+#: context-menu.cpp:214
 msgid "Move to Group"
 msgstr "Siirrä ryhmään"
 
-#: context-menu.cpp:238
+#: context-menu.cpp:232
 msgid "Create New Group..."
 msgstr "Luo uusi ryhmä…"
 
-#: context-menu.cpp:257
+#: context-menu.cpp:251
 msgid "Re-request Contact Authorization"
 msgstr "Pyydä läsnäolon näkemislupaa käyttäjältä"
 
-#: context-menu.cpp:263
+#: context-menu.cpp:257
 msgid "Resend Contact Authorization"
 msgstr "Lähetä läsnäolon näkemislupa käyttäjälle"
 
-#: context-menu.cpp:271
+#: context-menu.cpp:265
 msgid "Unblock Contact"
 msgstr "Peru yhteystiedon torjunta"
 
-#: context-menu.cpp:275
+#: context-menu.cpp:269
 msgid "Block Contact"
 msgstr "Torju yhteystieto"
 
-#: context-menu.cpp:283
+#: context-menu.cpp:277
 msgid "Remove Contact"
 msgstr "Poista yhteystieto"
 
-#: context-menu.cpp:288
+#: context-menu.cpp:282
 msgid "Show Info..."
 msgstr "Näytä tiedot…"
 
-#: context-menu.cpp:309
+#: context-menu.cpp:303
 msgid "Rename Group..."
 msgstr "Muuta ryhmän nimeä…"
 
-#: context-menu.cpp:315
+#: context-menu.cpp:309
 msgid "Delete Group"
 msgstr "Poista ryhmä"
 
-#: context-menu.cpp:499 context-menu.cpp:524
+#: context-menu.cpp:493 context-menu.cpp:518
 msgid "New Group Name"
 msgstr "Uuden ryhmän nimi"
 
-#: context-menu.cpp:500 context-menu.cpp:525
+#: context-menu.cpp:494 context-menu.cpp:519
 msgid "Please enter the new group name"
 msgstr "Anna uudelle ryhmälle nimi"
 
-#: context-menu.cpp:558
+#: context-menu.cpp:552
 #, kde-format
 msgid ""
 "Do you really want to remove group %1?\n"
@@ -270,7 +270,7 @@ msgstr ""
 "\n"
 "Huomaa, että sen kaikki yhteystiedot siirretään ryhmään ”Ryhmittämättömät”"
 
-#: context-menu.cpp:560
+#: context-menu.cpp:554
 msgid "Remove Group"
 msgstr "Poista ryhmä"
 
@@ -370,7 +370,7 @@ msgstr ""
 msgid "Plugin disabled"
 msgstr "Liitännäinen ei käytössä"
 
-#: main-widget.cpp:174
+#: main-widget.cpp:175
 msgid ""
 "Something unexpected happened to the core part of your Instant Messaging "
 "system and it couldn't be initialized. Try restarting the Contact List."
@@ -378,11 +378,11 @@ msgstr ""
 "Jotakin odottamatonta sattui pikaviestijärjestelmän ydinosalle eikä se "
 "voinut käynnistyä. Yritä käynnistä yhteystietoluettelo uudestaan."
 
-#: main-widget.cpp:176
+#: main-widget.cpp:177
 msgid "IM system failed to initialize"
 msgstr "Pikaviestijärjestelmän käynnistys epäonnistui"
 
-#: main-widget.cpp:304
+#: main-widget.cpp:303
 msgid ""
 "You do not have any other presence controls active (a Presence widget for "
 "example).\n"
@@ -392,123 +392,123 @@ msgstr ""
 "käytössä.\n"
 "Haluatko mieluummin pysyä yhteydessä vai poistua verkosta?"
 
-#: main-widget.cpp:306
+#: main-widget.cpp:305
 msgid "No Other Presence Controls Found"
 msgstr "Muita läsnäolo-ohjaimia ei löytynyt"
 
-#: main-widget.cpp:307
+#: main-widget.cpp:306
 msgid "Stay Online"
 msgstr "Pysy verkossa"
 
-#: main-widget.cpp:308
+#: main-widget.cpp:307
 msgid "Go Offline"
 msgstr "Poistu verkosta"
 
-#: main-widget.cpp:424 tooltips/persontooltip.cpp:55
+#: main-widget.cpp:423 tooltips/persontooltip.cpp:55
 msgid "Contacts"
 msgstr "Yhteystiedot"
 
-#: main-widget.cpp:439
+#: main-widget.cpp:438
 msgid "View"
 msgstr "Näkymä"
 
-#: main-widget.cpp:443 main-widget.cpp:486
+#: main-widget.cpp:442 main-widget.cpp:485
 msgid "Contact List Type"
 msgstr "Yhteystietoluettelon tyyppi"
 
-#: main-widget.cpp:446 main-widget.cpp:491
+#: main-widget.cpp:445 main-widget.cpp:490
 msgid "Shown Contacts"
 msgstr "Näytetyt yhteystiedot"
 
-#: main-widget.cpp:449 main-widget.cpp:496
+#: main-widget.cpp:448 main-widget.cpp:495
 msgid "Contact Grouping"
 msgstr "Käyttäjien ryhmittely"
 
-#: main-widget.cpp:573
+#: main-widget.cpp:572
 msgid "Instant Messaging Settings..."
 msgstr "Pikaviestinnän asetukset…"
 
-#: main-widget.cpp:578
+#: main-widget.cpp:577
 msgid "Join Chat Room..."
 msgstr "Liity keskusteluhuoneeseen…"
 
-#: main-widget.cpp:580
+#: main-widget.cpp:579
 msgid "Make a Call..."
 msgstr "Aloita puhelu…"
 
-#: main-widget.cpp:581
+#: main-widget.cpp:580
 msgid "Merge Contacts..."
 msgstr "Yhdistä yhteystiedot…"
 
-#: main-widget.cpp:582
+#: main-widget.cpp:581
 msgid "Add New Contacts..."
 msgstr "Lisää uusia yhteystietoja…"
 
-#: main-widget.cpp:583
+#: main-widget.cpp:582
 msgid "Find Contact"
 msgstr "Etsi yhteystietoa"
 
-#: main-widget.cpp:586
+#: main-widget.cpp:585
 msgid "Start a chat..."
 msgstr "Aloita keskustelu…"
 
-#: main-widget.cpp:589
+#: main-widget.cpp:588
 msgid "Split Selected Contacts"
 msgstr "Jaa valitut yhteystiedot"
 
-#: main-widget.cpp:590
+#: main-widget.cpp:589
 msgid "Merge Selected Contacts"
 msgstr "Yhdistä valitut yhteystiedot"
 
-#: main-widget.cpp:600
+#: main-widget.cpp:599
 msgid "Show Contacts by Groups"
 msgstr "Näytä käyttäjät ryhmittäin"
 
-#: main-widget.cpp:604
+#: main-widget.cpp:603
 msgid "Do not group"
 msgstr "Älä ryhmitä"
 
-#: main-widget.cpp:607
+#: main-widget.cpp:606
 msgid "Show Contacts by Accounts"
 msgstr "Näytä käyttäjät tileittäin"
 
-#: main-widget.cpp:612
+#: main-widget.cpp:611
 msgid "Show Offline Contacts"
 msgstr "Näytä poissa verkosta olevat käyttäjät"
 
-#: main-widget.cpp:613
+#: main-widget.cpp:612
 msgid "Hide Offline Contacts"
 msgstr "Piilota poissa verkosta olevat käyttäjät"
 
-#: main-widget.cpp:621
+#: main-widget.cpp:620
 msgid "Sort by Presence"
 msgstr "Lajittele läsnäolon mukaan"
 
-#: main-widget.cpp:622
+#: main-widget.cpp:621
 msgid "Sort by Name"
 msgstr "Lajittele nimen mukaan"
 
-#: main-widget.cpp:630
+#: main-widget.cpp:629
 msgid "Use Full List"
 msgstr "Käytä täyttä luetteloa"
 
-#: main-widget.cpp:632
+#: main-widget.cpp:631
 msgid "Use Normal List"
 msgstr "Käytä tavallista luetteloa"
 
-#: main-widget.cpp:636
+#: main-widget.cpp:635
 msgid "Use Minimalistic List"
 msgstr "Käytä tiivistä luetteloa"
 
-#: main-widget.cpp:643
+#: main-widget.cpp:642
 msgid "Show All Contacts"
 msgstr "Näytä kaikki käyttäjät"
 
-#: main-widget.cpp:645
+#: main-widget.cpp:644
 msgid "Show Unblocked Contacts"
 msgstr "Näytä estosta poistetut käyttäjät"
 
-#: main-widget.cpp:647
+#: main-widget.cpp:646
 msgid "Show Blocked Contacts"
 msgstr "Näytä estetyt käyttäjät"
 
@@ -540,12 +540,12 @@ msgstr "Kehittäjä"
 msgid "Show Telepathy debugging information"
 msgstr "Näytä Telepathy-vianjäljitystieto"
 
-#: tooltips/contacttooltip.cpp:60
+#: tooltips/contacttooltip.cpp:58
 msgctxt "This is an IM user status"
 msgid "Error Getting Presence"
 msgstr "Virhe pyydettäessä läsnäoloa"
 
-#: tooltips/contacttooltip.cpp:78
+#: tooltips/contacttooltip.cpp:76
 #, kde-format
 msgid "Account: %1"
 msgstr "Tili: %1"

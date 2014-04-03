@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-02-17 01:57+0000\n"
-"PO-Revision-Date: 2013-10-07 18:05+0200\n"
+"POT-Creation-Date: 2013-10-26 04:57+0000\n"
+"PO-Revision-Date: 2013-10-01 18:08+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -70,15 +70,15 @@ msgctxt "@action:inmenu This is the IM presence message"
 msgid "Set message..."
 msgstr "Ange meddelande..."
 
-#: contact-list-widget.cpp:193
+#: contact-list-widget.cpp:192
 msgid "You have no IM accounts configured. Would you like to do that now?"
 msgstr "Inga direktmeddelandekonton är inställda. Skulle du vilja göra det nu?"
 
-#: contact-list-widget.cpp:194
+#: contact-list-widget.cpp:193
 msgid "No Accounts Found"
 msgstr "Inga konton hittades"
 
-#: contact-list-widget.cpp:209
+#: contact-list-widget.cpp:208
 msgid ""
 "It appears you do not have the IM Accounts control module installed. Please "
 "install ktp-accounts-kcm package."
@@ -86,15 +86,15 @@ msgstr ""
 "Det verkar som om du inte har installerat inställningsmodulen för "
 "kontohantering. Installera paketet ktp-accounts-kcm."
 
-#: contact-list-widget.cpp:210
+#: contact-list-widget.cpp:209
 msgid "IM Accounts KCM Plugin Is Not Installed"
 msgstr "Inställningsmodulen för kontohantering är inte installerad"
 
-#: contact-list-widget.cpp:228
+#: contact-list-widget.cpp:227
 msgid "Notifications"
 msgstr "Underrättelser"
 
-#: contact-list-widget.cpp:290
+#: contact-list-widget.cpp:289
 #, kde-format
 msgctxt ""
 "Label of a dialog's 'OK' button; %1 is account name, eg. 'Connect account "
@@ -102,33 +102,33 @@ msgctxt ""
 msgid "Connect account %1"
 msgstr "Anslut konto %1"
 
-#: contact-list-widget.cpp:292
+#: contact-list-widget.cpp:291
 msgid ""
 "The account for this contact is disconnected. Do you want to connect it?"
 msgstr "Kontot för kontakten är nerkopplat. Vill du ansluta det?"
 
-#: contact-list-widget.cpp:293
+#: contact-list-widget.cpp:292
 msgid "Account offline"
-msgstr "Konto nerkopplat"
+msgstr "Nerkopplat konto"
 
-#: contact-list-widget.cpp:501
+#: contact-list-widget.cpp:500
 #, kde-format
 msgid "Choose files to send to %1"
 msgstr "Välj filer att skicka till %1"
 
-#: contact-list-widget.cpp:797
+#: contact-list-widget.cpp:796
 msgid "Merge contacts"
 msgstr "Sammanfoga kontakter"
 
-#: contact-list-widget.cpp:839
+#: contact-list-widget.cpp:838
 msgid "&Move here"
 msgstr "&Flytta hit"
 
-#: contact-list-widget.cpp:843
+#: contact-list-widget.cpp:842
 msgid "&Copy here"
 msgstr "&Kopiera hit"
 
-#: contact-list-widget.cpp:847
+#: contact-list-widget.cpp:846
 msgid "C&ancel"
 msgstr "&Avbryt"
 
@@ -156,7 +156,7 @@ msgstr "Starta videosamtal"
 msgid "Start a video call"
 msgstr "Starta ett videosamtal"
 
-#: contact-overlays.cpp:171 contact-overlays.cpp:172 context-menu.cpp:146
+#: contact-overlays.cpp:171 contact-overlays.cpp:172 context-menu.cpp:140
 msgid "Send File..."
 msgstr "Skicka fil..."
 
@@ -172,89 +172,89 @@ msgstr "Öppna loggvisning"
 msgid "Show conversation logs"
 msgstr "Visa samtalsloggar"
 
-#: context-menu.cpp:116
+#: context-menu.cpp:110
 msgid "Start Chat..."
 msgstr "Börja chatta..."
 
-#: context-menu.cpp:126
+#: context-menu.cpp:120
 msgid "Start Audio Call..."
 msgstr "Starta röstsamtal..."
 
-#: context-menu.cpp:136
+#: context-menu.cpp:130
 msgid "Start Video Call..."
 msgstr "Starta videosamtal..."
 
-#: context-menu.cpp:156
+#: context-menu.cpp:150
 msgid "Share my desktop..."
 msgstr "Dela mitt skrivbord..."
 
-#: context-menu.cpp:166
+#: context-menu.cpp:160
 msgid "Open Log Viewer..."
 msgstr "Öppna loggvisning..."
 
-#: context-menu.cpp:179
+#: context-menu.cpp:173
 msgid "Configure Notifications..."
 msgstr "Anpassa underrättelser..."
 
-#: context-menu.cpp:196
+#: context-menu.cpp:190
 msgid "Presence message link"
 msgid_plural "Presence message links"
 msgstr[0] "Meddelandelänk för närvaro"
 msgstr[1] "Meddelandelänkar för närvaro"
 
-#: context-menu.cpp:216
+#: context-menu.cpp:210
 msgid "Remove Contact From This Group"
 msgstr "Ta bort kontakt från gruppen"
 
-#: context-menu.cpp:220
+#: context-menu.cpp:214
 msgid "Move to Group"
 msgstr "Flytta till grupp"
 
-#: context-menu.cpp:238
+#: context-menu.cpp:232
 msgid "Create New Group..."
 msgstr "Skapa ny grupp..."
 
-#: context-menu.cpp:257
+#: context-menu.cpp:251
 msgid "Re-request Contact Authorization"
 msgstr "Begär kontaktbehörighet igen"
 
-#: context-menu.cpp:263
+#: context-menu.cpp:257
 msgid "Resend Contact Authorization"
 msgstr "Skicka om kontaktbehörighet"
 
-#: context-menu.cpp:271
+#: context-menu.cpp:265
 msgid "Unblock Contact"
 msgstr "Tillåt kontakt"
 
-#: context-menu.cpp:275
+#: context-menu.cpp:269
 msgid "Block Contact"
 msgstr "Blockera kontakt"
 
-#: context-menu.cpp:283
+#: context-menu.cpp:277
 msgid "Remove Contact"
 msgstr "Ta bort kontakt"
 
-#: context-menu.cpp:288
+#: context-menu.cpp:282
 msgid "Show Info..."
 msgstr "Visa information..."
 
-#: context-menu.cpp:309
+#: context-menu.cpp:303
 msgid "Rename Group..."
 msgstr "Byt namn på grupp..."
 
-#: context-menu.cpp:315
+#: context-menu.cpp:309
 msgid "Delete Group"
 msgstr "Ta bort grupp"
 
-#: context-menu.cpp:499 context-menu.cpp:524
+#: context-menu.cpp:493 context-menu.cpp:518
 msgid "New Group Name"
 msgstr "Nytt gruppnamn"
 
-#: context-menu.cpp:500 context-menu.cpp:525
+#: context-menu.cpp:494 context-menu.cpp:519
 msgid "Please enter the new group name"
 msgstr "Ange det nya gruppnamnet"
 
-#: context-menu.cpp:558
+#: context-menu.cpp:552
 #, kde-format
 msgid ""
 "Do you really want to remove group %1?\n"
@@ -265,7 +265,7 @@ msgstr ""
 "\n"
 "Observera att alla kontakter kommer att flyttas till gruppen 'Ogrupperade'."
 
-#: context-menu.cpp:560
+#: context-menu.cpp:554
 msgid "Remove Group"
 msgstr "Ta bort grupp"
 
@@ -365,7 +365,7 @@ msgstr ""
 msgid "Plugin disabled"
 msgstr "Insticksprogram inaktiverat"
 
-#: main-widget.cpp:174
+#: main-widget.cpp:175
 msgid ""
 "Something unexpected happened to the core part of your Instant Messaging "
 "system and it couldn't be initialized. Try restarting the Contact List."
@@ -374,11 +374,11 @@ msgstr ""
 "direktmeddelanden, och det kunde inte initieras. Försök att starta om "
 "kontaktlistan."
 
-#: main-widget.cpp:176
+#: main-widget.cpp:177
 msgid "IM system failed to initialize"
 msgstr "Systemet för direktmeddelanden kunde inte initieras"
 
-#: main-widget.cpp:304
+#: main-widget.cpp:303
 msgid ""
 "You do not have any other presence controls active (a Presence widget for "
 "example).\n"
@@ -388,123 +388,123 @@ msgstr ""
 "närvarokomponent).\n"
 "Vill du förbli uppkopplad, eller vill du hellre koppla ner?"
 
-#: main-widget.cpp:306
+#: main-widget.cpp:305
 msgid "No Other Presence Controls Found"
 msgstr "Inga andra närvarokontroller hittades"
 
-#: main-widget.cpp:307
+#: main-widget.cpp:306
 msgid "Stay Online"
 msgstr "Förbli uppkopplad"
 
-#: main-widget.cpp:308
+#: main-widget.cpp:307
 msgid "Go Offline"
 msgstr "Koppla ner"
 
-#: main-widget.cpp:424 tooltips/persontooltip.cpp:55
+#: main-widget.cpp:423 tooltips/persontooltip.cpp:55
 msgid "Contacts"
 msgstr "Kontakter"
 
-#: main-widget.cpp:439
+#: main-widget.cpp:438
 msgid "View"
 msgstr "Visa"
 
-#: main-widget.cpp:443 main-widget.cpp:486
+#: main-widget.cpp:442 main-widget.cpp:485
 msgid "Contact List Type"
 msgstr "Typ av kontaktlista"
 
-#: main-widget.cpp:446 main-widget.cpp:491
+#: main-widget.cpp:445 main-widget.cpp:490
 msgid "Shown Contacts"
 msgstr "Visade kontakter"
 
-#: main-widget.cpp:449 main-widget.cpp:496
+#: main-widget.cpp:448 main-widget.cpp:495
 msgid "Contact Grouping"
 msgstr "Kontaktgruppering"
 
-#: main-widget.cpp:573
+#: main-widget.cpp:572
 msgid "Instant Messaging Settings..."
 msgstr "Inställningar av direktmeddelanden..."
 
-#: main-widget.cpp:578
+#: main-widget.cpp:577
 msgid "Join Chat Room..."
 msgstr "Gå med i chattrum"
 
-#: main-widget.cpp:580
+#: main-widget.cpp:579
 msgid "Make a Call..."
 msgstr "Ring samtal..."
 
-#: main-widget.cpp:581
+#: main-widget.cpp:580
 msgid "Merge Contacts..."
 msgstr "Sammanfoga kontakter..."
 
-#: main-widget.cpp:582
+#: main-widget.cpp:581
 msgid "Add New Contacts..."
 msgstr "Lägg till nya kontakter..."
 
-#: main-widget.cpp:583
+#: main-widget.cpp:582
 msgid "Find Contact"
 msgstr "Sök kontakt"
 
-#: main-widget.cpp:586
+#: main-widget.cpp:585
 msgid "Start a chat..."
 msgstr "Starta en chatt..."
 
-#: main-widget.cpp:589
+#: main-widget.cpp:588
 msgid "Split Selected Contacts"
 msgstr "Dela upp markerade kontakter"
 
-#: main-widget.cpp:590
+#: main-widget.cpp:589
 msgid "Merge Selected Contacts"
 msgstr "Sammanfoga markerade kontakter"
 
-#: main-widget.cpp:600
+#: main-widget.cpp:599
 msgid "Show Contacts by Groups"
 msgstr "Visa kontakter i grupper"
 
-#: main-widget.cpp:604
+#: main-widget.cpp:603
 msgid "Do not group"
 msgstr "Gruppera inte"
 
-#: main-widget.cpp:607
+#: main-widget.cpp:606
 msgid "Show Contacts by Accounts"
 msgstr "Visa kontakter enligt konton"
 
-#: main-widget.cpp:612
+#: main-widget.cpp:611
 msgid "Show Offline Contacts"
 msgstr "Visa nerkopplade kontakter"
 
-#: main-widget.cpp:613
+#: main-widget.cpp:612
 msgid "Hide Offline Contacts"
 msgstr "Dölj nerkopplade kontakter"
 
-#: main-widget.cpp:621
+#: main-widget.cpp:620
 msgid "Sort by Presence"
 msgstr "Sortera enligt närvaro"
 
-#: main-widget.cpp:622
+#: main-widget.cpp:621
 msgid "Sort by Name"
 msgstr "Sortera enligt namn"
 
-#: main-widget.cpp:630
+#: main-widget.cpp:629
 msgid "Use Full List"
 msgstr "Använd fullständig lista"
 
-#: main-widget.cpp:632
+#: main-widget.cpp:631
 msgid "Use Normal List"
 msgstr "Använd normal lista"
 
-#: main-widget.cpp:636
+#: main-widget.cpp:635
 msgid "Use Minimalistic List"
 msgstr "Använd kompakt lista"
 
-#: main-widget.cpp:643
+#: main-widget.cpp:642
 msgid "Show All Contacts"
 msgstr "Visa alla kontakter"
 
-#: main-widget.cpp:645
+#: main-widget.cpp:644
 msgid "Show Unblocked Contacts"
 msgstr "Visa oblockerade kontakter"
 
-#: main-widget.cpp:647
+#: main-widget.cpp:646
 msgid "Show Blocked Contacts"
 msgstr "Visa blockerade kontakter"
 
@@ -534,12 +534,12 @@ msgstr "Utvecklare"
 msgid "Show Telepathy debugging information"
 msgstr "Visa felsökningsinformation för Telepathy"
 
-#: tooltips/contacttooltip.cpp:60
+#: tooltips/contacttooltip.cpp:58
 msgctxt "This is an IM user status"
 msgid "Error Getting Presence"
 msgstr "Fel när närvaro skulle hämtas"
 
-#: tooltips/contacttooltip.cpp:78
+#: tooltips/contacttooltip.cpp:76
 #, kde-format
 msgid "Account: %1"
 msgstr "Konto: %1"

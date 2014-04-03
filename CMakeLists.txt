@@ -1,6 +1,6 @@
 project (ktp-contactlist)
 
-set(KTP_CONTACT_LIST_VERSION "0.7.80")
+set(KTP_CONTACT_LIST_VERSION "0.8.0")
 
 set (CMAKE_MODULE_PATH
      "${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules"
@@ -12,7 +12,7 @@ set(KDE_MIN_VERSION "4.4.75")
 find_package (KDE4 4.4.75 REQUIRED)
 find_package (TelepathyQt4 0.9.3 REQUIRED)
 find_package (KTp REQUIRED)
-find_package (KPeople 0.2)
+find_package (KPeople 0.2.1)
 
 
 macro_log_feature(KPEOPLE_FOUND "KPeople" "Support for KDE Contact Aggregation" "https://projects.kde.org/libkpeople" FALSE "" "")
