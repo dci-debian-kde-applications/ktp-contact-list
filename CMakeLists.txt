@@ -1,6 +1,6 @@
 project (ktp-contactlist)
 
-set(KTP_CONTACT_LIST_VERSION "0.8.0")
+set(KTP_CONTACT_LIST_VERSION "0.8.1")
 
 set (CMAKE_MODULE_PATH
      "${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules"
@@ -47,6 +47,7 @@ set (ktp_contactlist_SRCS
      contact-delegate-compact.cpp
      account-button.cpp
      account-buttons-panel.cpp
+     empty-row-filter.cpp
      filter-bar.cpp
      main.cpp
      main-widget.cpp

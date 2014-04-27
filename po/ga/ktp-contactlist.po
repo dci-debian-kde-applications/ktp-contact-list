@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktp-contactlist\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-10-26 04:57+0000\n"
+"POT-Creation-Date: 2014-03-12 05:55+0000\n"
 "PO-Revision-Date: 2011-12-28 12:28-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -70,29 +70,29 @@ msgctxt "@action:inmenu This is the IM presence message"
 msgid "Set message..."
 msgstr ""
 
-#: contact-list-widget.cpp:192
+#: contact-list-widget.cpp:193
 msgid "You have no IM accounts configured. Would you like to do that now?"
 msgstr ""
 
-#: contact-list-widget.cpp:193
+#: contact-list-widget.cpp:194
 msgid "No Accounts Found"
 msgstr ""
 
-#: contact-list-widget.cpp:208
+#: contact-list-widget.cpp:209
 msgid ""
 "It appears you do not have the IM Accounts control module installed. Please "
 "install ktp-accounts-kcm package."
 msgstr ""
 
-#: contact-list-widget.cpp:209
+#: contact-list-widget.cpp:210
 msgid "IM Accounts KCM Plugin Is Not Installed"
 msgstr ""
 
-#: contact-list-widget.cpp:227
+#: contact-list-widget.cpp:228
 msgid "Notifications"
 msgstr ""
 
-#: contact-list-widget.cpp:289
+#: contact-list-widget.cpp:290
 #, fuzzy, kde-format
 msgctxt ""
 "Label of a dialog's 'OK' button; %1 is account name, eg. 'Connect account "
@@ -100,162 +100,162 @@ msgctxt ""
 msgid "Connect account %1"
 msgstr "Cuntas:"
 
-#: contact-list-widget.cpp:291
+#: contact-list-widget.cpp:292
 msgid ""
 "The account for this contact is disconnected. Do you want to connect it?"
 msgstr ""
 
-#: contact-list-widget.cpp:292
+#: contact-list-widget.cpp:293
 #, fuzzy
 msgid "Account offline"
 msgstr "Cuntas:"
 
-#: contact-list-widget.cpp:500
+#: contact-list-widget.cpp:501
 #, kde-format
 msgid "Choose files to send to %1"
 msgstr "Roghnaigh comhaid le seoladh chuig %1"
 
-#: contact-list-widget.cpp:796
+#: contact-list-widget.cpp:797
 #, fuzzy
 #| msgid "Remove Contact"
 msgid "Merge contacts"
 msgstr "Bain Teagmháil"
 
-#: contact-list-widget.cpp:838
+#: contact-list-widget.cpp:839
 msgid "&Move here"
 msgstr ""
 
-#: contact-list-widget.cpp:842
+#: contact-list-widget.cpp:843
 msgid "&Copy here"
 msgstr ""
 
-#: contact-list-widget.cpp:846
+#: contact-list-widget.cpp:847
 msgid "C&ancel"
 msgstr ""
 
-#: contact-overlays.cpp:134 contact-overlays.cpp:135
+#: contact-overlays.cpp:135 contact-overlays.cpp:136
 msgid "Start Chat"
 msgstr ""
 
-#: contact-overlays.cpp:135
+#: contact-overlays.cpp:136
 msgid "Start a text chat"
 msgstr ""
 
-#: contact-overlays.cpp:146 contact-overlays.cpp:147
+#: contact-overlays.cpp:147 contact-overlays.cpp:148
 msgid "Start Audio Call"
 msgstr ""
 
-#: contact-overlays.cpp:147
+#: contact-overlays.cpp:148
 msgid "Start an audio call"
 msgstr ""
 
-#: contact-overlays.cpp:159 contact-overlays.cpp:160
+#: contact-overlays.cpp:160 contact-overlays.cpp:161
 msgid "Start Video Call"
 msgstr ""
 
-#: contact-overlays.cpp:160
+#: contact-overlays.cpp:161
 msgid "Start a video call"
 msgstr ""
 
-#: contact-overlays.cpp:171 contact-overlays.cpp:172 context-menu.cpp:140
+#: contact-overlays.cpp:172 contact-overlays.cpp:173 context-menu.cpp:146
 msgid "Send File..."
 msgstr "Seol Comhad..."
 
-#: contact-overlays.cpp:172
+#: contact-overlays.cpp:173
 msgid "Send a file"
 msgstr ""
 
-#: contact-overlays.cpp:183 contact-overlays.cpp:184
+#: contact-overlays.cpp:184 contact-overlays.cpp:185
 msgid "Open Log Viewer"
 msgstr ""
 
-#: contact-overlays.cpp:184
+#: contact-overlays.cpp:185
 msgid "Show conversation logs"
 msgstr ""
 
-#: context-menu.cpp:110
+#: context-menu.cpp:116
 msgid "Start Chat..."
 msgstr ""
 
-#: context-menu.cpp:120
+#: context-menu.cpp:126
 msgid "Start Audio Call..."
 msgstr ""
 
-#: context-menu.cpp:130
+#: context-menu.cpp:136
 msgid "Start Video Call..."
 msgstr ""
 
-#: context-menu.cpp:150
+#: context-menu.cpp:156
 msgid "Share my desktop..."
 msgstr ""
 
-#: context-menu.cpp:160
+#: context-menu.cpp:166
 msgid "Open Log Viewer..."
 msgstr ""
 
-#: context-menu.cpp:173
+#: context-menu.cpp:179
 msgid "Configure Notifications..."
 msgstr ""
 
-#: context-menu.cpp:190
+#: context-menu.cpp:196
 msgid "Presence message link"
 msgid_plural "Presence message links"
 msgstr[0] ""
 msgstr[1] ""
 
-#: context-menu.cpp:210
+#: context-menu.cpp:216
 msgid "Remove Contact From This Group"
 msgstr ""
 
-#: context-menu.cpp:214
+#: context-menu.cpp:220
 msgid "Move to Group"
 msgstr ""
 
-#: context-menu.cpp:232
+#: context-menu.cpp:238
 msgid "Create New Group..."
 msgstr "Cruthaigh Grúpa Nua..."
 
-#: context-menu.cpp:251
+#: context-menu.cpp:257
 msgid "Re-request Contact Authorization"
 msgstr ""
 
-#: context-menu.cpp:257
+#: context-menu.cpp:263
 msgid "Resend Contact Authorization"
 msgstr ""
 
-#: context-menu.cpp:265
+#: context-menu.cpp:271
 msgid "Unblock Contact"
 msgstr ""
 
-#: context-menu.cpp:269
+#: context-menu.cpp:275
 msgid "Block Contact"
 msgstr "Cuir Cosc Ar Theagmháil"
 
-#: context-menu.cpp:277
+#: context-menu.cpp:283
 msgid "Remove Contact"
 msgstr "Bain Teagmháil"
 
-#: context-menu.cpp:282
+#: context-menu.cpp:288
 msgid "Show Info..."
 msgstr ""
 
-#: context-menu.cpp:303
+#: context-menu.cpp:309
 msgid "Rename Group..."
 msgstr "Athainmnigh Grúpa..."
 
-#: context-menu.cpp:309
+#: context-menu.cpp:315
 msgid "Delete Group"
 msgstr "Scrios Grúpa"
 
-#: context-menu.cpp:493 context-menu.cpp:518
+#: context-menu.cpp:499 context-menu.cpp:524
 msgid "New Group Name"
 msgstr ""
 
-#: context-menu.cpp:494 context-menu.cpp:519
+#: context-menu.cpp:500 context-menu.cpp:525
 msgid "Please enter the new group name"
 msgstr ""
 
-#: context-menu.cpp:552
+#: context-menu.cpp:558
 #, kde-format
 msgid ""
 "Do you really want to remove group %1?\n"
@@ -263,7 +263,7 @@ msgid ""
 "Note that all contacts will be moved to group 'Ungrouped'"
 msgstr ""
 
-#: context-menu.cpp:554
+#: context-menu.cpp:560
 msgid "Remove Group"
 msgstr "Bain Grúpa"
 
@@ -361,13 +361,13 @@ msgstr ""
 msgid "Plugin disabled"
 msgstr ""
 
-#: main-widget.cpp:175
+#: main-widget.cpp:173
 msgid ""
 "Something unexpected happened to the core part of your Instant Messaging "
 "system and it couldn't be initialized. Try restarting the Contact List."
 msgstr ""
 
-#: main-widget.cpp:177
+#: main-widget.cpp:175
 msgid "IM system failed to initialize"
 msgstr ""
 
@@ -395,120 +395,120 @@ msgstr ""
 msgid "Contacts"
 msgstr "Teagmhálacha Ar Taispeáint"
 
-#: main-widget.cpp:438
+#: main-widget.cpp:439
 msgid "View"
 msgstr ""
 
-#: main-widget.cpp:442 main-widget.cpp:485
+#: main-widget.cpp:443 main-widget.cpp:486
 msgid "Contact List Type"
 msgstr ""
 
-#: main-widget.cpp:445 main-widget.cpp:490
+#: main-widget.cpp:446 main-widget.cpp:491
 msgid "Shown Contacts"
 msgstr "Teagmhálacha Ar Taispeáint"
 
-#: main-widget.cpp:448 main-widget.cpp:495
+#: main-widget.cpp:449 main-widget.cpp:496
 #, fuzzy
 msgid "Contact Grouping"
 msgstr "Taispeáin gach teagmháil"
 
-#: main-widget.cpp:572
+#: main-widget.cpp:573
 msgid "Instant Messaging Settings..."
 msgstr ""
 
-#: main-widget.cpp:577
+#: main-widget.cpp:578
 msgid "Join Chat Room..."
 msgstr ""
 
-#: main-widget.cpp:579
+#: main-widget.cpp:580
 msgid "Make a Call..."
 msgstr ""
 
-#: main-widget.cpp:580
+#: main-widget.cpp:581
 #, fuzzy
 #| msgid "Remove Contact"
 msgid "Merge Contacts..."
 msgstr "Bain Teagmháil"
 
-#: main-widget.cpp:581
+#: main-widget.cpp:582
 msgid "Add New Contacts..."
 msgstr ""
 
-#: main-widget.cpp:582
+#: main-widget.cpp:583
 msgid "Find Contact"
 msgstr "Aimsigh Teagmháil"
 
-#: main-widget.cpp:585
+#: main-widget.cpp:586
 msgid "Start a chat..."
 msgstr ""
 
-#: main-widget.cpp:588
+#: main-widget.cpp:589
 #, fuzzy
 msgid "Split Selected Contacts"
 msgstr "Cuir Cosc Ar Theagmháil"
 
-#: main-widget.cpp:589
+#: main-widget.cpp:590
 #, fuzzy
 msgid "Merge Selected Contacts"
 msgstr "Cuir Cosc Ar Theagmháil"
 
-#: main-widget.cpp:599
+#: main-widget.cpp:600
 #, fuzzy
 msgid "Show Contacts by Groups"
 msgstr "Taispeáin gach teagmháil"
 
-#: main-widget.cpp:603
+#: main-widget.cpp:604
 msgid "Do not group"
 msgstr ""
 
-#: main-widget.cpp:606
+#: main-widget.cpp:607
 #, fuzzy
 msgid "Show Contacts by Accounts"
 msgstr "Taispeáin gach teagmháil"
 
-#: main-widget.cpp:611
+#: main-widget.cpp:612
 #, fuzzy
 msgid "Show Offline Contacts"
 msgstr "Taispeáin gach teagmháil"
 
-#: main-widget.cpp:612
+#: main-widget.cpp:613
 #, fuzzy
 msgid "Hide Offline Contacts"
 msgstr "Taispeáin gach teagmháil"
 
-#: main-widget.cpp:620
+#: main-widget.cpp:621
 #, fuzzy
 msgid "Sort by Presence"
 msgstr "Sórtáil de réir ainm"
 
-#: main-widget.cpp:621
+#: main-widget.cpp:622
 #, fuzzy
 msgid "Sort by Name"
 msgstr "Sórtáil de réir ainm"
 
-#: main-widget.cpp:629
+#: main-widget.cpp:630
 msgid "Use Full List"
 msgstr ""
 
-#: main-widget.cpp:631
+#: main-widget.cpp:632
 msgid "Use Normal List"
 msgstr ""
 
-#: main-widget.cpp:635
+#: main-widget.cpp:636
 msgid "Use Minimalistic List"
 msgstr ""
 
-#: main-widget.cpp:642
+#: main-widget.cpp:643
 #, fuzzy
 msgid "Show All Contacts"
 msgstr "Taispeáin gach teagmháil"
 
-#: main-widget.cpp:644
+#: main-widget.cpp:645
 #, fuzzy
 msgid "Show Unblocked Contacts"
 msgstr "Teagmhálacha Ar Taispeáint"
 
-#: main-widget.cpp:646
+#: main-widget.cpp:647
 #, fuzzy
 msgid "Show Blocked Contacts"
 msgstr "Cuir Cosc Ar Theagmháil"
@@ -535,16 +535,16 @@ msgstr "Martin Klapetek"
 msgid "Developer"
 msgstr "Forbróir"
 
-#: main.cpp:49
+#: main.cpp:50
 msgid "Show Telepathy debugging information"
 msgstr ""
 
-#: tooltips/contacttooltip.cpp:58
+#: tooltips/contacttooltip.cpp:60
 msgctxt "This is an IM user status"
 msgid "Error Getting Presence"
 msgstr ""
 
-#: tooltips/contacttooltip.cpp:76
+#: tooltips/contacttooltip.cpp:78
 #, fuzzy, kde-format
 msgid "Account: %1"
 msgstr "Cuntas:"

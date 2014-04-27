@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2013-10-26 04:57+0000\n"
+"POT-Creation-Date: 2014-03-12 05:55+0000\n"
 "PO-Revision-Date: 2014-01-13 18:55+0100\n"
 "Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
 "Language-Team: Norwegian Bokmål <i18n-nb@lister.ping.uio.no>\n"
@@ -72,15 +72,15 @@ msgctxt "@action:inmenu This is the IM presence message"
 msgid "Set message..."
 msgstr "Skriv inn melding …"
 
-#: contact-list-widget.cpp:192
+#: contact-list-widget.cpp:193
 msgid "You have no IM accounts configured. Would you like to do that now?"
 msgstr "Du har ingen lynmeldingskontoer satt opp. Vil du gjøre det nå?"
 
-#: contact-list-widget.cpp:193
+#: contact-list-widget.cpp:194
 msgid "No Accounts Found"
 msgstr "Fant ingen kontoer"
 
-#: contact-list-widget.cpp:208
+#: contact-list-widget.cpp:209
 msgid ""
 "It appears you do not have the IM Accounts control module installed. Please "
 "install ktp-accounts-kcm package."
@@ -88,15 +88,15 @@ msgstr ""
 "Det ser ut til at du ikke har installert styringsmodulen IM Accounts. "
 "Installer pakka ktp-accounts-kcm."
 
-#: contact-list-widget.cpp:209
+#: contact-list-widget.cpp:210
 msgid "IM Accounts KCM Plugin Is Not Installed"
 msgstr "KCM programtillegg for lynmeldingskontoer er ikke installert"
 
-#: contact-list-widget.cpp:227
+#: contact-list-widget.cpp:228
 msgid "Notifications"
 msgstr "Varslinger"
 
-#: contact-list-widget.cpp:289
+#: contact-list-widget.cpp:290
 #, kde-format
 msgctxt ""
 "Label of a dialog's 'OK' button; %1 is account name, eg. 'Connect account "
@@ -104,159 +104,159 @@ msgctxt ""
 msgid "Connect account %1"
 msgstr "Koble til konto %1"
 
-#: contact-list-widget.cpp:291
+#: contact-list-widget.cpp:292
 msgid ""
 "The account for this contact is disconnected. Do you want to connect it?"
 msgstr "Kontoen for denne kontakten er frakoblet. Vil du koble til?"
 
-#: contact-list-widget.cpp:292
+#: contact-list-widget.cpp:293
 msgid "Account offline"
 msgstr "Konto frakoblet"
 
-#: contact-list-widget.cpp:500
+#: contact-list-widget.cpp:501
 #, kde-format
 msgid "Choose files to send to %1"
 msgstr "Velg filer som skal sendes til %1"
 
-#: contact-list-widget.cpp:796
+#: contact-list-widget.cpp:797
 msgid "Merge contacts"
 msgstr "Flett sammen kontakter"
 
-#: contact-list-widget.cpp:838
+#: contact-list-widget.cpp:839
 msgid "&Move here"
 msgstr "&Flytt hit"
 
-#: contact-list-widget.cpp:842
+#: contact-list-widget.cpp:843
 msgid "&Copy here"
 msgstr "&Kopier hit"
 
-#: contact-list-widget.cpp:846
+#: contact-list-widget.cpp:847
 msgid "C&ancel"
 msgstr "&Avbryt"
 
-#: contact-overlays.cpp:134 contact-overlays.cpp:135
+#: contact-overlays.cpp:135 contact-overlays.cpp:136
 msgid "Start Chat"
 msgstr "Start prat"
 
-#: contact-overlays.cpp:135
+#: contact-overlays.cpp:136
 msgid "Start a text chat"
 msgstr "Start en tekstprat"
 
-#: contact-overlays.cpp:146 contact-overlays.cpp:147
+#: contact-overlays.cpp:147 contact-overlays.cpp:148
 msgid "Start Audio Call"
 msgstr "Start lydoppkall"
 
-#: contact-overlays.cpp:147
+#: contact-overlays.cpp:148
 msgid "Start an audio call"
 msgstr "Start et lydoppkall"
 
-#: contact-overlays.cpp:159 contact-overlays.cpp:160
+#: contact-overlays.cpp:160 contact-overlays.cpp:161
 msgid "Start Video Call"
 msgstr "Start video-oppkall"
 
-#: contact-overlays.cpp:160
+#: contact-overlays.cpp:161
 msgid "Start a video call"
 msgstr "Start et video-oppkall"
 
-#: contact-overlays.cpp:171 contact-overlays.cpp:172 context-menu.cpp:140
+#: contact-overlays.cpp:172 contact-overlays.cpp:173 context-menu.cpp:146
 msgid "Send File..."
 msgstr "Send fil …"
 
-#: contact-overlays.cpp:172
+#: contact-overlays.cpp:173
 msgid "Send a file"
 msgstr "Send en fil"
 
-#: contact-overlays.cpp:183 contact-overlays.cpp:184
+#: contact-overlays.cpp:184 contact-overlays.cpp:185
 msgid "Open Log Viewer"
 msgstr "Åpne loggviser"
 
-#: contact-overlays.cpp:184
+#: contact-overlays.cpp:185
 msgid "Show conversation logs"
 msgstr "Vis samtalelogger"
 
-#: context-menu.cpp:110
+#: context-menu.cpp:116
 msgid "Start Chat..."
 msgstr "Start prat …"
 
-#: context-menu.cpp:120
+#: context-menu.cpp:126
 msgid "Start Audio Call..."
 msgstr "Start lydoppkall …"
 
-#: context-menu.cpp:130
+#: context-menu.cpp:136
 msgid "Start Video Call..."
 msgstr "Start video-oppkall …"
 
-#: context-menu.cpp:150
+#: context-menu.cpp:156
 msgid "Share my desktop..."
 msgstr "Del mitt skrivebord …"
 
-#: context-menu.cpp:160
+#: context-menu.cpp:166
 msgid "Open Log Viewer..."
 msgstr "Åpne loggviser …"
 
-#: context-menu.cpp:173
+#: context-menu.cpp:179
 msgid "Configure Notifications..."
 msgstr "Oppsett av beskjeder …"
 
-#: context-menu.cpp:190
+#: context-menu.cpp:196
 msgid "Presence message link"
 msgid_plural "Presence message links"
 msgstr[0] "Lenke til tilstedemelding"
 msgstr[1] "Lenker til tilstedemeldinger"
 
-#: context-menu.cpp:210
+#: context-menu.cpp:216
 msgid "Remove Contact From This Group"
 msgstr "Fjern kontakten fra denne gruppa"
 
-#: context-menu.cpp:214
+#: context-menu.cpp:220
 msgid "Move to Group"
 msgstr "Flytt til gruppe"
 
-#: context-menu.cpp:232
+#: context-menu.cpp:238
 msgid "Create New Group..."
 msgstr "Opprett ny gruppe …"
 
-#: context-menu.cpp:251
+#: context-menu.cpp:257
 msgid "Re-request Contact Authorization"
 msgstr "Be på nytt om kontakt-autorisering"
 
-#: context-menu.cpp:257
+#: context-menu.cpp:263
 msgid "Resend Contact Authorization"
 msgstr "Send kontakt-autorisering på nytt"
 
-#: context-menu.cpp:265
+#: context-menu.cpp:271
 msgid "Unblock Contact"
 msgstr "Ta vekk blokkering for kontakt"
 
-#: context-menu.cpp:269
+#: context-menu.cpp:275
 msgid "Block Contact"
 msgstr "Blokker kontakt"
 
-#: context-menu.cpp:277
+#: context-menu.cpp:283
 msgid "Remove Contact"
 msgstr "Fjern kontakt"
 
-#: context-menu.cpp:282
+#: context-menu.cpp:288
 msgid "Show Info..."
 msgstr "Vis info …"
 
-#: context-menu.cpp:303
+#: context-menu.cpp:309
 msgid "Rename Group..."
 msgstr "Gi gruppe nytt navn …"
 
-#: context-menu.cpp:309
+#: context-menu.cpp:315
 msgid "Delete Group"
 msgstr "Slett gruppe"
 
-#: context-menu.cpp:493 context-menu.cpp:518
+#: context-menu.cpp:499 context-menu.cpp:524
 msgid "New Group Name"
 msgstr "Nytt navn på gruppe"
 
-#: context-menu.cpp:494 context-menu.cpp:519
+#: context-menu.cpp:500 context-menu.cpp:525
 msgid "Please enter the new group name"
 msgstr "Skriv inn det nye gruppenavnet"
 
-#: context-menu.cpp:552
+#: context-menu.cpp:558
 #, kde-format
 msgid ""
 "Do you really want to remove group %1?\n"
@@ -267,7 +267,7 @@ msgstr ""
 "\n"
 "Merk at alle kontakter vil bli flyttet til gruppa «Ugruppert»"
 
-#: context-menu.cpp:554
+#: context-menu.cpp:560
 msgid "Remove Group"
 msgstr "Fjern gruppe"
 
@@ -367,7 +367,7 @@ msgstr ""
 msgid "Plugin disabled"
 msgstr "Programtillegg slått av"
 
-#: main-widget.cpp:175
+#: main-widget.cpp:173
 msgid ""
 "Something unexpected happened to the core part of your Instant Messaging "
 "system and it couldn't be initialized. Try restarting the Contact List."
@@ -375,7 +375,7 @@ msgstr ""
 "Det hendte noe uventet med kjernedelen av lynmeldingssystemet ditt og det "
 "kunne ikke klargjøres. Forsøk å starte Kontaktlista på nytt."
 
-#: main-widget.cpp:177
+#: main-widget.cpp:175
 msgid "IM system failed to initialize"
 msgstr "LM-systemet ble ikke klargjort"
 
@@ -405,107 +405,107 @@ msgstr "Koble fra"
 msgid "Contacts"
 msgstr "Kontakter"
 
-#: main-widget.cpp:438
+#: main-widget.cpp:439
 msgid "View"
 msgstr "Vis"
 
-#: main-widget.cpp:442 main-widget.cpp:485
+#: main-widget.cpp:443 main-widget.cpp:486
 msgid "Contact List Type"
 msgstr "Type kontaktliste"
 
-#: main-widget.cpp:445 main-widget.cpp:490
+#: main-widget.cpp:446 main-widget.cpp:491
 msgid "Shown Contacts"
 msgstr "Viste kontakter:"
 
-#: main-widget.cpp:448 main-widget.cpp:495
+#: main-widget.cpp:449 main-widget.cpp:496
 msgid "Contact Grouping"
 msgstr "Kontaktgruppering"
 
-#: main-widget.cpp:572
+#: main-widget.cpp:573
 msgid "Instant Messaging Settings..."
 msgstr "Lynmeldingsinnstillinger …"
 
-#: main-widget.cpp:577
+#: main-widget.cpp:578
 msgid "Join Chat Room..."
 msgstr "Gå inn i praterom …"
 
-#: main-widget.cpp:579
+#: main-widget.cpp:580
 msgid "Make a Call..."
 msgstr "Gjør et anrop …"
 
-#: main-widget.cpp:580
+#: main-widget.cpp:581
 msgid "Merge Contacts..."
 msgstr "Flett sammen kontakter …"
 
-#: main-widget.cpp:581
+#: main-widget.cpp:582
 msgid "Add New Contacts..."
 msgstr "Legg til nye kontakter …"
 
-#: main-widget.cpp:582
+#: main-widget.cpp:583
 msgid "Find Contact"
 msgstr "Finn kontakt"
 
-#: main-widget.cpp:585
+#: main-widget.cpp:586
 msgid "Start a chat..."
 msgstr "Start prat …"
 
-#: main-widget.cpp:588
+#: main-widget.cpp:589
 msgid "Split Selected Contacts"
 msgstr "Splitt valge kontakter"
 
-#: main-widget.cpp:589
+#: main-widget.cpp:590
 msgid "Merge Selected Contacts"
 msgstr "Flett sammen valgte kontakter"
 
-#: main-widget.cpp:599
+#: main-widget.cpp:600
 msgid "Show Contacts by Groups"
 msgstr "Vis kontakter etter grupper"
 
-#: main-widget.cpp:603
+#: main-widget.cpp:604
 msgid "Do not group"
 msgstr "Ikke grupper"
 
-#: main-widget.cpp:606
+#: main-widget.cpp:607
 msgid "Show Contacts by Accounts"
 msgstr "Vis kontakter etter kontoer"
 
-#: main-widget.cpp:611
+#: main-widget.cpp:612
 msgid "Show Offline Contacts"
 msgstr "Vis frakoblede kontakter"
 
-#: main-widget.cpp:612
+#: main-widget.cpp:613
 msgid "Hide Offline Contacts"
 msgstr "Skjul frakoblede kontakter"
 
-#: main-widget.cpp:620
+#: main-widget.cpp:621
 msgid "Sort by Presence"
 msgstr "Sortert etter tilstedeværelse"
 
-#: main-widget.cpp:621
+#: main-widget.cpp:622
 msgid "Sort by Name"
 msgstr "Sortert etter navn"
 
-#: main-widget.cpp:629
+#: main-widget.cpp:630
 msgid "Use Full List"
 msgstr "Bruk fullstendig liste"
 
-#: main-widget.cpp:631
+#: main-widget.cpp:632
 msgid "Use Normal List"
 msgstr "Bruk normal liste"
 
-#: main-widget.cpp:635
+#: main-widget.cpp:636
 msgid "Use Minimalistic List"
 msgstr "Bruk minimalistisk liste"
 
-#: main-widget.cpp:642
+#: main-widget.cpp:643
 msgid "Show All Contacts"
 msgstr "Vis alle kontakter"
 
-#: main-widget.cpp:644
+#: main-widget.cpp:645
 msgid "Show Unblocked Contacts"
 msgstr "Vis ublokkerte kontakter"
 
-#: main-widget.cpp:646
+#: main-widget.cpp:647
 msgid "Show Blocked Contacts"
 msgstr "Vis blokkerte kontakter"
 
@@ -531,16 +531,16 @@ msgstr "Martin Klapetek"
 msgid "Developer"
 msgstr "Utvikler"
 
-#: main.cpp:49
+#: main.cpp:50
 msgid "Show Telepathy debugging information"
 msgstr "Vis feilsøkingsinformasjon for Telepathy"
 
-#: tooltips/contacttooltip.cpp:58
+#: tooltips/contacttooltip.cpp:60
 msgctxt "This is an IM user status"
 msgid "Error Getting Presence"
 msgstr "Feil mens Tilstede ble hentet"
 
-#: tooltips/contacttooltip.cpp:76
+#: tooltips/contacttooltip.cpp:78
 #, kde-format
 msgid "Account: %1"
 msgstr "Konto: %1"

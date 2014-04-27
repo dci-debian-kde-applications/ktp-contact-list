@@ -58,6 +58,7 @@
 #include "contact-delegate.h"
 #include "contact-delegate-compact.h"
 #include "contact-overlays.h"
+#include "empty-row-filter.h"
 
 
 #ifdef HAVE_KPEOPLE
@@ -106,15 +107,9 @@ ContactListWidget::ContactListWidget(QWidget *parent)
     d->style.reset(new NoLinesStyle());
 
     setStyle(d->style.data());
-    setSortingEnabled(true);
-    sortByColumn(0, Qt::AscendingOrder);
     loadGroupStatesFromConfig();
 
-    connect(d->model, SIGNAL(rowsInserted(QModelIndex,int,int)),
-            this, SLOT(onNewGroupModelItemsInserted(QModelIndex,int,int)));
-
     header()->hide();
-    setSortingEnabled(true);
     setEditTriggers(NoEditTriggers);
     setContextMenuPolicy(Qt::CustomContextMenu);
     if (KTp::kpeopleEnabled()) {
@@ -178,10 +173,16 @@ void ContactListWidget::setAccountManager(const Tp::AccountManagerPtr &accountMa
     d->accountManager = accountManager;
     d->model->setAccountManager(accountManager);
 
+    EmptyRowFilter *rowFilter= new EmptyRowFilter(this);
+    rowFilter->setSourceModel(d->model);
+
+    connect(rowFilter, SIGNAL(rowsInserted(QModelIndex,int,int)),
+            this, SLOT(onNewGroupModelItemsInserted(QModelIndex,int,int)));
+
     // We set the model only when the account manager is set.
     // This fixes the weird horizontal scrollbar bug
     // See https://bugs.kde.org/show_bug.cgi?id=316260
-    setModel(d->model);
+    setModel(rowFilter);
 
     connect(selectionModel(), SIGNAL(selectionChanged(QItemSelection,QItemSelection)),
             this, SIGNAL(contactSelectionChanged()));
