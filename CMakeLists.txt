@@ -1,6 +1,6 @@
 project (ktp-contactlist)
 
-set(KTP_CONTACT_LIST_VERSION "0.8.1")
+set(KTP_CONTACT_LIST_VERSION "0.8.80")
 
 set (CMAKE_MODULE_PATH
      "${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules"
@@ -35,7 +35,7 @@ include_directories (${KDE4_INCLUDES}
 )
 
 
-set (ktp_contactlist_SRCS 
+set (ktp_contactlist_SRCS
      contact-list-widget.cpp
      context-menu.cpp
      abstract-contact-delegate.cpp
@@ -54,7 +54,6 @@ set (ktp_contactlist_SRCS
      global-presence-chooser.cpp
      dialogs/remove-contact-dialog.cpp
      dialogs/custom-presence-dialog.cpp
-     presence-model.cpp
      tooltips/ktooltip.cpp
      tooltips/tooltipmanager.cpp
      tooltips/ktooltipwindow.cpp

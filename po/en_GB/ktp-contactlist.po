@@ -1,97 +1,98 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Franklin Weng <franklin@mail.everfocus.com.tw>, 2012.
-# Franklin Weng <franklin@goodhorse.idv.tw>, 2012, 2013.
+# Steve Allewell <steve.allewell@gmail.com>, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-05-14 05:49+0000\n"
-"PO-Revision-Date: 2013-10-03 15:07+0800\n"
-"Last-Translator: Franklin Weng <franklin at goodhorse dot idv dot tw>\n"
-"Language-Team: Chinese Traditional <kde-tw@googlegroups.com>\n"
-"Language: zh_TW\n"
+"PO-Revision-Date: 2014-06-24 00:16+0100\n"
+"Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
+"Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
+"Language: en_GB\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 1.5\n"
 
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Frank Weng (a.k.a. Franklin)"
+msgstr "Steve Allewell"
 
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "franklin at goodhorse dot idv dot tw"
+msgstr "steve.allewell@gmail.com"
 
 #: account-button.cpp:71
 msgctxt "@action:inmenu This is an IM user status"
 msgid "Available"
-msgstr "可用"
+msgstr "Available"
 
 #: account-button.cpp:72
 msgctxt "@action:inmenu This is an IM user status"
 msgid "Away"
-msgstr "離開"
+msgstr "Away"
 
 #: account-button.cpp:73
 msgctxt "@action:inmenu This is an IM user status"
 msgid "Be right back"
-msgstr "馬上回來"
+msgstr "Be right back"
 
 #: account-button.cpp:74
 msgctxt "@action:inmenu This is an IM user status"
 msgid "Busy"
-msgstr "忙碌"
+msgstr "Busy"
 
 #: account-button.cpp:75
 msgctxt "@action:inmenu This is an IM user status"
 msgid "Do not disturb"
-msgstr "請勿打擾"
+msgstr "Do not disturb"
 
 #: account-button.cpp:76
 msgctxt "@action:inmenu This is an IM user status"
 msgid "Extended Away"
-msgstr "延伸離開"
+msgstr "Extended Away"
 
 #: account-button.cpp:77
 msgctxt "@action:inmenu This is an IM user status"
 msgid "Invisible"
-msgstr "隱身"
+msgstr "Invisible"
 
 #: account-button.cpp:78
 msgctxt "@action:inmenu This is an IM user status"
 msgid "Offline"
-msgstr "離線"
+msgstr "Offline"
 
 #: account-button.cpp:82
 msgctxt "@action:inmenu This is the IM presence message"
 msgid "Set message..."
-msgstr "設定訊息..."
+msgstr "Set message..."
 
 #: contact-list-widget.cpp:194
 msgid "You have no IM accounts configured. Would you like to do that now?"
-msgstr "您沒有設定任何即時訊息帳號。您要現在設定嗎？"
+msgstr "You have no IM accounts configured. Would you like to do that now?"
 
 #: contact-list-widget.cpp:195
 msgid "No Accounts Found"
-msgstr "找不到帳號"
+msgstr "No Accounts Found"
 
 #: contact-list-widget.cpp:210
 msgid ""
 "It appears you do not have the IM Accounts control module installed. Please "
 "install ktp-accounts-kcm package."
-msgstr "您似乎沒有安裝即時訊息帳號控制模組。請先安裝 ktp-accounts-kcm 套件。"
+msgstr ""
+"It appears you do not have the IM Accounts control module installed. Please "
+"install ktp-accounts-kcm package."
 
 #: contact-list-widget.cpp:211
 msgid "IM Accounts KCM Plugin Is Not Installed"
-msgstr "即時訊息帳號 KCM 外掛程式尚未安裝"
+msgstr "IM Accounts KCM Plugin Is Not Installed"
 
 #: contact-list-widget.cpp:229
 msgid "Notifications"
-msgstr "通知"
+msgstr "Notifications"
 
 #: contact-list-widget.cpp:291
 #, kde-format
@@ -99,158 +100,160 @@ msgctxt ""
 "Label of a dialog's 'OK' button; %1 is account name, eg. 'Connect account "
 "GTalk'"
 msgid "Connect account %1"
-msgstr "連線帳號 %1"
+msgstr "Connect account %1"
 
 #: contact-list-widget.cpp:293
 msgid ""
 "The account for this contact is disconnected. Do you want to connect it?"
-msgstr "此聯絡人帳號目前已離線。您要連線嗎？"
+msgstr ""
+"The account for this contact is disconnected. Do you want to connect it?"
 
 #: contact-list-widget.cpp:294
 msgid "Account offline"
-msgstr "帳號已離線"
+msgstr "Account offline"
 
 #: contact-list-widget.cpp:502
 #, kde-format
 msgid "Choose files to send to %1"
-msgstr "選擇要傳送給 %1 的檔案"
+msgstr "Choose files to send to %1"
 
 #: contact-list-widget.cpp:807
 msgid "Merge contacts"
-msgstr "合併聯絡人"
+msgstr "Merge contacts"
 
 #: contact-list-widget.cpp:849
 msgid "&Move here"
-msgstr "移到這裡(&M)"
+msgstr "&Move here"
 
 #: contact-list-widget.cpp:853
 msgid "&Copy here"
-msgstr "複製到這裡(&C)"
+msgstr "&Copy here"
 
 #: contact-list-widget.cpp:857
 msgid "C&ancel"
-msgstr "取消(&A)"
+msgstr "C&ancel"
 
 #: contact-overlays.cpp:135 contact-overlays.cpp:136
 msgid "Start Chat"
-msgstr "開始聊天"
+msgstr "Start Chat"
 
 #: contact-overlays.cpp:136
 msgid "Start a text chat"
-msgstr "開始文字聊天"
+msgstr "Start a text chat"
 
 #: contact-overlays.cpp:147 contact-overlays.cpp:148
 msgid "Start Audio Call"
-msgstr "開始語音呼叫"
+msgstr "Start Audio Call"
 
 #: contact-overlays.cpp:148
 msgid "Start an audio call"
-msgstr "開始語音呼叫"
+msgstr "Start an audio call"
 
 #: contact-overlays.cpp:160 contact-overlays.cpp:161
 msgid "Start Video Call"
-msgstr "開始視訊呼叫"
+msgstr "Start Video Call"
 
 #: contact-overlays.cpp:161
 msgid "Start a video call"
-msgstr "開始視訊呼叫"
+msgstr "Start a video call"
 
 #: contact-overlays.cpp:172 contact-overlays.cpp:173 context-menu.cpp:146
 msgid "Send File..."
-msgstr "傳送檔案..."
+msgstr "Send File..."
 
 #: contact-overlays.cpp:173
 msgid "Send a file"
-msgstr "傳送檔案"
+msgstr "Send a file"
 
 #: contact-overlays.cpp:184 contact-overlays.cpp:185
 msgid "Open Log Viewer"
-msgstr "開啟紀錄檢視器"
+msgstr "Open Log Viewer"
 
 #: contact-overlays.cpp:185
 msgid "Show conversation logs"
-msgstr "顯示對話紀錄"
+msgstr "Show conversation logs"
 
 #: context-menu.cpp:116
 msgid "Start Chat..."
-msgstr "開始聊天..."
+msgstr "Start Chat..."
 
 #: context-menu.cpp:126
 msgid "Start Audio Call..."
-msgstr "開始語音呼叫..."
+msgstr "Start Audio Call..."
 
 #: context-menu.cpp:136
 msgid "Start Video Call..."
-msgstr "開始視訊呼叫..."
+msgstr "Start Video Call..."
 
 #: context-menu.cpp:156
 msgid "Share my desktop..."
-msgstr "分享我的桌面..."
+msgstr "Share my desktop..."
 
 #: context-menu.cpp:166
 msgid "Open Log Viewer..."
-msgstr "開啟紀錄檢視器"
+msgstr "Open Log Viewer..."
 
 #: context-menu.cpp:179
 msgid "Configure Notifications..."
-msgstr "設定通知..."
+msgstr "Configure Notifications..."
 
 #: context-menu.cpp:196
 msgid "Presence message link"
 msgid_plural "Presence message links"
-msgstr[0] "上線狀態訊息連結"
+msgstr[0] "Presence message link"
+msgstr[1] "Presence message links"
 
 #: context-menu.cpp:216
 msgid "Remove Contact From This Group"
-msgstr "從此群組中移除聯絡人"
+msgstr "Remove Contact From This Group"
 
 #: context-menu.cpp:220
 msgid "Move to Group"
-msgstr "移動到群組"
+msgstr "Move to Group"
 
 #: context-menu.cpp:238
 msgid "Create New Group..."
-msgstr "建立新群組..."
+msgstr "Create New Group..."
 
 #: context-menu.cpp:257
 msgid "Re-request Contact Authorization"
-msgstr "重新請求聯絡人授權"
+msgstr "Re-request Contact Authorisation"
 
 #: context-menu.cpp:263
 msgid "Resend Contact Authorization"
-msgstr "重新送出聯絡人授權"
+msgstr "Resend Contact Authorisation"
 
 #: context-menu.cpp:271
 msgid "Unblock Contact"
-msgstr "解除封鎖聯絡人"
+msgstr "Unblock Contact"
 
 #: context-menu.cpp:275
 msgid "Block Contact"
-msgstr "封鎖聯絡人"
+msgstr "Block Contact"
 
 #: context-menu.cpp:283
 msgid "Remove Contact"
-msgstr "移除聯絡人"
+msgstr "Remove Contact"
 
 #: context-menu.cpp:288
 msgid "Show Info..."
-msgstr "顯示資訊..."
+msgstr "Show Info..."
 
 #: context-menu.cpp:309
 msgid "Rename Group..."
-msgstr "重新命名群組..."
+msgstr "Rename Group..."
 
 #: context-menu.cpp:315
 msgid "Delete Group"
-msgstr "刪除群組"
+msgstr "Delete Group"
 
 #: context-menu.cpp:499 context-menu.cpp:524
 msgid "New Group Name"
-msgstr "新群組名稱"
+msgstr "New Group Name"
 
 #: context-menu.cpp:500 context-menu.cpp:525
 msgid "Please enter the new group name"
-msgstr "請輸入新群組的名稱"
+msgstr "Please enter the new group name"
 
 #: context-menu.cpp:558
 #, kde-format
@@ -259,119 +262,121 @@ msgid ""
 "\n"
 "Note that all contacts will be moved to group 'Ungrouped'"
 msgstr ""
-"您真的要移除群組 %1 嗎？\n"
+"Do you really want to remove group %1?\n"
 "\n"
-"注意，所有群組內的聯絡人都將移到「未分組」內"
+"Note that all contacts will be moved to group 'Ungrouped'"
 
 #: context-menu.cpp:560
 msgid "Remove Group"
-msgstr "移除群組"
+msgstr "Remove Group"
 
 #: dialogs/custom-presence-dialog.cpp:70
 msgid "Edit Custom Presences"
-msgstr "編輯自訂上線狀態"
+msgstr "Edit Custom Presences"
 
 #: dialogs/custom-presence-dialog.cpp:89
 msgid "Set custom available message..."
-msgstr "設定自訂有空訊息..."
+msgstr "Set custom available message..."
 
 #: dialogs/custom-presence-dialog.cpp:90
 msgid "Set custom busy message..."
-msgstr "設定自訂忙碌訊息..."
+msgstr "Set custom busy message..."
 
 #: dialogs/custom-presence-dialog.cpp:91
 msgid "Set custom away message..."
-msgstr "設定自訂離開訊息..."
+msgstr "Set custom away message..."
 
 #: dialogs/custom-presence-dialog.cpp:92
 msgid "Set custom extended away message..."
-msgstr "設定自訂延伸離開訊息..."
+msgstr "Set custom extended away message..."
 
 #: dialogs/custom-presence-dialog.cpp:102
 msgid "Add Presence"
-msgstr "新增上線狀態"
+msgstr "Add Presence"
 
 #: dialogs/custom-presence-dialog.cpp:103
 msgid "Remove Presence"
-msgstr "移除上線狀態"
+msgstr "Remove Presence"
 
 #: dialogs/remove-contact-dialog.cpp:45
 msgid "Remove the selected contact?"
-msgstr "要移除選取的聯絡人嗎？"
+msgstr "Remove the selected contact?"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, RemoveContactDialog)
 #: dialogs/remove-contact-dialog.ui:23
 msgid "Remove contact"
-msgstr "移除聯絡人"
+msgstr "Remove contact"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel)
 #: dialogs/remove-contact-dialog.ui:47
 msgid "Message"
-msgstr "訊息"
+msgstr "Message"
 
 #. i18n: ectx: property (text), widget (QLabel, contactAvatarLabel)
 #: dialogs/remove-contact-dialog.ui:124
 msgid "Avatar"
-msgstr "頭像"
+msgstr "Avatar"
 
 #. i18n: ectx: property (text), widget (QLabel, contactAliasLabel)
 #: dialogs/remove-contact-dialog.ui:161
 msgid "Alias"
-msgstr "別名"
+msgstr "Alias"
 
 #. i18n: ectx: property (text), widget (QCheckBox, blockCheckbox)
 #: dialogs/remove-contact-dialog.ui:229
 msgid "Block contact"
-msgstr "封鎖聯絡人"
+msgstr "Block contact"
 
 #: filter-bar.cpp:39
 msgctxt "@info:tooltip"
 msgid "Hide Filter Bar"
-msgstr "隱藏過濾器列"
+msgstr "Hide Filter Bar"
 
 #: filter-bar.cpp:43
 msgctxt "@label:textbox"
 msgid "Filter:"
-msgstr "過濾器："
+msgstr "Filter:"
 
 #: global-presence-chooser.cpp:98
 msgid "Configure Custom Presences..."
-msgstr "設定自訂上線狀態..."
+msgstr "Configure Custom Presences..."
 
 #: global-presence-chooser.cpp:105
 msgid "Now listening to..."
-msgstr "正在收聽..."
+msgstr "Now listening to..."
 
 #: global-presence-chooser.cpp:192
 msgid "Click to change your presence message"
-msgstr "點擊以變更您的上線訊息"
+msgstr "Click to change your presence message"
 
 #: global-presence-chooser.cpp:232
 msgctxt "Presence string when the account is connecting"
 msgid "Connecting..."
-msgstr "連線中..."
+msgstr "Connecting..."
 
 #: global-presence-chooser.cpp:333
 msgid ""
 "This plugin is currently disabled. Do you want to enable it and use as your "
 "presence?"
-msgstr "此外掛程式目前已關閉。您要開啟它並做為您的上線狀態控制元件嗎？"
+msgstr ""
+"This plugin is currently disabled. Do you want to enable it and use as your "
+"presence?"
 
 #: global-presence-chooser.cpp:334
 msgid "Plugin disabled"
-msgstr "外掛程式已關閉"
+msgstr "Plugin disabled"
 
 #: main-widget.cpp:173
 msgid ""
 "Something unexpected happened to the core part of your Instant Messaging "
 "system and it couldn't be initialized. Try restarting the Contact List."
 msgstr ""
-"您的即時訊息系統核心部件發生了一些未預期的錯誤，無法初始化。請重新啟動聯絡人"
-"清單。"
+"Something unexpected happened to the core part of your Instant Messaging "
+"system and it couldn't be initialised. Try restarting the Contact List."
 
 #: main-widget.cpp:175
 msgid "IM system failed to initialize"
-msgstr "即時訊息系統初始化失敗"
+msgstr "IM system failed to initialise"
 
 #: main-widget.cpp:308
 msgid ""
@@ -379,137 +384,138 @@ msgid ""
 "example).\n"
 "Do you want to stay online or would you rather go offline?"
 msgstr ""
-"您沒有任何其他作用中的上線狀態控制（如上線狀態元件）。\n"
-"您要保持在上線狀態還是要離線？"
+"You do not have any other presence controls active (a Presence widget for "
+"example).\n"
+"Do you want to stay online or would you rather go offline?"
 
 #: main-widget.cpp:310
 msgid "No Other Presence Controls Found"
-msgstr "找不到其他上線狀態控制元件"
+msgstr "No Other Presence Controls Found"
 
 #: main-widget.cpp:311
 msgid "Stay Online"
-msgstr "留在線上"
+msgstr "Stay Online"
 
 #: main-widget.cpp:312
 msgid "Go Offline"
-msgstr "離線"
+msgstr "Go Offline"
 
 #: main-widget.cpp:428 tooltips/persontooltip.cpp:55
 msgid "Contacts"
-msgstr "聯絡人"
+msgstr "Contacts"
 
 #: main-widget.cpp:444
 msgid "View"
-msgstr "檢視"
+msgstr "View"
 
 #: main-widget.cpp:448 main-widget.cpp:491
 msgid "Contact List Type"
-msgstr "聯絡人清單型態"
+msgstr "Contact List Type"
 
 #: main-widget.cpp:451 main-widget.cpp:496
 msgid "Shown Contacts"
-msgstr "已顯示聯絡人"
+msgstr "Shown Contacts"
 
 #: main-widget.cpp:454 main-widget.cpp:501
 msgid "Contact Grouping"
-msgstr "聯絡人群組"
+msgstr "Contact Grouping"
 
 #: main-widget.cpp:578
 msgid "Instant Messaging Settings..."
-msgstr "即時訊息設定..."
+msgstr "Instant Messaging Settings..."
 
 #: main-widget.cpp:583
 msgid "Join Chat Room..."
-msgstr "加入聊天室..."
+msgstr "Join Chat Room..."
 
 #: main-widget.cpp:585
 msgid "Make a Call..."
-msgstr "執行呼叫..."
+msgstr "Make a Call..."
 
 #: main-widget.cpp:586
 msgid "Merge Contacts..."
-msgstr "合併聯絡人..."
+msgstr "Merge Contacts..."
 
 #: main-widget.cpp:587
 msgid "Add New Contacts..."
-msgstr "新增聯絡人..."
+msgstr "Add New Contacts..."
 
 #: main-widget.cpp:588
 msgid "Find Contact"
-msgstr "尋找聯絡人"
+msgstr "Find Contact"
 
 #: main-widget.cpp:591
 msgid "Start a chat..."
-msgstr "開始聊天..."
+msgstr "Start a chat..."
 
 #: main-widget.cpp:594
 msgid "Split Selected Contacts"
-msgstr "分割選取的聯絡人"
+msgstr "Split Selected Contacts"
 
 #: main-widget.cpp:595
 msgid "Merge Selected Contacts"
-msgstr "合併選取的聯絡人"
+msgstr "Merge Selected Contacts"
 
 #: main-widget.cpp:605
 msgid "Show Contacts by Groups"
-msgstr "依群組顯示聯絡人"
+msgstr "Show Contacts by Groups"
 
 #: main-widget.cpp:609
 msgid "Do not group"
-msgstr "不要分組"
+msgstr "Do not group"
 
 #: main-widget.cpp:612
 msgid "Show Contacts by Accounts"
-msgstr "依帳號顯示聯絡人"
+msgstr "Show Contacts by Accounts"
 
 #: main-widget.cpp:617
 msgid "Show Offline Contacts"
-msgstr "顯示離線聯絡人"
+msgstr "Show Offline Contacts"
 
 #: main-widget.cpp:618
 msgid "Hide Offline Contacts"
-msgstr "隱藏離線聯絡人"
+msgstr "Hide Offline Contacts"
 
 #: main-widget.cpp:626
 msgid "Sort by Presence"
-msgstr "依出現排序"
+msgstr "Sort by Presence"
 
 #: main-widget.cpp:627
 msgid "Sort by Name"
-msgstr "依名稱排序"
+msgstr "Sort by Name"
 
 #: main-widget.cpp:635
 msgid "Use Full List"
-msgstr "使用完整清單"
+msgstr "Use Full List"
 
 #: main-widget.cpp:637
 msgid "Use Normal List"
-msgstr "使用普通清單"
+msgstr "Use Normal List"
 
 #: main-widget.cpp:641
 msgid "Use Minimalistic List"
-msgstr "使用最小化清單"
+msgstr "Use Minimalistic List"
 
 #: main-widget.cpp:648
 msgid "Show All Contacts"
-msgstr "顯示所有聯絡人"
+msgstr "Show All Contacts"
 
 #: main-widget.cpp:650
 msgid "Show Unblocked Contacts"
-msgstr "顯示未被封鎖的聯絡人"
+msgstr "Show Unblocked Contacts"
 
 #: main-widget.cpp:652
 msgid "Show Blocked Contacts"
-msgstr "顯示已被封鎖的聯絡人"
+msgstr "Show Blocked Contacts"
 
 #. i18n: ectx: property (windowTitle), widget (QMainWindow, MainWindow)
 #: main-widget.ui:14
 msgid "KDE IM Contacts"
-msgstr "KDE 即時訊息聯絡人"
+msgstr "KDE IM Contacts"
 
 #: main.cpp:37 main.cpp:38
 msgid "KDE Telepathy Contact List"
-msgstr "KDE Telepathy 聯絡人清單"
+msgstr "KDE Telepathy Contact List"
 
 #: main.cpp:39
 msgid "(C) 2011, Martin Klapetek"
@@ -522,168 +528,23 @@ msgstr "Martin Klapetek"
 
 #: main.cpp:41
 msgid "Developer"
-msgstr "開發者"
+msgstr "Developer"
 
 #: main.cpp:50
 msgid "Show Telepathy debugging information"
-msgstr "顯示 Telepathy 除錯資訊"
+msgstr "Show Telepathy debugging information"
 
 #: tooltips/contacttooltip.cpp:60
 msgctxt "This is an IM user status"
 msgid "Error Getting Presence"
-msgstr "取得上線狀態時發生錯誤"
+msgstr "Error Getting Presence"
 
 #: tooltips/contacttooltip.cpp:78
 #, kde-format
 msgid "Account: %1"
-msgstr "帳號：%1"
+msgstr "Account: %1"
 
 #. i18n: ectx: property (text), widget (QLabel, blockedLabel)
 #: tooltips/contacttooltip.ui:126 tooltips/persontooltip.ui:33
 msgid "User is blocked"
-msgstr "使用者已被封鎖"
-
-#~ msgid "Share My Desktop"
-#~ msgstr "分享我的桌面"
-
-#~ msgid "Share desktop using RFB"
-#~ msgstr "使用 RFB 分享桌面"
-
-#~ msgid "Settings"
-#~ msgstr "設定"
-
-#~ msgid "Contacts are shown by accounts. Click to show them in groups."
-#~ msgstr "聯絡人是依帳號來顯示的。點擊以在群組中顯示。"
-
-#~ msgid "Contacts are shown in groups. Click to show them in accounts."
-#~ msgstr "聯絡人是依群組來顯示的。點擊以在帳號中顯示。"
-
-#~ msgid "Offline contacts are hidden. Click to show them."
-#~ msgstr "離線聯絡人已隱藏。點擊以顯示。"
-
-#~ msgid "Offline contacts are shown. Click to hide them."
-#~ msgstr "離線聯絡人已顯示。點擊以隱藏。"
-
-#~ msgid "List is sorted by name. Click to sort by presence."
-#~ msgstr "列表依名稱排序。點擊這裡改依上線狀態排序。"
-
-#~ msgid "List is sorted by presence. Click to sort by name."
-#~ msgstr "列表依上線狀態排序。點擊這裡改依名稱排序。"
-
-#~ msgctxt "This is an IM user status"
-#~ msgid "Unknown"
-#~ msgstr "未知"
-
-#~ msgid "Dialog"
-#~ msgstr "對話框"
-
-#~ msgid "Avatar Here"
-#~ msgstr "頭像"
-
-#~ msgid "Contact Display Name"
-#~ msgstr "聯絡人顯示名稱"
-
-#~ msgid "Presence String"
-#~ msgstr "上線狀態字串"
-
-#~ msgid "Contact can see when you are online:"
-#~ msgstr "聯絡人是否可以看見您上線："
-
-#~ msgid "TextLabel"
-#~ msgstr "文字標籤"
-
-#~ msgid "You can see when the contact is online:"
-#~ msgstr "您是否可以看到聯絡人上線："
-
-#~ msgid "Contact is blocked:"
-#~ msgstr "聯絡人被封鎖："
-
-#~ msgid "This room is already in your favorites."
-#~ msgstr "此房間已在您的最愛清單中。"
-
-#~ msgid "Add room"
-#~ msgstr "新增房間"
-
-#~ msgid "Name"
-#~ msgstr "名稱"
-
-#~ msgid "Join Chatroom"
-#~ msgstr "加入聊天室"
-
-#~ msgid "Enter chat room:"
-#~ msgstr "進入聊天室："
-
-#~ msgid "Favorites"
-#~ msgstr "我的最愛"
-
-#~ msgid "Add Room"
-#~ msgstr "新增房間"
-
-#~ msgid "Remove Room"
-#~ msgstr "移除房間"
-
-#~ msgid "Recent"
-#~ msgstr "最近使用"
-
-#~ msgid "Remove"
-#~ msgstr "移除"
-
-#~ msgid "Clear list"
-#~ msgstr "清除清單"
-
-#~ msgid "Query"
-#~ msgstr "查詢"
-
-#~ msgid "Server to be queried:"
-#~ msgstr "要查詢的伺服器："
-
-#~ msgid "Leave blank for the selected account's default server"
-#~ msgstr "選取帳號的預設伺服器留白"
-
-#~ msgid "Stop"
-#~ msgstr "停止"
-
-#~ msgid "Search rooms"
-#~ msgstr "搜尋聊天室"
-
-#~ msgid "Password required"
-#~ msgstr "需要密碼"
-
-#~ msgid "No password required"
-#~ msgstr "不需要密碼"
-
-#~ msgid "Member count"
-#~ msgstr "成員計數"
-
-#~ msgctxt "Chatrooms name"
-#~ msgid "Name"
-#~ msgstr "名稱"
-
-#~ msgctxt "Chatrooms description"
-#~ msgid "Description"
-#~ msgstr "描述"
-
-#~ msgid "Show/Hide Groups"
-#~ msgstr "顯示/隱藏群組"
-
-#~ msgid "Hide/Show Offline Users"
-#~ msgstr "隱藏/顯示離線使用者"
-
-#~ msgid ""
-#~ "Seems like you forgot to select an account. Also do not forget to connect "
-#~ "it first."
-#~ msgstr "您似乎忘了選擇一個帳號。同時也別忘了先連線過去。"
-
-#~ msgid "No Account Selected"
-#~ msgstr "未選取任何帳號"
-
-#~ msgid ""
-#~ "An error we did not anticipate just happened and so the contact could not "
-#~ "be added. Sorry."
-#~ msgstr "剛發生了一個未預期的錯誤，因此無法新增聯絡人。抱歉。"
-
-#~ msgid "Screen Name:"
-#~ msgstr "螢幕名稱："
-
-#~ msgid "Join chat room"
-#~ msgstr "加入聊天室"
+msgstr "User is blocked"

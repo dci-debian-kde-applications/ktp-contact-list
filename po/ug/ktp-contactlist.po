@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: telepathy-contactslist-prototype\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-03-12 05:55+0000\n"
+"POT-Creation-Date: 2014-05-14 05:49+0000\n"
 "PO-Revision-Date: 2011-05-09 19:00+0900\n"
 "Last-Translator: Sahran <sahran@live.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -70,29 +70,29 @@ msgctxt "@action:inmenu This is the IM presence message"
 msgid "Set message..."
 msgstr ""
 
-#: contact-list-widget.cpp:193
+#: contact-list-widget.cpp:194
 msgid "You have no IM accounts configured. Would you like to do that now?"
 msgstr ""
 
-#: contact-list-widget.cpp:194
+#: contact-list-widget.cpp:195
 msgid "No Accounts Found"
 msgstr ""
 
-#: contact-list-widget.cpp:209
+#: contact-list-widget.cpp:210
 msgid ""
 "It appears you do not have the IM Accounts control module installed. Please "
 "install ktp-accounts-kcm package."
 msgstr ""
 
-#: contact-list-widget.cpp:210
+#: contact-list-widget.cpp:211
 msgid "IM Accounts KCM Plugin Is Not Installed"
 msgstr ""
 
-#: contact-list-widget.cpp:228
+#: contact-list-widget.cpp:229
 msgid "Notifications"
 msgstr ""
 
-#: contact-list-widget.cpp:290
+#: contact-list-widget.cpp:291
 #, fuzzy, kde-format
 msgctxt ""
 "Label of a dialog's 'OK' button; %1 is account name, eg. 'Connect account "
@@ -100,36 +100,36 @@ msgctxt ""
 msgid "Connect account %1"
 msgstr "ھېسابات:"
 
-#: contact-list-widget.cpp:292
+#: contact-list-widget.cpp:293
 msgid ""
 "The account for this contact is disconnected. Do you want to connect it?"
 msgstr ""
 
-#: contact-list-widget.cpp:293
+#: contact-list-widget.cpp:294
 #, fuzzy
 msgid "Account offline"
 msgstr "ھېسابات:"
 
-#: contact-list-widget.cpp:501
+#: contact-list-widget.cpp:502
 #, kde-format
 msgid "Choose files to send to %1"
 msgstr ""
 
-#: contact-list-widget.cpp:797
+#: contact-list-widget.cpp:807
 #, fuzzy
 #| msgid "Remove contact"
 msgid "Merge contacts"
 msgstr "ئالاقەداش ئۆچۈر"
 
-#: contact-list-widget.cpp:839
+#: contact-list-widget.cpp:849
 msgid "&Move here"
 msgstr ""
 
-#: contact-list-widget.cpp:843
+#: contact-list-widget.cpp:853
 msgid "&Copy here"
 msgstr ""
 
-#: contact-list-widget.cpp:847
+#: contact-list-widget.cpp:857
 msgid "C&ancel"
 msgstr ""
 
@@ -370,143 +370,143 @@ msgstr ""
 msgid "IM system failed to initialize"
 msgstr ""
 
-#: main-widget.cpp:303
+#: main-widget.cpp:308
 msgid ""
 "You do not have any other presence controls active (a Presence widget for "
 "example).\n"
 "Do you want to stay online or would you rather go offline?"
 msgstr ""
 
-#: main-widget.cpp:305
+#: main-widget.cpp:310
 msgid "No Other Presence Controls Found"
 msgstr ""
 
-#: main-widget.cpp:306
+#: main-widget.cpp:311
 msgid "Stay Online"
 msgstr ""
 
-#: main-widget.cpp:307
+#: main-widget.cpp:312
 msgid "Go Offline"
 msgstr ""
 
-#: main-widget.cpp:423 tooltips/persontooltip.cpp:55
+#: main-widget.cpp:428 tooltips/persontooltip.cpp:55
 msgid "Contacts"
 msgstr ""
 
-#: main-widget.cpp:439
+#: main-widget.cpp:444
 msgid "View"
 msgstr ""
 
-#: main-widget.cpp:443 main-widget.cpp:486
+#: main-widget.cpp:448 main-widget.cpp:491
 msgid "Contact List Type"
 msgstr ""
 
-#: main-widget.cpp:446 main-widget.cpp:491
+#: main-widget.cpp:451 main-widget.cpp:496
 msgid "Shown Contacts"
 msgstr ""
 
-#: main-widget.cpp:449 main-widget.cpp:496
+#: main-widget.cpp:454 main-widget.cpp:501
 #, fuzzy
 msgid "Contact Grouping"
 msgstr "ئالاقەداش توس"
 
-#: main-widget.cpp:573
+#: main-widget.cpp:578
 msgid "Instant Messaging Settings..."
 msgstr ""
 
-#: main-widget.cpp:578
+#: main-widget.cpp:583
 msgid "Join Chat Room..."
 msgstr ""
 
-#: main-widget.cpp:580
+#: main-widget.cpp:585
 msgid "Make a Call..."
 msgstr ""
 
-#: main-widget.cpp:581
+#: main-widget.cpp:586
 msgid "Merge Contacts..."
 msgstr ""
 
-#: main-widget.cpp:582
+#: main-widget.cpp:587
 msgid "Add New Contacts..."
 msgstr ""
 
-#: main-widget.cpp:583
+#: main-widget.cpp:588
 msgid "Find Contact"
 msgstr ""
 
-#: main-widget.cpp:586
+#: main-widget.cpp:591
 #, fuzzy
 #| msgid "Start a video call"
 msgid "Start a chat..."
 msgstr "سىنلىق سۆزلىشىشنى باشلايدۇ"
 
-#: main-widget.cpp:589
+#: main-widget.cpp:594
 #, fuzzy
 msgid "Split Selected Contacts"
 msgstr "ئالاقەداش توس"
 
-#: main-widget.cpp:590
+#: main-widget.cpp:595
 #, fuzzy
 msgid "Merge Selected Contacts"
 msgstr "ئالاقەداش توس"
 
-#: main-widget.cpp:600
+#: main-widget.cpp:605
 #, fuzzy
 msgid "Show Contacts by Groups"
 msgstr "ئالاقەداش توس"
 
-#: main-widget.cpp:604
+#: main-widget.cpp:609
 msgid "Do not group"
 msgstr ""
 
-#: main-widget.cpp:607
+#: main-widget.cpp:612
 #, fuzzy
 msgid "Show Contacts by Accounts"
 msgstr "ئالاقەداش توس"
 
-#: main-widget.cpp:612
+#: main-widget.cpp:617
 #, fuzzy
 msgid "Show Offline Contacts"
 msgstr "ئالاقەداش توس"
 
-#: main-widget.cpp:613
+#: main-widget.cpp:618
 #, fuzzy
 msgid "Hide Offline Contacts"
 msgstr "ئالاقەداش توس"
 
-#: main-widget.cpp:621
+#: main-widget.cpp:626
 #, fuzzy
 msgid "Sort by Presence"
 msgstr "ئىسمىنى تەرتىپلەش"
 
-#: main-widget.cpp:622
+#: main-widget.cpp:627
 #, fuzzy
 msgid "Sort by Name"
 msgstr "ئىسمىنى تەرتىپلەش"
 
-#: main-widget.cpp:630
+#: main-widget.cpp:635
 msgid "Use Full List"
 msgstr ""
 
-#: main-widget.cpp:632
+#: main-widget.cpp:637
 msgid "Use Normal List"
 msgstr ""
 
-#: main-widget.cpp:636
+#: main-widget.cpp:641
 msgid "Use Minimalistic List"
 msgstr ""
 
-#: main-widget.cpp:643
+#: main-widget.cpp:648
 #, fuzzy
 msgid "Show All Contacts"
 msgstr "ئالاقەداش توس"
 
-#: main-widget.cpp:645
+#: main-widget.cpp:650
 #, fuzzy
 msgid "Show Unblocked Contacts"
 msgstr "ئالاقەداش توس"
 
-#: main-widget.cpp:647
+#: main-widget.cpp:652
 #, fuzzy
 msgid "Show Blocked Contacts"
 msgstr "ئالاقەداش توس"
