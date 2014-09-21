@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: telepathy-contactslist-prototype\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-03-12 05:55+0000\n"
+"POT-Creation-Date: 2014-05-14 05:49+0000\n"
 "PO-Revision-Date: 2013-10-03 14:05+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -67,15 +67,15 @@ msgctxt "@action:inmenu This is the IM presence message"
 msgid "Set message..."
 msgstr "Definir a mensagem..."
 
-#: contact-list-widget.cpp:193
+#: contact-list-widget.cpp:194
 msgid "You have no IM accounts configured. Would you like to do that now?"
 msgstr "Não tem contas de IM definidas. Deseja fazê-lo agora?"
 
-#: contact-list-widget.cpp:194
+#: contact-list-widget.cpp:195
 msgid "No Accounts Found"
 msgstr "Sem Contas Definidas"
 
-#: contact-list-widget.cpp:209
+#: contact-list-widget.cpp:210
 msgid ""
 "It appears you do not have the IM Accounts control module installed. Please "
 "install ktp-accounts-kcm package."
@@ -83,15 +83,15 @@ msgstr ""
 "Parece que não tem o módulo de controlo de Contas de MI instalado. Instale "
 "por favor o pacote 'ktp-accounts-kcm'."
 
-#: contact-list-widget.cpp:210
+#: contact-list-widget.cpp:211
 msgid "IM Accounts KCM Plugin Is Not Installed"
 msgstr "'Plugin' do KCM para Contas de MI Não Instalado"
 
-#: contact-list-widget.cpp:228
+#: contact-list-widget.cpp:229
 msgid "Notifications"
 msgstr "Notificações"
 
-#: contact-list-widget.cpp:290
+#: contact-list-widget.cpp:291
 #, kde-format
 msgctxt ""
 "Label of a dialog's 'OK' button; %1 is account name, eg. 'Connect account "
@@ -99,33 +99,33 @@ msgctxt ""
 msgid "Connect account %1"
 msgstr "Ligar a conta %1"
 
-#: contact-list-widget.cpp:292
+#: contact-list-widget.cpp:293
 msgid ""
 "The account for this contact is disconnected. Do you want to connect it?"
 msgstr "A conta deste contacto está desligada. Deseja ligá-la?"
 
-#: contact-list-widget.cpp:293
+#: contact-list-widget.cpp:294
 msgid "Account offline"
 msgstr "Conta desligada"
 
-#: contact-list-widget.cpp:501
+#: contact-list-widget.cpp:502
 #, kde-format
 msgid "Choose files to send to %1"
 msgstr "Escolher os ficheiros a enviar para %1"
 
-#: contact-list-widget.cpp:797
+#: contact-list-widget.cpp:807
 msgid "Merge contacts"
 msgstr "Reunir os contactos"
 
-#: contact-list-widget.cpp:839
+#: contact-list-widget.cpp:849
 msgid "&Move here"
 msgstr "&Mover para aqui"
 
-#: contact-list-widget.cpp:843
+#: contact-list-widget.cpp:853
 msgid "&Copy here"
 msgstr "&Copiar para aqui"
 
-#: contact-list-widget.cpp:847
+#: contact-list-widget.cpp:857
 msgid "C&ancel"
 msgstr "C&ancelar"
 
@@ -375,7 +375,7 @@ msgstr ""
 msgid "IM system failed to initialize"
 msgstr "Erro de inicialização do sistema de MI"
 
-#: main-widget.cpp:303
+#: main-widget.cpp:308
 msgid ""
 "You do not have any other presence controls active (a Presence widget for "
 "example).\n"
@@ -385,123 +385,123 @@ msgstr ""
 "Presença, por exemplo).\n"
 "Deseja manter-se ligado ou deseja passar a desligado?"
 
-#: main-widget.cpp:305
+#: main-widget.cpp:310
 msgid "No Other Presence Controls Found"
 msgstr "Nenhum Controlo de Presença Encontrado"
 
-#: main-widget.cpp:306
+#: main-widget.cpp:311
 msgid "Stay Online"
 msgstr "Manter-se Ligado"
 
-#: main-widget.cpp:307
+#: main-widget.cpp:312
 msgid "Go Offline"
 msgstr "Desligar-se"
 
-#: main-widget.cpp:423 tooltips/persontooltip.cpp:55
+#: main-widget.cpp:428 tooltips/persontooltip.cpp:55
 msgid "Contacts"
 msgstr "Contactos"
 
-#: main-widget.cpp:439
+#: main-widget.cpp:444
 msgid "View"
 msgstr "Ver"
 
-#: main-widget.cpp:443 main-widget.cpp:486
+#: main-widget.cpp:448 main-widget.cpp:491
 msgid "Contact List Type"
 msgstr "Tipo da Lista de Contactos"
 
-#: main-widget.cpp:446 main-widget.cpp:491
+#: main-widget.cpp:451 main-widget.cpp:496
 msgid "Shown Contacts"
 msgstr "Contactos Visíveis"
 
-#: main-widget.cpp:449 main-widget.cpp:496
+#: main-widget.cpp:454 main-widget.cpp:501
 msgid "Contact Grouping"
 msgstr "Agrupamento de Contactos"
 
-#: main-widget.cpp:573
+#: main-widget.cpp:578
 msgid "Instant Messaging Settings..."
 msgstr "Configuração das Mensagens Instantâneas..."
 
-#: main-widget.cpp:578
+#: main-widget.cpp:583
 msgid "Join Chat Room..."
 msgstr "Juntar-se à Sala de Conversação..."
 
-#: main-widget.cpp:580
+#: main-widget.cpp:585
 msgid "Make a Call..."
 msgstr "Fazer uma Chamada..."
 
-#: main-widget.cpp:581
+#: main-widget.cpp:586
 msgid "Merge Contacts..."
 msgstr "Reunir os Contactos..."
 
-#: main-widget.cpp:582
+#: main-widget.cpp:587
 msgid "Add New Contacts..."
 msgstr "Adicionar Novos Contactos..."
 
-#: main-widget.cpp:583
+#: main-widget.cpp:588
 msgid "Find Contact"
 msgstr "Procurar um Contacto"
 
-#: main-widget.cpp:586
+#: main-widget.cpp:591
 msgid "Start a chat..."
 msgstr "Iniciar uma conversa..."
 
-#: main-widget.cpp:589
+#: main-widget.cpp:594
 msgid "Split Selected Contacts"
 msgstr "Dividir os Contactos Seleccionados"
 
-#: main-widget.cpp:590
+#: main-widget.cpp:595
 msgid "Merge Selected Contacts"
 msgstr "Reunir os Contactos Seleccionados"
 
-#: main-widget.cpp:600
+#: main-widget.cpp:605
 msgid "Show Contacts by Groups"
 msgstr "Mostrar os Contactos por Grupos"
 
-#: main-widget.cpp:604
+#: main-widget.cpp:609
 msgid "Do not group"
 msgstr "Não agrupar"
 
-#: main-widget.cpp:607
+#: main-widget.cpp:612
 msgid "Show Contacts by Accounts"
 msgstr "Mostrar os Contactos por Contas"
 
-#: main-widget.cpp:612
+#: main-widget.cpp:617
 msgid "Show Offline Contacts"
 msgstr "Mostrar os Contactos Desligados"
 
-#: main-widget.cpp:613
+#: main-widget.cpp:618
 msgid "Hide Offline Contacts"
 msgstr "Esconder os Contactos Desligados"
 
-#: main-widget.cpp:621
+#: main-widget.cpp:626
 msgid "Sort by Presence"
 msgstr "Ordenar pela Presença"
 
-#: main-widget.cpp:622
+#: main-widget.cpp:627
 msgid "Sort by Name"
 msgstr "Ordenar por Nome"
 
-#: main-widget.cpp:630
+#: main-widget.cpp:635
 msgid "Use Full List"
 msgstr "Usar a Lista Completa"
 
-#: main-widget.cpp:632
+#: main-widget.cpp:637
 msgid "Use Normal List"
 msgstr "Usar a Lista Normal"
 
-#: main-widget.cpp:636
+#: main-widget.cpp:641
 msgid "Use Minimalistic List"
 msgstr "Usar a Lista Minimalista"
 
-#: main-widget.cpp:643
+#: main-widget.cpp:648
 msgid "Show All Contacts"
 msgstr "Mostrar Todos os Contactos"
 
-#: main-widget.cpp:645
+#: main-widget.cpp:650
 msgid "Show Unblocked Contacts"
 msgstr "Mostrar os Contactos Desbloqueados"
 
-#: main-widget.cpp:647
+#: main-widget.cpp:652
 msgid "Show Blocked Contacts"
 msgstr "Mostrar os Contactos Bloqueados"
 

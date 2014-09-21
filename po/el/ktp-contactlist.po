@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktp-contactlist\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-03-12 05:55+0000\n"
+"POT-Creation-Date: 2014-05-14 05:49+0000\n"
 "PO-Revision-Date: 2014-04-19 14:28+0300\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -73,17 +73,17 @@ msgctxt "@action:inmenu This is the IM presence message"
 msgid "Set message..."
 msgstr "Καθορίστε μήνυμα..."
 
-#: contact-list-widget.cpp:193
+#: contact-list-widget.cpp:194
 msgid "You have no IM accounts configured. Would you like to do that now?"
 msgstr ""
 "Δεν έχετε διαμορφώσει λογαριασμούς στιγμιαίων μηνυμάτων. Θέλετε να το κάνετε "
 "τώρα;"
 
-#: contact-list-widget.cpp:194
+#: contact-list-widget.cpp:195
 msgid "No Accounts Found"
 msgstr "Δεν βρέθηκαν λογαριασμοί"
 
-#: contact-list-widget.cpp:209
+#: contact-list-widget.cpp:210
 msgid ""
 "It appears you do not have the IM Accounts control module installed. Please "
 "install ktp-accounts-kcm package."
@@ -91,16 +91,16 @@ msgstr ""
 "Φαίνεται ότι δεν έχετε εγκατεστημένο το άρθρωμα ελέγχου λογαριασμών "
 "στιγμιαίων μηνυμάτων. Εγκαταστήστε το πακέτο ktp-accounts-kcm ."
 
-#: contact-list-widget.cpp:210
+#: contact-list-widget.cpp:211
 msgid "IM Accounts KCM Plugin Is Not Installed"
 msgstr ""
 "Το πρόσθετο KCM για λογαριασμούς στιγμιαίων μηνυμάτων δεν είναι εγκατεστημένο"
 
-#: contact-list-widget.cpp:228
+#: contact-list-widget.cpp:229
 msgid "Notifications"
 msgstr "Ειδοποιήσεις"
 
-#: contact-list-widget.cpp:290
+#: contact-list-widget.cpp:291
 #, kde-format
 msgctxt ""
 "Label of a dialog's 'OK' button; %1 is account name, eg. 'Connect account "
@@ -108,35 +108,35 @@ msgctxt ""
 msgid "Connect account %1"
 msgstr "Σύνδεση λογαριασμού %1"
 
-#: contact-list-widget.cpp:292
+#: contact-list-widget.cpp:293
 msgid ""
 "The account for this contact is disconnected. Do you want to connect it?"
 msgstr ""
 "Ο λογαριασμός για αυτή την επαφή είναι αποσυνδεδεμένος. Θέλετε να τον "
 "συνδέσετε;"
 
-#: contact-list-widget.cpp:293
+#: contact-list-widget.cpp:294
 msgid "Account offline"
 msgstr "Λογαριασμός χωρίς σύνδεση"
 
-#: contact-list-widget.cpp:501
+#: contact-list-widget.cpp:502
 #, kde-format
 msgid "Choose files to send to %1"
 msgstr "Επιλέξτε αρχεία προς αποστολή στο %1"
 
-#: contact-list-widget.cpp:797
+#: contact-list-widget.cpp:807
 msgid "Merge contacts"
 msgstr "Συγχώνευση επαφών"
 
-#: contact-list-widget.cpp:839
+#: contact-list-widget.cpp:849
 msgid "&Move here"
 msgstr "&Μετακίνηση εδώ"
 
-#: contact-list-widget.cpp:843
+#: contact-list-widget.cpp:853
 msgid "&Copy here"
 msgstr "Α&ντιγραφή εδώ"
 
-#: contact-list-widget.cpp:847
+#: contact-list-widget.cpp:857
 msgid "C&ancel"
 msgstr "&Ακύρωση"
 
@@ -386,7 +386,7 @@ msgstr ""
 msgid "IM system failed to initialize"
 msgstr "Απέτυχε η αρχικοποίηση του συστήματος στιγμιαίων μηνυμάτων"
 
-#: main-widget.cpp:303
+#: main-widget.cpp:308
 msgid ""
 "You do not have any other presence controls active (a Presence widget for "
 "example).\n"
@@ -396,123 +396,123 @@ msgstr ""
 "παρουσίας για παράδειγμα).\n"
 "Θέλετε να παραμείνετε σε σύνδεση ή να βγείτε εκτός;"
 
-#: main-widget.cpp:305
+#: main-widget.cpp:310
 msgid "No Other Presence Controls Found"
 msgstr "Δεν βρέθηκαν άλλα συστατικά ελέγχου παρουσίας"
 
-#: main-widget.cpp:306
+#: main-widget.cpp:311
 msgid "Stay Online"
 msgstr "Να παραμείνω σε σύνδεση"
 
-#: main-widget.cpp:307
+#: main-widget.cpp:312
 msgid "Go Offline"
 msgstr "Να βγω εκτός σύνδεσης"
 
-#: main-widget.cpp:423 tooltips/persontooltip.cpp:55
+#: main-widget.cpp:428 tooltips/persontooltip.cpp:55
 msgid "Contacts"
 msgstr "Επαφές"
 
-#: main-widget.cpp:439
+#: main-widget.cpp:444
 msgid "View"
 msgstr "Προβολή"
 
-#: main-widget.cpp:443 main-widget.cpp:486
+#: main-widget.cpp:448 main-widget.cpp:491
 msgid "Contact List Type"
 msgstr "Τύπος λίστας επαφών"
 
-#: main-widget.cpp:446 main-widget.cpp:491
+#: main-widget.cpp:451 main-widget.cpp:496
 msgid "Shown Contacts"
 msgstr "Εμφανιζόμενες επαφές"
 
-#: main-widget.cpp:449 main-widget.cpp:496
+#: main-widget.cpp:454 main-widget.cpp:501
 msgid "Contact Grouping"
 msgstr "Ομαδοποίηση επαφών"
 
-#: main-widget.cpp:573
+#: main-widget.cpp:578
 msgid "Instant Messaging Settings..."
 msgstr "Ρυθμίσεις στιγμιαίων μηνυμάτων..."
 
-#: main-widget.cpp:578
+#: main-widget.cpp:583
 msgid "Join Chat Room..."
 msgstr "Εισέλθετε στην αίθουσα συνομιλίας..."
 
-#: main-widget.cpp:580
+#: main-widget.cpp:585
 msgid "Make a Call..."
 msgstr "Κάνετε μία κλήση..."
 
-#: main-widget.cpp:581
+#: main-widget.cpp:586
 msgid "Merge Contacts..."
 msgstr "Συγχώνευση επαφών..."
 
-#: main-widget.cpp:582
+#: main-widget.cpp:587
 msgid "Add New Contacts..."
 msgstr "Προσθήκη νέων επαφών..."
 
-#: main-widget.cpp:583
+#: main-widget.cpp:588
 msgid "Find Contact"
 msgstr "Εύρεση επαφής"
 
-#: main-widget.cpp:586
+#: main-widget.cpp:591
 msgid "Start a chat..."
 msgstr "Έναρξη συνομιλίας..."
 
-#: main-widget.cpp:589
+#: main-widget.cpp:594
 msgid "Split Selected Contacts"
 msgstr "Διαχωρισμός επιλεγμένων επαφών"
 
-#: main-widget.cpp:590
+#: main-widget.cpp:595
 msgid "Merge Selected Contacts"
 msgstr "Συγχώνευση επιλεγμένων επαφών"
 
-#: main-widget.cpp:600
+#: main-widget.cpp:605
 msgid "Show Contacts by Groups"
 msgstr "Εμφάνιση επαφών ανά ομάδα"
 
-#: main-widget.cpp:604
+#: main-widget.cpp:609
 msgid "Do not group"
 msgstr "Χωρίς ομαδοποίηση"
 
-#: main-widget.cpp:607
+#: main-widget.cpp:612
 msgid "Show Contacts by Accounts"
 msgstr "Εμφάνιση επαφών ανά λογαριασμό"
 
-#: main-widget.cpp:612
+#: main-widget.cpp:617
 msgid "Show Offline Contacts"
 msgstr "Εμφάνιση των εκτός σύνδεσης επαφών"
 
-#: main-widget.cpp:613
+#: main-widget.cpp:618
 msgid "Hide Offline Contacts"
 msgstr "Απόκρυψη των εκτός σύνδεσης επαφών"
 
-#: main-widget.cpp:621
+#: main-widget.cpp:626
 msgid "Sort by Presence"
 msgstr "Ταξινόμηση κατά παρουσία"
 
-#: main-widget.cpp:622
+#: main-widget.cpp:627
 msgid "Sort by Name"
 msgstr "Ταξινόμηση κατά όνομα"
 
-#: main-widget.cpp:630
+#: main-widget.cpp:635
 msgid "Use Full List"
 msgstr "Χρήση πλήρους λίστας"
 
-#: main-widget.cpp:632
+#: main-widget.cpp:637
 msgid "Use Normal List"
 msgstr "Χρήση κανονικής λίστας"
 
-#: main-widget.cpp:636
+#: main-widget.cpp:641
 msgid "Use Minimalistic List"
 msgstr "Χρήση μινιμαλιστικής λίστας"
 
-#: main-widget.cpp:643
+#: main-widget.cpp:648
 msgid "Show All Contacts"
 msgstr "Εμφάνιση όλων των επαφών"
 
-#: main-widget.cpp:645
+#: main-widget.cpp:650
 msgid "Show Unblocked Contacts"
 msgstr "Εμφάνιση των χωρίς φραγή επαφών"
 
-#: main-widget.cpp:647
+#: main-widget.cpp:652
 msgid "Show Blocked Contacts"
 msgstr "Εμφάνιση των με φραγή επαφών"
 

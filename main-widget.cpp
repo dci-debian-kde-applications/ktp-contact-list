@@ -71,6 +71,7 @@
 #include "contact-list-application.h"
 #include "tooltips/tooltipmanager.h"
 #include "context-menu.h"
+#include "filter-bar.h"
 
 bool kde_tp_filter_contacts_by_publication_status(const Tp::ContactPtr &contact)
 {
@@ -111,8 +112,14 @@ MainWidget::MainWidget(QWidget *parent)
     m_contextMenu = new ContextMenu(m_contactsListView);
     new ToolTipManager(m_contactsListView);
 
+    m_messageWidget->setWordWrap(true);
+    m_messageWidget->setCloseButtonVisible(true);
+    m_messageWidget->hide();
+
     connect(m_contactsListView, SIGNAL(customContextMenuRequested(QPoint)),
             this, SLOT(onCustomContextMenuRequested(QPoint)));
+    connect(m_contactsListView->contactsModel(), SIGNAL(modelInitialized(bool)),
+            this, SLOT(onModelInitialized(bool)));
 
     connect(m_showOfflineAction, SIGNAL(toggled(bool)),
             m_contactsListView, SLOT(toggleOfflineContacts(bool)));
@@ -132,7 +139,7 @@ MainWidget::MainWidget(QWidget *parent)
             this, SLOT(onGenericOperationFinished(Tp::PendingOperation*)));
 
     connect(m_contactsListView, SIGNAL(actionStarted()),
-            this, SLOT(hideSearchWidget()));
+            this, SLOT(clearSearch()));
 
     connect(m_contactsListView, SIGNAL(contactSelectionChanged()),
             this, SLOT(onContactSelectionChanged()));
@@ -201,16 +208,20 @@ void MainWidget::showMessageToUser(const QString& text, const MainWidget::System
 
 void MainWidget::onAddContactRequest()
 {
-    KTp::AddContactDialog *dialog = new KTp::AddContactDialog(m_accountManager, this);
-    dialog->setAttribute(Qt::WA_DeleteOnClose);
-    dialog->show();
+    if (m_accountManager->isReady()) {
+        KTp::AddContactDialog *dialog = new KTp::AddContactDialog(m_accountManager, this);
+        dialog->setAttribute(Qt::WA_DeleteOnClose);
+        dialog->show();
+    }
 }
 
 void MainWidget::onStartChatRequest()
 {
-    KTp::StartChatDialog *dialog = new KTp::StartChatDialog(m_accountManager, this);
-    dialog->setAttribute(Qt::WA_DeleteOnClose);
-    dialog->show();
+    if (m_accountManager->isReady()) {
+        KTp::StartChatDialog *dialog = new KTp::StartChatDialog(m_accountManager, this);
+        dialog->setAttribute(Qt::WA_DeleteOnClose);
+        dialog->show();
+    }
 }
 
 
@@ -248,21 +259,12 @@ void MainWidget::onGenericOperationFinished(Tp::PendingOperation* operation)
 
 void MainWidget::onJoinChatRoomRequested()
 {
-    QWeakPointer<KTp::JoinChatRoomDialog> dialog = new KTp::JoinChatRoomDialog(m_accountManager);
+    if (m_accountManager->isReady()) {
+        KTp::JoinChatRoomDialog *dialog = new KTp::JoinChatRoomDialog(m_accountManager);
+        dialog->setAttribute(Qt::WA_DeleteOnClose);
 
-    if (dialog.data()->exec() == QDialog::Accepted) {
-        Tp::AccountPtr account = dialog.data()->selectedAccount();
-
-        // check account validity. Should NEVER be invalid
-        if (!account.isNull()) {
-            // ensure chat room
-            Tp::PendingChannelRequest *channelRequest = KTp::Actions::startGroupChat(account, dialog.data()->selectedChatRoom());
-
-            connect(channelRequest, SIGNAL(finished(Tp::PendingOperation*)), SLOT(onGenericOperationFinished(Tp::PendingOperation*)));
-        }
+        dialog->show();
     }
-
-    delete dialog.data();
 }
 
 void MainWidget::onMakeCallRequested()
@@ -405,9 +407,9 @@ void MainWidget::toggleSearchWidget(bool show)
     }
 }
 
-void MainWidget::hideSearchWidget()
+void MainWidget::clearSearch()
 {
-    toggleSearchWidget(false);
+    m_filterBar->clear();
 }
 
 void MainWidget::setupGlobalMenu()
@@ -601,7 +603,7 @@ void MainWidget::setupActions(const KConfigGroup& guiConfigGroup)
                                           guiConfigGroup.readEntry("use_groups", true)));
     QString useGroupsDisabledText;
     if (KTp::kpeopleEnabled()) {
-        useGroupsDisabledText = i18n("Do not group");
+        useGroupsDisabledText = i18n("Do Not Group");
     }
     else {
         useGroupsDisabledText = i18n("Show Contacts by Accounts");
@@ -752,5 +754,18 @@ void MainWidget::onMetacontactToggleTriggered()
     }
 #endif
 }
+
+void MainWidget::onModelInitialized(bool success)
+{
+    if (!success) {
+        m_messageWidget->setMessageType(KMessageWidget::Warning);
+        m_messageWidget->setText(i18n("Some data sources failed to initialize properly, your contact list might be incomplete."));
+        m_messageWidget->setIcon(KIcon::fromTheme(QLatin1String("dialog-warning")));
+        m_messageWidget->animatedShow();
+    }
+
+    m_contactsListView->contactsModel()->setTrackUnreadMessages(true);
+}
+
 
 #include "main-widget.moc"

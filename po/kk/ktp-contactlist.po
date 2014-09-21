@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-03-12 05:55+0000\n"
+"POT-Creation-Date: 2014-05-14 05:49+0000\n"
 "PO-Revision-Date: 2013-10-03 05:22+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -72,15 +72,15 @@ msgctxt "@action:inmenu This is the IM presence message"
 msgid "Set message..."
 msgstr "Мәлімдемені орнату..."
 
-#: contact-list-widget.cpp:193
+#: contact-list-widget.cpp:194
 msgid "You have no IM accounts configured. Would you like to do that now?"
 msgstr "Сізде бірде бір бапталған ЛХ тіркелгі жоқ. Қазір баптайсыз ба?"
 
-#: contact-list-widget.cpp:194
+#: contact-list-widget.cpp:195
 msgid "No Accounts Found"
 msgstr "Тіркелгілер табылмады"
 
-#: contact-list-widget.cpp:209
+#: contact-list-widget.cpp:210
 msgid ""
 "It appears you do not have the IM Accounts control module installed. Please "
 "install ktp-accounts-kcm package."
@@ -88,15 +88,15 @@ msgstr ""
 "ЛХ ттіркелгіні басқару модулі жоқ сияқты. kpt-accounts-kcm дестесін орнату "
 "керек."
 
-#: contact-list-widget.cpp:210
+#: contact-list-widget.cpp:211
 msgid "IM Accounts KCM Plugin Is Not Installed"
 msgstr "ЛХ тіркелгіні басқару KCM плагині орнатылмаған"
 
-#: contact-list-widget.cpp:228
+#: contact-list-widget.cpp:229
 msgid "Notifications"
 msgstr "Құлақтандырулар"
 
-#: contact-list-widget.cpp:290
+#: contact-list-widget.cpp:291
 #, kde-format
 msgctxt ""
 "Label of a dialog's 'OK' button; %1 is account name, eg. 'Connect account "
@@ -104,33 +104,33 @@ msgctxt ""
 msgid "Connect account %1"
 msgstr "%1 тіркелгіні байланыстру"
 
-#: contact-list-widget.cpp:292
+#: contact-list-widget.cpp:293
 msgid ""
 "The account for this contact is disconnected. Do you want to connect it?"
 msgstr "Бұл контакттың тіркелгісі жыратылған. Оны байланыстырмақсыз ба?"
 
-#: contact-list-widget.cpp:293
+#: contact-list-widget.cpp:294
 msgid "Account offline"
 msgstr "Тіркелгі желіден тыс"
 
-#: contact-list-widget.cpp:501
+#: contact-list-widget.cpp:502
 #, kde-format
 msgid "Choose files to send to %1"
 msgstr "%1 дегенге жіберетін файлдарды таңдау"
 
-#: contact-list-widget.cpp:797
+#: contact-list-widget.cpp:807
 msgid "Merge contacts"
 msgstr "Контакттарды біріктіру"
 
-#: contact-list-widget.cpp:839
+#: contact-list-widget.cpp:849
 msgid "&Move here"
 msgstr "&Осында жылжыту"
 
-#: contact-list-widget.cpp:843
+#: contact-list-widget.cpp:853
 msgid "&Copy here"
 msgstr "Осында &көшірмелеу"
 
-#: contact-list-widget.cpp:847
+#: contact-list-widget.cpp:857
 msgid "C&ancel"
 msgstr "Қ&айту"
 
@@ -378,7 +378,7 @@ msgstr ""
 msgid "IM system failed to initialize"
 msgstr "ЛХ жүйенің инициализация жаңылысы"
 
-#: main-widget.cpp:303
+#: main-widget.cpp:308
 msgid ""
 "You do not have any other presence controls active (a Presence widget for "
 "example).\n"
@@ -387,123 +387,123 @@ msgstr ""
 "Басқа бар-жоғыңызды мәлімдеу құралы (виджеті) қосылмаған.\n"
 "Желіде қала бересіз бе, әлде желіден тыс боласыз ба?"
 
-#: main-widget.cpp:305
+#: main-widget.cpp:310
 msgid "No Other Presence Controls Found"
 msgstr "Басқа бар-жоқты бақылау құралы табылмады"
 
-#: main-widget.cpp:306
+#: main-widget.cpp:311
 msgid "Stay Online"
 msgstr "Желіде қалу"
 
-#: main-widget.cpp:307
+#: main-widget.cpp:312
 msgid "Go Offline"
 msgstr "Желіден шығу"
 
-#: main-widget.cpp:423 tooltips/persontooltip.cpp:55
+#: main-widget.cpp:428 tooltips/persontooltip.cpp:55
 msgid "Contacts"
 msgstr "Контакттар"
 
-#: main-widget.cpp:439
+#: main-widget.cpp:444
 msgid "View"
 msgstr "Көрініс"
 
-#: main-widget.cpp:443 main-widget.cpp:486
+#: main-widget.cpp:448 main-widget.cpp:491
 msgid "Contact List Type"
 msgstr "Контакттар тізімінің түрі"
 
-#: main-widget.cpp:446 main-widget.cpp:491
+#: main-widget.cpp:451 main-widget.cpp:496
 msgid "Shown Contacts"
 msgstr "Көрсетілген контакттар"
 
-#: main-widget.cpp:449 main-widget.cpp:496
+#: main-widget.cpp:454 main-widget.cpp:501
 msgid "Contact Grouping"
 msgstr "Контакттарды топтастыру"
 
-#: main-widget.cpp:573
+#: main-widget.cpp:578
 msgid "Instant Messaging Settings..."
 msgstr "Лезде хабарласуды баптау..."
 
-#: main-widget.cpp:578
+#: main-widget.cpp:583
 msgid "Join Chat Room..."
 msgstr "Әңгіме бөлмесіне кіру..."
 
-#: main-widget.cpp:580
+#: main-widget.cpp:585
 msgid "Make a Call..."
 msgstr "Шақыру..."
 
-#: main-widget.cpp:581
+#: main-widget.cpp:586
 msgid "Merge Contacts..."
 msgstr "Контакттарды біріктіру..."
 
-#: main-widget.cpp:582
+#: main-widget.cpp:587
 msgid "Add New Contacts..."
 msgstr "Жаңа контакттарын қосу..."
 
-#: main-widget.cpp:583
+#: main-widget.cpp:588
 msgid "Find Contact"
 msgstr "Контактты табу"
 
-#: main-widget.cpp:586
+#: main-widget.cpp:591
 msgid "Start a chat..."
 msgstr "Чат-әңгімені бастау..."
 
-#: main-widget.cpp:589
+#: main-widget.cpp:594
 msgid "Split Selected Contacts"
 msgstr "Таңдалған контакттарды бөлу"
 
-#: main-widget.cpp:590
+#: main-widget.cpp:595
 msgid "Merge Selected Contacts"
 msgstr "Таңдалған контакттарды біріктіру"
 
-#: main-widget.cpp:600
+#: main-widget.cpp:605
 msgid "Show Contacts by Groups"
 msgstr "Контакттар топтары бойынша көрсетілсін"
 
-#: main-widget.cpp:604
+#: main-widget.cpp:609
 msgid "Do not group"
 msgstr "Топтастырмау"
 
-#: main-widget.cpp:607
+#: main-widget.cpp:612
 msgid "Show Contacts by Accounts"
 msgstr "Контакттар тіркелгілері бойынша көрсетілсін"
 
-#: main-widget.cpp:612
+#: main-widget.cpp:617
 msgid "Show Offline Contacts"
 msgstr "Желіде жоқ контакттар көрсетілсін"
 
-#: main-widget.cpp:613
+#: main-widget.cpp:618
 msgid "Hide Offline Contacts"
 msgstr "Желіде жоқ контакттар көрсетілмесін"
 
-#: main-widget.cpp:621
+#: main-widget.cpp:626
 msgid "Sort by Presence"
 msgstr "Орында бар-жоғы бойынша реттелсін"
 
-#: main-widget.cpp:622
+#: main-widget.cpp:627
 msgid "Sort by Name"
 msgstr "Атауы бойынша реттелсін"
 
-#: main-widget.cpp:630
+#: main-widget.cpp:635
 msgid "Use Full List"
 msgstr "Толық тізім"
 
-#: main-widget.cpp:632
+#: main-widget.cpp:637
 msgid "Use Normal List"
 msgstr "Кәдімгі тізім"
 
-#: main-widget.cpp:636
+#: main-widget.cpp:641
 msgid "Use Minimalistic List"
 msgstr "Минимлистикалық тізім"
 
-#: main-widget.cpp:643
+#: main-widget.cpp:648
 msgid "Show All Contacts"
 msgstr "Бүкіл контакттар"
 
-#: main-widget.cpp:645
+#: main-widget.cpp:650
 msgid "Show Unblocked Contacts"
 msgstr "Бұғатталмаған контакттар"
 
-#: main-widget.cpp:647
+#: main-widget.cpp:652
 msgid "Show Blocked Contacts"
 msgstr "Бұғатталған контакттар"
 
