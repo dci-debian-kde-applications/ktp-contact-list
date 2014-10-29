@@ -1,3 +1,10 @@
+ktp-contact-list (0.9.0-0ubuntu1) UNRELEASED; urgency=medium
+
+  * Merge from Debian git, no changes
+  * New upstream release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Tue, 28 Oct 2014 13:14:01 +0100
+
 ktp-contact-list (0.8.80-1) UNRELEASED; urgency=medium
 
   * New upstream release.
@@ -5,6 +12,14 @@ ktp-contact-list (0.8.80-1) UNRELEASED; urgency=medium
   * Change kde-telepathy-data to source:Upstream-Version
 
  -- Diane Trout <diane@ghic.org>  Sun, 21 Sep 2014 10:56:47 -0700
+
+ktp-contact-list (0.8.1-1ubuntu1) utopic; urgency=low
+
+  * Merge from Debian unstable.  Remaining changes:
+    - debian/patches/upstream_Dont-crash-on-account-manager-not-ready.diff:
+      + Do not load dialogs if account manager is not ready.
+
+ -- Artur Rona <ari-tczew@ubuntu.com>  Wed, 09 Jul 2014 08:06:01 +0200
 
 ktp-contact-list (0.8.1-1) unstable; urgency=medium
 
@@ -16,6 +31,36 @@ ktp-contact-list (0.8.1-1) unstable; urgency=medium
 
  -- Diane Trout <diane@ghic.org>  Fri, 16 May 2014 21:01:52 -0700
 
+ktp-contact-list (0.8.1-0ubuntu2) utopic; urgency=medium
+
+  * Add upstream_Dont-crash-on-account-manager-not-ready.diff (LP: #1319085)
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Tue, 13 May 2014 17:30:35 +0200
+
+ktp-contact-list (0.8.1-0ubuntu1) utopic; urgency=medium
+
+  * New upstream release
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Mon, 28 Apr 2014 17:09:25 +0200
+
+ktp-contact-list (0.8.0-0ubuntu1) trusty; urgency=medium
+
+  * New upstream release (LP: #1297351)
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Tue, 01 Apr 2014 15:08:31 +0200
+
+ktp-contact-list (0.7.80-0ubuntu1) trusty; urgency=medium
+
+  * New upstream release
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Tue, 18 Feb 2014 00:13:58 +0100
+
+ktp-contact-list (0.7.1-0ubuntu1) trusty; urgency=medium
+
+  * New upstream release
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Wed, 29 Jan 2014 19:45:44 +0100
+
 ktp-contact-list (0.7.0-1) unstable; urgency=low
 
   * New upstream release.
@@ -23,6 +68,24 @@ ktp-contact-list (0.7.0-1) unstable; urgency=low
   * Bump depends kde-telepathy-data to 0.7.0
 
  -- Diane Trout <diane@ghic.org>  Wed, 27 Nov 2013 18:11:34 -0800
+
+ktp-contact-list (0.7.0-0ubuntu2) trusty; urgency=low
+
+  * Add libkpeople-dev to Build Deps
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Fri, 01 Nov 2013 20:08:44 +0100
+
+ktp-contact-list (0.7.0-0ubuntu1) trusty; urgency=low
+
+  * New upstream release
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Tue, 29 Oct 2013 12:46:29 +0100
+
+ktp-contact-list (0.6.3-1fakesync1) saucy-proposed; urgency=low
+
+  * Fake sync due to mismatching orig tarball (LP: #1212603).
+
+ -- Jackson Doak <noskcaj@ubuntu.com>  Wed, 21 Aug 2013 11:22:48 +0200
 
 ktp-contact-list (0.6.3-1) unstable; urgency=low
 
