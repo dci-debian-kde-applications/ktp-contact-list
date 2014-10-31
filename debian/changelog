@@ -1,4 +1,4 @@
-ktp-contact-list (0.9.0-0ubuntu1) UNRELEASED; urgency=medium
+ktp-contact-list (0.9.0-0ubuntu1) vivid; urgency=medium
 
   * Merge from Debian git, no changes
   * New upstream release
