@@ -1,4 +1,4 @@
-ktp-contact-list (0.8.80-1) UNRELEASED; urgency=medium
+ktp-contact-list (0.9.0-1) UNRELEASED; urgency=medium
 
   * New upstream release.
   * Update libktpcommoninternalsprivate-dev build-dep to 0.8.80
