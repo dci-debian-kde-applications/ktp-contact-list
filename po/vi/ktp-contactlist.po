@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-05-14 05:49+0000\n"
+"POT-Creation-Date: 2014-09-17 05:13+0000\n"
 "PO-Revision-Date: 2012-12-19 09:48+0800\n"
 "Last-Translator: Lê Hoàng Phương <herophuong93@gmail.com>\n"
 "Language-Team: Vietnamese <kde-i18n-vi@kde.org>\n"
@@ -70,34 +70,16 @@ msgctxt "@action:inmenu This is the IM presence message"
 msgid "Set message..."
 msgstr "Đặt tin nhắn..."
 
-#: contact-list-widget.cpp:194
+#: contact-list-widget.cpp:200
 msgid "You have no IM accounts configured. Would you like to do that now?"
 msgstr ""
 "Bạn chưa cấu hình tài khoản IM nào. Bạn có muốn cấu hình ngay bây giờ không?"
 
-#: contact-list-widget.cpp:195
+#: contact-list-widget.cpp:201
 msgid "No Accounts Found"
 msgstr "Không tìm thấy tài khoản nào"
 
-#: contact-list-widget.cpp:210
-msgid ""
-"It appears you do not have the IM Accounts control module installed. Please "
-"install ktp-accounts-kcm package."
-msgstr ""
-"Có vẻ như bạn chưa cài đặt mô-đun điều khiển Tài khoản IM. Hãy cài đặt gói "
-"ktp-accounts-kcm."
-
-#: contact-list-widget.cpp:211
-msgid "IM Accounts KCM Plugin Is Not Installed"
-msgstr "Chưa cài đặt phần bổ sung Tài khoản IM cho KCM"
-
-#: contact-list-widget.cpp:229
-#, fuzzy
-#| msgid "Configure Notifications ..."
-msgid "Notifications"
-msgstr "Cấu hình thông báo..."
-
-#: contact-list-widget.cpp:291
+#: contact-list-widget.cpp:269
 #, kde-format
 msgctxt ""
 "Label of a dialog's 'OK' button; %1 is account name, eg. 'Connect account "
@@ -105,37 +87,41 @@ msgctxt ""
 msgid "Connect account %1"
 msgstr ""
 
-#: contact-list-widget.cpp:293
+#: contact-list-widget.cpp:271
 msgid ""
 "The account for this contact is disconnected. Do you want to connect it?"
 msgstr ""
 
-#: contact-list-widget.cpp:294
+#: contact-list-widget.cpp:272
 #, fuzzy
 #| msgid "Go Offline"
 msgid "Account offline"
 msgstr "Chuyển sang ngoại tuyến"
 
-#: contact-list-widget.cpp:502
+#: contact-list-widget.cpp:479
 #, kde-format
 msgid "Choose files to send to %1"
 msgstr "Chọn tập tin để gửi tới %1"
 
-#: contact-list-widget.cpp:807
+#: contact-list-widget.cpp:480
+msgid "Send"
+msgstr ""
+
+#: contact-list-widget.cpp:788
 #, fuzzy
 #| msgid "Remove contact"
 msgid "Merge contacts"
 msgstr "Xoá liên lạc"
 
-#: contact-list-widget.cpp:849
+#: contact-list-widget.cpp:830
 msgid "&Move here"
 msgstr ""
 
-#: contact-list-widget.cpp:853
+#: contact-list-widget.cpp:834
 msgid "&Copy here"
 msgstr ""
 
-#: contact-list-widget.cpp:857
+#: contact-list-widget.cpp:838
 msgid "C&ancel"
 msgstr ""
 
@@ -344,24 +330,24 @@ msgctxt "@label:textbox"
 msgid "Filter:"
 msgstr "Lọc:"
 
-#: global-presence-chooser.cpp:98
+#: global-presence-chooser.cpp:97
 msgid "Configure Custom Presences..."
 msgstr "Cấu hình trạng thái tuỳ biến..."
 
-#: global-presence-chooser.cpp:105
+#: global-presence-chooser.cpp:104
 msgid "Now listening to..."
 msgstr "Hiện đang nghe bài..."
 
-#: global-presence-chooser.cpp:192
+#: global-presence-chooser.cpp:190
 msgid "Click to change your presence message"
 msgstr "Nhấn để thay đổi tin trạng thái của bạn"
 
-#: global-presence-chooser.cpp:232
+#: global-presence-chooser.cpp:230
 msgctxt "Presence string when the account is connecting"
 msgid "Connecting..."
 msgstr "Đang kết nối..."
 
-#: global-presence-chooser.cpp:333
+#: global-presence-chooser.cpp:331
 msgid ""
 "This plugin is currently disabled. Do you want to enable it and use as your "
 "presence?"
@@ -369,11 +355,11 @@ msgstr ""
 "Hiện đã tắt phần bổ sung này. Bạn có muốn bật lên và dùng làm trạng thái của "
 "bạn không?"
 
-#: global-presence-chooser.cpp:334
+#: global-presence-chooser.cpp:332
 msgid "Plugin disabled"
 msgstr "Đã tắt phần bổ sung"
 
-#: main-widget.cpp:173
+#: main-widget.cpp:182
 msgid ""
 "Something unexpected happened to the core part of your Instant Messaging "
 "system and it couldn't be initialized. Try restarting the Contact List."
@@ -381,11 +367,11 @@ msgstr ""
 "Đã xảy ra điều không mong đợi trong phần lõi của hệ thống Nhắn tin tức thời "
 "khiến nó không thể khởi động được. Hãy thử mở lại Danh sách liên lạc lần nữa."
 
-#: main-widget.cpp:175
+#: main-widget.cpp:184
 msgid "IM system failed to initialize"
 msgstr "Không thể khởi chạy hệ thống IM "
 
-#: main-widget.cpp:308
+#: main-widget.cpp:307
 msgid ""
 "You do not have any other presence controls active (a Presence widget for "
 "example).\n"
@@ -395,161 +381,169 @@ msgstr ""
 "widget Trạng thái).\n"
 "Bạn có muốn tiếp tục trực tuyến hay chuyển sang ngoại tuyến?"
 
-#: main-widget.cpp:310
+#: main-widget.cpp:309
 msgid "No Other Presence Controls Found"
 msgstr "Không tìm thấy trình điều khiển trạng thái nào khác"
 
-#: main-widget.cpp:311
+#: main-widget.cpp:310
 msgid "Stay Online"
 msgstr "Tiếp tục trực tuyến"
 
-#: main-widget.cpp:312
+#: main-widget.cpp:311
 msgid "Go Offline"
 msgstr "Chuyển sang ngoại tuyến"
 
-#: main-widget.cpp:428 tooltips/persontooltip.cpp:55
+#: main-widget.cpp:427 tooltips/persontooltip.cpp:55
 #, fuzzy
 #| msgid "ContactID"
 msgid "Contacts"
 msgstr "ID Liên lạc"
 
-#: main-widget.cpp:444
+#: main-widget.cpp:443
 msgid "View"
 msgstr ""
 
-#: main-widget.cpp:448 main-widget.cpp:491
+#: main-widget.cpp:447 main-widget.cpp:490
 msgid "Contact List Type"
 msgstr "Kiểu danh sách liên lạc"
 
-#: main-widget.cpp:451 main-widget.cpp:496
+#: main-widget.cpp:450 main-widget.cpp:495
 msgid "Shown Contacts"
 msgstr "Liên lạc được hiển thị"
 
-#: main-widget.cpp:454 main-widget.cpp:501
+#: main-widget.cpp:453 main-widget.cpp:500
 #, fuzzy
 #| msgid "Show all contacts"
 msgid "Contact Grouping"
 msgstr "Hiện tất cả liên lạc"
 
-#: main-widget.cpp:578
+#: main-widget.cpp:577
 msgid "Instant Messaging Settings..."
 msgstr "Thiết lập nhắn tin tức thời..."
 
-#: main-widget.cpp:583
+#: main-widget.cpp:582
 msgid "Join Chat Room..."
 msgstr "Tham gia phòng trò chuyện..."
 
-#: main-widget.cpp:585
+#: main-widget.cpp:584
 msgid "Make a Call..."
 msgstr "Thực hiện cuộc gọi..."
 
-#: main-widget.cpp:586
+#: main-widget.cpp:585
 #, fuzzy
 #| msgid "Add New Contacts..."
 msgid "Merge Contacts..."
 msgstr "Thêm liên lạc mới..."
 
-#: main-widget.cpp:587
+#: main-widget.cpp:586
 msgid "Add New Contacts..."
 msgstr "Thêm liên lạc mới..."
 
-#: main-widget.cpp:588
+#: main-widget.cpp:587
 msgid "Find Contact"
 msgstr "Tìm liên lạc"
 
-#: main-widget.cpp:591
+#: main-widget.cpp:590
 #, fuzzy
 #| msgid "Start Chat..."
 msgid "Start a chat..."
 msgstr "Bắt đầu trò chuyện..."
 
-#: main-widget.cpp:594
+#: main-widget.cpp:593
 #, fuzzy
 #| msgid "Show blocked contacts"
 msgid "Split Selected Contacts"
 msgstr "Hiện các liên lạc đã chặn"
 
-#: main-widget.cpp:595
+#: main-widget.cpp:594
 #, fuzzy
 #| msgid "Remove the selected contact?"
 msgid "Merge Selected Contacts"
 msgstr "Xoá liên lạc đã chọn?"
 
-#: main-widget.cpp:605
+#: main-widget.cpp:604
 #, fuzzy
 #| msgid "Show all contacts"
 msgid "Show Contacts by Groups"
 msgstr "Hiện tất cả liên lạc"
 
-#: main-widget.cpp:609
+#: main-widget.cpp:608
 #, fuzzy
 #| msgid "Move to Group"
-msgid "Do not group"
+msgid "Do Not Group"
 msgstr "Chuyển nhóm"
 
-#: main-widget.cpp:612
+#: main-widget.cpp:611
 #, fuzzy
 #| msgid "Show all contacts"
 msgid "Show Contacts by Accounts"
 msgstr "Hiện tất cả liên lạc"
 
-#: main-widget.cpp:617
+#: main-widget.cpp:616
 #, fuzzy
 #| msgid "Show all contacts"
 msgid "Show Offline Contacts"
 msgstr "Hiện tất cả liên lạc"
 
-#: main-widget.cpp:618
+#: main-widget.cpp:617
 #, fuzzy
 #| msgid "Show all contacts"
 msgid "Hide Offline Contacts"
 msgstr "Hiện tất cả liên lạc"
 
-#: main-widget.cpp:626
+#: main-widget.cpp:625
 #, fuzzy
 #| msgid "Remove Presence"
 msgid "Sort by Presence"
 msgstr "Xoá bỏ trạng thái"
 
-#: main-widget.cpp:627
+#: main-widget.cpp:626
 #, fuzzy
 #| msgid "Remove Presence"
 msgid "Sort by Name"
 msgstr "Xoá bỏ trạng thái"
 
-#: main-widget.cpp:635
+#: main-widget.cpp:634
 msgid "Use Full List"
 msgstr "Dùng danh sách đầy đủ"
 
-#: main-widget.cpp:637
+#: main-widget.cpp:636
 msgid "Use Normal List"
 msgstr "Dùng danh sách thường"
 
-#: main-widget.cpp:641
+#: main-widget.cpp:640
 msgid "Use Minimalistic List"
 msgstr "Dùng danh sách thu gọn"
 
-#: main-widget.cpp:648
+#: main-widget.cpp:647
 #, fuzzy
 #| msgid "Show all contacts"
 msgid "Show All Contacts"
 msgstr "Hiện tất cả liên lạc"
 
-#: main-widget.cpp:650
+#: main-widget.cpp:649
 #, fuzzy
 #| msgid "Show unblocked contacts"
 msgid "Show Unblocked Contacts"
 msgstr "Hiện các liên lạc đã huỷ chặn"
 
-#: main-widget.cpp:652
+#: main-widget.cpp:651
 #, fuzzy
 #| msgid "Show blocked contacts"
 msgid "Show Blocked Contacts"
 msgstr "Hiện các liên lạc đã chặn"
 
+#: main-widget.cpp:764
+msgid ""
+"Some data sources failed to initialize properly, your contact list might be "
+"incomplete."
+msgstr ""
+
 #. i18n: ectx: property (windowTitle), widget (QMainWindow, MainWindow)
 #: main-widget.ui:14
-msgid "KDE IM Contacts"
+#, fuzzy
+#| msgid "KDE IM Contacts"
+msgid "IM Contacts"
 msgstr "KDE - Danh sách liên lạc IM"
 
 #: main.cpp:37 main.cpp:38
@@ -587,6 +581,21 @@ msgstr ""
 #: tooltips/contacttooltip.ui:126 tooltips/persontooltip.ui:33
 msgid "User is blocked"
 msgstr "Người dùng đã bị chặn"
+
+#~ msgid ""
+#~ "It appears you do not have the IM Accounts control module installed. "
+#~ "Please install ktp-accounts-kcm package."
+#~ msgstr ""
+#~ "Có vẻ như bạn chưa cài đặt mô-đun điều khiển Tài khoản IM. Hãy cài đặt "
+#~ "gói ktp-accounts-kcm."
+
+#~ msgid "IM Accounts KCM Plugin Is Not Installed"
+#~ msgstr "Chưa cài đặt phần bổ sung Tài khoản IM cho KCM"
+
+#, fuzzy
+#~| msgid "Configure Notifications ..."
+#~ msgid "Notifications"
+#~ msgstr "Cấu hình thông báo..."
 
 #, fuzzy
 #~| msgid "Share my desktop"

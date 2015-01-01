@@ -5,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktp-contactlist\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-05-14 05:49+0000\n"
-"PO-Revision-Date: 2013-10-05 17:01+0200\n"
+"POT-Creation-Date: 2014-09-17 05:13+0000\n"
+"PO-Revision-Date: 2014-04-19 14:38+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@latin\n"
@@ -73,31 +73,15 @@ msgctxt "@action:inmenu This is the IM presence message"
 msgid "Set message..."
 msgstr "Postavi poruku..."
 
-#: contact-list-widget.cpp:194
+#: contact-list-widget.cpp:200
 msgid "You have no IM accounts configured. Would you like to do that now?"
 msgstr "Nemate podešenih IM naloga. Želite li da ih podesite sada?"
 
-#: contact-list-widget.cpp:195
+#: contact-list-widget.cpp:201
 msgid "No Accounts Found"
 msgstr "Nema naloga"
 
-#: contact-list-widget.cpp:210
-msgid ""
-"It appears you do not have the IM Accounts control module installed. Please "
-"install ktp-accounts-kcm package."
-msgstr ""
-"Čini se da nemate instaliran kontrolni modul IM naloga. Instalirajte paket "
-"ktp-accounts-kcm."
-
-#: contact-list-widget.cpp:211
-msgid "IM Accounts KCM Plugin Is Not Installed"
-msgstr "Priključak kontrolnog modula IM naloga nije instaliran"
-
-#: contact-list-widget.cpp:229
-msgid "Notifications"
-msgstr "Obaveštenja"
-
-#: contact-list-widget.cpp:291
+#: contact-list-widget.cpp:269
 #, kde-format
 msgctxt ""
 "Label of a dialog's 'OK' button; %1 is account name, eg. 'Connect account "
@@ -105,34 +89,38 @@ msgctxt ""
 msgid "Connect account %1"
 msgstr "Poveži nalog %1"
 
-#: contact-list-widget.cpp:293
+#: contact-list-widget.cpp:271
 msgid ""
 "The account for this contact is disconnected. Do you want to connect it?"
 msgstr "Nalog za ovaj kontakt nije povezan. Želite li da ga povežete?"
 
-#: contact-list-widget.cpp:294
+#: contact-list-widget.cpp:272
 msgid "Account offline"
 msgstr "Nalog van veze"
 
 # >> @title:window
-#: contact-list-widget.cpp:502
+#: contact-list-widget.cpp:479
 #, kde-format
 msgid "Choose files to send to %1"
 msgstr "Izbor fajlova za slanje primaocu %1"
 
-#: contact-list-widget.cpp:807
+#: contact-list-widget.cpp:480
+msgid "Send"
+msgstr "Pošalji"
+
+#: contact-list-widget.cpp:788
 msgid "Merge contacts"
 msgstr "Stopi kontakte"
 
-#: contact-list-widget.cpp:849
+#: contact-list-widget.cpp:830
 msgid "&Move here"
 msgstr "&Premesti ovde"
 
-#: contact-list-widget.cpp:853
+#: contact-list-widget.cpp:834
 msgid "&Copy here"
 msgstr "&Kopiraj ovde"
 
-#: contact-list-widget.cpp:857
+#: contact-list-widget.cpp:838
 msgid "C&ancel"
 msgstr "&Odustani"
 
@@ -345,24 +333,24 @@ msgctxt "@label:textbox"
 msgid "Filter:"
 msgstr "Filter:"
 
-#: global-presence-chooser.cpp:98
+#: global-presence-chooser.cpp:97
 msgid "Configure Custom Presences..."
 msgstr "Podesi posebne prisutnosti..."
 
-#: global-presence-chooser.cpp:105
+#: global-presence-chooser.cpp:104
 msgid "Now listening to..."
 msgstr "Trenutno slušam..."
 
-#: global-presence-chooser.cpp:192
+#: global-presence-chooser.cpp:190
 msgid "Click to change your presence message"
 msgstr "Kliknite da promenite poruku prisutnosti"
 
-#: global-presence-chooser.cpp:232
+#: global-presence-chooser.cpp:230
 msgctxt "Presence string when the account is connecting"
 msgid "Connecting..."
 msgstr "Povezujem se..."
 
-#: global-presence-chooser.cpp:333
+#: global-presence-chooser.cpp:331
 msgid ""
 "This plugin is currently disabled. Do you want to enable it and use as your "
 "presence?"
@@ -370,11 +358,11 @@ msgstr ""
 "Ovaj priključak je isključen. Želite li da ga uključite i koristite kao "
 "svoju prisutnost?"
 
-#: global-presence-chooser.cpp:334
+#: global-presence-chooser.cpp:332
 msgid "Plugin disabled"
 msgstr "Priključak je isključen"
 
-#: main-widget.cpp:173
+#: main-widget.cpp:182
 msgid ""
 "Something unexpected happened to the core part of your Instant Messaging "
 "system and it couldn't be initialized. Try restarting the Contact List."
@@ -382,11 +370,11 @@ msgstr ""
 "Nešto neočekivano se desilo sa jezgrom brzoglasničkog sistema i zato ne može "
 "da se pokrene. Pokušajte ponovo da pokrenete spisak kontakata."
 
-#: main-widget.cpp:175
+#: main-widget.cpp:184
 msgid "IM system failed to initialize"
 msgstr "IM sistem ne može da se pokrene"
 
-#: main-widget.cpp:308
+#: main-widget.cpp:307
 msgid ""
 "You do not have any other presence controls active (a Presence widget for "
 "example).\n"
@@ -396,132 +384,140 @@ msgstr ""
 "primer).\n"
 "Želite li da ostanete na vezi ili biste radije otišli van veze?"
 
-#: main-widget.cpp:310
+#: main-widget.cpp:309
 msgid "No Other Presence Controls Found"
 msgstr "Nijedan upravljač prisutnošću nije nađen"
 
-#: main-widget.cpp:311
+#: main-widget.cpp:310
 msgid "Stay Online"
 msgstr "Ostani na vezi"
 
-#: main-widget.cpp:312
+#: main-widget.cpp:311
 msgid "Go Offline"
 msgstr "Idi van veze"
 
 # >> @title:menu
-#: main-widget.cpp:428 tooltips/persontooltip.cpp:55
+#: main-widget.cpp:427 tooltips/persontooltip.cpp:55
 msgid "Contacts"
 msgstr "Kontakti"
 
 # >> @title:menu
-#: main-widget.cpp:444
+#: main-widget.cpp:443
 msgid "View"
 msgstr "Prikaz"
 
-#: main-widget.cpp:448 main-widget.cpp:491
+#: main-widget.cpp:447 main-widget.cpp:490
 msgid "Contact List Type"
 msgstr "Tip spiska kontakata"
 
-#: main-widget.cpp:451 main-widget.cpp:496
+#: main-widget.cpp:450 main-widget.cpp:495
 msgid "Shown Contacts"
 msgstr "Prikaži kontakte"
 
-#: main-widget.cpp:454 main-widget.cpp:501
+#: main-widget.cpp:453 main-widget.cpp:500
 msgid "Contact Grouping"
 msgstr "Grupisanje kontakata"
 
-#: main-widget.cpp:578
+#: main-widget.cpp:577
 msgid "Instant Messaging Settings..."
 msgstr "Brzoglasničke postavke..."
 
-#: main-widget.cpp:583
+#: main-widget.cpp:582
 msgid "Join Chat Room..."
 msgstr "Pridruži se sobi za ćaskanje..."
 
-#: main-widget.cpp:585
+#: main-widget.cpp:584
 msgid "Make a Call..."
 msgstr "Pozovi..."
 
-#: main-widget.cpp:586
+#: main-widget.cpp:585
 msgid "Merge Contacts..."
 msgstr "Stopi kontakte..."
 
-#: main-widget.cpp:587
+#: main-widget.cpp:586
 msgid "Add New Contacts..."
 msgstr "Dodaj nove kontakte..."
 
-#: main-widget.cpp:588
+#: main-widget.cpp:587
 msgid "Find Contact"
 msgstr "Nađi kontakt"
 
-#: main-widget.cpp:591
+#: main-widget.cpp:590
 msgid "Start a chat..."
 msgstr "Započni ćaskanje..."
 
-#: main-widget.cpp:594
+#: main-widget.cpp:593
 msgid "Split Selected Contacts"
 msgstr "Podeli izabrane kontakte"
 
-#: main-widget.cpp:595
+#: main-widget.cpp:594
 msgid "Merge Selected Contacts"
 msgstr "Stopi izabrane kontakte"
 
-#: main-widget.cpp:605
+#: main-widget.cpp:604
 msgid "Show Contacts by Groups"
 msgstr "Prikaži kontakte po grupama"
 
-#: main-widget.cpp:609
-msgid "Do not group"
+#: main-widget.cpp:608
+msgid "Do Not Group"
 msgstr "Ne grupiši"
 
-#: main-widget.cpp:612
+#: main-widget.cpp:611
 msgid "Show Contacts by Accounts"
 msgstr "Prikaži kontakte po nalozima"
 
-#: main-widget.cpp:617
+#: main-widget.cpp:616
 msgid "Show Offline Contacts"
 msgstr "Prikaži kontakte van veze"
 
-#: main-widget.cpp:618
+#: main-widget.cpp:617
 msgid "Hide Offline Contacts"
 msgstr "Sakrij kontakte van veze"
 
-#: main-widget.cpp:626
+#: main-widget.cpp:625
 msgid "Sort by Presence"
 msgstr "Poređaj po prisutnosti"
 
-#: main-widget.cpp:627
+#: main-widget.cpp:626
 msgid "Sort by Name"
 msgstr "Poređaj po imenu"
 
-#: main-widget.cpp:635
+#: main-widget.cpp:634
 msgid "Use Full List"
 msgstr "Pun spisak"
 
-#: main-widget.cpp:637
+#: main-widget.cpp:636
 msgid "Use Normal List"
 msgstr "Normalan spisak"
 
-#: main-widget.cpp:641
+#: main-widget.cpp:640
 msgid "Use Minimalistic List"
 msgstr "Minimalistički spisak"
 
-#: main-widget.cpp:648
+#: main-widget.cpp:647
 msgid "Show All Contacts"
 msgstr "Prikaži sve kontakte"
 
-#: main-widget.cpp:650
+#: main-widget.cpp:649
 msgid "Show Unblocked Contacts"
 msgstr "Prikaži neblokirane kontakte"
 
-#: main-widget.cpp:652
+#: main-widget.cpp:651
 msgid "Show Blocked Contacts"
 msgstr "Prikaži blokirane kontakte"
 
+#: main-widget.cpp:764
+msgid ""
+"Some data sources failed to initialize properly, your contact list might be "
+"incomplete."
+msgstr ""
+"Neki izvori podataka ne mogu pravilno da se pripreme, lista kontakata možda "
+"neće biti potpuna."
+
 #. i18n: ectx: property (windowTitle), widget (QMainWindow, MainWindow)
 #: main-widget.ui:14
-msgid "KDE IM Contacts"
-msgstr "KDE IM kontakti"
+msgid "IM Contacts"
+msgstr "IM kontakti"
 
 #: main.cpp:37 main.cpp:38
 msgid "KDE Telepathy Contact List"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-05-14 05:49+0000\n"
+"POT-Creation-Date: 2014-09-17 05:13+0000\n"
 "PO-Revision-Date: 2013-10-30 12:31+0400\n"
 "Last-Translator: Alexander Lakhin <exclusion@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -75,32 +75,16 @@ msgctxt "@action:inmenu This is the IM presence message"
 msgid "Set message..."
 msgstr "Установить сообщение..."
 
-#: contact-list-widget.cpp:194
+#: contact-list-widget.cpp:200
 msgid "You have no IM accounts configured. Would you like to do that now?"
 msgstr ""
 "У вас нет настроенных учётных записей. Настроить учётную запись сейчас?"
 
-#: contact-list-widget.cpp:195
+#: contact-list-widget.cpp:201
 msgid "No Accounts Found"
 msgstr "Не найдено учётных записей"
 
-#: contact-list-widget.cpp:210
-msgid ""
-"It appears you do not have the IM Accounts control module installed. Please "
-"install ktp-accounts-kcm package."
-msgstr ""
-"Похоже, в вашей системе не установлен модуль управления учётными записями "
-"системы обмена сообщениями. Установите пакет ktp-accounts-kcm."
-
-#: contact-list-widget.cpp:211
-msgid "IM Accounts KCM Plugin Is Not Installed"
-msgstr "Не установлен модуль управления учётными записями"
-
-#: contact-list-widget.cpp:229
-msgid "Notifications"
-msgstr "Уведомления"
-
-#: contact-list-widget.cpp:291
+#: contact-list-widget.cpp:269
 #, kde-format
 msgctxt ""
 "Label of a dialog's 'OK' button; %1 is account name, eg. 'Connect account "
@@ -108,33 +92,37 @@ msgctxt ""
 msgid "Connect account %1"
 msgstr "Подключить %1"
 
-#: contact-list-widget.cpp:293
+#: contact-list-widget.cpp:271
 msgid ""
 "The account for this contact is disconnected. Do you want to connect it?"
 msgstr "Нет подключения для этого контакта. Вы хотите подключиться?"
 
-#: contact-list-widget.cpp:294
+#: contact-list-widget.cpp:272
 msgid "Account offline"
 msgstr "Пользователь не в сети"
 
-#: contact-list-widget.cpp:502
+#: contact-list-widget.cpp:479
 #, kde-format
 msgid "Choose files to send to %1"
 msgstr "Выбор файлов для отправки собеседнику %1"
 
-#: contact-list-widget.cpp:807
+#: contact-list-widget.cpp:480
+msgid "Send"
+msgstr ""
+
+#: contact-list-widget.cpp:788
 msgid "Merge contacts"
 msgstr "Объединить контакты"
 
-#: contact-list-widget.cpp:849
+#: contact-list-widget.cpp:830
 msgid "&Move here"
 msgstr "&Переместить сюда"
 
-#: contact-list-widget.cpp:853
+#: contact-list-widget.cpp:834
 msgid "&Copy here"
 msgstr "&Скопировать сюда"
 
-#: contact-list-widget.cpp:857
+#: contact-list-widget.cpp:838
 msgid "C&ancel"
 msgstr "О&тмена"
 
@@ -344,24 +332,24 @@ msgctxt "@label:textbox"
 msgid "Filter:"
 msgstr "Фильтр:"
 
-#: global-presence-chooser.cpp:98
+#: global-presence-chooser.cpp:97
 msgid "Configure Custom Presences..."
 msgstr "Другой статус..."
 
-#: global-presence-chooser.cpp:105
+#: global-presence-chooser.cpp:104
 msgid "Now listening to..."
 msgstr "Сейчас слушаю..."
 
-#: global-presence-chooser.cpp:192
+#: global-presence-chooser.cpp:190
 msgid "Click to change your presence message"
 msgstr "Нажмите, чтобы изменить сообщение статуса"
 
-#: global-presence-chooser.cpp:232
+#: global-presence-chooser.cpp:230
 msgctxt "Presence string when the account is connecting"
 msgid "Connecting..."
 msgstr "Соединение..."
 
-#: global-presence-chooser.cpp:333
+#: global-presence-chooser.cpp:331
 msgid ""
 "This plugin is currently disabled. Do you want to enable it and use as your "
 "presence?"
@@ -369,11 +357,11 @@ msgstr ""
 "Этот модуль отключён. Хотите включить его и использовать в качестве вашего "
 "статуса?"
 
-#: global-presence-chooser.cpp:334
+#: global-presence-chooser.cpp:332
 msgid "Plugin disabled"
 msgstr "Модуль отключён"
 
-#: main-widget.cpp:173
+#: main-widget.cpp:182
 msgid ""
 "Something unexpected happened to the core part of your Instant Messaging "
 "system and it couldn't be initialized. Try restarting the Contact List."
@@ -382,11 +370,11 @@ msgstr ""
 "ошибка. По этой причине он не может быть инициализирован. Попробуйте "
 "перезапустить список контактов."
 
-#: main-widget.cpp:175
+#: main-widget.cpp:184
 msgid "IM system failed to initialize"
 msgstr "Ошибка инициализации системы обмена сообщениями"
 
-#: main-widget.cpp:308
+#: main-widget.cpp:307
 msgid ""
 "You do not have any other presence controls active (a Presence widget for "
 "example).\n"
@@ -396,129 +384,139 @@ msgstr ""
 "статусом).\n"
 "Оставаться в сети или выйти?"
 
-#: main-widget.cpp:310
+#: main-widget.cpp:309
 msgid "No Other Presence Controls Found"
 msgstr "Не найдено других средств управления статусом"
 
-#: main-widget.cpp:311
+#: main-widget.cpp:310
 msgid "Stay Online"
 msgstr "Оставаться в сети"
 
-#: main-widget.cpp:312
+#: main-widget.cpp:311
 msgid "Go Offline"
 msgstr "Выйти из сети"
 
-#: main-widget.cpp:428 tooltips/persontooltip.cpp:55
+#: main-widget.cpp:427 tooltips/persontooltip.cpp:55
 msgid "Contacts"
 msgstr "Контакты"
 
-#: main-widget.cpp:444
+#: main-widget.cpp:443
 msgid "View"
 msgstr "Вид"
 
-#: main-widget.cpp:448 main-widget.cpp:491
+#: main-widget.cpp:447 main-widget.cpp:490
 msgid "Contact List Type"
 msgstr "Тип списка контактов"
 
-#: main-widget.cpp:451 main-widget.cpp:496
+#: main-widget.cpp:450 main-widget.cpp:495
 msgid "Shown Contacts"
 msgstr "Отображение контактов"
 
-#: main-widget.cpp:454 main-widget.cpp:501
+#: main-widget.cpp:453 main-widget.cpp:500
 msgid "Contact Grouping"
 msgstr "Группировка контактов"
 
-#: main-widget.cpp:578
+#: main-widget.cpp:577
 msgid "Instant Messaging Settings..."
 msgstr "Параметры мгновенных сообщений..."
 
-#: main-widget.cpp:583
+#: main-widget.cpp:582
 msgid "Join Chat Room..."
 msgstr "Присоединиться к чату..."
 
-#: main-widget.cpp:585
+#: main-widget.cpp:584
 msgid "Make a Call..."
 msgstr "Позвонить..."
 
-#: main-widget.cpp:586
+#: main-widget.cpp:585
 msgid "Merge Contacts..."
 msgstr "Объединить контакты..."
 
-#: main-widget.cpp:587
+#: main-widget.cpp:586
 msgid "Add New Contacts..."
 msgstr "Добавить контакты..."
 
-#: main-widget.cpp:588
+#: main-widget.cpp:587
 msgid "Find Contact"
 msgstr "Поиск контакта"
 
-#: main-widget.cpp:591
+#: main-widget.cpp:590
 msgid "Start a chat..."
 msgstr "Начать общение..."
 
-#: main-widget.cpp:594
+#: main-widget.cpp:593
 msgid "Split Selected Contacts"
 msgstr "Разделить выбранные контакты"
 
-#: main-widget.cpp:595
+#: main-widget.cpp:594
 msgid "Merge Selected Contacts"
 msgstr "Объединить выбранные контакты"
 
-#: main-widget.cpp:605
+#: main-widget.cpp:604
 msgid "Show Contacts by Groups"
 msgstr "Показывать контакты по группам"
 
-#: main-widget.cpp:609
-msgid "Do not group"
+#: main-widget.cpp:608
+#, fuzzy
+#| msgid "Do not group"
+msgid "Do Not Group"
 msgstr "Не группировать"
 
-#: main-widget.cpp:612
+#: main-widget.cpp:611
 msgid "Show Contacts by Accounts"
 msgstr "Показывать контакты по учётным записям"
 
-#: main-widget.cpp:617
+#: main-widget.cpp:616
 msgid "Show Offline Contacts"
 msgstr "Показывать контакты не в сети"
 
-#: main-widget.cpp:618
+#: main-widget.cpp:617
 msgid "Hide Offline Contacts"
 msgstr "Скрывать контакты не в сети"
 
-#: main-widget.cpp:626
+#: main-widget.cpp:625
 msgid "Sort by Presence"
 msgstr "Сортировать по статусу"
 
-#: main-widget.cpp:627
+#: main-widget.cpp:626
 msgid "Sort by Name"
 msgstr "Сортировать по имени"
 
-#: main-widget.cpp:635
+#: main-widget.cpp:634
 msgid "Use Full List"
 msgstr "Использовать полный список"
 
-#: main-widget.cpp:637
+#: main-widget.cpp:636
 msgid "Use Normal List"
 msgstr "Использовать обычный список"
 
-#: main-widget.cpp:641
+#: main-widget.cpp:640
 msgid "Use Minimalistic List"
 msgstr "Использовать компактный список"
 
-#: main-widget.cpp:648
+#: main-widget.cpp:647
 msgid "Show All Contacts"
 msgstr "Показать все контакты"
 
-#: main-widget.cpp:650
+#: main-widget.cpp:649
 msgid "Show Unblocked Contacts"
 msgstr "Показать незаблокированные контакты"
 
-#: main-widget.cpp:652
+#: main-widget.cpp:651
 msgid "Show Blocked Contacts"
 msgstr "Показать заблокированные контакты"
 
+#: main-widget.cpp:764
+msgid ""
+"Some data sources failed to initialize properly, your contact list might be "
+"incomplete."
+msgstr ""
+
 #. i18n: ectx: property (windowTitle), widget (QMainWindow, MainWindow)
 #: main-widget.ui:14
-msgid "KDE IM Contacts"
+#, fuzzy
+#| msgid "KDE IM Contacts"
+msgid "IM Contacts"
 msgstr "Список контактов KDE"
 
 #: main.cpp:37 main.cpp:38
@@ -556,3 +554,16 @@ msgstr "Учётная запись: %1"
 #: tooltips/contacttooltip.ui:126 tooltips/persontooltip.ui:33
 msgid "User is blocked"
 msgstr "Пользователь заблокирован"
+
+#~ msgid ""
+#~ "It appears you do not have the IM Accounts control module installed. "
+#~ "Please install ktp-accounts-kcm package."
+#~ msgstr ""
+#~ "Похоже, в вашей системе не установлен модуль управления учётными записями "
+#~ "системы обмена сообщениями. Установите пакет ktp-accounts-kcm."
+
+#~ msgid "IM Accounts KCM Plugin Is Not Installed"
+#~ msgstr "Не установлен модуль управления учётными записями"
+
+#~ msgid "Notifications"
+#~ msgstr "Уведомления"

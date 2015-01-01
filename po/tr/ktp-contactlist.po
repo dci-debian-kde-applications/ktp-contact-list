@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-05-14 05:49+0000\n"
+"POT-Creation-Date: 2014-09-17 05:13+0000\n"
 "PO-Revision-Date: 2013-10-15 19:56+0200\n"
 "Last-Translator: Volkan Gezer <volkangezer@gmail.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -71,33 +71,17 @@ msgctxt "@action:inmenu This is the IM presence message"
 msgid "Set message..."
 msgstr "İleti ayarla..."
 
-#: contact-list-widget.cpp:194
+#: contact-list-widget.cpp:200
 msgid "You have no IM accounts configured. Would you like to do that now?"
 msgstr ""
 "Ayarlanmış geçerli bir IM (anında mesajlaşma) hesabınız yok. Bunu şimdi "
 "yapmak ister misiniz?"
 
-#: contact-list-widget.cpp:195
+#: contact-list-widget.cpp:201
 msgid "No Accounts Found"
 msgstr "Hesap Bulunamadı"
 
-#: contact-list-widget.cpp:210
-msgid ""
-"It appears you do not have the IM Accounts control module installed. Please "
-"install ktp-accounts-kcm package."
-msgstr ""
-"IM Hesap denetim modülü yüklü değil gibi görünüyor. Lütfen ktp-accounts-kcm "
-"paketini yükleyin."
-
-#: contact-list-widget.cpp:211
-msgid "IM Accounts KCM Plugin Is Not Installed"
-msgstr "IM Hesapları KCM Eklentisi Yüklü Değil"
-
-#: contact-list-widget.cpp:229
-msgid "Notifications"
-msgstr "Bildirimler"
-
-#: contact-list-widget.cpp:291
+#: contact-list-widget.cpp:269
 #, kde-format
 msgctxt ""
 "Label of a dialog's 'OK' button; %1 is account name, eg. 'Connect account "
@@ -105,33 +89,37 @@ msgctxt ""
 msgid "Connect account %1"
 msgstr "%1 hesabına bağlan"
 
-#: contact-list-widget.cpp:293
+#: contact-list-widget.cpp:271
 msgid ""
 "The account for this contact is disconnected. Do you want to connect it?"
 msgstr "Bu kişi için hesap bağlantısı kesilmiş. Bağlanmak ister misiniz?"
 
-#: contact-list-widget.cpp:294
+#: contact-list-widget.cpp:272
 msgid "Account offline"
 msgstr "Hesap çevrimdışı"
 
-#: contact-list-widget.cpp:502
+#: contact-list-widget.cpp:479
 #, kde-format
 msgid "Choose files to send to %1"
 msgstr "%1 kullanıcısına gönderilecek dosyaları seç"
 
-#: contact-list-widget.cpp:807
+#: contact-list-widget.cpp:480
+msgid "Send"
+msgstr ""
+
+#: contact-list-widget.cpp:788
 msgid "Merge contacts"
 msgstr "Kişileri birleştir"
 
-#: contact-list-widget.cpp:849
+#: contact-list-widget.cpp:830
 msgid "&Move here"
 msgstr "Buraya &taşı"
 
-#: contact-list-widget.cpp:853
+#: contact-list-widget.cpp:834
 msgid "&Copy here"
 msgstr "Buraya &kopyala"
 
-#: contact-list-widget.cpp:857
+#: contact-list-widget.cpp:838
 msgid "C&ancel"
 msgstr "İ&ptal"
 
@@ -339,24 +327,24 @@ msgctxt "@label:textbox"
 msgid "Filter:"
 msgstr "Filtrele:"
 
-#: global-presence-chooser.cpp:98
+#: global-presence-chooser.cpp:97
 msgid "Configure Custom Presences..."
 msgstr "Özel Durumları Yapılandır..."
 
-#: global-presence-chooser.cpp:105
+#: global-presence-chooser.cpp:104
 msgid "Now listening to..."
 msgstr "Dinlenilen Şarkı..."
 
-#: global-presence-chooser.cpp:192
+#: global-presence-chooser.cpp:190
 msgid "Click to change your presence message"
 msgstr "Durum iletinizi değiştirmek için tıklayın"
 
-#: global-presence-chooser.cpp:232
+#: global-presence-chooser.cpp:230
 msgctxt "Presence string when the account is connecting"
 msgid "Connecting..."
 msgstr "Bağlanıyor..."
 
-#: global-presence-chooser.cpp:333
+#: global-presence-chooser.cpp:331
 msgid ""
 "This plugin is currently disabled. Do you want to enable it and use as your "
 "presence?"
@@ -364,11 +352,11 @@ msgstr ""
 "Bu eklenti şuanda devre dışı. Etkinleştirmek ve durumunuz olarak kullanmak "
 "istiyor musunuz?"
 
-#: global-presence-chooser.cpp:334
+#: global-presence-chooser.cpp:332
 msgid "Plugin disabled"
 msgstr "Eklenti devre dışı"
 
-#: main-widget.cpp:173
+#: main-widget.cpp:182
 msgid ""
 "Something unexpected happened to the core part of your Instant Messaging "
 "system and it couldn't be initialized. Try restarting the Contact List."
@@ -376,11 +364,11 @@ msgstr ""
 "Anında Mesajlaşma temel bölümünde beklenmedik bir durum oluştu ve "
 "başlatılamadı. Lütfen Kişi Listenizi yeniden başlatmayı deneyin."
 
-#: main-widget.cpp:175
+#: main-widget.cpp:184
 msgid "IM system failed to initialize"
 msgstr "IM sistemi başlatılamadı"
 
-#: main-widget.cpp:308
+#: main-widget.cpp:307
 msgid ""
 "You do not have any other presence controls active (a Presence widget for "
 "example).\n"
@@ -389,129 +377,139 @@ msgstr ""
 "Etkin olan diğer varlık denetiminiz yok (Örneğin bir Durum gereci)\n"
 "Çevrimiçi olmak mı yoksa çevrim dışı mı olmak istersiniz?"
 
-#: main-widget.cpp:310
+#: main-widget.cpp:309
 msgid "No Other Presence Controls Found"
 msgstr "Diğer Durum Denetimleri Bulunamadı"
 
-#: main-widget.cpp:311
+#: main-widget.cpp:310
 msgid "Stay Online"
 msgstr "Çevrimiçi Kal"
 
-#: main-widget.cpp:312
+#: main-widget.cpp:311
 msgid "Go Offline"
 msgstr "Çevrimdışı Ol"
 
-#: main-widget.cpp:428 tooltips/persontooltip.cpp:55
+#: main-widget.cpp:427 tooltips/persontooltip.cpp:55
 msgid "Contacts"
 msgstr "Kişiler"
 
-#: main-widget.cpp:444
+#: main-widget.cpp:443
 msgid "View"
 msgstr "Görünüm"
 
-#: main-widget.cpp:448 main-widget.cpp:491
+#: main-widget.cpp:447 main-widget.cpp:490
 msgid "Contact List Type"
 msgstr "Kişi Liste Türü"
 
-#: main-widget.cpp:451 main-widget.cpp:496
+#: main-widget.cpp:450 main-widget.cpp:495
 msgid "Shown Contacts"
 msgstr "Gösterilen Kişiler"
 
-#: main-widget.cpp:454 main-widget.cpp:501
+#: main-widget.cpp:453 main-widget.cpp:500
 msgid "Contact Grouping"
 msgstr "Kişi Gruplama"
 
-#: main-widget.cpp:578
+#: main-widget.cpp:577
 msgid "Instant Messaging Settings..."
 msgstr "Anında Mesajlaşma Ayarları..."
 
-#: main-widget.cpp:583
+#: main-widget.cpp:582
 msgid "Join Chat Room..."
 msgstr "Sohbet Odasına Katıl..."
 
-#: main-widget.cpp:585
+#: main-widget.cpp:584
 msgid "Make a Call..."
 msgstr "Bir Arama Yap..."
 
-#: main-widget.cpp:586
+#: main-widget.cpp:585
 msgid "Merge Contacts..."
 msgstr "Kişileri Birleştir..."
 
-#: main-widget.cpp:587
+#: main-widget.cpp:586
 msgid "Add New Contacts..."
 msgstr "Yeni Kişi Ekle..."
 
-#: main-widget.cpp:588
+#: main-widget.cpp:587
 msgid "Find Contact"
 msgstr "Kişi Ara"
 
-#: main-widget.cpp:591
+#: main-widget.cpp:590
 msgid "Start a chat..."
 msgstr "Bir sohbete başlat..."
 
-#: main-widget.cpp:594
+#: main-widget.cpp:593
 msgid "Split Selected Contacts"
 msgstr "Seçili Kişileri Böl"
 
-#: main-widget.cpp:595
+#: main-widget.cpp:594
 msgid "Merge Selected Contacts"
 msgstr "Seçili Kişileri Birleştir"
 
-#: main-widget.cpp:605
+#: main-widget.cpp:604
 msgid "Show Contacts by Groups"
 msgstr "Kişileri Gruba Göre Göster"
 
-#: main-widget.cpp:609
-msgid "Do not group"
+#: main-widget.cpp:608
+#, fuzzy
+#| msgid "Do not group"
+msgid "Do Not Group"
 msgstr "Grup yapma"
 
-#: main-widget.cpp:612
+#: main-widget.cpp:611
 msgid "Show Contacts by Accounts"
 msgstr "Kişileri Hesaba Göre Göster"
 
-#: main-widget.cpp:617
+#: main-widget.cpp:616
 msgid "Show Offline Contacts"
 msgstr "Çevrimdışı Kişileri Göster"
 
-#: main-widget.cpp:618
+#: main-widget.cpp:617
 msgid "Hide Offline Contacts"
 msgstr "Çevrimdışı Kişileri Gizle"
 
-#: main-widget.cpp:626
+#: main-widget.cpp:625
 msgid "Sort by Presence"
 msgstr "Duruma Göre Sıralı"
 
-#: main-widget.cpp:627
+#: main-widget.cpp:626
 msgid "Sort by Name"
 msgstr "İsme Göre Sıralı"
 
-#: main-widget.cpp:635
+#: main-widget.cpp:634
 msgid "Use Full List"
 msgstr "Tam Listeyi Kullan"
 
-#: main-widget.cpp:637
+#: main-widget.cpp:636
 msgid "Use Normal List"
 msgstr "Normal Listeyi Kullan"
 
-#: main-widget.cpp:641
+#: main-widget.cpp:640
 msgid "Use Minimalistic List"
 msgstr "Daraltılmış Listeyi Kullan"
 
-#: main-widget.cpp:648
+#: main-widget.cpp:647
 msgid "Show All Contacts"
 msgstr "Tüm Kişileri Göster"
 
-#: main-widget.cpp:650
+#: main-widget.cpp:649
 msgid "Show Unblocked Contacts"
 msgstr "Engellenmemiş Kişileri Göster"
 
-#: main-widget.cpp:652
+#: main-widget.cpp:651
 msgid "Show Blocked Contacts"
 msgstr "Engellenmiş Kişileri Göster"
 
+#: main-widget.cpp:764
+msgid ""
+"Some data sources failed to initialize properly, your contact list might be "
+"incomplete."
+msgstr ""
+
 #. i18n: ectx: property (windowTitle), widget (QMainWindow, MainWindow)
 #: main-widget.ui:14
-msgid "KDE IM Contacts"
+#, fuzzy
+#| msgid "KDE IM Contacts"
+msgid "IM Contacts"
 msgstr "KDE IM Kişileri"
 
 #: main.cpp:37 main.cpp:38
@@ -549,6 +547,19 @@ msgstr "Hesap: %1"
 #: tooltips/contacttooltip.ui:126 tooltips/persontooltip.ui:33
 msgid "User is blocked"
 msgstr "Kullanıcı engellenmiş"
+
+#~ msgid ""
+#~ "It appears you do not have the IM Accounts control module installed. "
+#~ "Please install ktp-accounts-kcm package."
+#~ msgstr ""
+#~ "IM Hesap denetim modülü yüklü değil gibi görünüyor. Lütfen ktp-accounts-"
+#~ "kcm paketini yükleyin."
+
+#~ msgid "IM Accounts KCM Plugin Is Not Installed"
+#~ msgstr "IM Hesapları KCM Eklentisi Yüklü Değil"
+
+#~ msgid "Notifications"
+#~ msgstr "Bildirimler"
 
 #~ msgid "Share My Desktop"
 #~ msgstr "Masaüstümü Paylaş"

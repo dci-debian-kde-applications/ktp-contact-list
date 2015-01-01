@@ -1,15 +1,15 @@
 # Translation of ktp-contactlist.po to Catalan
-# Copyright (C) 2012-2013 This_file_is_part_of_KDE
+# Copyright (C) 2012-2014 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Josep Ma. Ferrer <txemaq@gmail.com>, 2012, 2013.
+# Josep Ma. Ferrer <txemaq@gmail.com>, 2012, 2013, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: ktp-contactlist\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2014-05-14 05:49+0000\n"
-"PO-Revision-Date: 2013-10-01 20:40+0200\n"
+"POT-Creation-Date: 2014-09-17 05:13+0000\n"
+"PO-Revision-Date: 2014-09-20 15:54+0200\n"
 "Last-Translator: Josep Ma. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -73,31 +73,15 @@ msgctxt "@action:inmenu This is the IM presence message"
 msgid "Set message..."
 msgstr "Estableix missatge..."
 
-#: contact-list-widget.cpp:194
+#: contact-list-widget.cpp:200
 msgid "You have no IM accounts configured. Would you like to do that now?"
 msgstr "No teniu cap compte de MI configurat. Voleu fer-ho ara?"
 
-#: contact-list-widget.cpp:195
+#: contact-list-widget.cpp:201
 msgid "No Accounts Found"
 msgstr "No s'ha trobat cap compte"
 
-#: contact-list-widget.cpp:210
-msgid ""
-"It appears you do not have the IM Accounts control module installed. Please "
-"install ktp-accounts-kcm package."
-msgstr ""
-"Sembla que el mòdul de control dels comptes de MI no està instal·lat. Si us "
-"plau, instal·leu el paquet ktp-accounts-kcm."
-
-#: contact-list-widget.cpp:211
-msgid "IM Accounts KCM Plugin Is Not Installed"
-msgstr "El connector KCM de comptes de MI no està instal·lat"
-
-#: contact-list-widget.cpp:229
-msgid "Notifications"
-msgstr "Notificacions"
-
-#: contact-list-widget.cpp:291
+#: contact-list-widget.cpp:269
 #, kde-format
 msgctxt ""
 "Label of a dialog's 'OK' button; %1 is account name, eg. 'Connect account "
@@ -105,33 +89,37 @@ msgctxt ""
 msgid "Connect account %1"
 msgstr "Connecta el compte %1"
 
-#: contact-list-widget.cpp:293
+#: contact-list-widget.cpp:271
 msgid ""
 "The account for this contact is disconnected. Do you want to connect it?"
 msgstr "El compte per aquest contacte està desconnectat. El voleu connectar?"
 
-#: contact-list-widget.cpp:294
+#: contact-list-widget.cpp:272
 msgid "Account offline"
 msgstr "Compte desconnectat"
 
-#: contact-list-widget.cpp:502
+#: contact-list-widget.cpp:479
 #, kde-format
 msgid "Choose files to send to %1"
 msgstr "Seleccioneu els fitxers a enviar a %1"
 
-#: contact-list-widget.cpp:807
+#: contact-list-widget.cpp:480
+msgid "Send"
+msgstr "Envia"
+
+#: contact-list-widget.cpp:788
 msgid "Merge contacts"
 msgstr "Fusiona els contactes"
 
-#: contact-list-widget.cpp:849
+#: contact-list-widget.cpp:830
 msgid "&Move here"
 msgstr "&Mou aquí"
 
-#: contact-list-widget.cpp:853
+#: contact-list-widget.cpp:834
 msgid "&Copy here"
 msgstr "&Copia aquí"
 
-#: contact-list-widget.cpp:857
+#: contact-list-widget.cpp:838
 msgid "C&ancel"
 msgstr "C&ancel·la"
 
@@ -339,24 +327,24 @@ msgctxt "@label:textbox"
 msgid "Filter:"
 msgstr "Filtre:"
 
-#: global-presence-chooser.cpp:98
+#: global-presence-chooser.cpp:97
 msgid "Configure Custom Presences..."
 msgstr "Configura les presències personalitzades..."
 
-#: global-presence-chooser.cpp:105
+#: global-presence-chooser.cpp:104
 msgid "Now listening to..."
 msgstr "Ara s'escolta a..."
 
-#: global-presence-chooser.cpp:192
+#: global-presence-chooser.cpp:190
 msgid "Click to change your presence message"
 msgstr "Cliqueu per canviar el missatge de presència"
 
-#: global-presence-chooser.cpp:232
+#: global-presence-chooser.cpp:230
 msgctxt "Presence string when the account is connecting"
 msgid "Connecting..."
 msgstr "S'està connectant..."
 
-#: global-presence-chooser.cpp:333
+#: global-presence-chooser.cpp:331
 msgid ""
 "This plugin is currently disabled. Do you want to enable it and use as your "
 "presence?"
@@ -364,11 +352,11 @@ msgstr ""
 "Aquest connector ara està desactivat. Voleu activar-lo i utilitzar-lo com a "
 "la vostra presència?"
 
-#: global-presence-chooser.cpp:334
+#: global-presence-chooser.cpp:332
 msgid "Plugin disabled"
 msgstr "Connector desactivat"
 
-#: main-widget.cpp:173
+#: main-widget.cpp:182
 msgid ""
 "Something unexpected happened to the core part of your Instant Messaging "
 "system and it couldn't be initialized. Try restarting the Contact List."
@@ -377,11 +365,11 @@ msgstr ""
 "missatgeria instantània i no s'ha pogut inicialitzar. Proveu de reiniciar la "
 "llista de contactes."
 
-#: main-widget.cpp:175
+#: main-widget.cpp:184
 msgid "IM system failed to initialize"
 msgstr "El sistema de MI ha fallat en inicialitzar-se"
 
-#: main-widget.cpp:308
+#: main-widget.cpp:307
 msgid ""
 "You do not have any other presence controls active (a Presence widget for "
 "example).\n"
@@ -391,130 +379,138 @@ msgstr ""
 "Presència).\n"
 "Preferiu estar connectat o desconnectat?"
 
-#: main-widget.cpp:310
+#: main-widget.cpp:309
 msgid "No Other Presence Controls Found"
 msgstr "No s'han trobat altres control de presència"
 
-#: main-widget.cpp:311
+#: main-widget.cpp:310
 msgid "Stay Online"
 msgstr "Romandre connectat"
 
-#: main-widget.cpp:312
+#: main-widget.cpp:311
 msgid "Go Offline"
 msgstr "Desconnecta"
 
-#: main-widget.cpp:428 tooltips/persontooltip.cpp:55
+#: main-widget.cpp:427 tooltips/persontooltip.cpp:55
 msgid "Contacts"
 msgstr "Contactes"
 
-#: main-widget.cpp:444
+#: main-widget.cpp:443
 msgid "View"
 msgstr "Visualitza"
 
-#: main-widget.cpp:448 main-widget.cpp:491
+#: main-widget.cpp:447 main-widget.cpp:490
 msgid "Contact List Type"
 msgstr "Tipus de llista de contactes"
 
-#: main-widget.cpp:451 main-widget.cpp:496
+#: main-widget.cpp:450 main-widget.cpp:495
 msgid "Shown Contacts"
 msgstr "Mostra els contactes"
 
-#: main-widget.cpp:454 main-widget.cpp:501
+#: main-widget.cpp:453 main-widget.cpp:500
 msgid "Contact Grouping"
 msgstr "Agrupament de contactes"
 
-#: main-widget.cpp:578
+#: main-widget.cpp:577
 msgid "Instant Messaging Settings..."
 msgstr "Arranjament de missatgeria instantània..."
 
-#: main-widget.cpp:583
+#: main-widget.cpp:582
 msgid "Join Chat Room..."
 msgstr "Entra a la sala de xat..."
 
-#: main-widget.cpp:585
+#: main-widget.cpp:584
 msgid "Make a Call..."
 msgstr "Fes una trucada..."
 
-#: main-widget.cpp:586
+#: main-widget.cpp:585
 msgid "Merge Contacts..."
 msgstr "Fusiona els contactes..."
 
-#: main-widget.cpp:587
+#: main-widget.cpp:586
 msgid "Add New Contacts..."
 msgstr "Afegeix contactes nous..."
 
-#: main-widget.cpp:588
+#: main-widget.cpp:587
 msgid "Find Contact"
 msgstr "Cerca contacte"
 
-#: main-widget.cpp:591
+#: main-widget.cpp:590
 msgid "Start a chat..."
 msgstr "Inicia un xat..."
 
-#: main-widget.cpp:594
+#: main-widget.cpp:593
 msgid "Split Selected Contacts"
 msgstr "Separa els contactes seleccionats"
 
-#: main-widget.cpp:595
+#: main-widget.cpp:594
 msgid "Merge Selected Contacts"
 msgstr "Fusiona els contactes seleccionats"
 
-#: main-widget.cpp:605
+#: main-widget.cpp:604
 msgid "Show Contacts by Groups"
 msgstr "Mostra els contactes per grups"
 
-#: main-widget.cpp:609
-msgid "Do not group"
+#: main-widget.cpp:608
+msgid "Do Not Group"
 msgstr "No agrupis"
 
-#: main-widget.cpp:612
+#: main-widget.cpp:611
 msgid "Show Contacts by Accounts"
 msgstr "Mostra els contactes per comptes"
 
-#: main-widget.cpp:617
+#: main-widget.cpp:616
 msgid "Show Offline Contacts"
 msgstr "Mostra els contactes desconnectats"
 
-#: main-widget.cpp:618
+#: main-widget.cpp:617
 msgid "Hide Offline Contacts"
 msgstr "Oculta els contactes desconnectats"
 
-#: main-widget.cpp:626
+#: main-widget.cpp:625
 msgid "Sort by Presence"
 msgstr "Ordena per presència"
 
-#: main-widget.cpp:627
+#: main-widget.cpp:626
 msgid "Sort by Name"
 msgstr "Ordena per nom"
 
-#: main-widget.cpp:635
+#: main-widget.cpp:634
 msgid "Use Full List"
 msgstr "Usa la llista completa"
 
-#: main-widget.cpp:637
+#: main-widget.cpp:636
 msgid "Use Normal List"
 msgstr "Usa la llista normal"
 
-#: main-widget.cpp:641
+#: main-widget.cpp:640
 msgid "Use Minimalistic List"
 msgstr "Usa la llista minimalista"
 
-#: main-widget.cpp:648
+#: main-widget.cpp:647
 msgid "Show All Contacts"
 msgstr "Mostra tots els contactes"
 
-#: main-widget.cpp:650
+#: main-widget.cpp:649
 msgid "Show Unblocked Contacts"
 msgstr "Mostra els contactes no bloquejats"
 
-#: main-widget.cpp:652
+#: main-widget.cpp:651
 msgid "Show Blocked Contacts"
 msgstr "Mostra els contactes bloquejats"
 
+#: main-widget.cpp:764
+msgid ""
+"Some data sources failed to initialize properly, your contact list might be "
+"incomplete."
+msgstr ""
+"Algunes fonts de dades han fallat en inicialitzar-se adequadament, la llista "
+"de contactes podria ser incompleta."
+
 #. i18n: ectx: property (windowTitle), widget (QMainWindow, MainWindow)
 #: main-widget.ui:14
-msgid "KDE IM Contacts"
-msgstr "Contactes de MI del KDE"
+msgid "IM Contacts"
+msgstr "Contactes de MI"
 
 #: main.cpp:37 main.cpp:38
 msgid "KDE Telepathy Contact List"
@@ -551,6 +547,19 @@ msgstr "Compte: %1"
 #: tooltips/contacttooltip.ui:126 tooltips/persontooltip.ui:33
 msgid "User is blocked"
 msgstr "L'usuari està bloquejat"
+
+#~ msgid ""
+#~ "It appears you do not have the IM Accounts control module installed. "
+#~ "Please install ktp-accounts-kcm package."
+#~ msgstr ""
+#~ "Sembla que el mòdul de control dels comptes de MI no està instal·lat. Si "
+#~ "us plau, instal·leu el paquet ktp-accounts-kcm."
+
+#~ msgid "IM Accounts KCM Plugin Is Not Installed"
+#~ msgstr "El connector KCM de comptes de MI no està instal·lat"
+
+#~ msgid "Notifications"
+#~ msgstr "Notificacions"
 
 #~ msgid "Share My Desktop"
 #~ msgstr "Comparteix el meu escriptori"
