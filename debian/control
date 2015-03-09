@@ -2,24 +2,54 @@ Source: ktp-contact-list
 Section: kde
 Priority: optional
 Maintainer: Debian/Kubuntu KDE Extras Team <pkg-kde-extras@lists.alioth.debian.org>
-Uploaders: Diane Trout <diane@ghic.org>, Michał Zając <quintasan@kubuntu.org>, Mark Purcell <msp@debian.org>
-Build-Depends: debhelper (>= 9),
- pkg-kde-tools (>= 0.9),
- libtelepathy-qt4-dev (>= 0.9.3),
- kdelibs5-dev (>= 4:4.6),
- cmake (>= 2.8),
- libtelepathy-logger-dev,
- libtelepathy-logger-qt4-dev (>= 0.5.60),
- libktpcommoninternalsprivate-dev (>= 0.8.80),
- libkpeople-dev (>= 0.3)
+Uploaders: Diane Trout <diane@ghic.org>,
+           Michał Zając <quintasan@kubuntu.org>,
+           Mark Purcell <msp@debian.org>
+Build-Depends: cmake,
+               debhelper (>= 9),
+               extra-cmake-modules,
+               gettext,
+               kio-dev,
+               libkf5attica-dev,
+               libkf5auth-dev,
+               libkf5bookmarks-dev,
+               libkf5codecs-dev,
+               libkf5completion-dev,
+               libkf5config-dev,
+               libkf5configwidgets-dev,
+               libkf5coreaddons-dev,
+               libkf5dbusaddons-dev,
+               libkf5globalaccel-dev,
+               libkf5guiaddons-dev,
+               libkf5i18n-dev,
+               libkf5iconthemes-dev,
+               libkf5itemviews-dev,
+               libkf5jobwidgets-dev,
+               libkf5kcmutils-dev,
+               libkf5notifications-dev,
+               libkf5notifyconfig-dev,
+               libkf5service-dev,
+               libkf5solid-dev,
+               libkf5sonnet-dev,
+               libkf5textwidgets-dev,
+               libkf5wallet-dev,
+               libkf5widgetsaddons-dev,
+               libkf5windowsystem-dev,
+               libkf5xmlgui-dev,
+               libktp-dev,
+               libtelepathy-qt5-dev,
+               pkg-kde-tools (>> 0.15.15),
+               qtbase5-dev
 Standards-Version: 3.9.5
 Homepage: https://projects.kde.org/projects/extragear/network/telepathy/ktp-contact-list
-Vcs-Git: git://anonscm.debian.org/pkg-kde/kde-extras/kde-telepathy/ktp-contact-list.git
-Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-kde/kde-extras/kde-telepathy/ktp-contact-list.git
+Vcs-Git: git://anonscm.debian.org/pkg-kde/applications/ktp-contact-list.git
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-kde/applications/ktp-contact-list.git
 
 Package: kde-telepathy-contact-list
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, kde-telepathy-data (>= ${source:Upstream-Version})
+Depends: kde-telepathy-data (>= ${source:Upstream-Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
 Recommends: kde-telepathy
 Description: Telepathy contact list for the KDE Plasma Desktop
  This package provides a contact list application based on telepathy,
