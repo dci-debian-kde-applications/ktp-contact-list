@@ -48,7 +48,10 @@ Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-kde/applications/ktp-contac
 
 Package: kde-telepathy-contact-list
 Architecture: any
-Depends: kde-telepathy-data, ${misc:Depends}, ${shlibs:Depends}
+Depends: kde-telepathy-data,
+         kde-telepathy-kpeople,
+         ${misc:Depends},
+         ${shlibs:Depends}
 Recommends: kde-telepathy
 Description: Telepathy contact list for the KDE Plasma Desktop
  This package provides a contact list application based on telepathy,
