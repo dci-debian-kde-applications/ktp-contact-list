@@ -2,6 +2,7 @@ ktp-contact-list (0.9.0-1) UNRELEASED; urgency=medium
 
   * New upstream release.
   * Update libktpcommoninternalsprivate-dev build-dep to 0.9.0
+  * Update Standards-Version to 3.9.6. No changes needed.
 
  -- Diane Trout <diane@ghic.org>  Sun, 21 Sep 2014 10:56:47 -0700
 
