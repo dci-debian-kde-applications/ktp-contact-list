@@ -1,4 +1,4 @@
-ktp-contact-list (15.03.80-0ubuntu1) UNRELEASED; urgency=medium
+ktp-contact-list (15.04.0-0ubuntu1) UNRELEASED; urgency=medium
 
   * KDE Frameworks 5 port
     + Update watch file. Now released as part of applications.
