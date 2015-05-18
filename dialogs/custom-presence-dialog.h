@@ -21,19 +21,17 @@
 #ifndef CUSTOM_PRESENCE_DIALOG_H
 #define CUSTOM_PRESENCE_DIALOG_H
 
-//KDE includes
-#include <KComboBox>
-#include <KDialog>
+#include <QDialog>
 
 class QPushButton;
-class KIcon;
 class QListView;
+class QComboBox;
 
 namespace KTp {
     class PresenceModel;
 }
 
-class CustomPresenceDialog : public KDialog
+class CustomPresenceDialog : public QDialog
 {
     Q_OBJECT
 
@@ -52,14 +50,11 @@ private:
     ///Setup the initial dialog
     void setupDialog();
 
-    ///Returns corresponding icon for index read from the config file
-    static KIcon iconForIndex(int index);
-
     ///ListWidget to display custom presence's
     QListView  *m_listView;
 
     ///Combobox to type custom presence's
-    KComboBox    *m_statusMessage;
+    QComboBox  *m_statusMessage;
 
     KTp::PresenceModel *m_model;
 
