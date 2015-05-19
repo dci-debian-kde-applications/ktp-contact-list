@@ -26,7 +26,7 @@ Build-Depends: cmake (>= 2.8.12~),
                libtelepathy-qt4-dev (>= 0.9.3),
                libtelepathy-qt5-dev (>= 0.9.3~),
                pkg-kde-tools (>= 0.9),
-               qtbase5-dev (>= 5.0~)
+               qtbase5-dev (>= 5.4)
 Standards-Version: 3.9.5
 Homepage: https://projects.kde.org/projects/extragear/network/telepathy/ktp-contact-list
 Vcs-Git: git://anonscm.debian.org/pkg-kde/kde-extras/kde-telepathy/ktp-contact-list.git
