@@ -23,14 +23,19 @@
  */
 
 #include "main-widget.h"
+#include "ktp-contactlist-debug.h"
 
-#include <QtGui/QSortFilterProxyModel>
-#include <QtGui/QPainter>
-#include <QtGui/QMenu>
-#include <QtGui/QToolButton>
+#include <QSortFilterProxyModel>
+#include <QPainter>
+#include <QMenu>
+#include <QToolButton>
 #include <QtCore/QWeakPointer>
 #include <QWidgetAction>
 #include <QCloseEvent>
+#include <QDialog>
+#include <QMenu>
+#include <QMenuBar>
+#include <QDebug>
 
 #include <TelepathyQt/PendingChannelRequest>
 #include <TelepathyQt/PendingContacts>
@@ -45,23 +50,17 @@
 #include <KTp/Widgets/join-chat-room-dialog.h>
 #include <KTp/Widgets/start-chat-dialog.h>
 
-#include <KDebug>
-#include <KDialog>
 #include <KIO/Job>
-#include <KMenu>
 #include <KMessageBox>
 #include <KProtocolInfo>
-#include <KSettings/Dialog>
+#include <ksettings/Dialog>
 #include <KSharedConfig>
-#include <KStandardDirs>
 #include <KStandardShortcut>
 #include <KNotification>
 #include <KToolInvocation>
-#include <KMenuBar>
 #include <KStandardAction>
 #include <KWindowSystem>
-
-#include <kdeversion.h>
+#include <KLocalizedString>
 
 #ifdef HAVE_KPEOPLE
 // #include <kpeople/widgets/mergedialog.h> //Disable for now, re-enable when kpeople re-enables it
@@ -69,8 +68,6 @@
 #endif
 
 #include "ui_main-widget.h"
-#include "account-buttons-panel.h"
-#include "contact-list-application.h"
 #include "tooltips/tooltipmanager.h"
 #include "context-menu.h"
 #include "filter-bar.h"
@@ -97,7 +94,7 @@ MainWidget::MainWidget(QWidget *parent)
     setAutoSaveSettings();
     setupTelepathy();
 
-    KSharedConfigPtr config = KGlobal::config();
+    KSharedConfigPtr config = KSharedConfig::openConfig();
     KConfigGroup guiConfigGroup(config, "GUI");
     setupActions(guiConfigGroup);
     setupToolBar();
@@ -106,10 +103,7 @@ MainWidget::MainWidget(QWidget *parent)
     // Restore window geometry, global/by-account presence, search widget state
     restoreGeometry(guiConfigGroup.readEntry("window_geometry", QByteArray()));
     toggleSearchWidget(guiConfigGroup.readEntry("pin_filterbar", true));
-    if (guiConfigGroup.readEntry("selected_presence_chooser", "global") == QLatin1String("global")) {
-        //hide account buttons and show global presence
-        onUseGlobalPresenceTriggered();
-    }
+    m_presenceChooser->show();
 
     m_contextMenu = new ContextMenu(m_contactsListView);
     new ToolTipManager(m_contactsListView);
@@ -163,7 +157,7 @@ MainWidget::MainWidget(QWidget *parent)
 MainWidget::~MainWidget()
 {
     //save the state of the filter bar, pinned or not
-    KSharedConfigPtr config = KGlobal::config();
+    KSharedConfigPtr config = KSharedConfig::openConfig();
     KConfigGroup configGroup(config, "GUI");
     configGroup.writeEntry("pin_filterbar", m_searchContactAction->isChecked());
     configGroup.writeEntry("use_groups", m_groupContactsActionGroup->actions().first()->isChecked());
@@ -174,9 +168,9 @@ MainWidget::~MainWidget()
 
 void MainWidget::onAccountManagerReady(Tp::PendingOperation* op)
 {
-    if (op->isError()) {
-        kDebug() << op->errorName();
-        kDebug() << op->errorMessage();
+    if (op && op->isError()) {
+        qCDebug(KTP_CONTACTLIST_MODULE) << op->errorName();
+        qCDebug(KTP_CONTACTLIST_MODULE) << op->errorMessage();
 
         KMessageBox::error(this,
                            i18n("Something unexpected happened to the core part of your Instant Messaging system "
@@ -185,7 +179,6 @@ void MainWidget::onAccountManagerReady(Tp::PendingOperation* op)
         return;
     }
 
-    m_accountButtons->setAccountManager(m_accountManager);
     m_presenceChooser->setAccountManager(m_accountManager);
     m_contactsListView->setAccountManager(m_accountManager);
     m_contextMenu->setAccountManager(m_accountManager);
@@ -201,8 +194,7 @@ void MainWidget::showMessageToUser(const QString& text, const MainWidget::System
         notification = new KNotification("telepathyInfo", this);
     }
 
-    KAboutData aboutData("ktelepathy",0,KLocalizedString(),0);
-    notification->setComponentData(KComponentData(aboutData));
+    notification->setComponentName("ktelepathy");
 
     notification->setText(text);
     notification->sendEvent();
@@ -237,7 +229,7 @@ void MainWidget::onCustomContextMenuRequested(const QPoint &pos)
 
     KTp::RowType type = (KTp::RowType)index.data(KTp::RowTypeRole).toInt();
 
-    KMenu *menu = 0;
+    QMenu *menu = 0;
 
     if (type == KTp::ContactRowType || type == KTp::PersonRowType) {
         menu = m_contextMenu->contactContextMenu(index);
@@ -291,13 +283,12 @@ void MainWidget::onMergeContactsDialogRequested()
 
 void MainWidget::closeEvent(QCloseEvent* e)
 {
-    KSharedConfigPtr config = KGlobal::config();
+    KSharedConfigPtr config = KSharedConfig::openConfig();
     KConfigGroup generalConfigGroup(config, "General");
     KConfigGroup notifyConigGroup(config, "Notification Messages");
     KConfigGroup guiConfigGroup(config, "GUI");
 
-    ContactListApplication *app = qobject_cast<ContactListApplication*>(kapp);
-    if (!app->isShuttingDown()) {
+    if (qApp->closingDown()) {
         //the standard KMessageBox control saves "true" if you select the checkbox, therefore the reversed var name
         bool dontCheckForPlasmoid = notifyConigGroup.readEntry("dont_check_for_plasmoid", false);
 
@@ -307,8 +298,8 @@ void MainWidget::closeEvent(QCloseEvent* e)
                         i18n("You do not have any other presence controls active (a Presence widget for example).\n"
                             "Do you want to stay online or would you rather go offline?"),
                         i18n("No Other Presence Controls Found"),
-                        KGuiItem(i18n("Stay Online"), KIcon("user-online")),
-                        KGuiItem(i18n("Go Offline"), KIcon("user-offline")),
+                        KGuiItem(i18n("Stay Online"), QIcon::fromTheme("user-online")),
+                        KGuiItem(i18n("Go Offline"), QIcon::fromTheme("user-offline")),
                         KStandardGuiItem::cancel(),
                         QString("dont_check_for_plasmoid"))) {
 
@@ -352,7 +343,7 @@ bool MainWidget::isPresencePlasmoidPresent() const
 void MainWidget::goOffline()
 {
     //FIXME use global presence
-    kDebug() << "Setting all accounts offline...";
+    qCDebug(KTP_CONTACTLIST_MODULE) << "Setting all accounts offline...";
     foreach (const Tp::AccountPtr &account, m_accountManager->allAccounts()) {
         if (account->isEnabled() && account->isValid()) {
             account->setRequestedPresence(Tp::Presence::offline());
@@ -369,32 +360,6 @@ bool MainWidget::isAnyAccountOnline() const
     }
 
     return false;
-}
-
-void MainWidget::onUseGlobalPresenceTriggered()
-{
-    KSharedConfigPtr config = KGlobal::config();
-    KConfigGroup configGroup(config, "GUI");
-
-    m_presenceChooser->show();
-    m_accountButtons->hide();
-
-    configGroup.writeEntry("selected_presence_chooser", "global");
-
-    configGroup.config()->sync();
-}
-
-void MainWidget::onUsePerAccountPresenceTriggered()
-{
-    KSharedConfigPtr config = KGlobal::config();
-    KConfigGroup configGroup(config, "GUI");
-
-    m_presenceChooser->hide();
-    m_accountButtons->show();
-
-    configGroup.writeEntry("selected_presence_chooser", "per-account");
-
-    configGroup.config()->sync();
 }
 
 void MainWidget::toggleSearchWidget(bool show)
@@ -421,13 +386,13 @@ void MainWidget::setupGlobalMenu()
     // items to main window. Since it's always active when an
     // application is active, shortcuts now will work properly.
 
-    m_globalMenu = new KMenuBar(this);
+    m_globalMenu = new QMenuBar(this);
     m_globalMenu->setVisible(false);
 
-    KMenu *contacts = new KMenu(i18n("Contacts"), m_globalMenu);
+    QMenu *contacts = new QMenu(i18n("Contacts"), m_globalMenu);
     contacts->addAction(m_addContactAction);
     contacts->addAction(m_joinChatRoom);
-    if (!KStandardDirs::findExe("ktp-dialout-ui").isEmpty()) {
+    if (!QStandardPaths::findExecutable("ktp-dialout-ui").isEmpty()) {
         contacts->addAction(m_makeCall);
     }
     //temporarily disable until funcationality is restored in libkpeople
@@ -440,17 +405,17 @@ void MainWidget::setupGlobalMenu()
     this->addAction(m_quitAction); // Shortcuts workaround.
     m_globalMenu->addMenu(contacts);
 
-    KMenu *view = new KMenu(i18n("View"), m_globalMenu);
+    QMenu *view = new QMenu(i18n("View"), m_globalMenu);
     view->addAction(m_showOfflineAction);
     view->addAction(m_sortByPresenceAction);
     view->addSeparator();
-    KMenu *view_contactListTypeMenu = new KMenu(i18n("Contact List Type"), view);
+    QMenu *view_contactListTypeMenu = new QMenu(i18n("Contact List Type"), view);
     view_contactListTypeMenu->addActions(m_contactListTypeGroup->actions());
     view->addMenu(view_contactListTypeMenu);
-    KMenu *view_blockedFilterMenu = new KMenu(i18n("Shown Contacts"), view);
+    QMenu *view_blockedFilterMenu = new QMenu(i18n("Shown Contacts"), view);
     view_blockedFilterMenu->addActions(m_blockedFilterGroup->actions());
     view->addMenu(view_blockedFilterMenu);
-    KMenu *view_showGroupedMenu = new KMenu(i18n("Contact Grouping"), view);
+    QMenu *view_showGroupedMenu = new QMenu(i18n("Contact Grouping"), view);
     view_showGroupedMenu->addActions(m_groupContactsActionGroup->actions());
     view->addMenu(view_showGroupedMenu);
     m_globalMenu->addMenu(view);
@@ -477,31 +442,31 @@ void MainWidget::setupToolBar()
     m_toolBar->addWidget(toolBarSpacer);
 
     QToolButton *settingsButton = new QToolButton(this);
-    settingsButton->setIcon(KIcon("configure"));
+    settingsButton->setIcon(QIcon::fromTheme("configure"));
     settingsButton->setPopupMode(QToolButton::InstantPopup);
 
-    KMenu *settingsButtonMenu = new KMenu(settingsButton);
+    QMenu *settingsButtonMenu = new QMenu(settingsButton);
     settingsButtonMenu->addAction(m_settingsDialog);
 
     QActionGroup *delegateTypeGroup = new QActionGroup(this);
     delegateTypeGroup->setExclusive(true);
 
-    KMenu *setDelegateTypeMenu = new KMenu(settingsButtonMenu);
+    QMenu *setDelegateTypeMenu = new QMenu(settingsButtonMenu);
     setDelegateTypeMenu->setTitle(i18n("Contact List Type"));
     setDelegateTypeMenu->addActions(m_contactListTypeGroup->actions());
     settingsButtonMenu->addMenu(setDelegateTypeMenu);
 
-    KMenu *setBlockedFilterMenu = new KMenu(settingsButtonMenu);
+    QMenu *setBlockedFilterMenu = new QMenu(settingsButtonMenu);
     setBlockedFilterMenu->setTitle(i18n("Shown Contacts"));
     setBlockedFilterMenu->addActions(m_blockedFilterGroup->actions());
     settingsButtonMenu->addMenu(setBlockedFilterMenu);
 
-    KMenu *showGroupedMenu = new KMenu(settingsButton);
+    QMenu *showGroupedMenu = new QMenu(settingsButton);
     showGroupedMenu->setTitle(i18n("Contact Grouping"));
     showGroupedMenu->addActions(m_groupContactsActionGroup->actions());
     settingsButtonMenu->addMenu(showGroupedMenu);
 
-    if (!KStandardDirs::findExe("ktp-dialout-ui").isEmpty()) {
+    if (!QStandardPaths::findExecutable("ktp-dialout-ui").isEmpty()) {
         settingsButtonMenu->addAction(m_makeCall);
     }
 
@@ -556,16 +521,17 @@ void MainWidget::setupTelepathy()
             this, SLOT(onAccountManagerReady(Tp::PendingOperation*)));
 }
 
-KAction *MainWidget::createAction(const QString &text, QObject *signalReceiver, const char *slot, const KIcon &icon = KIcon())
+QAction *MainWidget::createAction(const QString &text, QObject *signalReceiver, const char *slot, const QIcon &icon = QIcon())
 {
-    KAction *action = new KAction(icon, text, this);
+    QAction *action = new QAction(icon, text, this);
+    action->setToolTip(text);
     connect(action, SIGNAL(triggered(bool)), signalReceiver, slot);
     return action;
 }
 
-KAction *MainWidget::createAction(const QString& text, QObject *signalReceiver, const char* slot, bool isChecked, const KIcon& icon = KIcon())
+QAction *MainWidget::createAction(const QString& text, QObject *signalReceiver, const char* slot, bool isChecked, const QIcon &icon = QIcon())
 {
-    KAction *action = createAction(text, signalReceiver, slot, icon);
+    QAction *action = createAction(text, signalReceiver, slot, icon);
     action->setCheckable(true);
     action->setChecked(isChecked);
     return action;
@@ -580,21 +546,21 @@ void MainWidget::setupActions(const KConfigGroup& guiConfigGroup)
     m_quitAction->setMenuRole(QAction::QuitRole);
 
     m_joinChatRoom = createAction(i18n("Join Chat Room..."), this, SLOT(onJoinChatRoomRequested()));
-    m_joinChatRoom->setIcon(KIcon("im-irc"));
+    m_joinChatRoom->setIcon(QIcon::fromTheme("im-irc"));
     m_makeCall = createAction(i18n("Make a Call..."), this, SLOT(onMakeCallRequested()));
     m_mergeContacts = createAction(i18n("Merge Contacts..."), this, SLOT(onMergeContactsDialogRequested()));
-    m_addContactAction = createAction(i18n("Add New Contacts..."), this, SLOT(onAddContactRequest()), KIcon("list-add-user"));
+    m_addContactAction = createAction(i18n("Add New Contacts..."), this, SLOT(onAddContactRequest()), QIcon::fromTheme("list-add-user"));
     m_searchContactAction = createAction(i18n("Find Contact"), this, SLOT(toggleSearchWidget(bool)),
-                                         guiConfigGroup.readEntry("pin_filterbar", true), KIcon("edit-find"));
-    m_searchContactAction->setShortcut(KStandardShortcut::find());
-    m_startChatAction = createAction(i18n("Start a chat..."), this, SLOT(onStartChatRequest()), KIcon("telepathy-kde"));
+                                         guiConfigGroup.readEntry("pin_filterbar", true), QIcon::fromTheme("edit-find"));
+    m_searchContactAction->setShortcuts(KStandardShortcut::find());
+    m_startChatAction = createAction(i18n("Start a Chat..."), this, SLOT(onStartChatRequest()), QIcon::fromTheme("telepathy-kde"));
 
     // Dual actions
     m_metacontactToggleAction = new KDualAction(i18n("Split Selected Contacts"),
                                                 i18n("Merge Selected Contacts"),
                                                 this);
-    m_metacontactToggleAction->setActiveIcon(KIcon("user-group-new"));
-    m_metacontactToggleAction->setInactiveIcon(KIcon("user-group-delete"));
+    m_metacontactToggleAction->setActiveIcon(QIcon::fromTheme("user-group-new"));
+    m_metacontactToggleAction->setInactiveIcon(QIcon::fromTheme("user-group-delete"));
     m_metacontactToggleAction->setActive(true);
     m_metacontactToggleAction->setDisabled(true);
     m_metacontactToggleAction->setAutoToggle(false);
@@ -616,8 +582,8 @@ void MainWidget::setupActions(const KConfigGroup& guiConfigGroup)
     m_showOfflineAction = new KDualAction(i18n("Show Offline Contacts"),
                                           i18n("Hide Offline Contacts"),
                                           this);
-    m_showOfflineAction->setActiveIcon(KIcon("show-offline"));
-    m_showOfflineAction->setInactiveIcon(KIcon("show-offline"));
+    m_showOfflineAction->setActiveIcon(QIcon::fromTheme("show-offline"));
+    m_showOfflineAction->setInactiveIcon(QIcon::fromTheme("show-offline"));
     m_showOfflineAction->setCheckable(true);
     m_showOfflineAction->setChecked(false);
     m_showOfflineAction->setShortcut(QKeySequence(Qt::CTRL + Qt::Key_S));
@@ -625,8 +591,8 @@ void MainWidget::setupActions(const KConfigGroup& guiConfigGroup)
     m_sortByPresenceAction = new KDualAction(i18n("Sort by Presence"),
                                              i18n("Sort by Name"),
                                              this);
-    m_sortByPresenceAction->setActiveIcon(KIcon("sort-presence"));
-    m_sortByPresenceAction->setInactiveIcon(KIcon("sort-name"));
+    m_sortByPresenceAction->setActiveIcon(QIcon::fromTheme("sort-presence"));
+    m_sortByPresenceAction->setInactiveIcon(QIcon::fromTheme("sort-name"));
 
     // Setup contact list appearance
     m_contactListTypeGroup = new QActionGroup(this);
@@ -716,7 +682,7 @@ void MainWidget::onMetacontactToggleTriggered()
                     && index.parent().data(KTp::RowTypeRole).toInt() == KTp::PersonRowType) {
                 //we can merge only standalone contacts, not a contact that's already part of a person
                 invalid = true;
-                kDebug() << "Found selected subcontact, aborting";
+                qCDebug(KTP_CONTACTLIST_MODULE) << "Found selected subcontact, aborting";
                 break;
             }
 
@@ -725,10 +691,10 @@ void MainWidget::onMetacontactToggleTriggered()
             if (index.data(KTp::RowTypeRole).toInt() == KTp::PersonRowType) {
                 if (person.isValid()) {
                     invalid = true;
-                    kDebug() << "Found second person, aborting";
+                    qCDebug(KTP_CONTACTLIST_MODULE) << "Found second person, aborting";
                     break;
                 } else {
-                    kDebug() << "Found a person, adding";
+                    qCDebug(KTP_CONTACTLIST_MODULE) << "Found a person, adding";
                     person = index;
                 }
             }
@@ -737,7 +703,7 @@ void MainWidget::onMetacontactToggleTriggered()
             //(we should never get here)
             if (index.parent().isValid() && index.parent() == person) {
                 invalid = true;
-                kDebug() << "Found subcontact of selected person, aborting";
+                qCDebug(KTP_CONTACTLIST_MODULE) << "Found subcontact of selected person, aborting";
                 break;
             }
 
@@ -751,8 +717,14 @@ void MainWidget::onMetacontactToggleTriggered()
         //we're removing contacts from person
         QStringList contacts;
         const QModelIndex &index = selection.first();
-        const QString &personUri = index.data(KTp::PersonIdRole).toString();
-        KPeople::unmergeContact(personUri);
+        QString uri;
+
+        if (index.parent().isValid() && index.parent().data(KTp::RowTypeRole).toInt() == KTp::PersonRowType) {
+            uri = index.data(KTp::ContactUriRole).toString();
+        } else {
+            uri = index.data(KTp::PersonIdRole).toString();
+        }
+        KPeople::unmergeContact(uri);
     }
 #endif
 }
@@ -762,14 +734,8 @@ void MainWidget::onModelInitialized(bool success)
     if (!success) {
         m_messageWidget->setMessageType(KMessageWidget::Warning);
         m_messageWidget->setText(i18n("Some data sources failed to initialize properly, your contact list might be incomplete."));
-        #if KDE_IS_VERSION(4, 11, 0)
-        m_messageWidget->setIcon(KIcon::fromTheme(QLatin1String("dialog-warning")));
-        #endif
         m_messageWidget->animatedShow();
     }
 
     m_contactsListView->contactsModel()->setTrackUnreadMessages(true);
 }
-
-
-#include "main-widget.moc"

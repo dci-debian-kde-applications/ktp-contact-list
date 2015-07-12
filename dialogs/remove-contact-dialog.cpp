@@ -21,11 +21,11 @@
 #include "remove-contact-dialog.h"
 #include "ui_remove-contact-dialog.h"
 
-#include <KIcon>
 #include <KLocalizedString>
 
-#include <QtGui/QCheckBox>
-#include <QtGui/QLabel>
+#include <QCheckBox>
+#include <QLabel>
+#include <QDialogButtonBox>
 
 #include <TelepathyQt/AvatarData>
 #include <TelepathyQt/Contact>
@@ -34,13 +34,21 @@
 
 
 RemoveContactDialog::RemoveContactDialog(Tp::ContactPtr contact, QWidget* parent)
-    : KDialog(parent, Qt::Dialog)
+    : QDialog(parent, Qt::Dialog)
     , ui(new Ui::RemoveContactDialog)
 {
     QWidget *removeDialog = new QWidget(this);
 
     ui->setupUi(removeDialog);
-    setMainWidget(removeDialog);
+
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+    connect(buttonBox, SIGNAL(accepted()), this, SLOT(accept()));
+    connect(buttonBox, SIGNAL(rejected()), this, SLOT(reject()));
+
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    mainLayout->addWidget(removeDialog);
+    mainLayout->addWidget(buttonBox);
+
 
     ui->textLabel->setText(i18n("Remove the selected contact?"));
     ui->contactAliasLabel->setText(contact->alias());
@@ -49,8 +57,7 @@ RemoveContactDialog::RemoveContactDialog(Tp::ContactPtr contact, QWidget* parent
 
     // load contact avatar
     if (contact->avatarData().fileName.isEmpty()) {
-        KIcon defaultIcon("im-user");       // load KIcon with the desired pixmap
-        ui->contactAvatarLabel->setPixmap(defaultIcon.pixmap(QSize(90, 90)));
+        ui->contactAvatarLabel->setPixmap(QIcon::fromTheme("im-user").pixmap(QSize(90, 90)));
     } else {
         ui->contactAvatarLabel->setPixmap(QPixmap(contact->avatarData().fileName).scaled(QSize(128, 128), Qt::KeepAspectRatio));
     }
@@ -60,5 +67,3 @@ bool RemoveContactDialog::blockContact() const
 {
     return ui->blockCheckbox->isChecked();
 }
-
-#include "remove-contact-dialog.moc"
