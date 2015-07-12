@@ -22,7 +22,7 @@
 #ifndef ABSTRACT_CONTACT_DELEGATE_H
 #define ABSTRACT_CONTACT_DELEGATE_H
 
-#include <QtGui/QStyledItemDelegate>
+#include <QStyledItemDelegate>
 
 class AbstractContactDelegate : public QStyledItemDelegate
 {
@@ -53,6 +53,7 @@ protected:
     /** The size hint for painting contact items*/
     virtual QSize sizeHintContact(const QStyleOptionViewItem &option, const QModelIndex &index) const = 0;
     virtual QSize sizeHintHeader(const QStyleOptionViewItem &option, const QModelIndex &index) const;
+    virtual void avatarToGray(QPixmap &avatar) const;
 
 private:
     /** Paints header items*/

@@ -20,6 +20,7 @@
 
 #include "contact-list-widget.h"
 #include "contact-list-widget_p.h"
+#include "ktp-contactlist-debug.h"
 
 #include <TelepathyQt/AccountManager>
 #include <TelepathyQt/PendingChannelRequest>
@@ -33,19 +34,16 @@
 #include <KTp/contact.h>
 #include <KTp/Widgets/settings-kcm-dialog.h>
 
-#include <KGlobal>
 #include <KSharedConfig>
 #include <KConfigGroup>
-#include <KDebug>
 #include <KMessageBox>
 #include <KLocalizedString>
-#include <KDialog>
-#include <KFileDialog>
-#include <KSettings/Dialog>
-#include <KMenu>
+#include <ksettings/Dialog>
 #include <KNotifyConfigWidget>
-#include <KPushButton>
 
+#include <QMenu>
+#include <QPushButton>
+#include <QFileDialog>
 #include <QHeaderView>
 #include <QLabel>
 #include <QApplication>
@@ -56,6 +54,8 @@
 #include <QPainter>
 #include <QPixmap>
 #include <QMenu>
+#include <QDrag>
+#include <QDebug>
 
 #include "contact-delegate.h"
 #include "contact-delegate-compact.h"
@@ -95,7 +95,7 @@ ContactListWidget::ContactListWidget(QWidget *parent)
 {
     Q_D(ContactListWidget);
 
-    KSharedConfigPtr config = KGlobal::config();
+    KSharedConfigPtr config = KSharedConfig::openConfig();
     KConfigGroup guiConfigGroup(config, "GUI");
 
     d->groupMode = KTp::ContactsModel::NoGrouping;
@@ -254,7 +254,7 @@ void ContactListWidget::onContactListDoubleClicked(const QModelIndex &index)
     KTp::ContactPtr contact = index.data(KTp::ContactRole).value<KTp::ContactPtr>();
 
     if (account.isNull()) {
-        kWarning() << "Account is null!";
+        qCWarning(KTP_CONTACTLIST_MODULE) << "Account is null!";
         return;
     }
 
@@ -293,14 +293,14 @@ void ContactListWidget::onContactListDoubleClicked(const QModelIndex &index)
 void ContactListWidget::accountEnablingFinished(Tp::PendingOperation *op)
 {
     if (op->isError()) {
-        kWarning() << "Account enabling failed" << op->errorMessage();
+        qCWarning(KTP_CONTACTLIST_MODULE) << "Account enabling failed" << op->errorMessage();
         return;
     }
 
     Tp::AccountPtr account = Tp::AccountPtr(qobject_cast<Tp::Account*>(sender()));
 
     if (account.isNull()) {
-        kWarning() << "Null account passed!";
+        qCWarning(KTP_CONTACTLIST_MODULE) << "Null account passed!";
         return;
     }
 
@@ -472,12 +472,10 @@ void ContactListWidget::startLogViewer(const Tp::AccountPtr &account, const Tp::
 
 void ContactListWidget::startFileTransferChannel(const Tp::AccountPtr &account, const Tp::ContactPtr &contact)
 {
-    kDebug() << "Requesting file transfer for contact" << contact->alias();
+    qCDebug(KTP_CONTACTLIST_MODULE) << "Requesting file transfer for contact" << contact->alias();
 
-    KFileDialog *fileDialog = new KFileDialog(KUrl("kfiledialog:///FileTransferLastDirectory"), QString(), this);
-    fileDialog->setOperationMode(KFileDialog::Opening);
-    fileDialog->setWindowTitle(i18n("Choose files to send to %1", contact->alias()));
-    fileDialog->okButton()->setText(i18n("Send"));
+    QFileDialog *fileDialog = new QFileDialog(this, i18n("Choose files to send to %1", contact->alias()), QStringLiteral("kfiledialog:///FileTransferLastDirectory"));
+    fileDialog->setLabelText(QFileDialog::Accept, i18n("Send"));
     fileDialog->exec();
     QStringList filenames = fileDialog->selectedFiles();
     fileDialog->deleteLater();
@@ -544,7 +542,7 @@ void ContactListWidget::onSwitchToFullView()
 
     emit enableOverlays(true);
 
-    KSharedConfigPtr config = KGlobal::config();
+    KSharedConfigPtr config = KSharedConfig::openConfig();
     KConfigGroup guiConfigGroup(config, "GUI");
     guiConfigGroup.writeEntry("selected_delegate", "full");
     guiConfigGroup.config()->sync();
@@ -560,7 +558,7 @@ void ContactListWidget::onSwitchToCompactView()
 
     emit enableOverlays(false);
 
-    KSharedConfigPtr config = KGlobal::config();
+    KSharedConfigPtr config = KSharedConfig::openConfig();
     KConfigGroup guiConfigGroup(config, "GUI");
     guiConfigGroup.writeEntry("selected_delegate", "normal");
     guiConfigGroup.config()->sync();
@@ -576,7 +574,7 @@ void ContactListWidget::onSwitchToMiniView()
 
     emit enableOverlays(false);
 
-    KSharedConfigPtr config = KGlobal::config();
+    KSharedConfigPtr config = KSharedConfig::openConfig();
     KConfigGroup guiConfigGroup(config, "GUI");
     guiConfigGroup.writeEntry("selected_delegate", "mini");
     guiConfigGroup.config()->sync();
@@ -588,7 +586,7 @@ void ContactListWidget::onShowAllContacts()
 
     d->model->setSubscriptionStateFilterFlags(KTp::ContactsFilterModel::DoNotFilterBySubscription);
 
-    KSharedConfigPtr config = KGlobal::config();
+    KSharedConfigPtr config = KSharedConfig::openConfig();
     KConfigGroup guiConfigGroup(config, "GUI");
     guiConfigGroup.writeEntry("shown_contacts", "all");
     guiConfigGroup.config()->sync();
@@ -600,7 +598,7 @@ void ContactListWidget::onShowUnblockedContacts()
 
     d->model->setSubscriptionStateFilterFlags(KTp::ContactsFilterModel::HideBlocked);
 
-    KSharedConfigPtr config = KGlobal::config();
+    KSharedConfigPtr config = KSharedConfig::openConfig();
     KConfigGroup guiConfigGroup(config, "GUI");
     guiConfigGroup.writeEntry("shown_contacts", "unblocked");
     guiConfigGroup.config()->sync();
@@ -612,7 +610,7 @@ void ContactListWidget::onShowBlockedContacts()
 
     d->model->setSubscriptionStateFilterFlags(KTp::ContactsFilterModel::ShowOnlyBlocked);
 
-    KSharedConfigPtr config = KGlobal::config();
+    KSharedConfigPtr config = KSharedConfig::openConfig();
     KConfigGroup guiConfigGroup(config, "GUI");
     guiConfigGroup.writeEntry("shown_contacts", "blocked");
     guiConfigGroup.config()->sync();
@@ -731,7 +729,7 @@ void ContactListWidget::mouseMoveEvent(QMouseEvent *event)
 
     mimeData->setData("application/vnd.telepathy.contact", encodedData);
 
-    kDebug() <<  index.data(KTp::PersonIdRole).toString().toLatin1();
+    qCDebug(KTP_CONTACTLIST_MODULE) <<  index.data(KTp::PersonIdRole).toString().toLatin1();
 
     mimeData->setData("application/vnd.kpeople.uri", index.data(KTp::PersonIdRole).toString().toLatin1());
 
@@ -763,7 +761,7 @@ void ContactListWidget::dropEvent(QDropEvent *event)
     }
 
     if (event->mimeData()->hasUrls()) {
-        kDebug() << "Filed dropped";
+        qCDebug(KTP_CONTACTLIST_MODULE) << "Filed dropped";
 
         Tp::ContactPtr contact = index.data(KTp::ContactRole).value<KTp::ContactPtr>();
         Tp::AccountPtr account = index.data(KTp::AccountRole).value<Tp::AccountPtr>();
@@ -774,7 +772,7 @@ void ContactListWidget::dropEvent(QDropEvent *event)
         }
 
         if (account && contact && !filenames.isEmpty()) {
-            kDebug() << "Requesting file transfer for contact" << contact->alias();
+            qCDebug(KTP_CONTACTLIST_MODULE) << "Requesting file transfer for contact" << contact->alias();
             requestFileTransferChannels(account, contact, filenames);
             event->acceptProposedAction();
         }
@@ -784,7 +782,7 @@ void ContactListWidget::dropEvent(QDropEvent *event)
         QString droppedUri(index.data(KTp::PersonIdRole).toString());
         QString draggedUri(event->mimeData()->data("application/vnd.kpeople.uri"));
         if(droppedUri != draggedUri) {
-            KMenu menu;
+            QMenu menu;
             QAction *mergeAction = menu.addAction(i18n("Merge contacts"));
             QAction *result = menu.exec(mapToGlobal(event->pos()));
             if (result == mergeAction) {
@@ -794,7 +792,7 @@ void ContactListWidget::dropEvent(QDropEvent *event)
         }
         #endif
     } else if (event->mimeData()->hasFormat("application/vnd.telepathy.contact")) {
-        kDebug() << "Contact dropped";
+        qCDebug(KTP_CONTACTLIST_MODULE) << "Contact dropped";
 
         QByteArray encodedData = event->mimeData()->data("application/vnd.telepathy.contact");
         QDataStream stream(&encodedData, QIODevice::ReadOnly);
@@ -824,18 +822,18 @@ void ContactListWidget::dropEvent(QDropEvent *event)
         if ((event->possibleActions() & Qt::CopyAction) &&
             (event->possibleActions() & Qt::MoveAction)) {
 
-            KMenu menu;
+            QMenu menu;
             QString seq = QKeySequence(Qt::ShiftModifier).toString();
             seq.chop(1);
-            QAction *move = menu.addAction(KIcon("go-jump"), i18n("&Move here") + QLatin1Char('\t') + seq);
+            QAction *move = menu.addAction(QIcon::fromTheme("go-jump"), i18n("&Move here") + QLatin1Char('\t') + seq);
 
             seq = QKeySequence(Qt::ControlModifier).toString();
             seq.chop(1);
-            QAction *copy = menu.addAction(KIcon("edit-copy"), i18n("&Copy here") + QLatin1Char('\t') + seq);
+            QAction *copy = menu.addAction(QIcon::fromTheme("edit-copy"), i18n("&Copy here") + QLatin1Char('\t') + seq);
 
             menu.addSeparator();
             seq = QKeySequence(Qt::Key_Escape).toString();
-            menu.addAction(KIcon("process-stop"), i18n("C&ancel") + QLatin1Char('\t') + seq);
+            menu.addAction(QIcon::fromTheme("process-stop"), i18n("C&ancel") + QLatin1Char('\t') + seq);
 
             QAction *result = menu.exec(mapToGlobal(event->pos()));
 
@@ -875,7 +873,7 @@ void ContactListWidget::dropEvent(QDropEvent *event)
                 continue;
             }
 
-            kDebug() << contact->alias() << "added to group" << targetGroup;
+            qCDebug(KTP_CONTACTLIST_MODULE) << contact->alias() << "added to group" << targetGroup;
 
             if (action == Qt::MoveAction) {
                 Tp::PendingOperation *rmOp = contact->removeFromGroup(d->dragSourceGroup);

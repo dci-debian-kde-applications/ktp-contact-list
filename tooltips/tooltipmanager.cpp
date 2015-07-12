@@ -35,7 +35,6 @@
 #include <QX11Info>
 #endif
 
-#include <KIcon>
 #include <KColorScheme>
 
 #include <KTp/types.h>
@@ -203,5 +202,3 @@ QWidget * ToolTipManager::createTipContent(const QModelIndex &index)
         return new ContactToolTip(index);
     }
 }
-
-#include "tooltipmanager.moc"
