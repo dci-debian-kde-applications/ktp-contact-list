@@ -3,6 +3,7 @@ ktp-contact-list (15.04.3-1) UNRELEASED; urgency=medium
   * Apply homepage update patch from Matthew Cope
   * Update watch file for KTps move to Applications.
   * New upstream release.
+  * Use --fail-missing to make it easier to find not installed files.
 
  -- Diane Trout <diane@debian.org>  Sun, 12 Jul 2015 15:12:30 -0700
 
