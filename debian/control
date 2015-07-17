@@ -5,13 +5,22 @@ Maintainer: Debian KDE Extras Team <pkg-kde-extras@lists.alioth.debian.org>
 Uploaders: Diane Trout <diane@ghic.org>, Michał Zając <quintasan@kubuntu.org>, Mark Purcell <msp@debian.org>
 Build-Depends: debhelper (>= 9),
  pkg-kde-tools (>= 0.9),
- libtelepathy-qt4-dev (>= 0.9.3),
- kdelibs5-dev (>= 4:4.6),
+ qtbase5-dev,
  cmake (>= 2.8),
+ extra-cmake-modules,
+ kio-dev,
  libtelepathy-logger-dev,
- libtelepathy-logger-qt4-dev (>= 0.5.60),
- libktpcommoninternalsprivate-dev (>= 0.9.0),
- libkpeople-dev (>= 0.2.2)
+ libtelepathy-logger-qt-dev (>= 0.5.60),
+ libtelepathy-qt5-dev (>= 0.9.3),
+ libktp-dev (>= 15.04),
+ libkf5people-dev (>= 0.5),
+ libkf5dbusaddons-dev,
+ libkf5kcmutils-dev,
+ libkf5notifications-dev,
+ libkf5notifyconfig-dev,
+ libkf5iconthemes-dev,
+ libkf5wallet-dev,
+ libkf5windowsystem-dev,
 Standards-Version: 3.9.6
 Homepage: https://projects.kde.org/projects/kde/kdenetwork/ktp-contact-list
 Vcs-Git: git://anonscm.debian.org/pkg-kde/kde-extras/kde-telepathy/ktp-contact-list.git
