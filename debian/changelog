@@ -9,6 +9,7 @@ ktp-contact-list (15.04.3-1) UNRELEASED; urgency=medium
   * Update Diane Trout's email address.
   * Update copyright file, a few modules are now LGPL, the po/* files
     are somewhere else and I added myself to the debian/ block
+  * Update install paths for ktp-contactlist
 
  -- Diane Trout <diane@debian.org>  Sun, 12 Jul 2015 15:12:30 -0700
 
