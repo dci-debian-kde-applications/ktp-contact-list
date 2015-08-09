@@ -13,6 +13,7 @@ ktp-contact-list (15.04.3-1) UNRELEASED; urgency=medium
   * Use dhmk from pkg-kde-tools to build ktp.
     - Change maintainer to debian-qt-kde
     - Update debian/rules
+  * Add KDE's unstable download url to watch file
 
  -- Diane Trout <diane@debian.org>  Sun, 12 Jul 2015 15:12:30 -0700
 
