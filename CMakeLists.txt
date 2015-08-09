@@ -2,7 +2,12 @@ project (ktp-contactlist)
 
 cmake_minimum_required(VERSION 2.8.12)
 
-set(KTP_CONTACT_LIST_VERSION "15.04.2")
+# KDE Application Version, managed by release script
+set (KDE_APPLICATIONS_VERSION_MAJOR "15")
+set (KDE_APPLICATIONS_VERSION_MINOR "07")
+set (KDE_APPLICATIONS_VERSION_MICRO "90")
+
+set(KTP_CONTACT_LIST_VERSION "${KDE_APPLICATIONS_VERSION_MAJOR}.${KDE_APPLICATIONS_VERSION_MINOR}.${KDE_APPLICATIONS_VERSION_MICRO}")
 
 set(IS_KTP_INTERNAL_MODULE TRUE)
 
@@ -10,10 +15,9 @@ find_package(ECM 1.3.0 REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR})
 
 find_package (Qt5 5.0 REQUIRED COMPONENTS Widgets Xml)
-find_package (KF5 5.0 REQUIRED COMPONENTS DBusAddons KIO KCMUtils Notifications WindowSystem NotifyConfig I18n IconThemes XmlGui KCMUtils)
+find_package (KF5 5.11 REQUIRED COMPONENTS DBusAddons KIO KCMUtils Notifications WindowSystem NotifyConfig I18n IconThemes XmlGui KCMUtils People)
 find_package (TelepathyQt5 0.9.3 REQUIRED)
 find_package (KTp REQUIRED)
-find_package (KF5People 0.5)
 
 include(KDEInstallDirs)
 include(KDECMakeSettings)
