@@ -158,7 +158,7 @@ QMenu* ContextMenu::contactContextMenu(const QModelIndex &index)
             action->setEnabled(true);
         }
 
-        action = menu->addAction(i18n("Open Log Viewer..."));
+        action = menu->addAction(i18n("Open Log..."));
         action->setIcon(QIcon::fromTheme("documentation"));
         action->setDisabled(true);
         connect(action, SIGNAL(triggered(bool)),
@@ -274,15 +274,14 @@ QMenu* ContextMenu::contactContextMenu(const QModelIndex &index)
         }
 
         // remove contact action, must be QAction because that's what menu->addAction returns
-
         //TODO find an "if canRemove"
-        QAction *removeAction = menu->addAction(QIcon::fromTheme("list-remove-user"), i18n("Remove Contact"));
+        QAction *removeAction = menu->addAction(QIcon::fromTheme("list-remove-user"), i18n("Remove Contact..."));
         connect(removeAction, SIGNAL(triggered(bool)), this, SLOT(onDeleteContactTriggered()));
 
         menu->addSeparator();
     }
 
-    action = menu->addAction(i18n("Show Info..."));
+    action = menu->addAction(i18n("Show Contact Information..."));
     action->setIcon(QIcon::fromTheme(""));
     connect(action, SIGNAL(triggered()), SLOT(onShowInfoTriggered()));
 
@@ -349,7 +348,7 @@ void ContextMenu::onShowInfoTriggered()
 
     if (KTp::kpeopleEnabled()) {
     #ifdef HAVE_KPEOPLE
-        const QString &personId = m_currentIndex.data(KTp::PersonIdRole).toString();
+        QString personId = m_currentIndex.data(KTp::PersonIdRole).toString();
         if (!personId.isEmpty()) {
             KPeople::PersonDetailsDialog *view = new KPeople::PersonDetailsDialog(m_mainWidget);
             KPeople::PersonData *person = new KPeople::PersonData(personId, view);
