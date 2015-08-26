@@ -1,8 +1,8 @@
-ktp-contact-list (4:15.08.0-0ubuntu1) UNRELEASED; urgency=medium
+ktp-contact-list (4:15.08.0-0ubuntu1) wily; urgency=medium
 
   * new upstream release
 
- -- Clive Johnston <clivejo@aol.com>  Thu, 20 Aug 2015 14:08:09 +0000
+ -- Clive Johnston <clivejo@aol.com>  Wed, 26 Aug 2015 17:41:53 +0100
 
 ktp-contact-list (4:15.07.90-0ubuntu1) wily; urgency=medium
 
