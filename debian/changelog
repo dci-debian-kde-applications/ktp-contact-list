@@ -1,4 +1,4 @@
-ktp-contact-list (15.04.3-1~) UNRELEASED; urgency=medium
+ktp-contact-list (15.08.0-1~) UNRELEASED; urgency=medium
 
   [ Diane Trout ]
   * New upstream release.
@@ -10,8 +10,9 @@ ktp-contact-list (15.04.3-1~) UNRELEASED; urgency=medium
   * New upstream release (15.04.1).
   * New upstream release (15.04.2).
   * New upstream release (15.04.3).
+  * New upstream release (15.08.0).
 
- -- Maximiliano Curia <maxy@debian.org>  Fri, 03 Jul 2015 16:29:44 +0200
+ -- Maximiliano Curia <maxy@debian.org>  Thu, 10 Sep 2015 14:05:40 +0200
 
 ktp-contact-list (0.8.1-2) unstable; urgency=medium
 
