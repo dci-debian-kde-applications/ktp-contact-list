@@ -12,6 +12,7 @@ ktp-contact-list (15.08.1-1~) UNRELEASED; urgency=medium
   * New upstream release (15.04.3).
   * New upstream release (15.08.0).
   * New upstream release (15.08.1).
+  * Bump Standards-Version to 3.9.6.
 
  -- Maximiliano Curia <maxy@debian.org>  Thu, 17 Sep 2015 19:54:39 +0200
 
