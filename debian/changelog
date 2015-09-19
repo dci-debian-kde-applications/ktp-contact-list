@@ -1,4 +1,4 @@
-ktp-contact-list (15.07.90-1) UNRELEASED; urgency=medium
+ktp-contact-list (15.08.1-1) UNRELEASED; urgency=medium
 
   * Apply homepage update patch from Matthew Cope
   * Update watch file for KTps move to Applications.
