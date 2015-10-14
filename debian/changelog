@@ -1,9 +1,9 @@
-ktp-contact-list (4:15.08.2-0ubuntu1) UNRELEASED; urgency=medium
+ktp-contact-list (4:15.08.2-0ubuntu1) wily; urgency=medium
 
   * Vivid backport
   * New upstream release
 
- -- Scarlett Clark <sgclark@kubuntu.org>  Fri, 09 Oct 2015 16:17:31 -0700
+ -- Scarlett Clark <sgclark@kubuntu.org>  Wed, 14 Oct 2015 12:50:29 +0100
 
 ktp-contact-list (4:15.08.1-0ubuntu1) wily; urgency=medium
 
