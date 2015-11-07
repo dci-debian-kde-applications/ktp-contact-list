@@ -6,7 +6,6 @@ ktp-contact-list (15.08.2-1) UNRELEASED; urgency=medium
   * Use --fail-missing to make it easier to find not installed files.
   * Update build-depends to use libtelepathy-qt5, libtelepathy-logger-qt-dev,
     qtbase5, extra-cmake-modules and many kf5 libraries.
-  * Update Diane Trout's email address.
   * Update copyright file, a few modules are now LGPL, the po/* files
     are somewhere else and I added myself to the debian/ block
   * Update install paths for ktp-contactlist
