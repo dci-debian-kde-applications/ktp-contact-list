@@ -1,4 +1,4 @@
-ktp-contact-list (15.08.2-1) UNRELEASED; urgency=medium
+ktp-contact-list (15.08.2-1) unstable; urgency=medium
 
   * Apply homepage update patch from Matthew Cope
   * Update watch file for KTps move to Applications.
@@ -14,7 +14,7 @@ ktp-contact-list (15.08.2-1) UNRELEASED; urgency=medium
     - Update debian/rules
   * Add KDE's unstable download url to watch file
 
- -- Diane Trout <diane@debian.org>  Tue, 03 Nov 2015 22:09:31 -0800
+ -- Diane Trout <diane@ghic.org>  Sat, 07 Nov 2015 10:44:51 -0800
 
 ktp-contact-list (0.9.0-1) unstable; urgency=medium
 
