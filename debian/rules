@@ -1,7 +1,4 @@
 #!/usr/bin/make -f
 
 %:
-	dh $@ --with kf5
-
-override_dh_strip:
-	$(overridden_command) --dbg-package=kde-telepathy-contact-list-dbg
+	dh $@ --with kf5 --dbg-package=kde-telepathy-contact-list-dbg
