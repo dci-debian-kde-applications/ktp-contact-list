@@ -1,8 +1,8 @@
-ktp-contact-list (15.08.3-1) UNRELEASED; urgency=medium
+ktp-contact-list (15.08.3-1) unstable; urgency=medium
 
   * New upstream release.
 
- -- Diane Trout <diane@ghic.org>  Wed, 02 Dec 2015 21:36:55 -0800
+ -- Diane Trout <diane@ghic.org>  Wed, 02 Dec 2015 21:37:12 -0800
 
 ktp-contact-list (15.08.2-1) unstable; urgency=medium
 
