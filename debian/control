@@ -1,7 +1,7 @@
 Source: ktp-contact-list
 Section: kde
 Priority: optional
-Maintainer: Debian KDE Extras Team <pkg-kde-extras@lists.alioth.debian.org>
+Maintainer: Debian/Kubuntu Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Uploaders: Diane Trout <diane@ghic.org>,
            Michał Zając <quintasan@kubuntu.org>,
            Mark Purcell <msp@debian.org>
@@ -16,24 +16,23 @@ Build-Depends: cmake (>= 2.8.12~),
                libkf5notifications-dev (>= 5.11~),
                libkf5notifyconfig-dev (>= 5.11~),
                libkf5people-dev (>= 5.11~),
+               libkf5wallet-dev,
                libkf5windowsystem-dev (>= 5.11~),
                libkf5xmlgui-dev (>= 5.11~),
-               libkpeople-dev (>= 0.2.2),
                libktp-dev,
                libtelepathy-logger-dev,
-               libtelepathy-logger-qt4-dev (>= 0.5.60),
-               libtelepathy-qt4-dev (>= 0.9.3),
+               libtelepathy-logger-qt-dev (>= 0.5.60),
                libtelepathy-qt5-dev (>= 0.9.3~),
                pkg-kde-tools (>= 0.9),
                qtbase5-dev (>= 5.4)
 Standards-Version: 3.9.6
-Homepage: https://projects.kde.org/projects/extragear/network/telepathy/ktp-contact-list
+Homepage: https://projects.kde.org/projects/kde/kdenetwork/ktp-contact-list
 Vcs-Git: git://anonscm.debian.org/pkg-kde/kde-extras/kde-telepathy/ktp-contact-list.git
 Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-kde/kde-extras/kde-telepathy/ktp-contact-list.git
 
 Package: kde-telepathy-contact-list
 Architecture: any
-Depends: kde-telepathy-data (>= ${source:Upstream-Version}),
+Depends: kde-telepathy-data (>= 0.8.1),
          kde-telepathy-kpeople,
          ${misc:Depends},
          ${shlibs:Depends}
