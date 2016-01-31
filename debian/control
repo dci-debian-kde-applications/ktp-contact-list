@@ -44,11 +44,3 @@ Description: Telepathy contact list for the KDE Plasma Desktop
  .
  This package is not meant to be used standalone. It is recommended
  to install the kde-telepathy metapackage instead.
-
-Package: kde-telepathy-contact-list-dbg
-Architecture: any
-Section: debug
-Priority: extra
-Depends: kde-telepathy-contact-list (= ${binary:Version}), ${misc:Depends}
-Description: Telepathy contact list for the KDE Plasma Desktop - debug symbols
- This package provides the debug symbols for the KDE Telepathy contact list.
