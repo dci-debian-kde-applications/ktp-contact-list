@@ -1,8 +1,51 @@
-ktp-contact-list (4:15.12.0-0ubuntu1) UNRELEASED; urgency=medium
+ktp-contact-list (4:15.12.1-2ubuntu1) UNRELEASED; urgency=medium
 
+  * Merged with Debian
+    - Added epoch for Kubunbu
   * New upstream release
 
- -- Clive Johnston <clivejo@aol.com>  Sat, 02 Jan 2016 14:23:56 +0000
+ -- Clive Johnston <clivejo@aol.com>  Tue, 16 Feb 2016 19:30:09 +0000
+
+ktp-contact-list (15.12.1-2) experimental; urgency=medium
+
+  * Bump build dependencies.
+
+ -- Maximiliano Curia <maxy@debian.org>  Fri, 12 Feb 2016 20:52:57 +0100
+
+ktp-contact-list (15.12.1-1) experimental; urgency=medium
+
+  [ Maximiliano Curia ]
+  * Update watch file.
+  * Bump Standards-Version to 3.9.6.
+  * New upstream release (15.12.0).
+  * New upstream release (15.12.1).
+
+ -- Maximiliano Curia <maxy@debian.org>  Mon, 01 Feb 2016 10:23:21 +0100
+
+ktp-contact-list (15.08.3-1) unstable; urgency=medium
+
+  [ Diane Trout ]
+  * New upstream release.
+
+ -- Diane Trout <diane@ghic.org>  Wed, 02 Dec 2015 21:37:12 -0800
+
+ktp-contact-list (15.08.2-1) unstable; urgency=medium
+
+  * Apply homepage update patch from Matthew Cope
+  * Update watch file for KTps move to Applications.
+  * New upstream release.
+  * Use --fail-missing to make it easier to find not installed files.
+  * Update build-depends to use libtelepathy-qt5, libtelepathy-logger-qt-dev,
+    qtbase5, extra-cmake-modules and many kf5 libraries.
+  * Update copyright file, a few modules are now LGPL, the po/* files
+    are somewhere else and I added myself to the debian/ block
+  * Update install paths for ktp-contactlist
+  * Use dhmk from pkg-kde-tools to build ktp.
+    - Change maintainer to debian-qt-kde
+    - Update debian/rules
+  * Add KDE's unstable download url to watch file
+
+ -- Diane Trout <diane@ghic.org>  Sat, 07 Nov 2015 10:44:51 -0800
 
 ktp-contact-list (4:15.08.2-0ubuntu1) wily; urgency=medium
 
@@ -41,6 +84,16 @@ ktp-contact-list (4:15.04.2-0ubuntu1) wily; urgency=medium
 
  -- Scarlett Clark <sgclark@kubuntu.org>  Wed, 13 May 2015 22:36:25 -0700
 
+ktp-contact-list (0.9.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Update libktpcommoninternalsprivate-dev build-dep to 0.9.0
+  * Update Standards-Version to 3.9.6. No changes needed.
+  * Update copyright file.
+  * Update debian/watch file to use http://download.kde.org
+
+ -- Diane Trout <diane@ghic.org>  Sat, 25 Apr 2015 19:47:52 -0700
+
 ktp-contact-list (0.9.0-0ubuntu1) vivid; urgency=medium
 
   * Merge from Debian git, no changes
@@ -48,13 +101,14 @@ ktp-contact-list (0.9.0-0ubuntu1) vivid; urgency=medium
 
  -- Jonathan Riddell <jriddell@ubuntu.com>  Tue, 28 Oct 2014 13:14:01 +0100
 
-ktp-contact-list (0.8.80-1) UNRELEASED; urgency=medium
+ktp-contact-list (0.8.1-2) unstable; urgency=medium
 
-  * New upstream release.
-  * Update libktpcommoninternalsprivate-dev build-dep to 0.8.80
-  * Change kde-telepathy-data to source:Upstream-Version
+  * Add kde-telepathy-kpeople as a dependency to ktp-contactlist
+    this should force installing of the kpeople components to
+    prevent the contact list from being empty.
+    (Closes: #753305)
 
- -- Diane Trout <diane@ghic.org>  Sun, 21 Sep 2014 10:56:47 -0700
+ -- Diane Trout <diane@ghic.org>  Tue, 21 Oct 2014 22:07:01 -0700
 
 ktp-contact-list (0.8.1-1ubuntu1) utopic; urgency=low
 
