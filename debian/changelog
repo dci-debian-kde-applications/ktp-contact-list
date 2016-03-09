@@ -1,10 +1,10 @@
-ktp-contact-list (4:15.12.1-2ubuntu1) UNRELEASED; urgency=medium
+ktp-contact-list (4:15.12.1-2ubuntu1) xenial; urgency=medium
 
   * Merged with Debian
     - Added epoch for Kubunbu
   * New upstream release
 
- -- Clive Johnston <clivejo@aol.com>  Tue, 16 Feb 2016 19:30:09 +0000
+ -- Clive Johnston <clivejo@aol.com>  Wed, 09 Mar 2016 11:20:17 +0100
 
 ktp-contact-list (15.12.1-2) experimental; urgency=medium
 
