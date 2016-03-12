@@ -1,6 +1,7 @@
 ktp-contact-list (4:15.12.2-0ubuntu1) UNRELEASED; urgency=medium
 
   * New upstream bugfix release
+  * Add missing epoch libktp-dev depend. 
 
  -- Scarlett Clark <sgclark@kubuntu.org>  Wed, 09 Mar 2016 22:11:24 -0800
 
