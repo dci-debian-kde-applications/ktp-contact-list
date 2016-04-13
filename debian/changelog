@@ -1,3 +1,12 @@
+ktp-contact-list (15.12.3-1~1.gbpb50484) UNRELEASED; urgency=medium
+
+  ** SNAPSHOT build @b50484beb952e297087070139a7e94971bed84cc **
+
+  * Bump Standards-Version to 3.9.8
+  * Update build-deps and deps with the info from cmake
+
+ -- Automatic packaging <maxy+jenkins@gnuservers.com.ar>  Wed, 13 Apr 2016 12:28:35 +0200
+
 ktp-contact-list (15.08.3-1) unstable; urgency=medium
 
   * New upstream release.
