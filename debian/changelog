@@ -1,8 +1,11 @@
-ktp-contact-list (15.12.2-1~) UNRELEASED; urgency=medium
+ktp-contact-list (15.12.3-1~1.gbpb50484) UNRELEASED; urgency=medium
 
-  * New upstream release (15.12.2).
+  ** SNAPSHOT build @b50484beb952e297087070139a7e94971bed84cc **
 
- -- Maximiliano Curia <maxy@debian.org>  Sat, 13 Feb 2016 09:56:28 +0100
+  * Bump Standards-Version to 3.9.8
+  * Update build-deps and deps with the info from cmake
+
+ -- Automatic packaging <maxy+jenkins@gnuservers.com.ar>  Wed, 13 Apr 2016 12:28:35 +0200
 
 ktp-contact-list (15.12.1-2) experimental; urgency=medium
 
