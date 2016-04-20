@@ -1,6 +1,6 @@
-ktp-contact-list (15.12.3-1~2.gbpb0fee0) UNRELEASED; urgency=medium
+ktp-contact-list (16.04.0-1~1.gbpd72a15) UNRELEASED; urgency=medium
 
-  ** SNAPSHOT build @b0fee0398b4215127ddf13c91439e25ab5e339bb **
+  ** SNAPSHOT build @d72a152dabb10f7a48d6388be2732bbf4fa75fc7 **
 
   [ Automatic packaging ]
   ** SNAPSHOT build @b50484beb952e297087070139a7e94971bed84cc **
@@ -8,6 +8,7 @@ ktp-contact-list (15.12.3-1~2.gbpb0fee0) UNRELEASED; urgency=medium
   * Bump Standards-Version to 3.9.8
   * Update build-deps and deps with the info from cmake
   * upstream branch
+  * Add a .gitattributes file to use dpkg-mergechangelogs
 
   [ George Goldberg ]
   * Skeleton implementation of a IM Contact list for Telepathy using Nepomuk.
@@ -1103,7 +1104,7 @@ ktp-contact-list (15.12.3-1~2.gbpb0fee0) UNRELEASED; urgency=medium
   * GIT_SILENT Upgrade KDE Applications version to 15.12.2.
   * GIT_SILENT Upgrade KDE Applications version to 15.12.3.
 
- -- George Goldberg <grundleborg@googlemail.com>  Thu, 14 Apr 2016 09:05:55 +0200
+ -- Automatic packaging <maxy+jenkins@gnuservers.com.ar>  Thu, 21 Apr 2016 01:28:10 +0200
 
 ktp-contact-list (15.12.1-2) experimental; urgency=medium
 
