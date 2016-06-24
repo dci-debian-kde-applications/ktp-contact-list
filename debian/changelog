@@ -1,10 +1,8 @@
-ktp-contact-list (16.04.2-1~1.gbp6c56f9) UNRELEASED; urgency=medium
+ktp-contact-list (16.04.2-1) experimental; urgency=medium
 
-  ** SNAPSHOT build @6c56f916bd5d668305616012365854c0bd35ac99 **
+  * New upstream release.
 
-  * UNRELEASED
-
- -- Maximiliano Curia <jenkins@gnuservers.com.ar>  Wed, 15 Jun 2016 07:28:10 +0200
+ -- Maximiliano Curia <maxy@debian.org>  Fri, 24 Jun 2016 09:37:30 +0200
 
 ktp-contact-list (16.04.1-1) experimental; urgency=medium
 
