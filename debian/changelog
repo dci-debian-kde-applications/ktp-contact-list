@@ -1,10 +1,11 @@
-ktp-contact-list (16.04.3-1~1.gbpea483b) UNRELEASED; urgency=medium
+ktp-contact-list (16.08.0-1~1.gbpcabc8a) UNRELEASED; urgency=medium
 
-  ** SNAPSHOT build @ea483b82c2de50099b6a3bf2f1919303de48d037 **
+  ** SNAPSHOT build @cabc8a33a4b7123b6acfb0758bb1a49e072e447e **
 
   * UNRELEASED
+  * UNRELEASED
 
- -- Maximiliano Curia <jenkins@gnuservers.com.ar>  Wed, 13 Jul 2016 01:28:09 +0200
+ -- Maximiliano Curia <jenkins@gnuservers.com.ar>  Fri, 19 Aug 2016 07:28:10 +0200
 
 ktp-contact-list (16.04.2-1) experimental; urgency=medium
 
