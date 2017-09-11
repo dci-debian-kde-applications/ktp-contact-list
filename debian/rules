@@ -10,6 +10,3 @@ override_dh_auto_install:
 
 override_dh_strip:
 	$(overridden_command) --dbgsym-migration='kde-telepathy-contact-list-dbg (<= 15.12.1-1~~)'
-
-override_dh_install:
-	$(overridden_command) --fail-missing
