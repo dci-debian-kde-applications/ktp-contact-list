@@ -3,7 +3,7 @@ project (ktp-contactlist)
 cmake_minimum_required(VERSION 2.8.12)
 
 # KDE Application Version, managed by release script
-set (KDE_APPLICATIONS_VERSION_MAJOR "16")
+set (KDE_APPLICATIONS_VERSION_MAJOR "17")
 set (KDE_APPLICATIONS_VERSION_MINOR "08")
 set (KDE_APPLICATIONS_VERSION_MICRO "1")
 
@@ -108,3 +108,4 @@ install (PROGRAMS org.kde.ktpcontactlist.desktop
 install (FILES ${CMAKE_CURRENT_BINARY_DIR}/org.kde.ktpcontactlist.service
          DESTINATION ${DBUS_SERVICES_INSTALL_DIR}
 )
+ki18n_install(po)
