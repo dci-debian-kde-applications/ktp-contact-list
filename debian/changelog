@@ -1,15 +1,6 @@
 ktp-contact-list (17.08.1-1~) UNRELEASED; urgency=medium
 
-  [ Maximiliano Curia ]
-  ** SNAPSHOT build @f3b174a1f7466720f5a9154000083a6ac255f8eb **
-
-  * UNRELEASED
-  * UNRELEASED
-  * UNRELEASED
   * New upstream release (17.08.1).
-
-  [ Automatic packaging ]
-  * Update changelog for 16.08.1-1~1.gbpf3b174 release
 
  -- Maximiliano Curia <maxy@debian.org>  Mon, 11 Sep 2017 14:53:20 +0200
 
