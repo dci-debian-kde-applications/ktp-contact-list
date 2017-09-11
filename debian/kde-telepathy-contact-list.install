@@ -1,3 +1,4 @@
 usr/bin/ktp-contactlist
 usr/share/applications/org.kde.ktpcontactlist.desktop
 usr/share/dbus-1/services/org.kde.ktpcontactlist.service
+usr/share/locale/
