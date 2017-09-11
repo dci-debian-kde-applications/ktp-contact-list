@@ -1,8 +1,12 @@
-ktp-contact-list (17.08.1-1~) UNRELEASED; urgency=medium
+ktp-contact-list (17.08.1-1) experimental; urgency=medium
 
   * New upstream release (17.08.1).
+  * Update watch file
+  * Add breaks/replaces against the kde-l10n packages
+  * Drop soon to be deprecated fail-missing
+  * Release to experimental
 
- -- Maximiliano Curia <maxy@debian.org>  Mon, 11 Sep 2017 14:53:20 +0200
+ -- Maximiliano Curia <maxy@debian.org>  Mon, 11 Sep 2017 19:59:06 +0200
 
 ktp-contact-list (16.04.2-1) experimental; urgency=medium
 
