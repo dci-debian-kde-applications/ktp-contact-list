@@ -36,6 +36,8 @@ Depends: kde-telepathy-data (>= 0.8.1),
          kde-telepathy-kpeople,
          ${misc:Depends},
          ${shlibs:Depends},
+Breaks: ${kde-l10n:all}
+Replaces: ${kde-l10n:all}
 Recommends: kde-telepathy
 Description: Telepathy contact list for the KDE Plasma Desktop
  This package provides a contact list application based on telepathy,
