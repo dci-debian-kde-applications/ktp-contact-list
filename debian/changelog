@@ -1,3 +1,10 @@
+ktp-contact-list (17.08.3-0r1) UNRELEASED; urgency=medium
+
+  [ Pino Toscano ]
+  * New upstream release.
+
+ -- Debian/Kubuntu Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sun, 03 Dec 2017 14:34:53 +0100
+
 ktp-contact-list (17.08.1-1) experimental; urgency=medium
 
   * New upstream release (17.08.1).
