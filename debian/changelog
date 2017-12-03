@@ -5,6 +5,9 @@ ktp-contact-list (17.08.3-0r1) UNRELEASED; urgency=medium
   * Bump Standards-Version to 4.1.1, no changes required.
   * Simplify watch file, and switch it to https.
   * Remove trailing whitespaces in changelog.
+  * Stop forcing debian/tmp as local installation directory, installing
+    everything to the final location
+    - drop kde-telepathy-contact-list.install, no more useful now
 
  -- Debian/Kubuntu Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sun, 03 Dec 2017 14:34:53 +0100
 
