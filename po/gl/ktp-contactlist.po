@@ -5,14 +5,14 @@
 # Adrian Chaves Fernandez <adriyetichaves@gmail.com>, 2012, 2015, 2017.
 # Miguel Branco <mgl.branco@gmail.com>, 2013.
 # Marce Villarino <mvillarino@kde-espana.es>, 2013, 2014.
+# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2016-11-19 20:16+0100\n"
-"PO-Revision-Date: 2017-01-26 20:20+0100\n"
-"Last-Translator: Adrián Chaves Fernández (Gallaecio) <adriyetichaves@gmail."
-"com>\n"
+"PO-Revision-Date: 2017-09-29 20:00+0100\n"
+"Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <kde-i18n-doc@kde.org>\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
@@ -385,7 +385,7 @@ msgid ""
 "system and it couldn't be initialized. Try restarting the Contact List."
 msgstr ""
 "Aconteceu algo inesperado á parte nuclear do sistema de mensaxería "
-"instantánea e non foi posíbel iniciala. Intente reiniciando a lista de "
+"instantánea e non foi posíbel inicializala. Intente reiniciando a lista de "
 "contactos."
 
 #: main-widget.cpp:178
@@ -560,7 +560,7 @@ msgid ""
 "Some data sources failed to initialize properly, your contact list might be "
 "incomplete."
 msgstr ""
-"Non foi posíbel preparar correctamente algunhas das fontes de datos, pode "
+"Non foi posíbel inicializar correctamente algunhas das fontes de datos, pode "
 "que a lista de contactos estea incompleta."
 
 #. i18n: ectx: property (windowTitle), widget (QMainWindow, MainWindow)

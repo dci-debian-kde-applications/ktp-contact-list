@@ -3,13 +3,13 @@
 #
 # Yuri Efremov <yur.arh@gmail.com>, 2012, 2013.
 # Alexander Lakhin <exclusion@gmail.com>, 2013.
-# Alexander Potashev <aspotashev@gmail.com>, 2015.
+# Alexander Potashev <aspotashev@gmail.com>, 2015, 2017.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2016-11-19 20:16+0100\n"
-"PO-Revision-Date: 2015-05-04 20:22+0300\n"
+"PO-Revision-Date: 2017-10-17 15:54+0300\n"
 "Last-Translator: Alexander Potashev <aspotashev@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -366,7 +366,7 @@ msgstr "Нажмите, чтобы изменить сообщение стат�
 #, kde-format
 msgctxt "Presence string when the account is connecting"
 msgid "Connecting..."
-msgstr "Соединение..."
+msgstr "Подключение..."
 
 #: global-presence-chooser.cpp:332
 #, kde-format
