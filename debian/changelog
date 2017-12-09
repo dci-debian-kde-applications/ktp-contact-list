@@ -12,6 +12,8 @@ ktp-contact-list (17.08.3-0r1) UNRELEASED; urgency=medium
     - libktp-dev to >= 17.08.3
     - libtelepathy-logger-qt-dev to >= 17.08
     - libtelepathy-qt5-dev to >= 0.9.7
+  * Adjust l10npkgs_firstversion_ok to the version where kde-l10n will
+    drop translations.
 
  -- Debian/Kubuntu Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sun, 03 Dec 2017 14:34:53 +0100
 
